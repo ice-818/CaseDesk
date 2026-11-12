@@ -1,0 +1,59 @@
+{
+  "source": "https://github.com/bitext/customer-support-llm-chatbot-training-dataset",
+  "revision": "72ea2203180d14a416b579c657033ecd21e59a11",
+  "source_file": "data/Bitext_Sample_Customer_Support_Training_Dataset_27K_responses-v11.csv",
+  "license": "CDLA-Sharing-1.0",
+  "downloaded_at": "2026-11-11T07:15:50.005765+00:00",
+  "seed": 20261111,
+  "source_rows": 26872,
+  "source_sha256": "6f81102b0100b97b8468eb04368033a23206bf1fde9d53500d5806ec1001a434",
+  "mapping": {
+    "cancel_order": "cancel_order",
+    "track_order": "order_inquiry",
+    "get_refund": "refund",
+    "track_refund": "refund",
+    "check_refund_policy": "faq_policy",
+    "check_cancellation_fee": "faq_policy",
+    "delivery_options": "faq_policy",
+    "delivery_period": "faq_policy",
+    "check_invoice": "faq_policy",
+    "get_invoice": "faq_policy",
+    "check_payment_methods": "faq_policy",
+    "complaint": "complaint",
+    "contact_human_agent": "human_handoff"
+  },
+  "unmapped": {
+    "change_order": 997,
+    "change_shipping_address": 973,
+    "contact_customer_service": 1000,
+    "create_account": 997,
+    "delete_account": 995,
+    "edit_account": 1000,
+    "newsletter_subscription": 999,
+    "payment_issue": 999,
+    "place_order": 998,
+    "recover_password": 995,
+    "registration_problems": 999,
+    "review": 997,
+    "set_up_shipping_address": 997,
+    "switch_account": 1000
+  },
+  "sampling": "Uniform stratified by external intent; exact normalized English dedup before sampling",
+  "grouping": "Connected components: exact EN/ZH; same source intent token Jaccard>=0.70 or EN/ZH SequenceMatcher>=0.85",
+  "modifications": "Sampled, translated into Chinese, relabeled, similarity-group split; Bitext attribution retained",
+  "limitations": "Synthetic English training source translated by the evaluation model; machine audit pending human review",
+  "dedup_repair": {
+    "replacement_count": 14,
+    "replacement_seed": 20261112,
+    "discarded_run": "discarded-20261111T072444",
+    "reason": "Exact normalized Chinese duplicates"
+  },
+  "dedup_repairs": [
+    {
+      "replacement_count": 3,
+      "replacement_seed": 20261112,
+      "discarded_run": "discarded-20261111T072709",
+      "reason": "Exact normalized Chinese duplicates"
+    }
+  ]
+}

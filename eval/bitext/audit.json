@@ -1,0 +1,3104 @@
+{
+  "bitext-00339": {
+    "id": "bitext-00339",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00172": {
+    "id": "bitext-00172",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00244": {
+    "id": "bitext-00244",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00094": {
+    "id": "bitext-00094",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00358": {
+    "id": "bitext-00358",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00211": {
+    "id": "bitext-00211",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00989": {
+    "id": "bitext-00989",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00678": {
+    "id": "bitext-00678",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00566": {
+    "id": "bitext-00566",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00064": {
+    "id": "bitext-00064",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00110": {
+    "id": "bitext-00110",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00863": {
+    "id": "bitext-00863",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00039": {
+    "id": "bitext-00039",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00021": {
+    "id": "bitext-00021",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00382": {
+    "id": "bitext-00382",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00385": {
+    "id": "bitext-00385",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00162": {
+    "id": "bitext-00162",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00083": {
+    "id": "bitext-00083",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00185": {
+    "id": "bitext-00185",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00262": {
+    "id": "bitext-00262",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00067": {
+    "id": "bitext-00067",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00722": {
+    "id": "bitext-00722",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00614": {
+    "id": "bitext-00614",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00175": {
+    "id": "bitext-00175",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00504": {
+    "id": "bitext-00504",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00122": {
+    "id": "bitext-00122",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00040": {
+    "id": "bitext-00040",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00647": {
+    "id": "bitext-00647",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00123": {
+    "id": "bitext-00123",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00805": {
+    "id": "bitext-00805",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00045": {
+    "id": "bitext-00045",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00026": {
+    "id": "bitext-00026",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00381": {
+    "id": "bitext-00381",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00721": {
+    "id": "bitext-00721",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00649": {
+    "id": "bitext-00649",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00212": {
+    "id": "bitext-00212",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00048": {
+    "id": "bitext-00048",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00318": {
+    "id": "bitext-00318",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00641": {
+    "id": "bitext-00641",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03211": {
+    "id": "bitext-03211",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "原文问在哪里查看终止违约金，属具体查询；本地label faq_policy 偏政策说明，语义含糊"
+  },
+  "bitext-03224": {
+    "id": "bitext-03224",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03280": {
+    "id": "bitext-03280",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03872": {
+    "id": "bitext-03872",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03754": {
+    "id": "bitext-03754",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03466": {
+    "id": "bitext-03466",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03449": {
+    "id": "bitext-03449",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03714": {
+    "id": "bitext-03714",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03895": {
+    "id": "bitext-03895",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03446": {
+    "id": "bitext-03446",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03680": {
+    "id": "bitext-03680",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03103": {
+    "id": "bitext-03103",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03723": {
+    "id": "bitext-03723",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03713": {
+    "id": "bitext-03713",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03696": {
+    "id": "bitext-03696",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03175": {
+    "id": "bitext-03175",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03138": {
+    "id": "bitext-03138",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03394": {
+    "id": "bitext-03394",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03332": {
+    "id": "bitext-03332",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03159": {
+    "id": "bitext-03159",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03453": {
+    "id": "bitext-03453",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03472": {
+    "id": "bitext-03472",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03794": {
+    "id": "bitext-03794",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03870": {
+    "id": "bitext-03870",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03784": {
+    "id": "bitext-03784",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03163": {
+    "id": "bitext-03163",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03691": {
+    "id": "bitext-03691",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03390": {
+    "id": "bitext-03390",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03663": {
+    "id": "bitext-03663",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03262": {
+    "id": "bitext-03262",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03833": {
+    "id": "bitext-03833",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03003": {
+    "id": "bitext-03003",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03109": {
+    "id": "bitext-03109",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03593": {
+    "id": "bitext-03593",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03243": {
+    "id": "bitext-03243",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03430": {
+    "id": "bitext-03430",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03381": {
+    "id": "bitext-03381",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03116": {
+    "id": "bitext-03116",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03094": {
+    "id": "bitext-03094",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-04203": {
+    "id": "bitext-04203",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-03949": {
+    "id": "bitext-03949",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-04356": {
+    "id": "bitext-04356",
+    "translation_ok": false,
+    "label_ambiguous": true,
+    "reason": "译文“我想帮忙”误将I want help译为我想帮忙，语义偏移；且具体账单查询被标为faq_policy，与check_invoice具体查询混淆"
+  },
+  "bitext-04338": {
+    "id": "bitext-04338",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "具体账单查询标为faq_policy，政策与具体查询混淆"
+  },
+  "bitext-04663": {
+    "id": "bitext-04663",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "具体发票查询标为faq_policy，政策与具体查询混淆"
+  },
+  "bitext-04742": {
+    "id": "bitext-04742",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "具体发票查询标为faq_policy，政策与具体查询混淆"
+  },
+  "bitext-04753": {
+    "id": "bitext-04753",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "具体账单查询标为faq_policy，政策与具体查询混淆"
+  },
+  "bitext-03985": {
+    "id": "bitext-03985",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "具体账单查询标为faq_policy，政策与具体查询混淆"
+  },
+  "bitext-04280": {
+    "id": "bitext-04280",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "具体账单查询标为faq_policy，政策与具体查询混淆"
+  },
+  "bitext-04784": {
+    "id": "bitext-04784",
+    "translation_ok": false,
+    "label_ambiguous": true,
+    "reason": "译文“来自{{Person Name}}的我的账单”语序生硬但语义基本对应；具体账单查询标为faq_policy混淆"
+  },
+  "bitext-04545": {
+    "id": "bitext-04545",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "具体发票查询标为faq_policy，政策与具体查询混淆"
+  },
+  "bitext-04865": {
+    "id": "bitext-04865",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "具体账单查询标为faq_policy，政策与具体查询混淆"
+  },
+  "bitext-04682": {
+    "id": "bitext-04682",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "具体账单查询标为faq_policy，政策与具体查询混淆"
+  },
+  "bitext-04143": {
+    "id": "bitext-04143",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "具体账单查询标为faq_policy，政策与具体查询混淆"
+  },
+  "bitext-04478": {
+    "id": "bitext-04478",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "具体账单查询标为faq_policy，政策与具体查询混淆"
+  },
+  "bitext-04122": {
+    "id": "bitext-04122",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "具体发票查询标为faq_policy，政策与具体查询混淆"
+  },
+  "bitext-04413": {
+    "id": "bitext-04413",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "具体发票查询标为faq_policy，政策与具体查询混淆"
+  },
+  "bitext-04295": {
+    "id": "bitext-04295",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "具体账单查询标为faq_policy，政策与具体查询混淆"
+  },
+  "bitext-04487": {
+    "id": "bitext-04487",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "具体账单查询标为faq_policy，政策与具体查询混淆"
+  },
+  "bitext-04375": {
+    "id": "bitext-04375",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "具体账单查询标为faq_policy，政策与具体查询混淆"
+  },
+  "bitext-04690": {
+    "id": "bitext-04690",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "具体账单查询标为faq_policy，政策与具体查询混淆"
+  },
+  "bitext-04223": {
+    "id": "bitext-04223",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "具体发票查询标为faq_policy，政策与具体查询混淆"
+  },
+  "bitext-04710": {
+    "id": "bitext-04710",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "原文是查询具体发票#37777，label为faq_policy（政策类），语义应为具体查询而非政策"
+  },
+  "bitext-04153": {
+    "id": "bitext-04153",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "查询具体发票位置，label为faq_policy，属具体查询非政策"
+  },
+  "bitext-03934": {
+    "id": "bitext-03934",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "查询具体账单#12588，label为faq_policy，属具体查询非政策"
+  },
+  "bitext-04883": {
+    "id": "bitext-04883",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "查询具体发票，label为faq_policy，属具体查询非政策"
+  },
+  "bitext-04184": {
+    "id": "bitext-04184",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "查询具体发票#37777，label为faq_policy，属具体查询非政策"
+  },
+  "bitext-04297": {
+    "id": "bitext-04297",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "查询具体账单，label为faq_policy，属具体查询非政策"
+  },
+  "bitext-04457": {
+    "id": "bitext-04457",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "查询具体账单#37777，label为faq_policy，属具体查询非政策"
+  },
+  "bitext-04204": {
+    "id": "bitext-04204",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "查询具体账单，label为faq_policy，属具体查询非政策"
+  },
+  "bitext-03925": {
+    "id": "bitext-03925",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "查询具体账单#12588，label为faq_policy，属具体查询非政策"
+  },
+  "bitext-04701": {
+    "id": "bitext-04701",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "查询具体账单#37777，label为faq_policy，属具体查询非政策"
+  },
+  "bitext-04137": {
+    "id": "bitext-04137",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "查询具体账单，label为faq_policy，属具体查询非政策"
+  },
+  "bitext-04592": {
+    "id": "bitext-04592",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "查询具体发票#37777，label为faq_policy，属具体查询非政策"
+  },
+  "bitext-04081": {
+    "id": "bitext-04081",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "查询具体发票#12588，label为faq_policy，属具体查询非政策"
+  },
+  "bitext-04728": {
+    "id": "bitext-04728",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "查询具体发票，label为faq_policy，属具体查询非政策"
+  },
+  "bitext-04893": {
+    "id": "bitext-04893",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "查询具体账单，label为faq_policy，属具体查询非政策"
+  },
+  "bitext-04367": {
+    "id": "bitext-04367",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "查询具体账单#37777，label为faq_policy，属具体查询非政策"
+  },
+  "bitext-04103": {
+    "id": "bitext-04103",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "查询具体发票#00108，label为faq_policy，属具体查询非政策"
+  },
+  "bitext-05706": {
+    "id": "bitext-05706",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05564": {
+    "id": "bitext-05564",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05444": {
+    "id": "bitext-05444",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05528": {
+    "id": "bitext-05528",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05751": {
+    "id": "bitext-05751",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05651": {
+    "id": "bitext-05651",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05231": {
+    "id": "bitext-05231",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05037": {
+    "id": "bitext-05037",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05307": {
+    "id": "bitext-05307",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05481": {
+    "id": "bitext-05481",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05182": {
+    "id": "bitext-05182",
+    "translation_ok": false,
+    "label_ambiguous": false,
+    "reason": "原文I want help checking意为我想获得帮助来查询，译文“我想帮忙查”误将用户译为帮忙者，语义偏差"
+  },
+  "bitext-05209": {
+    "id": "bitext-05209",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05426": {
+    "id": "bitext-05426",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05356": {
+    "id": "bitext-05356",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-04977": {
+    "id": "bitext-04977",
+    "translation_ok": false,
+    "label_ambiguous": false,
+    "reason": "原文I want help listing意为我想获得帮助列出，译文“我想要帮忙列出”误将用户译为帮忙者"
+  },
+  "bitext-04995": {
+    "id": "bitext-04995",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05561": {
+    "id": "bitext-05561",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05016": {
+    "id": "bitext-05016",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05277": {
+    "id": "bitext-05277",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05752": {
+    "id": "bitext-05752",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05848": {
+    "id": "bitext-05848",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05457": {
+    "id": "bitext-05457",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05912": {
+    "id": "bitext-05912",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-04940": {
+    "id": "bitext-04940",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05040": {
+    "id": "bitext-05040",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05819": {
+    "id": "bitext-05819",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05759": {
+    "id": "bitext-05759",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05583": {
+    "id": "bitext-05583",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05656": {
+    "id": "bitext-05656",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05784": {
+    "id": "bitext-05784",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05199": {
+    "id": "bitext-05199",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05026": {
+    "id": "bitext-05026",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05841": {
+    "id": "bitext-05841",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05795": {
+    "id": "bitext-05795",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05108": {
+    "id": "bitext-05108",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05393": {
+    "id": "bitext-05393",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05093": {
+    "id": "bitext-05093",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05456": {
+    "id": "bitext-05456",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05176": {
+    "id": "bitext-05176",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06906": {
+    "id": "bitext-06906",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-05986": {
+    "id": "bitext-05986",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06850": {
+    "id": "bitext-06850",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06578": {
+    "id": "bitext-06578",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06381": {
+    "id": "bitext-06381",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06607": {
+    "id": "bitext-06607",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06886": {
+    "id": "bitext-06886",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06103": {
+    "id": "bitext-06103",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06810": {
+    "id": "bitext-06810",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06311": {
+    "id": "bitext-06311",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06478": {
+    "id": "bitext-06478",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06690": {
+    "id": "bitext-06690",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06203": {
+    "id": "bitext-06203",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06206": {
+    "id": "bitext-06206",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06191": {
+    "id": "bitext-06191",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06026": {
+    "id": "bitext-06026",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06360": {
+    "id": "bitext-06360",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06816": {
+    "id": "bitext-06816",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06852": {
+    "id": "bitext-06852",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06784": {
+    "id": "bitext-06784",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06432": {
+    "id": "bitext-06432",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06508": {
+    "id": "bitext-06508",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06527": {
+    "id": "bitext-06527",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06321": {
+    "id": "bitext-06321",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06752": {
+    "id": "bitext-06752",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06101": {
+    "id": "bitext-06101",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06196": {
+    "id": "bitext-06196",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06256": {
+    "id": "bitext-06256",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06193": {
+    "id": "bitext-06193",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06788": {
+    "id": "bitext-06788",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06787": {
+    "id": "bitext-06787",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06162": {
+    "id": "bitext-06162",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06676": {
+    "id": "bitext-06676",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06460": {
+    "id": "bitext-06460",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06525": {
+    "id": "bitext-06525",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06166": {
+    "id": "bitext-06166",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06140": {
+    "id": "bitext-06140",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06251": {
+    "id": "bitext-06251",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06895": {
+    "id": "bitext-06895",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07832": {
+    "id": "bitext-07832",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06951": {
+    "id": "bitext-06951",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07287": {
+    "id": "bitext-07287",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07469": {
+    "id": "bitext-07469",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06958": {
+    "id": "bitext-06958",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07103": {
+    "id": "bitext-07103",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07703": {
+    "id": "bitext-07703",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07144": {
+    "id": "bitext-07144",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07740": {
+    "id": "bitext-07740",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07708": {
+    "id": "bitext-07708",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07331": {
+    "id": "bitext-07331",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07448": {
+    "id": "bitext-07448",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07544": {
+    "id": "bitext-07544",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07881": {
+    "id": "bitext-07881",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07682": {
+    "id": "bitext-07682",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06943": {
+    "id": "bitext-06943",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07633": {
+    "id": "bitext-07633",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07203": {
+    "id": "bitext-07203",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07082": {
+    "id": "bitext-07082",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07492": {
+    "id": "bitext-07492",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07572": {
+    "id": "bitext-07572",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07698": {
+    "id": "bitext-07698",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07425": {
+    "id": "bitext-07425",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07822": {
+    "id": "bitext-07822",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07894": {
+    "id": "bitext-07894",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07451": {
+    "id": "bitext-07451",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06984": {
+    "id": "bitext-06984",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07311": {
+    "id": "bitext-07311",
+    "translation_ok": false,
+    "label_ambiguous": false,
+    "reason": "claim译为索赔，语义偏向赔偿请求，与投诉不完全一致"
+  },
+  "bitext-07776": {
+    "id": "bitext-07776",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07228": {
+    "id": "bitext-07228",
+    "translation_ok": false,
+    "label_ambiguous": false,
+    "reason": "consumer claim译为消费者索赔，偏向赔偿而非投诉"
+  },
+  "bitext-07601": {
+    "id": "bitext-07601",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07175": {
+    "id": "bitext-07175",
+    "translation_ok": false,
+    "label_ambiguous": false,
+    "reason": "consumer claim译为消费者索赔，语义偏向赔偿"
+  },
+  "bitext-07169": {
+    "id": "bitext-07169",
+    "translation_ok": false,
+    "label_ambiguous": false,
+    "reason": "customer claim译为客户索赔，偏向赔偿而非投诉"
+  },
+  "bitext-06937": {
+    "id": "bitext-06937",
+    "translation_ok": false,
+    "label_ambiguous": false,
+    "reason": "claim译为索赔，偏向赔偿请求"
+  },
+  "bitext-07524": {
+    "id": "bitext-07524",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07725": {
+    "id": "bitext-07725",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-07438": {
+    "id": "bitext-07438",
+    "translation_ok": false,
+    "label_ambiguous": false,
+    "reason": "consumer claim译为消费者索赔，偏向赔偿"
+  },
+  "bitext-07907": {
+    "id": "bitext-07907",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-06942": {
+    "id": "bitext-06942",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09593": {
+    "id": "bitext-09593",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09736": {
+    "id": "bitext-09736",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09151": {
+    "id": "bitext-09151",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09553": {
+    "id": "bitext-09553",
+    "translation_ok": false,
+    "label_ambiguous": false,
+    "reason": "live agent译为在线客服，添加了在线语义，原文仅指真人客服"
+  },
+  "bitext-09146": {
+    "id": "bitext-09146",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-08999": {
+    "id": "bitext-08999",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09659": {
+    "id": "bitext-09659",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09582": {
+    "id": "bitext-09582",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09265": {
+    "id": "bitext-09265",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09503": {
+    "id": "bitext-09503",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09394": {
+    "id": "bitext-09394",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09142": {
+    "id": "bitext-09142",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09537": {
+    "id": "bitext-09537",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09132": {
+    "id": "bitext-09132",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09833": {
+    "id": "bitext-09833",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09594": {
+    "id": "bitext-09594",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09502": {
+    "id": "bitext-09502",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09169": {
+    "id": "bitext-09169",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09242": {
+    "id": "bitext-09242",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09070": {
+    "id": "bitext-09070",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09425": {
+    "id": "bitext-09425",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09296": {
+    "id": "bitext-09296",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09437": {
+    "id": "bitext-09437",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09288": {
+    "id": "bitext-09288",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09533": {
+    "id": "bitext-09533",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09465": {
+    "id": "bitext-09465",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09289": {
+    "id": "bitext-09289",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09081": {
+    "id": "bitext-09081",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09871": {
+    "id": "bitext-09871",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09449": {
+    "id": "bitext-09449",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09696": {
+    "id": "bitext-09696",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09085": {
+    "id": "bitext-09085",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09375": {
+    "id": "bitext-09375",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09618": {
+    "id": "bitext-09618",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-08915": {
+    "id": "bitext-08915",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09306": {
+    "id": "bitext-09306",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09218": {
+    "id": "bitext-09218",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-09573": {
+    "id": "bitext-09573",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12593": {
+    "id": "bitext-12593",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-11928": {
+    "id": "bitext-11928",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12321": {
+    "id": "bitext-12321",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12273": {
+    "id": "bitext-12273",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-11930": {
+    "id": "bitext-11930",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12257": {
+    "id": "bitext-12257",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12277": {
+    "id": "bitext-12277",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12314": {
+    "id": "bitext-12314",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12765": {
+    "id": "bitext-12765",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12359": {
+    "id": "bitext-12359",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-11948": {
+    "id": "bitext-11948",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12399": {
+    "id": "bitext-12399",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12743": {
+    "id": "bitext-12743",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-11931": {
+    "id": "bitext-11931",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "原文拼写含糊，译文按配送至某地理解，语义基本对应"
+  },
+  "bitext-12834": {
+    "id": "bitext-12834",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12464": {
+    "id": "bitext-12464",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12149": {
+    "id": "bitext-12149",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12275": {
+    "id": "bitext-12275",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12800": {
+    "id": "bitext-12800",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12519": {
+    "id": "bitext-12519",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12120": {
+    "id": "bitext-12120",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "原文含粗俗语气词，译文用“到底”传达情绪，语义对应"
+  },
+  "bitext-12163": {
+    "id": "bitext-12163",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12068": {
+    "id": "bitext-12068",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "原文拼写含糊，译文按“到日本”理解，语义对应"
+  },
+  "bitext-12396": {
+    "id": "bitext-12396",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12671": {
+    "id": "bitext-12671",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12246": {
+    "id": "bitext-12246",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12168": {
+    "id": "bitext-12168",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12197": {
+    "id": "bitext-12197",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12597": {
+    "id": "bitext-12597",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12214": {
+    "id": "bitext-12214",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12304": {
+    "id": "bitext-12304",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12018": {
+    "id": "bitext-12018",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12806": {
+    "id": "bitext-12806",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12312": {
+    "id": "bitext-12312",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12151": {
+    "id": "bitext-12151",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12509": {
+    "id": "bitext-12509",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-11946": {
+    "id": "bitext-11946",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-11956": {
+    "id": "bitext-11956",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-13625": {
+    "id": "bitext-13625",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "article译为商品可接受，语义未丢失"
+  },
+  "bitext-13824": {
+    "id": "bitext-13824",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-13109": {
+    "id": "bitext-13109",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-13720": {
+    "id": "bitext-13720",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-13836": {
+    "id": "bitext-13836",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "article译为商品可接受"
+  },
+  "bitext-13279": {
+    "id": "bitext-13279",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "原文拼写错误不影响语义"
+  },
+  "bitext-13259": {
+    "id": "bitext-13259",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "原文拼写错误不影响语义"
+  },
+  "bitext-13100": {
+    "id": "bitext-13100",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-13558": {
+    "id": "bitext-13558",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-13477": {
+    "id": "bitext-13477",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-13307": {
+    "id": "bitext-13307",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-13699": {
+    "id": "bitext-13699",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-13694": {
+    "id": "bitext-13694",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12946": {
+    "id": "bitext-12946",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-13619": {
+    "id": "bitext-13619",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-13610": {
+    "id": "bitext-13610",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-13795": {
+    "id": "bitext-13795",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-13855": {
+    "id": "bitext-13855",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-13377": {
+    "id": "bitext-13377",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-13660": {
+    "id": "bitext-13660",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-13839": {
+    "id": "bitext-13839",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-13844": {
+    "id": "bitext-13844",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-13354": {
+    "id": "bitext-13354",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-13748": {
+    "id": "bitext-13748",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-13187": {
+    "id": "bitext-13187",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-13804": {
+    "id": "bitext-13804",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-13587": {
+    "id": "bitext-13587",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-13244": {
+    "id": "bitext-13244",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-13595": {
+    "id": "bitext-13595",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-13422": {
+    "id": "bitext-13422",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-12956": {
+    "id": "bitext-12956",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "询问具体物品到达时间，属delivery_period，标为faq_policy含糊"
+  },
+  "bitext-12992": {
+    "id": "bitext-12992",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "询问购买到达时间，属delivery_period，标为faq_policy含糊"
+  },
+  "bitext-13496": {
+    "id": "bitext-13496",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "询问多久收到产品，属delivery_period，标为faq_policy含糊"
+  },
+  "bitext-13850": {
+    "id": "bitext-13850",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "查询配送时长，属delivery_period，标为faq_policy含糊"
+  },
+  "bitext-13251": {
+    "id": "bitext-13251",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "询问购买到达时间，属delivery_period，标为faq_policy含糊"
+  },
+  "bitext-13120": {
+    "id": "bitext-13120",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "询问包裹到达时间，属delivery_period，标为faq_policy含糊"
+  },
+  "bitext-13898": {
+    "id": "bitext-13898",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "询问货件时长，属delivery_period，标为faq_policy含糊"
+  },
+  "bitext-12988": {
+    "id": "bitext-12988",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "询问包裹到达时间，属delivery_period，标为faq_policy含糊"
+  },
+  "bitext-15553": {
+    "id": "bitext-15553",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "具体下载账单#85632，属get_invoice，标为faq_policy含糊"
+  },
+  "bitext-15739": {
+    "id": "bitext-15739",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "具体下载发票，属get_invoice，标为faq_policy含糊"
+  },
+  "bitext-15304": {
+    "id": "bitext-15304",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "获取具体发票#00108，属get_invoice，标为faq_policy含糊"
+  },
+  "bitext-15124": {
+    "id": "bitext-15124",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "下载具体发票，属get_invoice，标为faq_policy含糊"
+  },
+  "bitext-15201": {
+    "id": "bitext-15201",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "获取具体发票，属get_invoice，标为faq_policy含糊"
+  },
+  "bitext-15894": {
+    "id": "bitext-15894",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "下载具体发票，属get_invoice，标为faq_policy含糊"
+  },
+  "bitext-15660": {
+    "id": "bitext-15660",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "邮寄具体发票，属get_invoice，标为faq_policy含糊"
+  },
+  "bitext-15107": {
+    "id": "bitext-15107",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "获取十二月发票，属get_invoice，标为faq_policy含糊"
+  },
+  "bitext-15313": {
+    "id": "bitext-15313",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "下载具体发票，属get_invoice，标为faq_policy含糊"
+  },
+  "bitext-15792": {
+    "id": "bitext-15792",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "获取具体发票，属get_invoice，标为faq_policy含糊"
+  },
+  "bitext-15183": {
+    "id": "bitext-15183",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "下载具体账单#00108，属get_invoice，标为faq_policy含糊"
+  },
+  "bitext-15145": {
+    "id": "bitext-15145",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "获取具体发票，属get_invoice，标为faq_policy含糊"
+  },
+  "bitext-15115": {
+    "id": "bitext-15115",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-15505": {
+    "id": "bitext-15505",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-15459": {
+    "id": "bitext-15459",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-15241": {
+    "id": "bitext-15241",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-15850": {
+    "id": "bitext-15850",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-15488": {
+    "id": "bitext-15488",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-15196": {
+    "id": "bitext-15196",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-15695": {
+    "id": "bitext-15695",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-15156": {
+    "id": "bitext-15156",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-15621": {
+    "id": "bitext-15621",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-15589": {
+    "id": "bitext-15589",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-15626": {
+    "id": "bitext-15626",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-15886": {
+    "id": "bitext-15886",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-15854": {
+    "id": "bitext-15854",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-15178": {
+    "id": "bitext-15178",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-15268": {
+    "id": "bitext-15268",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-15233": {
+    "id": "bitext-15233",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-15723": {
+    "id": "bitext-15723",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-15786": {
+    "id": "bitext-15786",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-15004": {
+    "id": "bitext-15004",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-15602": {
+    "id": "bitext-15602",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "译文准确，get_invoice对应具体发票查询，label为faq_policy偏政策类，但源标签本身为get_invoice，此处label与源标签不一致需注意"
+  },
+  "bitext-15724": {
+    "id": "bitext-15724",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "bills译为账单，语义基本对应，label为faq_policy与源get_invoice不一致"
+  },
+  "bitext-14979": {
+    "id": "bitext-14979",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "准确，label为faq_policy与源get_invoice不一致"
+  },
+  "bitext-15127": {
+    "id": "bitext-15127",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "准确，label为faq_policy与源get_invoice不一致"
+  },
+  "bitext-15058": {
+    "id": "bitext-15058",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "准确，label为faq_policy与源get_invoice不一致"
+  },
+  "bitext-15529": {
+    "id": "bitext-15529",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "准确，label为faq_policy与源get_invoice不一致"
+  },
+  "bitext-16552": {
+    "id": "bitext-16552",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "rebate译为返款，属退款类具体申请，label为refund合理"
+  },
+  "bitext-16409": {
+    "id": "bitext-16409",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "compensations译为补偿，属退款申请类，label合理"
+  },
+  "bitext-16519": {
+    "id": "bitext-16519",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "reimbursement译为报销略偏，但属退款申请语义，label合理"
+  },
+  "bitext-16289": {
+    "id": "bitext-16289",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "准确，label合理"
+  },
+  "bitext-16359": {
+    "id": "bitext-16359",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "准确，label合理"
+  },
+  "bitext-16648": {
+    "id": "bitext-16648",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "准确，label合理"
+  },
+  "bitext-16570": {
+    "id": "bitext-16570",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "准确，label合理"
+  },
+  "bitext-16691": {
+    "id": "bitext-16691",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "准确，label合理"
+  },
+  "bitext-15993": {
+    "id": "bitext-15993",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "reimbursement译为报销略偏，但属退款申请，label合理"
+  },
+  "bitext-16098": {
+    "id": "bitext-16098",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "准确，label合理"
+  },
+  "bitext-16194": {
+    "id": "bitext-16194",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "准确，label合理"
+  },
+  "bitext-16236": {
+    "id": "bitext-16236",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "准确，label合理"
+  },
+  "bitext-16571": {
+    "id": "bitext-16571",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "准确，label合理"
+  },
+  "bitext-16675": {
+    "id": "bitext-16675",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "准确，label合理"
+  },
+  "bitext-16292": {
+    "id": "bitext-16292",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-16335": {
+    "id": "bitext-16335",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-16741": {
+    "id": "bitext-16741",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-16264": {
+    "id": "bitext-16264",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-16872": {
+    "id": "bitext-16872",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-16644": {
+    "id": "bitext-16644",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-16363": {
+    "id": "bitext-16363",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "reimbursement译作报销，语义略偏但属退款范畴"
+  },
+  "bitext-16565": {
+    "id": "bitext-16565",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-16032": {
+    "id": "bitext-16032",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "reimbursements译作报销，语义略偏"
+  },
+  "bitext-16538": {
+    "id": "bitext-16538",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-16453": {
+    "id": "bitext-16453",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-16689": {
+    "id": "bitext-16689",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "reimbursement译作报销，语义略偏"
+  },
+  "bitext-15952": {
+    "id": "bitext-15952",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-16388": {
+    "id": "bitext-16388",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-16283": {
+    "id": "bitext-16283",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-16228": {
+    "id": "bitext-16228",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-16604": {
+    "id": "bitext-16604",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-16541": {
+    "id": "bitext-16541",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-16478": {
+    "id": "bitext-16478",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-16853": {
+    "id": "bitext-16853",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-15950": {
+    "id": "bitext-15950",
+    "translation_ok": false,
+    "label_ambiguous": false,
+    "reason": "rebate意为返利/折扣，译文正确；但source_label为get_refund，rebate与退款语义不同，译文未漏译，仅标签语义偏差"
+  },
+  "bitext-16101": {
+    "id": "bitext-16101",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-16180": {
+    "id": "bitext-16180",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "reimbursement译为报销，语义准确"
+  },
+  "bitext-16597": {
+    "id": "bitext-16597",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25315": {
+    "id": "bitext-25315",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "ETA译为预计到达时间，属物流时效，label为order_inquiry可接受"
+  },
+  "bitext-25660": {
+    "id": "bitext-25660",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25528": {
+    "id": "bitext-25528",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-24884": {
+    "id": "bitext-24884",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-24971": {
+    "id": "bitext-24971",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-24957": {
+    "id": "bitext-24957",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25440": {
+    "id": "bitext-25440",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25449": {
+    "id": "bitext-25449",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25037": {
+    "id": "bitext-25037",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25510": {
+    "id": "bitext-25510",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25224": {
+    "id": "bitext-25224",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "locate译为找到，语义准确"
+  },
+  "bitext-25674": {
+    "id": "bitext-25674",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25518": {
+    "id": "bitext-25518",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "damn语气保留，语义完整"
+  },
+  "bitext-25848": {
+    "id": "bitext-25848",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25123": {
+    "id": "bitext-25123",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25624": {
+    "id": "bitext-25624",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25442": {
+    "id": "bitext-25442",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25015": {
+    "id": "bitext-25015",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25685": {
+    "id": "bitext-25685",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25546": {
+    "id": "bitext-25546",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25231": {
+    "id": "bitext-25231",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25712": {
+    "id": "bitext-25712",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25524": {
+    "id": "bitext-25524",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25470": {
+    "id": "bitext-25470",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25665": {
+    "id": "bitext-25665",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25431": {
+    "id": "bitext-25431",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-24926": {
+    "id": "bitext-24926",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25788": {
+    "id": "bitext-25788",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25633": {
+    "id": "bitext-25633",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25492": {
+    "id": "bitext-25492",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25346": {
+    "id": "bitext-25346",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25418": {
+    "id": "bitext-25418",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-24921": {
+    "id": "bitext-24921",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25283": {
+    "id": "bitext-25283",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25043": {
+    "id": "bitext-25043",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25485": {
+    "id": "bitext-25485",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-24939": {
+    "id": "bitext-24939",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25508": {
+    "id": "bitext-25508",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-26194": {
+    "id": "bitext-26194",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "restitution译为退款，可能指补偿/返还，语义含糊"
+  },
+  "bitext-26014": {
+    "id": "bitext-26014",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-26140": {
+    "id": "bitext-26140",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "restitution译为退款，语义含糊"
+  },
+  "bitext-26615": {
+    "id": "bitext-26615",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "reimbursement译为报销，也可能指退款"
+  },
+  "bitext-25955": {
+    "id": "bitext-25955",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-26793": {
+    "id": "bitext-26793",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "restitution译为退款，语义含糊"
+  },
+  "bitext-25891": {
+    "id": "bitext-25891",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "restitution译为退款，语义含糊"
+  },
+  "bitext-25912": {
+    "id": "bitext-25912",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "restitution译为退款，语义含糊"
+  },
+  "bitext-26100": {
+    "id": "bitext-26100",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "rebate译为返利，也可能指退款"
+  },
+  "bitext-26822": {
+    "id": "bitext-26822",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-26038": {
+    "id": "bitext-26038",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-26334": {
+    "id": "bitext-26334",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-26549": {
+    "id": "bitext-26549",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "rebate译为返利，也可能指退款"
+  },
+  "bitext-26408": {
+    "id": "bitext-26408",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "reimbursement译为报销，也可能指退款"
+  },
+  "bitext-25898": {
+    "id": "bitext-25898",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-26436": {
+    "id": "bitext-26436",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "rebate译为返利，也可能指退款"
+  },
+  "bitext-26013": {
+    "id": "bitext-26013",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25946": {
+    "id": "bitext-25946",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-26853": {
+    "id": "bitext-26853",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-26743": {
+    "id": "bitext-26743",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-26473": {
+    "id": "bitext-26473",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-26489": {
+    "id": "bitext-26489",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25884": {
+    "id": "bitext-25884",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-26707": {
+    "id": "bitext-26707",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-26435": {
+    "id": "bitext-26435",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25877": {
+    "id": "bitext-25877",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-26674": {
+    "id": "bitext-26674",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-26828": {
+    "id": "bitext-26828",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-26227": {
+    "id": "bitext-26227",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25961": {
+    "id": "bitext-25961",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-26581": {
+    "id": "bitext-26581",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-26390": {
+    "id": "bitext-26390",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-26049": {
+    "id": "bitext-26049",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-26162": {
+    "id": "bitext-26162",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-26765": {
+    "id": "bitext-26765",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-26457": {
+    "id": "bitext-26457",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-26040": {
+    "id": "bitext-26040",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-25936": {
+    "id": "bitext-25936",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00242": {
+    "id": "bitext-00242",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00889": {
+    "id": "bitext-00889",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00574": {
+    "id": "bitext-00574",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00239": {
+    "id": "bitext-00239",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-04328": {
+    "id": "bitext-04328",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "译文准确；但原文是具体查看某账单，label为faq_policy（政策类）而非check_invoice，语义层级含糊"
+  },
+  "bitext-04801": {
+    "id": "bitext-04801",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "译文保留bilps原样；原文为查找具体账单，label为faq_policy而非check_invoice，且bilps拼写含糊"
+  },
+  "bitext-06696": {
+    "id": "bitext-06696",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "译文准确；但“在哪些情况下可以申请退款”既涉及退款政策也涉及退款申请，faq_policy与check_refund_policy边界含糊"
+  },
+  "bitext-06862": {
+    "id": "bitext-06862",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "译文准确，明确为查看退款政策，faq_policy合适"
+  },
+  "bitext-07180": {
+    "id": "bitext-07180",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "译文准确对应原文；complaint标签与消费者索赔/投诉语义一致，无歧义"
+  },
+  "bitext-09561": {
+    "id": "bitext-09561",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "译文准确传达抱怨并询问联系人工客服，human_handoff 标签合适。"
+  },
+  "bitext-15019": {
+    "id": "bitext-15019",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "译文准确；但“拿到账单”是具体获取账单请求，应属 get_invoice，标为 faq_policy 含糊"
+  },
+  "bitext-15855": {
+    "id": "bitext-15855",
+    "translation_ok": true,
+    "label_ambiguous": true,
+    "reason": "译文准确；但原文是具体账单下载求助，label 却为 faq_policy，与 get_invoice 的具体查询意图不符，存在含糊"
+  },
+  "bitext-25696": {
+    "id": "bitext-25696",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "译文准确对应订单状态查询，label为order_inquiry合理"
+  },
+  "bitext-25138": {
+    "id": "bitext-25138",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": "ETA译为预计到达时间准确，属订单查询"
+  },
+  "bitext-00248": {
+    "id": "bitext-00248",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00898": {
+    "id": "bitext-00898",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  },
+  "bitext-00583": {
+    "id": "bitext-00583",
+    "translation_ok": true,
+    "label_ambiguous": false,
+    "reason": ""
+  }
+}

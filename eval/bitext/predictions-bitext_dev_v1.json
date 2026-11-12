@@ -1,0 +1,4502 @@
+{
+  "bitext-00244": {
+    "id": "bitext-00244",
+    "query": "协助取消订单 {{Order Number}}",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-00211": {
+    "id": "bitext-00211",
+    "query": "需要帮助取消购买 {{Order Number}}",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-00339": {
+    "id": "bitext-00339",
+    "query": "帮我取消购买 {{Order Number}}",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-00094": {
+    "id": "bitext-00094",
+    "query": "我想寻求帮助取消订单 {{Order Number}}",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-00678": {
+    "id": "bitext-00678",
+    "query": "我不想要我购买的商品了，我可以取消订单吗？",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-00989": {
+    "id": "bitext-00989",
+    "query": "我不再想要购买 {{Order Number}} 了，你能取消它吗？",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-00064": {
+    "id": "bitext-00064",
+    "query": "你能帮我取消购买 {{Order Number}} 吗？",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-00110": {
+    "id": "bitext-00110",
+    "query": "需要协助取消订单 {{Order Number}}",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-00863": {
+    "id": "bitext-00863",
+    "query": "需要协助取消购买 {{Order Number}}",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-00039": {
+    "id": "bitext-00039",
+    "query": "我不想要这些商品，我尝试取消订单 {{Order Number}}",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-00382": {
+    "id": "bitext-00382",
+    "query": "想要协助取消购买 {{Order Number}}",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-00162": {
+    "id": "bitext-00162",
+    "query": "我必须取消购买 {{Order Number}}",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-00083": {
+    "id": "bitext-00083",
+    "query": "取消订单",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-00614": {
+    "id": "bitext-00614",
+    "query": "我该如何取消购买 {{Order Number}}？",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-00722": {
+    "id": "bitext-00722",
+    "query": "我不想要这件商品，取消订单 {{Order Number}}",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-00504": {
+    "id": "bitext-00504",
+    "query": "你能帮我取消订单 {{Order Number}} 吗",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-00040": {
+    "id": "bitext-00040",
+    "query": "我需要帮助取消购买 {{Order Number}}",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-00122": {
+    "id": "bitext-00122",
+    "query": "我不知道如何取消订单 {{Order Number}}",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-00805": {
+    "id": "bitext-00805",
+    "query": "我想取消购买 {{Order Number}}",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-00647": {
+    "id": "bitext-00647",
+    "query": "我无法支付订单 {{Order Number}}",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "order_inquiry",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-00889": {
+    "id": "bitext-00889",
+    "query": "我不知道该怎么做才能取消购买 {{Order Number}}",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-00898": {
+    "id": "bitext-00898",
+    "query": "我需要帮助取消订单{{Order Number}}",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-00649": {
+    "id": "bitext-00649",
+    "query": "我有一个关于取消订单 {{Order Number}} 的问题",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-00721": {
+    "id": "bitext-00721",
+    "query": "帮忙取消订单 {{Order Number}}",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-00212": {
+    "id": "bitext-00212",
+    "query": "我需要协助取消订单 {{Order Number}}",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-00318": {
+    "id": "bitext-00318",
+    "query": "我不知道如何取消购买 {{Order Number}}",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-00048": {
+    "id": "bitext-00048",
+    "query": "协助取消购买 {{Order Number}}",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-03224": {
+    "id": "bitext-03224",
+    "query": "想看看提前退出违约金，我该怎么做",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-03466": {
+    "id": "bitext-03466",
+    "query": "我想看看终止费用，你能帮我吗？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-03872": {
+    "id": "bitext-03872",
+    "query": "帮我查一下终止费用",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-03449": {
+    "id": "bitext-03449",
+    "query": "帮忙查一下提前退出费用",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-03895": {
+    "id": "bitext-03895",
+    "query": "我试着看看提前终止违约金",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-03175": {
+    "id": "bitext-03175",
+    "query": "可以查一下取消违约金吗？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-03103": {
+    "id": "bitext-03103",
+    "query": "我不知道该怎么查提款违约金",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-03138": {
+    "id": "bitext-03138",
+    "query": "我想让人帮我看看取消费用",
+    "gold": "faq_policy",
+    "raw": "human_handoff",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-03332": {
+    "id": "bitext-03332",
+    "query": "帮忙看看这该死的取消费用",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "cancel_order",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-03159": {
+    "id": "bitext-03159",
+    "query": "我得看看提前终止违约金，该怎么做",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-03472": {
+    "id": "bitext-03472",
+    "query": "我不知道我该怎么查看终止违约金",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-03794": {
+    "id": "bitext-03794",
+    "query": "如果我违约解约，你们会收我多少钱？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-03381": {
+    "id": "bitext-03381",
+    "query": "我想看撤销费用，我需要帮助",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-03116": {
+    "id": "bitext-03116",
+    "query": "我不知道我该怎么做才能查看提前退出费用",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-03094": {
+    "id": "bitext-03094",
+    "query": "我到底在哪里能查看这该死的撤销费用？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-04203": {
+    "id": "bitext-04203",
+    "query": "查找账单 #85632",
+    "gold": "faq_policy",
+    "raw": "order_inquiry",
+    "overlay": "order_inquiry",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-03949": {
+    "id": "bitext-03949",
+    "query": "我需要帮助找到来自 {{Person Name}} 的账单",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-04338": {
+    "id": "bitext-04338",
+    "query": "帮忙查找账单#00108",
+    "gold": "faq_policy",
+    "raw": "order_inquiry",
+    "overlay": "order_inquiry",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-04545": {
+    "id": "bitext-04545",
+    "query": "能否找到来自{{Person Name}}的发票",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-04865": {
+    "id": "bitext-04865",
+    "query": "找到账单#37777",
+    "gold": "faq_policy",
+    "raw": "order_inquiry",
+    "overlay": "order_inquiry",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-04710": {
+    "id": "bitext-04710",
+    "query": "我想寻求帮助查看我的发票 #37777",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-04367": {
+    "id": "bitext-04367",
+    "query": "有可能找到账单 #37777 吗？",
+    "gold": "faq_policy",
+    "raw": "order_inquiry",
+    "overlay": "order_inquiry",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-05564": {
+    "id": "bitext-05564",
+    "query": "想要帮助查看可接受的支付方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-05444": {
+    "id": "bitext-05444",
+    "query": "你能帮我看看你们允许的支付方式吗",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-05528": {
+    "id": "bitext-05528",
+    "query": "你能帮我看一下你们允许的支付方式吗？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-05751": {
+    "id": "bitext-05751",
+    "query": "我想看看允许的支付方式，我该怎么做？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-05651": {
+    "id": "bitext-05651",
+    "query": "我在哪里能看到你们接受的支付选项",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-05037": {
+    "id": "bitext-05037",
+    "query": "帮忙查一下接受哪些支付方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-05182": {
+    "id": "bitext-05182",
+    "query": "我想帮忙查一下你们的支付选项",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-05426": {
+    "id": "bitext-05426",
+    "query": "我想要协助列出允许的支付方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-05016": {
+    "id": "bitext-05016",
+    "query": "我在哪里能看到接受的支付选项",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-04977": {
+    "id": "bitext-04977",
+    "query": "我想要帮忙列出你们允许的支付方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-05561": {
+    "id": "bitext-05561",
+    "query": "我想要协助查看可用的支付方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-05752": {
+    "id": "bitext-05752",
+    "query": "想查看可用的支付选项",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-05457": {
+    "id": "bitext-05457",
+    "query": "你能帮我看一下接受的支付方式吗？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-05848": {
+    "id": "bitext-05848",
+    "query": "我得看看你们允许的支付选项，我该怎么做？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-05040": {
+    "id": "bitext-05040",
+    "query": "我得查一下可接受的付款方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-05819": {
+    "id": "bitext-05819",
+    "query": "我能查看你们可用的付款方式吗",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-05656": {
+    "id": "bitext-05656",
+    "query": "我需要协助列出允许的付款方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-05759": {
+    "id": "bitext-05759",
+    "query": "需要协助列出你们可接受的付款方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-05583": {
+    "id": "bitext-05583",
+    "query": "我怎么查看你们可用的付款方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-05784": {
+    "id": "bitext-05784",
+    "query": "帮我列出你们可接受的付款方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-05093": {
+    "id": "bitext-05093",
+    "query": "我需要帮忙查看允许的付款方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-05393": {
+    "id": "bitext-05393",
+    "query": "协助列出你们可接受的付款方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-05108": {
+    "id": "bitext-05108",
+    "query": "帮忙查看你们可接受的付款方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-06360": {
+    "id": "bitext-06360",
+    "query": "服务费用可以报销吗？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-06788": {
+    "id": "bitext-06788",
+    "query": "帮我查一下报销通常需要多长时间",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-06787": {
+    "id": "bitext-06787",
+    "query": "我想找人帮忙查一下你们的报销政策",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-06886": {
+    "id": "bitext-06886",
+    "query": "我可以查一下在哪些情况下我能申请报销吗？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-07103": {
+    "id": "bitext-07103",
+    "query": "我想对你们公司提出消费者索赔",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-07287": {
+    "id": "bitext-07287",
+    "query": "我需要协助提交一份投诉",
+    "gold": "complaint",
+    "raw": "human_handoff",
+    "overlay": "complaint",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-06140": {
+    "id": "bitext-06140",
+    "query": "我得查一下你们的退款政策，能帮我一下吗",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-07703": {
+    "id": "bitext-07703",
+    "query": "我想寻求帮助，对你们公司提出索赔",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-07708": {
+    "id": "bitext-07708",
+    "query": "我想对你们公司提出客户索赔",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-07331": {
+    "id": "bitext-07331",
+    "query": "帮忙对你们公司提出消费者索赔",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-07180": {
+    "id": "bitext-07180",
+    "query": "协助对贵公司提出消费者索赔",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-07881": {
+    "id": "bitext-07881",
+    "query": "你能帮我提出消费者索赔吗？",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-06943": {
+    "id": "bitext-06943",
+    "query": "我得提出索赔",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-07633": {
+    "id": "bitext-07633",
+    "query": "我想对你们企业提出客户索赔",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-07682": {
+    "id": "bitext-07682",
+    "query": "我想寻求帮助，对你们公司提出客户索赔",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-07492": {
+    "id": "bitext-07492",
+    "query": "我不知道我该怎么提出索赔",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-07572": {
+    "id": "bitext-07572",
+    "query": "我得提出索赔，我需要帮助",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-07894": {
+    "id": "bitext-07894",
+    "query": "我想寻求帮助，对你们公司提出投诉",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-06984": {
+    "id": "bitext-06984",
+    "query": "我在你们这里的体验很糟糕，提出投诉",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-07776": {
+    "id": "bitext-07776",
+    "query": "我在你们品牌的体验很差，提出投诉",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-08999": {
+    "id": "bitext-08999",
+    "query": "你能帮我跟客服通话吗？",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-07175": {
+    "id": "bitext-07175",
+    "query": "帮我提出消费者索赔",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-07228": {
+    "id": "bitext-07228",
+    "query": "我想对你们机构提出消费者索赔",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-06937": {
+    "id": "bitext-06937",
+    "query": "我在你们这里的体验很糟糕，我想提出该死的索赔",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-09132": {
+    "id": "bitext-09132",
+    "query": "我需要做什么才能和助理聊天？",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-09582": {
+    "id": "bitext-09582",
+    "query": "怎么和助理说话？",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-09394": {
+    "id": "bitext-09394",
+    "query": "你能帮我跟某人说话吗？",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-09594": {
+    "id": "bitext-09594",
+    "query": "我需要协助和真人客服说话",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-09242": {
+    "id": "bitext-09242",
+    "query": "我不知道我怎样才能联系到接线员",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-09289": {
+    "id": "bitext-09289",
+    "query": "帮我找个人说话",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-09070": {
+    "id": "bitext-09070",
+    "query": "我试着和客服说话",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-09288": {
+    "id": "bitext-09288",
+    "query": "你一点都帮不上忙，你能把我转接给客服吗？",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-09449": {
+    "id": "bitext-09449",
+    "query": "你能帮我跟人工客服说话吗？",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-09696": {
+    "id": "bitext-09696",
+    "query": "你能帮我跟某个人说话吗",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-11928": {
+    "id": "bitext-11928",
+    "query": "我能在{{Delivery Country}}下单吗",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-09375": {
+    "id": "bitext-09375",
+    "query": "我不知道要怎么做才能联系到真人",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-12277": {
+    "id": "bitext-12277",
+    "query": "我需要看看你们提供哪些配送方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-12257": {
+    "id": "bitext-12257",
+    "query": "我打电话来查看配送选项",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-12765": {
+    "id": "bitext-12765",
+    "query": "我想获得帮助，看看有哪些发货选项",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-12359": {
+    "id": "bitext-12359",
+    "query": "给我看看我他妈能选哪些配送选项",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-12743": {
+    "id": "bitext-12743",
+    "query": "你能帮我看看发货选项吗？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-11931": {
+    "id": "bitext-11931",
+    "query": "配送到{{Delivery Country}}",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-12120": {
+    "id": "bitext-12120",
+    "query": "到底能不能从{{Delivery Country}}下单？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-12464": {
+    "id": "bitext-12464",
+    "query": "查看配送选项",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-12671": {
+    "id": "bitext-12671",
+    "query": "可以看看我有哪些发货选项吗？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-12246": {
+    "id": "bitext-12246",
+    "query": "想帮忙看看有哪些配送选项",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-12197": {
+    "id": "bitext-12197",
+    "query": "我在发货选项上遇到了问题",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-12168": {
+    "id": "bitext-12168",
+    "query": "你能帮我看看我能选哪些发货方式吗？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-12214": {
+    "id": "bitext-12214",
+    "query": "你能帮我看一下我有哪些配送方式吗？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-12018": {
+    "id": "bitext-12018",
+    "query": "如何查看配送选项？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-12806": {
+    "id": "bitext-12806",
+    "query": "帮忙看看你们提供哪些配送方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-12312": {
+    "id": "bitext-12312",
+    "query": "我需要帮助看看我能选择哪些配送方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-12151": {
+    "id": "bitext-12151",
+    "query": "你能帮我查一下我有哪些配送方式吗？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-13109": {
+    "id": "bitext-13109",
+    "query": "可以查一下我的货物什么时候到吗？",
+    "gold": "faq_policy",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-11946": {
+    "id": "bitext-11946",
+    "query": "我得查一下你们提供哪些配送方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-13259": {
+    "id": "bitext-13259",
+    "query": "帮忙查一下我多久能收到购买的商品",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-13100": {
+    "id": "bitext-13100",
+    "query": "我想看看我的产品什么时候到，我需要帮助",
+    "gold": "faq_policy",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-12946": {
+    "id": "bitext-12946",
+    "query": "我得查一下我的商品什么时候到，我需要帮助",
+    "gold": "faq_policy",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-13839": {
+    "id": "bitext-13839",
+    "query": "我想更多了解配送周期",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-13307": {
+    "id": "bitext-13307",
+    "query": "我在哪里查看我最快多久能收到商品？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-13422": {
+    "id": "bitext-13422",
+    "query": "一个产品通常需要多长时间才能到？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-13120": {
+    "id": "bitext-13120",
+    "query": "需要查看我的包裹什么时候会到",
+    "gold": "faq_policy",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-15739": {
+    "id": "bitext-15739",
+    "query": "帮我下载{{Person Name}}的那些该死的发票",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-12992": {
+    "id": "bitext-12992",
+    "query": "你能给我看看我的购买什么时候会到吗",
+    "gold": "faq_policy",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-15304": {
+    "id": "bitext-15304",
+    "query": "我想获取发票#00108",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-15124": {
+    "id": "bitext-15124",
+    "query": "我不知道怎么下载{{Person Name}}的发票",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-15313": {
+    "id": "bitext-15313",
+    "query": "需要帮助下载我的发票{{Invoice Number}}",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-15183": {
+    "id": "bitext-15183",
+    "query": "我不知道怎么下载我的账单#00108",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-15115": {
+    "id": "bitext-15115",
+    "query": "我把37777号账单弄丢了，你能发给我吗？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-15505": {
+    "id": "bitext-15505",
+    "query": "我正试着从{{Person Name}}那里拿到那些该死的发票",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-15241": {
+    "id": "bitext-15241",
+    "query": "我不知道要怎么做才能下载00108号发票",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-15196": {
+    "id": "bitext-15196",
+    "query": "我不知道我怎样才能拿到37777号发票",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-15695": {
+    "id": "bitext-15695",
+    "query": "我需要帮助拿到{{Person Name}}的账单",
+    "gold": "faq_policy",
+    "raw": "out_of_scope",
+    "overlay": "out_of_scope",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-15156": {
+    "id": "bitext-15156",
+    "query": "我不知道该怎么做才能下载我的12588号发票",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-15268": {
+    "id": "bitext-15268",
+    "query": "我需要帮助下载{{Person Name}}给我的账单",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-15886": {
+    "id": "bitext-15886",
+    "query": "我不知道我怎样才能下载{{Person Name}}的发票",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-15589": {
+    "id": "bitext-15589",
+    "query": "我不知道我怎样才能下载12588号账单",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-15127": {
+    "id": "bitext-15127",
+    "query": "我不知道我必须做什么才能拿到发票#85632",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-15724": {
+    "id": "bitext-15724",
+    "query": "我不知道我怎样才能拿到{{Person Name}}的账单",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-15004": {
+    "id": "bitext-15004",
+    "query": "我需要帮助拿到{{Person Name}}给我的账单",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-15602": {
+    "id": "bitext-15602",
+    "query": "能不能把{{Person Name}}的那些该死的发票发给我",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-15058": {
+    "id": "bitext-15058",
+    "query": "我不知道我需要做什么才能拿到发票#85632",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-16409": {
+    "id": "bitext-16409",
+    "query": "帮我申请补偿",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-16519": {
+    "id": "bitext-16519",
+    "query": "有可能获得我的钱款的报销吗",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-16648": {
+    "id": "bitext-16648",
+    "query": "你能帮我收到我的钱款的补偿吗？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-15993": {
+    "id": "bitext-15993",
+    "query": "我为一次购买支付了{{Currency Symbol}}{{Refund Amount}}，我试图获得报销",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-16335": {
+    "id": "bitext-16335",
+    "query": "我需要帮助获得我的钱款的补偿",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-16571": {
+    "id": "bitext-16571",
+    "query": "我正在试图获得补偿",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-16292": {
+    "id": "bitext-16292",
+    "query": "帮我申请退还钱款",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-16741": {
+    "id": "bitext-16741",
+    "query": "我在哪里可以收到我的钱款的返还？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-16644": {
+    "id": "bitext-16644",
+    "query": "你能帮我获得钱款退款吗？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-16264": {
+    "id": "bitext-16264",
+    "query": "我不知道我该怎么要求该死的退款",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-16565": {
+    "id": "bitext-16565",
+    "query": "有可能获得钱款退款吗",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-16538": {
+    "id": "bitext-16538",
+    "query": "我在哪里能得到我的钱款的返还？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-16689": {
+    "id": "bitext-16689",
+    "query": "我需要帮助要求该死的报销",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-16388": {
+    "id": "bitext-16388",
+    "query": "我需要帮助要求退还钱款",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-15952": {
+    "id": "bitext-15952",
+    "query": "帮我申请钱款的补偿",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-16283": {
+    "id": "bitext-16283",
+    "query": "我需要获得一笔补偿",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-16228": {
+    "id": "bitext-16228",
+    "query": "我还要多久才能获得钱款退款？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-16541": {
+    "id": "bitext-16541",
+    "query": "我什么时候能拿到退款？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-15950": {
+    "id": "bitext-15950",
+    "query": "我不知道我该怎么申请返利",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-25440": {
+    "id": "bitext-25440",
+    "query": "查看订单{{Order Number}}的状态",
+    "gold": "order_inquiry",
+    "raw": "order_inquiry",
+    "overlay": "order_inquiry",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-25449": {
+    "id": "bitext-25449",
+    "query": "我正在尝试查看购买{{Order Number}}的状态",
+    "gold": "order_inquiry",
+    "raw": "order_inquiry",
+    "overlay": "order_inquiry",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-25015": {
+    "id": "bitext-25015",
+    "query": "正在检查订单 {{Order Number}} 的状态",
+    "gold": "order_inquiry",
+    "raw": "order_inquiry",
+    "overlay": "order_inquiry",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-25492": {
+    "id": "bitext-25492",
+    "query": "我需要帮助查看购买 {{Order Number}} 的该死的预计送达时间",
+    "gold": "order_inquiry",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-25224": {
+    "id": "bitext-25224",
+    "query": "我需要帮助找到购买{{Order Number}}",
+    "gold": "order_inquiry",
+    "raw": "order_inquiry",
+    "overlay": "order_inquiry",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-24921": {
+    "id": "bitext-24921",
+    "query": "我正在尝试查看购买 {{Order Number}} 的预计送达时间",
+    "gold": "order_inquiry",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-25043": {
+    "id": "bitext-25043",
+    "query": "我必须查询购买 {{Order Number}} 的当前状态",
+    "gold": "order_inquiry",
+    "raw": "order_inquiry",
+    "overlay": "order_inquiry",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-26194": {
+    "id": "bitext-26194",
+    "query": "我不知道如何追踪我的退款",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-24939": {
+    "id": "bitext-24939",
+    "query": "我需要做什么才能查看购买 {{Order Number}} 的状态？",
+    "gold": "order_inquiry",
+    "raw": "order_inquiry",
+    "overlay": "order_inquiry",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-26014": {
+    "id": "bitext-26014",
+    "query": "我在哪里能知道退款是否有任何问题？",
+    "gold": "refund",
+    "raw": "ERROR",
+    "overlay": "ERROR",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-26140": {
+    "id": "bitext-26140",
+    "query": "我在哪里能看到退款是否有任何更新？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-25955": {
+    "id": "bitext-25955",
+    "query": "你能帮我查看我的补偿状态吗？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-25891": {
+    "id": "bitext-25891",
+    "query": "我期待一笔 {{Currency Symbol}}{{Refund Amount}} 的退款，它已经处理了吗？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-26100": {
+    "id": "bitext-26100",
+    "query": "你能帮我查看我的返利状态吗？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-25912": {
+    "id": "bitext-25912",
+    "query": "帮忙了解退款是否有任何新情况",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-26549": {
+    "id": "bitext-26549",
+    "query": "你能帮我查看返利的当前状态吗？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-26473": {
+    "id": "bitext-26473",
+    "query": "怎么查看我的退款状态？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": true,
+    "split": "dev"
+  },
+  "bitext-25877": {
+    "id": "bitext-25877",
+    "query": "我期望有 {{Refund Amount}} 美元的报销",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-25884": {
+    "id": "bitext-25884",
+    "query": "我期望有 {{Refund Amount}} 美元的返款",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-26435": {
+    "id": "bitext-26435",
+    "query": "我可以查看我的退款状态吗？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-26828": {
+    "id": "bitext-26828",
+    "query": "我期望有 {{Currency Symbol}}{{Refund Amount}} 的补偿，处理了吗",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-26227": {
+    "id": "bitext-26227",
+    "query": "我怎么才能查看我的退款状态",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-25961": {
+    "id": "bitext-25961",
+    "query": "我想看看我的补偿当前状态",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-26390": {
+    "id": "bitext-26390",
+    "query": "我得看看我的退款当前状态，你能帮我吗？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-26049": {
+    "id": "bitext-26049",
+    "query": "我在哪里可以查看我的退款当前状态？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-26457": {
+    "id": "bitext-26457",
+    "query": "我需要帮助查看我的报销当前状态",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-25936": {
+    "id": "bitext-25936",
+    "query": "我想看看我的返款状态",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "dev"
+  },
+  "bitext-00358": {
+    "id": "bitext-00358",
+    "query": "取消订单 {{Order Number}} 有问题",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-00021": {
+    "id": "bitext-00021",
+    "query": "我在取消订单 {{Order Number}} 时遇到了问题",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-00566": {
+    "id": "bitext-00566",
+    "query": "我购买了一些商品，取消订单 {{Order Number}}",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-00172": {
+    "id": "bitext-00172",
+    "query": "我在取消购买 {{Order Number}} 时遇到了问题",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-00385": {
+    "id": "bitext-00385",
+    "query": "我负担不起订单 {{Order Number}}，我需要帮助取消它",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-00248": {
+    "id": "bitext-00248",
+    "query": "取消订单{{Order Number}}时遇到的问题",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-00262": {
+    "id": "bitext-00262",
+    "query": "我不知道我怎样才能取消订单 {{Order Number}}",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-00185": {
+    "id": "bitext-00185",
+    "query": "我需要做什么才能取消订单 {{Order Number}}？",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-00175": {
+    "id": "bitext-00175",
+    "query": "我付不起订单 {{Order Number}}，可以取消它吗？",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-00123": {
+    "id": "bitext-00123",
+    "query": "我订购了一些商品，取消购买 {{Order Number}}",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-00583": {
+    "id": "bitext-00583",
+    "query": "我购买了一些商品，请帮我取消订单{{Order Number}}",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-00381": {
+    "id": "bitext-00381",
+    "query": "我无法支付购买 {{Order Number}}，我该怎么取消它？",
+    "gold": "cancel_order",
+    "raw": "cancel_order",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-03211": {
+    "id": "bitext-03211",
+    "query": "我在哪里可以查看终止违约金",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-03754": {
+    "id": "bitext-03754",
+    "query": "我找不到提前退出违约金，你能帮我吗？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-03280": {
+    "id": "bitext-03280",
+    "query": "你能帮我查一下取消费用吗",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-03714": {
+    "id": "bitext-03714",
+    "query": "我需要查一下提前终止费",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-03446": {
+    "id": "bitext-03446",
+    "query": "我不知道要查提款费用该怎么做",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-03723": {
+    "id": "bitext-03723",
+    "query": "我不知道要查取消费用该做什么",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "cancel_order",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-03680": {
+    "id": "bitext-03680",
+    "query": "给我看看提前退出违约金",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-03713": {
+    "id": "bitext-03713",
+    "query": "我得查一下提款费用，我该怎么做？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-03696": {
+    "id": "bitext-03696",
+    "query": "可以查一下终止费用吗？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-03394": {
+    "id": "bitext-03394",
+    "query": "想让人帮忙看看提款费用",
+    "gold": "faq_policy",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-03870": {
+    "id": "bitext-03870",
+    "query": "你能帮我看一下提前终止费用吗？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-03453": {
+    "id": "bitext-03453",
+    "query": "我不知道要查提款费用该做什么",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-03784": {
+    "id": "bitext-03784",
+    "query": "显示提前终止费用",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-03163": {
+    "id": "bitext-03163",
+    "query": "我不知道怎么查看提前终止费用",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-03691": {
+    "id": "bitext-03691",
+    "query": "显示取消违约金",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-03390": {
+    "id": "bitext-03390",
+    "query": "我得看一下撤销费用",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-03663": {
+    "id": "bitext-03663",
+    "query": "我想有人帮我查看取消违约金",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-03833": {
+    "id": "bitext-03833",
+    "query": "我想查看提前退出费用",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-03262": {
+    "id": "bitext-03262",
+    "query": "我需要帮助查看提前终止费用",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-03003": {
+    "id": "bitext-03003",
+    "query": "给我看一下取消违约金",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "cancel_order",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-03109": {
+    "id": "bitext-03109",
+    "query": "显示撤销费用",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-03593": {
+    "id": "bitext-03593",
+    "query": "我需要协助查看提前终止违约金",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-03243": {
+    "id": "bitext-03243",
+    "query": "违约解约的费用是多少？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-03430": {
+    "id": "bitext-03430",
+    "query": "我得查看撤销费用，帮帮我",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-04356": {
+    "id": "bitext-04356",
+    "query": "我想帮忙快速看一下账单#85632",
+    "gold": "faq_policy",
+    "raw": "order_inquiry",
+    "overlay": "order_inquiry",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04663": {
+    "id": "bitext-04663",
+    "query": "我不知道我需要做什么来查找发票#12588",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04742": {
+    "id": "bitext-04742",
+    "query": "查看八月的发票",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04753": {
+    "id": "bitext-04753",
+    "query": "我需要快速看一下账单#00108",
+    "gold": "faq_policy",
+    "raw": "order_inquiry",
+    "overlay": "order_inquiry",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-03985": {
+    "id": "bitext-03985",
+    "query": "我不知道该怎么做来查看我的账单#85632",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04280": {
+    "id": "bitext-04280",
+    "query": "我怎样才能查找我的账单#37777？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04784": {
+    "id": "bitext-04784",
+    "query": "我想要帮忙查看来自{{Person Name}}的我的账单",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04682": {
+    "id": "bitext-04682",
+    "query": "我需要帮助找到来自{{Person Name}}的我的那些该死的账单",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04143": {
+    "id": "bitext-04143",
+    "query": "协助快速看一下账单#00108",
+    "gold": "faq_policy",
+    "raw": "order_inquiry",
+    "overlay": "order_inquiry",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04478": {
+    "id": "bitext-04478",
+    "query": "我想要协助找到来自{{Person Name}}的我的账单",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04328": {
+    "id": "bitext-04328",
+    "query": "我不知道我怎样才能快速查看账单#37777",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04122": {
+    "id": "bitext-04122",
+    "query": "查看来自{{Person Name}}的发票",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04295": {
+    "id": "bitext-04295",
+    "query": "我怎样才能找到来自{{Person Name}}的账单",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04487": {
+    "id": "bitext-04487",
+    "query": "我如何找到来自{{Person Name}}的我的账单",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04690": {
+    "id": "bitext-04690",
+    "query": "我需要查找来自{{Person Name}}的账单，该怎么做？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04801": {
+    "id": "bitext-04801",
+    "query": "找到来自{{Person Name}}的我的bilps",
+    "gold": "faq_policy",
+    "raw": "out_of_scope",
+    "overlay": "out_of_scope",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04223": {
+    "id": "bitext-04223",
+    "query": "我在哪里可以找到来自{{Person Name}}的我的发票",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-03934": {
+    "id": "bitext-03934",
+    "query": "你能帮我快速看一下账单 #12588 吗？",
+    "gold": "faq_policy",
+    "raw": "order_inquiry",
+    "overlay": "order_inquiry",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04153": {
+    "id": "bitext-04153",
+    "query": "我在哪里能找到来自 {{Person Name}} 的发票",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04184": {
+    "id": "bitext-04184",
+    "query": "我不知道我需要做什么来查看发票 #37777",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04883": {
+    "id": "bitext-04883",
+    "query": "我怎样才能快速查看来自 {{Person Name}} 的发票？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04297": {
+    "id": "bitext-04297",
+    "query": "我怎样才能看到来自 {{Person Name}} 的账单？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04457": {
+    "id": "bitext-04457",
+    "query": "想看看账单 #37777",
+    "gold": "faq_policy",
+    "raw": "order_inquiry",
+    "overlay": "order_inquiry",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04701": {
+    "id": "bitext-04701",
+    "query": "我不知道我怎样才能查看我的账单 #37777",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-03925": {
+    "id": "bitext-03925",
+    "query": "你能帮我查看账单 #12588 吗？",
+    "gold": "faq_policy",
+    "raw": "order_inquiry",
+    "overlay": "order_inquiry",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04204": {
+    "id": "bitext-04204",
+    "query": "我需要帮助找到我那份该死的来自 {{Person Name}} 的账单",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04137": {
+    "id": "bitext-04137",
+    "query": "我不知道我怎样才能找到来自 {{Person Name}} 的账单",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04081": {
+    "id": "bitext-04081",
+    "query": "我在哪里查找发票 #12588？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04592": {
+    "id": "bitext-04592",
+    "query": "我不知道我需要做什么来找到发票 #37777",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04728": {
+    "id": "bitext-04728",
+    "query": "需要帮助查看来自 {{Person Name}} 的发票",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04893": {
+    "id": "bitext-04893",
+    "query": "查看来自 {{Person Name}} 的账单",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04103": {
+    "id": "bitext-04103",
+    "query": "我想寻求帮助快速查看发票 #00108",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-05706": {
+    "id": "bitext-05706",
+    "query": "我需要查看支付方式，我该怎么做？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-05231": {
+    "id": "bitext-05231",
+    "query": "我在哪里可以查看你们的支付方式？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-05307": {
+    "id": "bitext-05307",
+    "query": "我不知道怎么查看你们的支付选项",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-05481": {
+    "id": "bitext-05481",
+    "query": "我得把这该死的支付方式列出来，怎么做？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-05356": {
+    "id": "bitext-05356",
+    "query": "允许的支付支付方式有哪些？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-05209": {
+    "id": "bitext-05209",
+    "query": "在哪里查看你们接受哪些支付选项？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-04995": {
+    "id": "bitext-04995",
+    "query": "帮我看一下你们允许的支付选项",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-05277": {
+    "id": "bitext-05277",
+    "query": "我能查看你们他妈的接受的支付选项吗？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-04940": {
+    "id": "bitext-04940",
+    "query": "我可以用PayPal付款吗？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-05912": {
+    "id": "bitext-05912",
+    "query": "我不知道怎么查看你们允许的支付方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-05199": {
+    "id": "bitext-05199",
+    "query": "想要协助查看你们的付款方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-05841": {
+    "id": "bitext-05841",
+    "query": "我不知道我到底怎么才能列出这些该死的付款方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-05026": {
+    "id": "bitext-05026",
+    "query": "列出你们可用的付款方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-05795": {
+    "id": "bitext-05795",
+    "query": "允许的付款方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-05456": {
+    "id": "bitext-05456",
+    "query": "我在哪里可以列出付款方式？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-06906": {
+    "id": "bitext-06906",
+    "query": "我需要帮忙查看你们的退款政策",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-05176": {
+    "id": "bitext-05176",
+    "query": "协助查看允许哪些付款方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-05986": {
+    "id": "bitext-05986",
+    "query": "我得看看退款需要多长时间",
+    "gold": "faq_policy",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-06850": {
+    "id": "bitext-06850",
+    "query": "我想查一下在哪些情况下我可以申请退款",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-06578": {
+    "id": "bitext-06578",
+    "query": "我需要查看你们的退款政策，怎么做？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-06607": {
+    "id": "bitext-06607",
+    "query": "我需要了解在哪些情况下我可以申请报销。",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-06381": {
+    "id": "bitext-06381",
+    "query": "你能告诉我，在哪些情况下我可以申请报销吗？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-06103": {
+    "id": "bitext-06103",
+    "query": "我想获得帮助，了解你们的退款政策。",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-06810": {
+    "id": "bitext-06810",
+    "query": "帮我看看在哪些情况下我可以申请退款。",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-06311": {
+    "id": "bitext-06311",
+    "query": "需要帮助了解在哪些情况下我可以申请退款。",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "refund",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-06690": {
+    "id": "bitext-06690",
+    "query": "你能帮我看看退款需要多长时间吗？",
+    "gold": "faq_policy",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-06478": {
+    "id": "bitext-06478",
+    "query": "告诉我，在什么情况下我可以申请退款。",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-06026": {
+    "id": "bitext-06026",
+    "query": "我需要了解在哪些情况下我可以申请退款。",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-06203": {
+    "id": "bitext-06203",
+    "query": "我想了解在哪些情况下我可以申请退款。",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-06206": {
+    "id": "bitext-06206",
+    "query": "我得查一下在哪些情况下我可以申请退款。",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-06191": {
+    "id": "bitext-06191",
+    "query": "帮我查一下在哪些情况下我可以申请报销。",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-06852": {
+    "id": "bitext-06852",
+    "query": "我想看看你们的报销政策。",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-06784": {
+    "id": "bitext-06784",
+    "query": "我得看看你们的退款政策。",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-06432": {
+    "id": "bitext-06432",
+    "query": "我能看看在什么情况下我可以申请退款吗？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-06816": {
+    "id": "bitext-06816",
+    "query": "需要了解在什么情况下我可以申请报销。",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-06527": {
+    "id": "bitext-06527",
+    "query": "想要帮助查一下在什么情况下我可以申请退款。",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "refund",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-06508": {
+    "id": "bitext-06508",
+    "query": "帮我看看在什么情况下我可以申请退款。",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "refund",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-06752": {
+    "id": "bitext-06752",
+    "query": "我需要看看报销需要多长时间，怎么做？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-06321": {
+    "id": "bitext-06321",
+    "query": "帮我看看在哪些情况下我可以申请报销。",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-06101": {
+    "id": "bitext-06101",
+    "query": "我想看看在哪些情况下我可以申请退款",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-06196": {
+    "id": "bitext-06196",
+    "query": "想帮忙看看在哪些情况下我可以申请退款",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-06256": {
+    "id": "bitext-06256",
+    "query": "帮忙查一下在哪些情况下我可以申请报销",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-06193": {
+    "id": "bitext-06193",
+    "query": "我需要看看报销需要多长时间，我该怎么做？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-06162": {
+    "id": "bitext-06162",
+    "query": "帮忙看看在哪些情况下我可以申请把钱退回来",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-06676": {
+    "id": "bitext-06676",
+    "query": "帮忙看看在哪些情况下我可以申请报销",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-06696": {
+    "id": "bitext-06696",
+    "query": "帮我查一下在哪些情况下我可以申请退款",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "refund",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-06525": {
+    "id": "bitext-06525",
+    "query": "能给我看看在哪些情况下我可以申请退款吗",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "refund",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-06166": {
+    "id": "bitext-06166",
+    "query": "我需要看看你们的退款政策",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-06862": {
+    "id": "bitext-06862",
+    "query": "我需要做什么来查看你们的退款政策",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-07832": {
+    "id": "bitext-07832",
+    "query": "提交投诉",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-06895": {
+    "id": "bitext-06895",
+    "query": "我想找人帮忙看看在哪些情况下我可以申请退款",
+    "gold": "faq_policy",
+    "raw": "human_handoff",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-06951": {
+    "id": "bitext-06951",
+    "query": "你能帮我针对你们公司提出投诉吗？",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-07469": {
+    "id": "bitext-07469",
+    "query": "和你们打交道的体验很糟糕，提交一份客户投诉",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-07144": {
+    "id": "bitext-07144",
+    "query": "帮我向你们企业提出投诉",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-06958": {
+    "id": "bitext-06958",
+    "query": "针对你们的企业提出投诉",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-07448": {
+    "id": "bitext-07448",
+    "query": "我需要帮助来提交消费者投诉",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-07544": {
+    "id": "bitext-07544",
+    "query": "我得向你们企业提出这该死的投诉",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-07203": {
+    "id": "bitext-07203",
+    "query": "怎么对你们企业提出这该死的客户索赔？",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-07698": {
+    "id": "bitext-07698",
+    "query": "在你们品牌的体验很糟糕，提交索赔",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-07082": {
+    "id": "bitext-07082",
+    "query": "我不知道我该怎么提交消费者索赔",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-07425": {
+    "id": "bitext-07425",
+    "query": "我对你们的工作不满意，我需要提出索赔",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-07822": {
+    "id": "bitext-07822",
+    "query": "我需要向你们组织提出索赔",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-07311": {
+    "id": "bitext-07311",
+    "query": "需要帮忙对你们机构提出该死的索赔",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-07451": {
+    "id": "bitext-07451",
+    "query": "我打电话来提出客户投诉",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-07601": {
+    "id": "bitext-07601",
+    "query": "对你们公司提出客户投诉",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-07725": {
+    "id": "bitext-07725",
+    "query": "想要协助对你们企业提出投诉",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-07169": {
+    "id": "bitext-07169",
+    "query": "我对你们的工作不满意，帮我提出客户索赔",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-07524": {
+    "id": "bitext-07524",
+    "query": "我该怎么提出投诉？",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-07438": {
+    "id": "bitext-07438",
+    "query": "我想提出该死的消费者索赔，我该怎么做",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-09593": {
+    "id": "bitext-09593",
+    "query": "帮忙和真人通话",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-07907": {
+    "id": "bitext-07907",
+    "query": "我不知道怎么提出消费者投诉",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-06942": {
+    "id": "bitext-06942",
+    "query": "我打电话来对你们企业提出消费者投诉",
+    "gold": "complaint",
+    "raw": "complaint",
+    "overlay": "complaint",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-09736": {
+    "id": "bitext-09736",
+    "query": "帮我跟接线员通话",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-09151": {
+    "id": "bitext-09151",
+    "query": "跟接线员通话",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-09553": {
+    "id": "bitext-09553",
+    "query": "我需要协助跟在线客服通话",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-09146": {
+    "id": "bitext-09146",
+    "query": "我想联系客服",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-09659": {
+    "id": "bitext-09659",
+    "query": "帮忙和真人客服通话",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-09265": {
+    "id": "bitext-09265",
+    "query": "想要协助和助理通话",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-09503": {
+    "id": "bitext-09503",
+    "query": "我需要协助和一个他妈的真人客服聊天",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-09142": {
+    "id": "bitext-09142",
+    "query": "我不知道该怎么做才能和真人客服聊天",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-09537": {
+    "id": "bitext-09537",
+    "query": "怎么跟某人说话？",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-09425": {
+    "id": "bitext-09425",
+    "query": "我想要协助和一个他妈的真人客服说话",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-09833": {
+    "id": "bitext-09833",
+    "query": "需要协助和一个人聊天",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-09169": {
+    "id": "bitext-09169",
+    "query": "转接给客服",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-09502": {
+    "id": "bitext-09502",
+    "query": "我需要协助和助理说话",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-09561": {
+    "id": "bitext-09561",
+    "query": "你帮不上忙，怎么和客服人员聊天？",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-09296": {
+    "id": "bitext-09296",
+    "query": "我可以和接线员说话吗？",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-09437": {
+    "id": "bitext-09437",
+    "query": "我需要和一个人说话",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-09465": {
+    "id": "bitext-09465",
+    "query": "我想要帮忙和助理说话",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-09871": {
+    "id": "bitext-09871",
+    "query": "帮忙和客服说话",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-09081": {
+    "id": "bitext-09081",
+    "query": "我需要帮助，想和真人客服聊天",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-09618": {
+    "id": "bitext-09618",
+    "query": "你一点用都没有，帮我跟一个该死的客服说话",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-09085": {
+    "id": "bitext-09085",
+    "query": "我得联系客服",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-09573": {
+    "id": "bitext-09573",
+    "query": "我不知道要怎么做才能跟客服说话",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-09306": {
+    "id": "bitext-09306",
+    "query": "我不知道怎么跟一个该死的客服说话",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-08915": {
+    "id": "bitext-08915",
+    "query": "我能跟真人说话吗？",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-09218": {
+    "id": "bitext-09218",
+    "query": "我能联系到真人吗？",
+    "gold": "human_handoff",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-12321": {
+    "id": "bitext-12321",
+    "query": "我试着看看有哪些配送选项可用",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-12273": {
+    "id": "bitext-12273",
+    "query": "需要帮助查看有哪些配送选项",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-12593": {
+    "id": "bitext-12593",
+    "query": "我得查看配送方式，我需要帮助",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-11930": {
+    "id": "bitext-11930",
+    "query": "帮我看看有哪些配送选项可用",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-12399": {
+    "id": "bitext-12399",
+    "query": "帮我查一下我有哪些配送选项",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-11948": {
+    "id": "bitext-11948",
+    "query": "我不知道怎么查看我有哪些配送方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-12834": {
+    "id": "bitext-12834",
+    "query": "我试着查看有哪些发货方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-12314": {
+    "id": "bitext-12314",
+    "query": "我怎么才能看到我可以选择哪些配送选项？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-12149": {
+    "id": "bitext-12149",
+    "query": "我怎么查看有哪些配送方式？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-12800": {
+    "id": "bitext-12800",
+    "query": "你能给我看看有哪些发货选项吗？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-12519": {
+    "id": "bitext-12519",
+    "query": "我不知道该怎么做才能查看发货选项",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-12275": {
+    "id": "bitext-12275",
+    "query": "需要看看有哪些发货选项，怎么做",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-12396": {
+    "id": "bitext-12396",
+    "query": "我不知道怎么查看有哪些配送方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-12597": {
+    "id": "bitext-12597",
+    "query": "我不知道我需要做什么才能看到配送选项",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-12068": {
+    "id": "bitext-12068",
+    "query": "你们配送到日本吗",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-12163": {
+    "id": "bitext-12163",
+    "query": "我想看看有哪些发货方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-12304": {
+    "id": "bitext-12304",
+    "query": "我想要帮助来查看有哪些配送选项",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-12509": {
+    "id": "bitext-12509",
+    "query": "我得查一下有哪些配送方式",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-13625": {
+    "id": "bitext-13625",
+    "query": "需要帮助看看我多久能收到我的商品",
+    "gold": "faq_policy",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-11956": {
+    "id": "bitext-11956",
+    "query": "我想看看我有哪些配送选项，我该怎么做？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-13720": {
+    "id": "bitext-13720",
+    "query": "我在哪里可以查我的包裹什么时候到？",
+    "gold": "faq_policy",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-13824": {
+    "id": "bitext-13824",
+    "query": "你能告诉我我多久能收到我的配送吗？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-13836": {
+    "id": "bitext-13836",
+    "query": "帮我看看我多久能收到商品",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-13279": {
+    "id": "bitext-13279",
+    "query": "我得看看我多久能收到商品",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-13699": {
+    "id": "bitext-13699",
+    "query": "我想帮忙查一下我最快多久能收到订单",
+    "gold": "faq_policy",
+    "raw": "logistics",
+    "overlay": "order_inquiry",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-13477": {
+    "id": "bitext-13477",
+    "query": "我在哪里可以看到配送需要多长时间？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-13694": {
+    "id": "bitext-13694",
+    "query": "我想看看我最快多久能收到包裹",
+    "gold": "faq_policy",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-13558": {
+    "id": "bitext-13558",
+    "query": "我怎样才能查这个物品送达需要多长时间？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-13610": {
+    "id": "bitext-13610",
+    "query": "我打电话来查一下送货需要多长时间才能到",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-13795": {
+    "id": "bitext-13795",
+    "query": "我得看看我的商品什么时候到，帮帮我",
+    "gold": "faq_policy",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-13855": {
+    "id": "bitext-13855",
+    "query": "我打电话来看看我的产品什么时候到",
+    "gold": "faq_policy",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-13619": {
+    "id": "bitext-13619",
+    "query": "你能帮我查一下我最快多久能收到货吗",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-13660": {
+    "id": "bitext-13660",
+    "query": "想要帮助看看我最快多久能收到我的产品",
+    "gold": "faq_policy",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-13354": {
+    "id": "bitext-13354",
+    "query": "我在哪里可以找到关于配送周期的信息？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-13377": {
+    "id": "bitext-13377",
+    "query": "在哪里查看商品送达需要多长时间？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-13844": {
+    "id": "bitext-13844",
+    "query": "我在哪里查看我的物品送达需要多长时间",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-13804": {
+    "id": "bitext-13804",
+    "query": "我能看看我最快多久能收到货件吗？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-13187": {
+    "id": "bitext-13187",
+    "query": "我想看看我的包裹送达需要多长时间",
+    "gold": "faq_policy",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-13748": {
+    "id": "bitext-13748",
+    "query": "我在哪里查看我的包裹送达需要多长时间？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-13587": {
+    "id": "bitext-13587",
+    "query": "帮我查一下我的产品什么时候到",
+    "gold": "faq_policy",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-13244": {
+    "id": "bitext-13244",
+    "query": "我得看看我的送货需要多长时间才能到",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-13595": {
+    "id": "bitext-13595",
+    "query": "我打电话来查一下我的包裹什么时候到",
+    "gold": "faq_policy",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-12956": {
+    "id": "bitext-12956",
+    "query": "我想获得帮助，查看我的物品什么时候会到",
+    "gold": "faq_policy",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-13496": {
+    "id": "bitext-13496",
+    "query": "帮忙看看我多久能收到这个产品",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-13850": {
+    "id": "bitext-13850",
+    "query": "我打电话来查一下我的配送要多久才能到",
+    "gold": "faq_policy",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-13251": {
+    "id": "bitext-13251",
+    "query": "我不知道怎么查看我的购买什么时候会到",
+    "gold": "faq_policy",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-13898": {
+    "id": "bitext-13898",
+    "query": "想要帮助查看这个货件要多久",
+    "gold": "faq_policy",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-15894": {
+    "id": "bitext-15894",
+    "query": "我想下载{{Person Name}}的发票，帮帮我",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-15553": {
+    "id": "bitext-15553",
+    "query": "需要下载我的账单#85632",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-12988": {
+    "id": "bitext-12988",
+    "query": "我必须查看我的包裹什么时候会到，帮帮我",
+    "gold": "faq_policy",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-15201": {
+    "id": "bitext-15201",
+    "query": "我需要帮助获取{{Person Name}}的发票",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-15019": {
+    "id": "bitext-15019",
+    "query": "你能帮我从{{Person Name}}那里拿到账单吗？",
+    "gold": "faq_policy",
+    "raw": "out_of_scope",
+    "overlay": "out_of_scope",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-15107": {
+    "id": "bitext-15107",
+    "query": "获取十二月的发票",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-15660": {
+    "id": "bitext-15660",
+    "query": "你能把{{Person Name}}的那些该死的发票邮寄给我吗？",
+    "gold": "faq_policy",
+    "raw": "ERROR",
+    "overlay": "ERROR",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-15145": {
+    "id": "bitext-15145",
+    "query": "获取{{Person Name}}的发票",
+    "gold": "faq_policy",
+    "raw": "out_of_scope",
+    "overlay": "out_of_scope",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-15459": {
+    "id": "bitext-15459",
+    "query": "你会把{{Person Name}}的账单邮寄给我吗",
+    "gold": "faq_policy",
+    "raw": "out_of_scope",
+    "overlay": "out_of_scope",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-15621": {
+    "id": "bitext-15621",
+    "query": "在哪里下载12588号账单？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-15850": {
+    "id": "bitext-15850",
+    "query": "你能帮我下载{{Person Name}}的发票吗",
+    "gold": "faq_policy",
+    "raw": "ERROR",
+    "overlay": "ERROR",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-15488": {
+    "id": "bitext-15488",
+    "query": "你能把我从{{Person Name}}那里的发票发给我吗",
+    "gold": "faq_policy",
+    "raw": "human_handoff",
+    "overlay": "human_handoff",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-15178": {
+    "id": "bitext-15178",
+    "query": "我必须拿到{{Person Name}}的发票，我该怎么做",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-15854": {
+    "id": "bitext-15854",
+    "query": "我想拿到{{Person Name}}给我的发票，我需要帮助",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-15626": {
+    "id": "bitext-15626",
+    "query": "有可能拿到我的00108号账单吗？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-15855": {
+    "id": "bitext-15855",
+    "query": "我不知道我必须做什么才能下载我的账单#37777",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-15723": {
+    "id": "bitext-15723",
+    "query": "你能帮我拿到12588号发票吗",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-14979": {
+    "id": "bitext-14979",
+    "query": "获取发票#00108",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-15786": {
+    "id": "bitext-15786",
+    "query": "我可以下载37777号账单吗？",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-15529": {
+    "id": "bitext-15529",
+    "query": "我想要帮助来下载发票#00108",
+    "gold": "faq_policy",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-16552": {
+    "id": "bitext-16552",
+    "query": "我为这件商品支付了{{Currency Symbol}}{{Refund Amount}}，想要帮助获得返款",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-16289": {
+    "id": "bitext-16289",
+    "query": "我不知道我必须做什么才能获得补偿",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-16359": {
+    "id": "bitext-16359",
+    "query": "协助获得钱款退还",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-16570": {
+    "id": "bitext-16570",
+    "query": "我必须做什么才能收到钱款的返款？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-16691": {
+    "id": "bitext-16691",
+    "query": "你能帮我申请补偿吗？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-16236": {
+    "id": "bitext-16236",
+    "query": "你能帮我申请退还我的钱款吗",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-16098": {
+    "id": "bitext-16098",
+    "query": "我如何获得钱款的报销",
+    "gold": "refund",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-16194": {
+    "id": "bitext-16194",
+    "query": "我必须收到钱款的返款",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-16675": {
+    "id": "bitext-16675",
+    "query": "我为这件商品支付了{{Currency Symbol}}{{Refund Amount}}，我想要获得返款",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-16363": {
+    "id": "bitext-16363",
+    "query": "如何收到我的钱款的报销？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-16872": {
+    "id": "bitext-16872",
+    "query": "帮忙要求退还我的钱款",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-16032": {
+    "id": "bitext-16032",
+    "query": "在哪里可以申请钱款的报销？",
+    "gold": "refund",
+    "raw": "faq_policy",
+    "overlay": "faq_policy",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-16453": {
+    "id": "bitext-16453",
+    "query": "如何申请退还我的钱款",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-16604": {
+    "id": "bitext-16604",
+    "query": "想要帮助以获得钱款的退还",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-16478": {
+    "id": "bitext-16478",
+    "query": "需要获得我的钱款的返还",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-16853": {
+    "id": "bitext-16853",
+    "query": "需要帮助要求退还我的钱",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-16101": {
+    "id": "bitext-16101",
+    "query": "我不知道我该怎么拿到退款",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-16180": {
+    "id": "bitext-16180",
+    "query": "我想要帮助来申请报销这笔钱",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-16597": {
+    "id": "bitext-16597",
+    "query": "我不知道我该怎么获得退款",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-25660": {
+    "id": "bitext-25660",
+    "query": "在哪里查看购买{{Order Number}}的当前状态",
+    "gold": "order_inquiry",
+    "raw": "order_inquiry",
+    "overlay": "order_inquiry",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-25315": {
+    "id": "bitext-25315",
+    "query": "需要帮助查看订单{{Order Number}}的预计到达时间",
+    "gold": "order_inquiry",
+    "raw": "logistics",
+    "overlay": "order_inquiry",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-25696": {
+    "id": "bitext-25696",
+    "query": "订单 {{Order Number}} 当前状态是什么",
+    "gold": "order_inquiry",
+    "raw": "order_inquiry",
+    "overlay": "order_inquiry",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-25528": {
+    "id": "bitext-25528",
+    "query": "查看购买{{Order Number}}的状态",
+    "gold": "order_inquiry",
+    "raw": "order_inquiry",
+    "overlay": "order_inquiry",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-24971": {
+    "id": "bitext-24971",
+    "query": "我想追踪购买{{Order Number}}，我需要帮助",
+    "gold": "order_inquiry",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-24957": {
+    "id": "bitext-24957",
+    "query": "我怎样才能查看购买{{Order Number}}的当前状态？",
+    "gold": "order_inquiry",
+    "raw": "order_inquiry",
+    "overlay": "order_inquiry",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-25510": {
+    "id": "bitext-25510",
+    "query": "我在哪里可以查看购买{{Order Number}}的当前状态",
+    "gold": "order_inquiry",
+    "raw": "order_inquiry",
+    "overlay": "order_inquiry",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-25037": {
+    "id": "bitext-25037",
+    "query": "给我显示订单{{Order Number}}的预计到达时间",
+    "gold": "order_inquiry",
+    "raw": "logistics",
+    "overlay": "order_inquiry",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-25138": {
+    "id": "bitext-25138",
+    "query": "帮忙查看订单 {{Order Number}} 的预计到达时间",
+    "gold": "order_inquiry",
+    "raw": "logistics",
+    "overlay": "order_inquiry",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-25848": {
+    "id": "bitext-25848",
+    "query": "你能给我显示购买{{Order Number}}的预计到达时间吗",
+    "gold": "order_inquiry",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-25518": {
+    "id": "bitext-25518",
+    "query": "想要帮助查看订单{{Order Number}}那该死的预计到达时间",
+    "gold": "order_inquiry",
+    "raw": "logistics",
+    "overlay": "order_inquiry",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-25123": {
+    "id": "bitext-25123",
+    "query": "需要帮助查看购买{{Order Number}}的预计到达时间",
+    "gold": "order_inquiry",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-25624": {
+    "id": "bitext-25624",
+    "query": "我得查看订单{{Order Number}}的预计到达时间",
+    "gold": "order_inquiry",
+    "raw": "logistics",
+    "overlay": "order_inquiry",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-25442": {
+    "id": "bitext-25442",
+    "query": "检查订单 {{Order Number}} 的当前状态",
+    "gold": "order_inquiry",
+    "raw": "order_inquiry",
+    "overlay": "order_inquiry",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-25546": {
+    "id": "bitext-25546",
+    "query": "我想请人帮忙查询购买 {{Order Number}} 的预计送达时间",
+    "gold": "order_inquiry",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-25685": {
+    "id": "bitext-25685",
+    "query": "我看不到订单 {{Order Number}} 的预计送达时间",
+    "gold": "order_inquiry",
+    "raw": "logistics",
+    "overlay": "order_inquiry",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-25231": {
+    "id": "bitext-25231",
+    "query": "如何查看购买 {{Order Number}} 的当前状态？",
+    "gold": "order_inquiry",
+    "raw": "order_inquiry",
+    "overlay": "order_inquiry",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-25470": {
+    "id": "bitext-25470",
+    "query": "你能帮我查一下订单 {{Order Number}} 的预计送达时间吗",
+    "gold": "order_inquiry",
+    "raw": "logistics",
+    "overlay": "order_inquiry",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-25712": {
+    "id": "bitext-25712",
+    "query": "请求协助查看订单 {{Order Number}} 的预计送达时间",
+    "gold": "order_inquiry",
+    "raw": "logistics",
+    "overlay": "order_inquiry",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-25665": {
+    "id": "bitext-25665",
+    "query": "你能帮我看看购买 {{Order Number}} 的预计送达时间吗",
+    "gold": "order_inquiry",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-25524": {
+    "id": "bitext-25524",
+    "query": "我在哪里可以查看购买 {{Order Number}} 的预计送达时间？",
+    "gold": "order_inquiry",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-24926": {
+    "id": "bitext-24926",
+    "query": "请求协助查询购买 {{Order Number}} 的预计送达时间",
+    "gold": "order_inquiry",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-25788": {
+    "id": "bitext-25788",
+    "query": "请求协助查看订单 {{Order Number}} 的当前状态",
+    "gold": "order_inquiry",
+    "raw": "order_inquiry",
+    "overlay": "order_inquiry",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-25633": {
+    "id": "bitext-25633",
+    "query": "想查订单 {{Order Number}} 的预计送达时间，怎么操作",
+    "gold": "order_inquiry",
+    "raw": "logistics",
+    "overlay": "order_inquiry",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-25431": {
+    "id": "bitext-25431",
+    "query": "我非得看到订单 {{Order Number}} 的预计送达时间，我需要帮助",
+    "gold": "order_inquiry",
+    "raw": "logistics",
+    "overlay": "order_inquiry",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-25418": {
+    "id": "bitext-25418",
+    "query": "我想请人帮忙查看购买 {{Order Number}} 的当前状态",
+    "gold": "order_inquiry",
+    "raw": "order_inquiry",
+    "overlay": "order_inquiry",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-25346": {
+    "id": "bitext-25346",
+    "query": "我需要帮助查询订单 {{Order Number}} 的当前状态",
+    "gold": "order_inquiry",
+    "raw": "order_inquiry",
+    "overlay": "order_inquiry",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-25283": {
+    "id": "bitext-25283",
+    "query": "我在哪里可以查看我最近一次购买的预计送达时间？",
+    "gold": "order_inquiry",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-25485": {
+    "id": "bitext-25485",
+    "query": "我想查看订单 {{Order Number}} 的预计送达时间，该怎么做？",
+    "gold": "order_inquiry",
+    "raw": "logistics",
+    "overlay": "order_inquiry",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-26615": {
+    "id": "bitext-26615",
+    "query": "你能帮我查看报销的状态吗？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-25508": {
+    "id": "bitext-25508",
+    "query": "我需要帮助来追踪购买 {{Order Number}}",
+    "gold": "order_inquiry",
+    "raw": "logistics",
+    "overlay": "logistics",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-26793": {
+    "id": "bitext-26793",
+    "query": "如何查看退款的当前状态？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-26822": {
+    "id": "bitext-26822",
+    "query": "我必须查看我的退款状态，你能帮我吗？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-26408": {
+    "id": "bitext-26408",
+    "query": "我想追踪报销，你能帮我吗？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-26038": {
+    "id": "bitext-26038",
+    "query": "在哪里能知道我的补偿是否有任何新消息？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-26334": {
+    "id": "bitext-26334",
+    "query": "我必须查看这该死的补偿状态，你能帮我吗？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-25898": {
+    "id": "bitext-25898",
+    "query": "我无法查看补偿是否有任何新情况",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-26013": {
+    "id": "bitext-26013",
+    "query": "我正在等待一笔 {{Currency Symbol}}{{Refund Amount}} 的退款",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-26436": {
+    "id": "bitext-26436",
+    "query": "在哪里查看这该死的返利当前状态？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-25946": {
+    "id": "bitext-25946",
+    "query": "我必须追踪补偿",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-26853": {
+    "id": "bitext-26853",
+    "query": "帮忙看看报销有没有什么消息",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-26489": {
+    "id": "bitext-26489",
+    "query": "我需要查一下我的退款有没有什么消息",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-26743": {
+    "id": "bitext-26743",
+    "query": "帮我看看报销有没有什么新消息",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-26707": {
+    "id": "bitext-26707",
+    "query": "我可以查一下我报销的当前状态吗？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-26581": {
+    "id": "bitext-26581",
+    "query": "我想查一下我的退款状态，我需要帮助",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-26674": {
+    "id": "bitext-26674",
+    "query": "你能不能帮我查一下这该死的返款状态？",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-26162": {
+    "id": "bitext-26162",
+    "query": "我不知道怎么查看我的退款当前状态",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  },
+  "bitext-26765": {
+    "id": "bitext-26765",
+    "query": "帮我查一下退款有没有什么消息",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": true,
+    "split": "test"
+  },
+  "bitext-26040": {
+    "id": "bitext-26040",
+    "query": "我需要知道我的返款有没有什么消息，帮帮我",
+    "gold": "refund",
+    "raw": "refund",
+    "overlay": "refund",
+    "review_required": false,
+    "split": "test"
+  }
+}

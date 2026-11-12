@@ -1,0 +1,2466 @@
+[
+  {
+    "id": "bitext-00358",
+    "en": "problem witth cancelling order {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order",
+    "zh": "取消订单 {{Order Number}} 有问题",
+    "review_required": true,
+    "review_reasons": [
+      "原文 witth 为 with 的拼写错误",
+      ""
+    ],
+    "group_id": "90fb21d201a76fce",
+    "split": "test"
+  },
+  {
+    "id": "bitext-00211",
+    "en": "ened help with cancelling purchase {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order",
+    "zh": "需要帮助取消购买 {{Order Number}}",
+    "review_required": true,
+    "review_reasons": [
+      "原文 ened 拼写含糊，推测为 need",
+      ""
+    ],
+    "group_id": "a5b0ca4abfea6158",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-00162",
+    "en": "i havegot to cancel purchase {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order",
+    "zh": "我必须取消购买 {{Order Number}}",
+    "review_required": true,
+    "review_reasons": [
+      "原文 havegot 为 have got 的连写",
+      ""
+    ],
+    "group_id": "a5b0ca4abfea6158",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-00185",
+    "en": "what do I ned to do to cancel order {{Order Number}}?",
+    "source_label": "cancel_order",
+    "label": "cancel_order",
+    "zh": "我需要做什么才能取消订单 {{Order Number}}？",
+    "review_required": true,
+    "review_reasons": [
+      "原文 ned 为 need 的拼写错误",
+      ""
+    ],
+    "group_id": "7e3bb25e77069539",
+    "split": "test"
+  },
+  {
+    "id": "bitext-00262",
+    "en": "I don't know how I colud cancel order {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order",
+    "zh": "我不知道我怎样才能取消订单 {{Order Number}}",
+    "review_required": true,
+    "review_reasons": [
+      "原文 colud 为 could 的拼写错误",
+      ""
+    ],
+    "group_id": "61ba03b92056b681",
+    "split": "test"
+  },
+  {
+    "id": "bitext-00614",
+    "en": "how do I cancel purchae {{Order Number}}?",
+    "source_label": "cancel_order",
+    "label": "cancel_order",
+    "zh": "我该如何取消购买 {{Order Number}}？",
+    "review_required": true,
+    "review_reasons": [
+      "原文拼写错误 purchae 应为 purchase",
+      ""
+    ],
+    "group_id": "c92de1daf783a002",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-00504",
+    "en": "can uhelp me cancelliung order {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order",
+    "zh": "你能帮我取消订单 {{Order Number}} 吗",
+    "review_required": true,
+    "review_reasons": [
+      "原文拼写含糊 uhelp、cancelliung，已按原意翻译",
+      ""
+    ],
+    "group_id": "a5b0ca4abfea6158",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-00122",
+    "en": "i do not knwo how to cancel order {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order",
+    "zh": "我不知道如何取消订单 {{Order Number}}",
+    "review_required": true,
+    "review_reasons": [
+      "原文拼写错误 knwo 应为 know",
+      ""
+    ],
+    "group_id": "aba9a98364c1f0ff",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-00318",
+    "en": "i do not know how to cancel purchasw {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order",
+    "zh": "我不知道如何取消购买 {{Order Number}}",
+    "review_required": true,
+    "review_reasons": [
+      "原文拼写错误 purchasw 应为 purchase",
+      ""
+    ],
+    "group_id": "aba9a98364c1f0ff",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-03211",
+    "en": "where can i check the termination penalties",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy",
+    "zh": "我在哪里可以查看终止违约金",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "原文问在哪里查看终止违约金，属具体查询；本地label faq_policy 偏政策说明，语义含糊"
+    ],
+    "group_id": "5507461fdb414da6",
+    "split": "test"
+  },
+  {
+    "id": "bitext-03714",
+    "en": "I need to check the early terfmination fee",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy",
+    "zh": "我需要查一下提前终止费",
+    "review_required": true,
+    "review_reasons": [
+      "原文“terfmination”拼写有误，应为termination",
+      ""
+    ],
+    "group_id": "3d56f32efe2d11a6",
+    "split": "test"
+  },
+  {
+    "id": "bitext-03895",
+    "en": "i try to see the early temrination penalty",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy",
+    "zh": "我试着看看提前终止违约金",
+    "review_required": true,
+    "review_reasons": [
+      "原文“temrination”拼写有误，应为termination",
+      ""
+    ],
+    "group_id": "0e5193f82003e9f6",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-03723",
+    "en": "I do not know what I have to do to check te cancellation fee",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy",
+    "zh": "我不知道要查取消费用该做什么",
+    "review_required": true,
+    "review_reasons": [
+      "原文“te”拼写有误，应为the",
+      ""
+    ],
+    "group_id": "60d90b460d197156",
+    "split": "test"
+  },
+  {
+    "id": "bitext-03696",
+    "en": "is it possible to chcek the termination charges?",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy",
+    "zh": "可以查一下终止费用吗？",
+    "review_required": true,
+    "review_reasons": [
+      "原文“chcek”拼写有误，应为check",
+      ""
+    ],
+    "group_id": "490bd7285d5c2f15",
+    "split": "test"
+  },
+  {
+    "id": "bitext-03332",
+    "en": "help seeing the fucking cancellation charges",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy",
+    "zh": "帮忙看看这该死的取消费用",
+    "review_required": true,
+    "review_reasons": [
+      "原文含粗俗用语“fucking”，译文保留其语气",
+      ""
+    ],
+    "group_id": "904263276b418c3a",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-03159",
+    "en": "i have to see the early termination penalties how to doo it",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy",
+    "zh": "我得看看提前终止违约金，该怎么做",
+    "review_required": true,
+    "review_reasons": [
+      "原文“doo”拼写有误，应为do",
+      ""
+    ],
+    "group_id": "d8232d44c0b1b6ac",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-03453",
+    "en": "i dont know what to do tyo see the withdrawal fees",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy",
+    "zh": "我不知道要查提款费用该做什么",
+    "review_required": true,
+    "review_reasons": [
+      "原文“tyo”拼写有误，应为to",
+      ""
+    ],
+    "group_id": "60d90b460d197156",
+    "split": "test"
+  },
+  {
+    "id": "bitext-03472",
+    "en": "i do not know how i can checkj the termination penalties",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy",
+    "zh": "我不知道我该怎么查看终止违约金",
+    "review_required": true,
+    "review_reasons": [
+      "checkj 疑为 check 的拼写错误",
+      ""
+    ],
+    "group_id": "178a50ad4f93d993",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-03390",
+    "en": "I have to see the withdrawal efe",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy",
+    "zh": "我得看一下撤销费用",
+    "review_required": true,
+    "review_reasons": [
+      "efe 疑为 fee 的拼写错误",
+      ""
+    ],
+    "group_id": "ae603072c270a9cd",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04356",
+    "en": "I want help taking a quick look at bill #85632",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "我想帮忙快速看一下账单#85632",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "译文“我想帮忙”误将I want help译为我想帮忙，语义偏移；且具体账单查询被标为faq_policy，与check_invoice具体查询混淆"
+    ],
+    "group_id": "74daf50dce85697e",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04338",
+    "en": "help looking for the bill #00108",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "帮忙查找账单#00108",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "具体账单查询标为faq_policy，政策与具体查询混淆"
+    ],
+    "group_id": "4f2630709ed54265",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-04663",
+    "en": "I don't know what I need to do to look forthe invoice #12588",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "我不知道我需要做什么来查找发票#12588",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "具体发票查询标为faq_policy，政策与具体查询混淆"
+    ],
+    "group_id": "40bd4d04e3c281bf",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04742",
+    "en": "checking invoices from August",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "查看八月的发票",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "具体发票查询标为faq_policy，政策与具体查询混淆"
+    ],
+    "group_id": "4ffb13c0c1905fde",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04753",
+    "en": "I need to give a quick look at bill #00108",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "我需要快速看一下账单#00108",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "具体账单查询标为faq_policy，政策与具体查询混淆"
+    ],
+    "group_id": "74daf50dce85697e",
+    "split": "test"
+  },
+  {
+    "id": "bitext-03985",
+    "en": "i do not know what to do to cdheck my bill #85632",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "我不知道该怎么做来查看我的账单#85632",
+    "review_required": true,
+    "review_reasons": [
+      "原文cdheck为拼写错误，按check理解",
+      "具体账单查询标为faq_policy，政策与具体查询混淆"
+    ],
+    "group_id": "8aa9b76873c3889f",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04280",
+    "en": "how can I look for my bill #37777?",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "我怎样才能查找我的账单#37777？",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "具体账单查询标为faq_policy，政策与具体查询混淆"
+    ],
+    "group_id": "9684437406b5ba79",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04784",
+    "en": "i want help to check my bill fom {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "我想要帮忙查看来自{{Person Name}}的我的账单",
+    "review_required": true,
+    "review_reasons": [
+      "原文fom为拼写错误，按from理解",
+      "译文“来自{{Person Name}}的我的账单”语序生硬但语义基本对应；具体账单查询标为faq_policy混淆"
+    ],
+    "group_id": "24f8e675e1e4afb7",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04545",
+    "en": "would it be possible to locate the invoice from {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "能否找到来自{{Person Name}}的发票",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "具体发票查询标为faq_policy，政策与具体查询混淆"
+    ],
+    "group_id": "80c6f7fb45fa93b6",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-04865",
+    "en": "find the bill #37777",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "找到账单#37777",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "具体账单查询标为faq_policy，政策与具体查询混淆"
+    ],
+    "group_id": "c753716c61faef05",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-04682",
+    "en": "i need assistance to find my damn bills from {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "我需要帮助找到来自{{Person Name}}的我的那些该死的账单",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "具体账单查询标为faq_policy，政策与具体查询混淆"
+    ],
+    "group_id": "24f8e675e1e4afb7",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04143",
+    "en": "assistance taking a quick look at the bill #00108",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "协助快速看一下账单#00108",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "具体账单查询标为faq_policy，政策与具体查询混淆"
+    ],
+    "group_id": "74daf50dce85697e",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04478",
+    "en": "I want assistance to find my bills from {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "我想要协助找到来自{{Person Name}}的我的账单",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "具体账单查询标为faq_policy，政策与具体查询混淆"
+    ],
+    "group_id": "24f8e675e1e4afb7",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04122",
+    "en": "checking invoice from {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "查看来自{{Person Name}}的发票",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "具体发票查询标为faq_policy，政策与具体查询混淆"
+    ],
+    "group_id": "6c83c7a78afbc199",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04328",
+    "en": "i do not know how i can take a quick look at the bill #37777",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "我不知道我怎样才能快速查看账单#37777",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "译文准确；但原文是具体查看某账单，label为faq_policy（政策类）而非check_invoice，语义层级含糊"
+    ],
+    "group_id": "8aa9b76873c3889f",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04295",
+    "en": "how can i locate the bill ffom {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "我怎样才能找到来自{{Person Name}}的账单",
+    "review_required": true,
+    "review_reasons": [
+      "原文ffom为拼写错误，按from理解",
+      "具体账单查询标为faq_policy，政策与具体查询混淆"
+    ],
+    "group_id": "8aa9b76873c3889f",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04487",
+    "en": "how do i locate my bills from {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "我如何找到来自{{Person Name}}的我的账单",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "具体账单查询标为faq_policy，政策与具体查询混淆"
+    ],
+    "group_id": "6fa2c6679d594622",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04801",
+    "en": "find my bilps from {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "找到来自{{Person Name}}的我的bilps",
+    "review_required": true,
+    "review_reasons": [
+      "原文“bilps”拼写含糊，可能为“bills”等词的误写，按原样保留语义",
+      "译文保留bilps原样；原文为查找具体账单，label为faq_policy而非check_invoice，且bilps拼写含糊"
+    ],
+    "group_id": "7c7e36e5376b76a0",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04690",
+    "en": "I need to look for the bill from {{Person Name}}, how to do it?",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "我需要查找来自{{Person Name}}的账单，该怎么做？",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "具体账单查询标为faq_policy，政策与具体查询混淆"
+    ],
+    "group_id": "ccc0d91e294ace6a",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04223",
+    "en": "where can i locate my invoices from {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "我在哪里可以找到来自{{Person Name}}的我的发票",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "具体发票查询标为faq_policy，政策与具体查询混淆"
+    ],
+    "group_id": "37a289d64ba266a7",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04710",
+    "en": "I want assistance checking my invoice #37777",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "我想寻求帮助查看我的发票 #37777",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "原文是查询具体发票#37777，label为faq_policy（政策类），语义应为具体查询而非政策"
+    ],
+    "group_id": "e35814557e6fb0d2",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-04153",
+    "en": "where do i locate my invoices from {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "我在哪里能找到来自 {{Person Name}} 的发票",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "查询具体发票位置，label为faq_policy，属具体查询非政策"
+    ],
+    "group_id": "37a289d64ba266a7",
+    "split": "test"
+  },
+  {
+    "id": "bitext-03934",
+    "en": "could you help me give a quick look at bill #12588?",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "你能帮我快速看一下账单 #12588 吗？",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "查询具体账单#12588，label为faq_policy，属具体查询非政策"
+    ],
+    "group_id": "74daf50dce85697e",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04883",
+    "en": "how do I give a quick look at the invoice from {{Person Name}}?",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "我怎样才能快速查看来自 {{Person Name}} 的发票？",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "查询具体发票，label为faq_policy，属具体查询非政策"
+    ],
+    "group_id": "97c8945984dfdf79",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04184",
+    "en": "I don't know what I need to do to check the invoice #37777",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "我不知道我需要做什么来查看发票 #37777",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "查询具体发票#37777，label为faq_policy，属具体查询非政策"
+    ],
+    "group_id": "40bd4d04e3c281bf",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04297",
+    "en": "how can I see my bill from {{Person Name}}?",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "我怎样才能看到来自 {{Person Name}} 的账单？",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "查询具体账单，label为faq_policy，属具体查询非政策"
+    ],
+    "group_id": "8aa9b76873c3889f",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04457",
+    "en": "wanna see bill #37777",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "想看看账单 #37777",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "查询具体账单#37777，label为faq_policy，属具体查询非政策"
+    ],
+    "group_id": "af7f576439bd3ada",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04204",
+    "en": "i need assitance to find my bloody bill from {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "我需要帮助找到我那份该死的来自 {{Person Name}} 的账单",
+    "review_required": true,
+    "review_reasons": [
+      "原文含 bloody，带有情绪化语气，已保留",
+      "查询具体账单，label为faq_policy，属具体查询非政策"
+    ],
+    "group_id": "24f8e675e1e4afb7",
+    "split": "test"
+  },
+  {
+    "id": "bitext-03925",
+    "en": "can you help me check bill #12588?",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "你能帮我查看账单 #12588 吗？",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "查询具体账单#12588，label为faq_policy，属具体查询非政策"
+    ],
+    "group_id": "473746695a33c7aa",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04701",
+    "en": "i do not know how i can check my bill #37777",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "我不知道我怎样才能查看我的账单 #37777",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "查询具体账单#37777，label为faq_policy，属具体查询非政策"
+    ],
+    "group_id": "8aa9b76873c3889f",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04137",
+    "en": "I do not know how I could locate my bill from {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "我不知道我怎样才能找到来自 {{Person Name}} 的账单",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "查询具体账单，label为faq_policy，属具体查询非政策"
+    ],
+    "group_id": "8aa9b76873c3889f",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04592",
+    "en": "i do not know what i need to do to find the invoice #37777",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "我不知道我需要做什么来找到发票 #37777",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "查询具体发票#37777，label为faq_policy，属具体查询非政策"
+    ],
+    "group_id": "40bd4d04e3c281bf",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04081",
+    "en": "where do I look for the invoice #12588?",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "我在哪里查找发票 #12588？",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "查询具体发票#12588，label为faq_policy，属具体查询非政策"
+    ],
+    "group_id": "7ec4b43ce8768ccb",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04728",
+    "en": "need assistance to see my invoices from {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "需要帮助查看来自 {{Person Name}} 的发票",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "查询具体发票，label为faq_policy，属具体查询非政策"
+    ],
+    "group_id": "2c8794893098dbe4",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04893",
+    "en": "seemy bill from {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "查看来自 {{Person Name}} 的账单",
+    "review_required": true,
+    "review_reasons": [
+      "原文 seemy 疑为 see my 的拼写含糊，按此理解翻译",
+      "查询具体账单，label为faq_policy，属具体查询非政策"
+    ],
+    "group_id": "79ee67d9a499f5bb",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04367",
+    "en": "is it possible to locate the bill #37777?",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "有可能找到账单 #37777 吗？",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "查询具体账单#37777，label为faq_policy，属具体查询非政策"
+    ],
+    "group_id": "d4aaa677cfb50059",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-04103",
+    "en": "i want assistance taking a quick look at the invoice #00108",
+    "source_label": "check_invoice",
+    "label": "faq_policy",
+    "zh": "我想寻求帮助快速查看发票 #00108",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "查询具体发票#00108，label为faq_policy，属具体查询非政策"
+    ],
+    "group_id": "74daf50dce85697e",
+    "split": "test"
+  },
+  {
+    "id": "bitext-05444",
+    "en": "can ya help me seieng ur allowed payment methods",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy",
+    "zh": "你能帮我看看你们允许的支付方式吗",
+    "review_required": true,
+    "review_reasons": [
+      "原文含拼写含糊 seieng/ur，按 seeing/your 理解翻译",
+      ""
+    ],
+    "group_id": "fa9e59eff434e18f",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-05307",
+    "en": "i do not know how i can see ur payhment options",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy",
+    "zh": "我不知道怎么查看你们的支付选项",
+    "review_required": true,
+    "review_reasons": [
+      "原文\"payhment\"为拼写错误，按payment理解",
+      ""
+    ],
+    "group_id": "48d3213dc96da7ee",
+    "split": "test"
+  },
+  {
+    "id": "bitext-05481",
+    "en": "I have got to list the damn payment methods, how to do it?",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy",
+    "zh": "我得把这该死的支付方式列出来，怎么做？",
+    "review_required": true,
+    "review_reasons": [
+      "原文含粗俗语气词damn",
+      ""
+    ],
+    "group_id": "be5395c62c6cab5b",
+    "split": "test"
+  },
+  {
+    "id": "bitext-05182",
+    "en": "I want help checking your payment options",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy",
+    "zh": "我想帮忙查一下你们的支付选项",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "原文I want help checking意为我想获得帮助来查询，译文“我想帮忙查”误将用户译为帮忙者，语义偏差"
+    ],
+    "group_id": "ba925b692ed8612c",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-05356",
+    "en": "what are the payment payment modalities allowed?",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy",
+    "zh": "允许的支付支付方式有哪些？",
+    "review_required": true,
+    "review_reasons": [
+      "原文payment重复出现",
+      ""
+    ],
+    "group_id": "19e5f2267c3b6e5d",
+    "split": "test"
+  },
+  {
+    "id": "bitext-04977",
+    "en": "I want help listing your allowed payment methods",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy",
+    "zh": "我想要帮忙列出你们允许的支付方式",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "原文I want help listing意为我想获得帮助列出，译文“我想要帮忙列出”误将用户译为帮忙者"
+    ],
+    "group_id": "fa9e59eff434e18f",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-04995",
+    "en": "help me see ur allowed payment optyions",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy",
+    "zh": "帮我看一下你们允许的支付选项",
+    "review_required": true,
+    "review_reasons": [
+      "原文\"optyions\"为拼写错误，按options理解",
+      ""
+    ],
+    "group_id": "cb1872fc5f3085c7",
+    "split": "test"
+  },
+  {
+    "id": "bitext-05277",
+    "en": "can I check your fucking accepted payment options?",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy",
+    "zh": "我能查看你们他妈的接受的支付选项吗？",
+    "review_required": true,
+    "review_reasons": [
+      "原文含粗俗用语fucking",
+      ""
+    ],
+    "group_id": "a2c6e8d57f120dc0",
+    "split": "test"
+  },
+  {
+    "id": "bitext-05752",
+    "en": "wanna check theavailable payment options",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy",
+    "zh": "想查看可用的支付选项",
+    "review_required": true,
+    "review_reasons": [
+      "原文\"theavailable\"缺空格",
+      ""
+    ],
+    "group_id": "c99bc4c0522548ed",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-05457",
+    "en": "can you help me seeing the accetped payment methods?",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy",
+    "zh": "你能帮我看一下接受的支付方式吗？",
+    "review_required": true,
+    "review_reasons": [
+      "原文\"accetped\"为拼写错误，按accepted理解",
+      ""
+    ],
+    "group_id": "fa9e59eff434e18f",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-05819",
+    "en": "can i check ur aailable payment methods",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy",
+    "zh": "我能查看你们可用的付款方式吗",
+    "review_required": true,
+    "review_reasons": [
+      "原文\"aailable\"为拼写错误，应为available",
+      ""
+    ],
+    "group_id": "b6a6e1c9e73a0cb8",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-05583",
+    "en": "how do i see ur available payment modailties",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy",
+    "zh": "我怎么查看你们可用的付款方式",
+    "review_required": true,
+    "review_reasons": [
+      "原文\"modailties\"为拼写错误，应为modalities",
+      ""
+    ],
+    "group_id": "b6a6e1c9e73a0cb8",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-05841",
+    "en": "I do not know how I can list the goddamn payment methods",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy",
+    "zh": "我不知道我到底怎么才能列出这些该死的付款方式",
+    "review_required": true,
+    "review_reasons": [
+      "原文含粗话\"goddamn\"，译文保留其语气",
+      ""
+    ],
+    "group_id": "b9204dc86a54ae9b",
+    "split": "test"
+  },
+  {
+    "id": "bitext-05393",
+    "en": "assistance to list your acepted payment modalities",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy",
+    "zh": "协助列出你们可接受的付款方式",
+    "review_required": true,
+    "review_reasons": [
+      "原文\"acepted\"为拼写错误，应为accepted",
+      ""
+    ],
+    "group_id": "b21749af75dc1288",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-05176",
+    "en": "assistanc to see what payment options are allowed",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy",
+    "zh": "协助查看允许哪些付款方式",
+    "review_required": true,
+    "review_reasons": [
+      "原文\"assistanc\"为拼写错误，应为assistance",
+      ""
+    ],
+    "group_id": "2d30cd799c81c73d",
+    "split": "test"
+  },
+  {
+    "id": "bitext-06906",
+    "en": "i need help seeing ur monbey back policy",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy",
+    "zh": "我需要帮忙查看你们的退款政策",
+    "review_required": true,
+    "review_reasons": [
+      "原文\"monbey back\"为拼写错误，意为退款",
+      ""
+    ],
+    "group_id": "473ac567c7cac4d6",
+    "split": "test"
+  },
+  {
+    "id": "bitext-06578",
+    "en": "I need to check your reimbursement policy, hbow to do it?",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy",
+    "zh": "我需要查看你们的退款政策，怎么做？",
+    "review_required": true,
+    "review_reasons": [
+      "原文\"hbow\"为拼写错误，应为how",
+      ""
+    ],
+    "group_id": "75ffb9ee482e919d",
+    "split": "test"
+  },
+  {
+    "id": "bitext-06381",
+    "en": "can ushow me in which cases can i ask for reimbursements",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy",
+    "zh": "你能告诉我，在哪些情况下我可以申请报销吗？",
+    "review_required": true,
+    "review_reasons": [
+      "原文“ushow”疑为“you show”拼写含糊",
+      ""
+    ],
+    "group_id": "822969669aa54675",
+    "split": "test"
+  },
+  {
+    "id": "bitext-06311",
+    "en": "need help to see in which cases can I request my money bac",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy",
+    "zh": "需要帮助了解在哪些情况下我可以申请退款。",
+    "review_required": true,
+    "review_reasons": [
+      "原文“bac”疑为“back”拼写不全",
+      ""
+    ],
+    "group_id": "822969669aa54675",
+    "split": "test"
+  },
+  {
+    "id": "bitext-06852",
+    "en": "I'm trying to see ur reimbursement policy",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy",
+    "zh": "我想看看你们的报销政策。",
+    "review_required": true,
+    "review_reasons": [
+      "原文“ur”为“your”的简写",
+      ""
+    ],
+    "group_id": "473ac567c7cac4d6",
+    "split": "test"
+  },
+  {
+    "id": "bitext-06784",
+    "en": "i have got to see ur refund policy",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy",
+    "zh": "我得看看你们的退款政策。",
+    "review_required": true,
+    "review_reasons": [
+      "原文“ur”为“your”的简写",
+      ""
+    ],
+    "group_id": "473ac567c7cac4d6",
+    "split": "test"
+  },
+  {
+    "id": "bitext-06508",
+    "en": "help me to seed in what situations can I ask to be refunded",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy",
+    "zh": "帮我看看在什么情况下我可以申请退款。",
+    "review_required": true,
+    "review_reasons": [
+      "原文“seed”疑为“see”拼写错误",
+      ""
+    ],
+    "group_id": "822969669aa54675",
+    "split": "test"
+  },
+  {
+    "id": "bitext-06527",
+    "en": "want assistance to check in what casew can I request refunds",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy",
+    "zh": "想要帮助查一下在什么情况下我可以申请退款。",
+    "review_required": true,
+    "review_reasons": [
+      "原文“casew”疑为“cases”拼写错误",
+      ""
+    ],
+    "group_id": "822969669aa54675",
+    "split": "test"
+  },
+  {
+    "id": "bitext-06788",
+    "en": "help me to check how long reimbursements usuaoly take",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy",
+    "zh": "帮我查一下报销通常需要多长时间",
+    "review_required": true,
+    "review_reasons": [
+      "原文\"usuaoly\"为拼写错误，意为usually",
+      ""
+    ],
+    "group_id": "7bb5d2cf44c592a7",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-06162",
+    "en": "help to see in which cases can I request ym money back",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy",
+    "zh": "帮忙看看在哪些情况下我可以申请把钱退回来",
+    "review_required": true,
+    "review_reasons": [
+      "原文\"ym\"疑为my的拼写错误",
+      ""
+    ],
+    "group_id": "822969669aa54675",
+    "split": "test"
+  },
+  {
+    "id": "bitext-06696",
+    "en": "help me check in which cases can I request a refund",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy",
+    "zh": "帮我查一下在哪些情况下我可以申请退款",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "译文准确；但“在哪些情况下可以申请退款”既涉及退款政策也涉及退款申请，faq_policy与check_refund_policy边界含糊"
+    ],
+    "group_id": "822969669aa54675",
+    "split": "test"
+  },
+  {
+    "id": "bitext-06525",
+    "en": "can ushow me in which situations can i ask to be refunded",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy",
+    "zh": "能给我看看在哪些情况下我可以申请退款吗",
+    "review_required": true,
+    "review_reasons": [
+      "原文\"ushow\"疑为show的拼写错误",
+      ""
+    ],
+    "group_id": "822969669aa54675",
+    "split": "test"
+  },
+  {
+    "id": "bitext-06862",
+    "en": "what do i need ti do to check ur refund policy",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy",
+    "zh": "我需要做什么来查看你们的退款政策",
+    "review_required": true,
+    "review_reasons": [
+      "原文“ti”应为“to”的拼写错误，已按语义翻译",
+      "译文准确，明确为查看退款政策，faq_policy合适"
+    ],
+    "group_id": "473ac567c7cac4d6",
+    "split": "test"
+  },
+  {
+    "id": "bitext-06958",
+    "en": "lodge reclamtaion against ur business",
+    "source_label": "complaint",
+    "label": "complaint",
+    "zh": "针对你们的企业提出投诉",
+    "review_required": true,
+    "review_reasons": [
+      "原文\"reclamtaion\"为拼写错误，意为reclamation",
+      ""
+    ],
+    "group_id": "c6774140625906f7",
+    "split": "test"
+  },
+  {
+    "id": "bitext-07180",
+    "en": "assistance making a consumer reclamation against ur company",
+    "source_label": "complaint",
+    "label": "complaint",
+    "zh": "协助对贵公司提出消费者索赔",
+    "review_required": true,
+    "review_reasons": [
+      "原文为不完整短语，无主语；'consumer reclamation'译为'消费者索赔'，'ur'为'your'的缩写。",
+      "译文准确对应原文；complaint标签与消费者索赔/投诉语义一致，无歧义"
+    ],
+    "group_id": "a6f16c775c0303d8",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-07544",
+    "en": "I need to lodge a goddamn conplaint against your business",
+    "source_label": "complaint",
+    "label": "complaint",
+    "zh": "我得向你们企业提出这该死的投诉",
+    "review_required": true,
+    "review_reasons": [
+      "原文含脏话goddamn，且conplaint为complaint的拼写错误",
+      ""
+    ],
+    "group_id": "4f14a99ad9fbd2ff",
+    "split": "test"
+  },
+  {
+    "id": "bitext-07682",
+    "en": "I want help making a ucstomer claim against your company",
+    "source_label": "complaint",
+    "label": "complaint",
+    "zh": "我想寻求帮助，对你们公司提出客户索赔",
+    "review_required": true,
+    "review_reasons": [
+      "ucstomer为customer的拼写错误",
+      ""
+    ],
+    "group_id": "54f5a1cbaaa1923d",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-07203",
+    "en": "how to make a damn customer claim against your business?",
+    "source_label": "complaint",
+    "label": "complaint",
+    "zh": "怎么对你们企业提出这该死的客户索赔？",
+    "review_required": true,
+    "review_reasons": [
+      "原文含脏话damn",
+      ""
+    ],
+    "group_id": "b146cfd3d941c933",
+    "split": "test"
+  },
+  {
+    "id": "bitext-07572",
+    "en": "i have got to lodge a reclamaion i need help",
+    "source_label": "complaint",
+    "label": "complaint",
+    "zh": "我得提出索赔，我需要帮助",
+    "review_required": true,
+    "review_reasons": [
+      "reclamaion为reclamation的拼写错误",
+      ""
+    ],
+    "group_id": "a92e993c967641ab",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-07311",
+    "en": "need help to file a damn claim against your organization",
+    "source_label": "complaint",
+    "label": "complaint",
+    "zh": "需要帮忙对你们机构提出该死的索赔",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "claim译为索赔，语义偏向赔偿请求，与投诉不完全一致"
+    ],
+    "group_id": "ecc462cbb60a8cde",
+    "split": "test"
+  },
+  {
+    "id": "bitext-07228",
+    "en": "I want to make a consumer claim against your organization",
+    "source_label": "complaint",
+    "label": "complaint",
+    "zh": "我想对你们机构提出消费者索赔",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "consumer claim译为消费者索赔，偏向赔偿而非投诉"
+    ],
+    "group_id": "54f5a1cbaaa1923d",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-07175",
+    "en": "help me lodge a consumer claim",
+    "source_label": "complaint",
+    "label": "complaint",
+    "zh": "帮我提出消费者索赔",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "consumer claim译为消费者索赔，语义偏向赔偿"
+    ],
+    "group_id": "7a3ec3095daf1817",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-07169",
+    "en": "I am not happy with your work, help lodging a customer claim",
+    "source_label": "complaint",
+    "label": "complaint",
+    "zh": "我对你们的工作不满意，帮我提出客户索赔",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "customer claim译为客户索赔，偏向赔偿而非投诉"
+    ],
+    "group_id": "c4edb167a461f876",
+    "split": "test"
+  },
+  {
+    "id": "bitext-06937",
+    "en": "my experience with uhas been bad i wanna make a bloody claim",
+    "source_label": "complaint",
+    "label": "complaint",
+    "zh": "我在你们这里的体验很糟糕，我想提出该死的索赔",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "claim译为索赔，偏向赔偿请求"
+    ],
+    "group_id": "f8ac60c4ad08c4b5",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-07524",
+    "en": "how could I file a complaont?",
+    "source_label": "complaint",
+    "label": "complaint",
+    "zh": "我该怎么提出投诉？",
+    "review_required": true,
+    "review_reasons": [
+      "原文\"complaont\"拼写有误，应为complaint",
+      ""
+    ],
+    "group_id": "e24ebeee798e4cef",
+    "split": "test"
+  },
+  {
+    "id": "bitext-07438",
+    "en": "I'd like to lodge a damn consumer claim how could i do it",
+    "source_label": "complaint",
+    "label": "complaint",
+    "zh": "我想提出该死的消费者索赔，我该怎么做",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "consumer claim译为消费者索赔，偏向赔偿"
+    ],
+    "group_id": "39e6fd01eb402674",
+    "split": "test"
+  },
+  {
+    "id": "bitext-07907",
+    "en": "I don't know how to lodge a condumer reclamation",
+    "source_label": "complaint",
+    "label": "complaint",
+    "zh": "我不知道怎么提出消费者投诉",
+    "review_required": true,
+    "review_reasons": [
+      "原文\"condumer\"拼写有误，应为consumer",
+      ""
+    ],
+    "group_id": "a2b64cc63bdf69e5",
+    "split": "test"
+  },
+  {
+    "id": "bitext-09553",
+    "en": "i nded assistance to talk to a live agent",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff",
+    "zh": "我需要协助跟在线客服通话",
+    "review_required": true,
+    "review_reasons": [
+      "原文\"nded\"拼写有误，应为needed",
+      "live agent译为在线客服，添加了在线语义，原文仅指真人客服"
+    ],
+    "group_id": "2ae18f55a6edcb5d",
+    "split": "test"
+  },
+  {
+    "id": "bitext-09561",
+    "en": "uarent being helpful how to chat with a agent",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff",
+    "zh": "你帮不上忙，怎么和客服人员聊天？",
+    "review_required": true,
+    "review_reasons": [
+      "原文拼写含糊（uarent 应为 you aren't），语义为抱怨对方不帮忙并询问如何联系人工客服。",
+      "译文准确传达抱怨并询问联系人工客服，human_handoff 标签合适。"
+    ],
+    "group_id": "b52499ddd4ecd661",
+    "split": "test"
+  },
+  {
+    "id": "bitext-09465",
+    "en": "I wan help speaking with an assistant",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff",
+    "zh": "我想要帮忙和助理说话",
+    "review_required": true,
+    "review_reasons": [
+      "原文\"wan\"疑为\"want\"的拼写错误，按\"想要\"理解",
+      ""
+    ],
+    "group_id": "22dbec1a035f6883",
+    "split": "test"
+  },
+  {
+    "id": "bitext-09696",
+    "en": "could ya help me to speak wqith somebody",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff",
+    "zh": "你能帮我跟某个人说话吗",
+    "review_required": true,
+    "review_reasons": [
+      "原文有拼写错误（ya、wqith），译文按语义处理",
+      ""
+    ],
+    "group_id": "f645549ab8ede139",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-09618",
+    "en": "uare not helpful help me talk wity a bloody assistant",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff",
+    "zh": "你一点用都没有，帮我跟一个该死的客服说话",
+    "review_required": true,
+    "review_reasons": [
+      "原文含粗俗用语（bloody），译文保留语气",
+      ""
+    ],
+    "group_id": "2eed8734a047e40f",
+    "split": "test"
+  },
+  {
+    "id": "bitext-09306",
+    "en": "I don't know how to speak with a fucking assistant",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff",
+    "zh": "我不知道怎么跟一个该死的客服说话",
+    "review_required": true,
+    "review_reasons": [
+      "原文含粗俗用语（fucking），译文保留语气",
+      ""
+    ],
+    "group_id": "32b4b064d4d7e8c1",
+    "split": "test"
+  },
+  {
+    "id": "bitext-11928",
+    "en": "can i order frrom {{Delivery Country}}",
+    "source_label": "delivery_options",
+    "label": "faq_policy",
+    "zh": "我能在{{Delivery Country}}下单吗",
+    "review_required": true,
+    "review_reasons": [
+      "保留占位符",
+      ""
+    ],
+    "group_id": "cd2019cba8ec7703",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-12359",
+    "en": "show me what fucking shipping options I can choose",
+    "source_label": "delivery_options",
+    "label": "faq_policy",
+    "zh": "给我看看我他妈能选哪些配送选项",
+    "review_required": true,
+    "review_reasons": [
+      "含粗俗语气词，保留原文情绪",
+      ""
+    ],
+    "group_id": "147192fd179dae7d",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-11931",
+    "en": "deliverids to {{Delivery Country}}",
+    "source_label": "delivery_options",
+    "label": "faq_policy",
+    "zh": "配送到{{Delivery Country}}",
+    "review_required": true,
+    "review_reasons": [
+      "原文拼写含糊（deliverids），语义不明确，按配送至某地理解",
+      "原文拼写含糊，译文按配送至某地理解，语义基本对应"
+    ],
+    "group_id": "e71e33d39f9cbf4f",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-12120",
+    "en": "is it possible to place a damn order from {{Delivery Country}}?",
+    "source_label": "delivery_options",
+    "label": "faq_policy",
+    "zh": "到底能不能从{{Delivery Country}}下单？",
+    "review_required": true,
+    "review_reasons": [
+      "含粗俗语气词，保留原文情绪",
+      "原文含粗俗语气词，译文用“到底”传达情绪，语义对应"
+    ],
+    "group_id": "9e3871bc6be3cda3",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-12068",
+    "en": "do ya ship toJapan",
+    "source_label": "delivery_options",
+    "label": "faq_policy",
+    "zh": "你们配送到日本吗",
+    "review_required": true,
+    "review_reasons": [
+      "原文拼写含糊（toJapan），按“到日本”理解",
+      "原文拼写含糊，译文按“到日本”理解，语义对应"
+    ],
+    "group_id": "c704faf64600486c",
+    "split": "test"
+  },
+  {
+    "id": "bitext-13625",
+    "en": "need assistance to see how soon can I expect my article",
+    "source_label": "delivery_period",
+    "label": "faq_policy",
+    "zh": "需要帮助看看我多久能收到我的商品",
+    "review_required": true,
+    "review_reasons": [
+      "article 指商品，语义含糊",
+      "article译为商品可接受，语义未丢失"
+    ],
+    "group_id": "e90fb1668b09841f",
+    "split": "test"
+  },
+  {
+    "id": "bitext-13836",
+    "en": "help me see how soon can I expect the article",
+    "source_label": "delivery_period",
+    "label": "faq_policy",
+    "zh": "帮我看看我多久能收到商品",
+    "review_required": true,
+    "review_reasons": [
+      "article 指商品，语义含糊",
+      "article译为商品可接受"
+    ],
+    "group_id": "e90fb1668b09841f",
+    "split": "test"
+  },
+  {
+    "id": "bitext-13279",
+    "en": "I have to ese how soon can I expect the article",
+    "source_label": "delivery_period",
+    "label": "faq_policy",
+    "zh": "我得看看我多久能收到商品",
+    "review_required": true,
+    "review_reasons": [
+      "原文 ese 疑为 see 的拼写错误",
+      "原文拼写错误不影响语义"
+    ],
+    "group_id": "e90fb1668b09841f",
+    "split": "test"
+  },
+  {
+    "id": "bitext-13259",
+    "en": "assistance to check how soon can i exepct the purchase",
+    "source_label": "delivery_period",
+    "label": "faq_policy",
+    "zh": "帮忙查一下我多久能收到购买的商品",
+    "review_required": true,
+    "review_reasons": [
+      "原文 exepct 为 expect 的拼写错误",
+      "原文拼写错误不影响语义"
+    ],
+    "group_id": "dd998490dd698bb9",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-13619",
+    "en": "can uhelp me check how soon can i epect the delivery",
+    "source_label": "delivery_period",
+    "label": "faq_policy",
+    "zh": "你能帮我查一下我最快多久能收到货吗",
+    "review_required": true,
+    "review_reasons": [
+      "原文\"uhelp\"\"epect\"为拼写含糊，按语义译为帮助、收到",
+      ""
+    ],
+    "group_id": "4604ef5414595a4d",
+    "split": "test"
+  },
+  {
+    "id": "bitext-13187",
+    "en": "I want to see how long it tyakes for my package to arrive",
+    "source_label": "delivery_period",
+    "label": "faq_policy",
+    "zh": "我想看看我的包裹送达需要多长时间",
+    "review_required": true,
+    "review_reasons": [
+      "原文\"tyakes\"为拼写错误，按语义译为需要",
+      ""
+    ],
+    "group_id": "fc21e8ed702deca2",
+    "split": "test"
+  },
+  {
+    "id": "bitext-13587",
+    "en": "hrlp me check when will my product arrive",
+    "source_label": "delivery_period",
+    "label": "faq_policy",
+    "zh": "帮我查一下我的产品什么时候到",
+    "review_required": true,
+    "review_reasons": [
+      "原文\"hrlp\"为拼写错误，按语义译为帮助",
+      ""
+    ],
+    "group_id": "0bd399ff95a036a2",
+    "split": "test"
+  },
+  {
+    "id": "bitext-13595",
+    "en": "i call to check when my parcel is gonna arive",
+    "source_label": "delivery_period",
+    "label": "faq_policy",
+    "zh": "我打电话来查一下我的包裹什么时候到",
+    "review_required": true,
+    "review_reasons": [
+      "原文\"arive\"为拼写错误，按语义译为到达",
+      ""
+    ],
+    "group_id": "b4cf86f6e576a667",
+    "split": "test"
+  },
+  {
+    "id": "bitext-12956",
+    "en": "I want assistance seeing when my item is going to arrive",
+    "source_label": "delivery_period",
+    "label": "faq_policy",
+    "zh": "我想获得帮助，查看我的物品什么时候会到",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "询问具体物品到达时间，属delivery_period，标为faq_policy含糊"
+    ],
+    "group_id": "1cbe256e8c90b5ff",
+    "split": "test"
+  },
+  {
+    "id": "bitext-12992",
+    "en": "can ya show me when my purchase is gonna arrive",
+    "source_label": "delivery_period",
+    "label": "faq_policy",
+    "zh": "你能给我看看我的购买什么时候会到吗",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "询问购买到达时间，属delivery_period，标为faq_policy含糊"
+    ],
+    "group_id": "aa43485548b3f806",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-13496",
+    "en": "help seeing how soon can I expect the product",
+    "source_label": "delivery_period",
+    "label": "faq_policy",
+    "zh": "帮忙看看我多久能收到这个产品",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "询问多久收到产品，属delivery_period，标为faq_policy含糊"
+    ],
+    "group_id": "b269f6fe9b5cbfab",
+    "split": "test"
+  },
+  {
+    "id": "bitext-13850",
+    "en": "i call to check how long it takes for my delivery to arrive",
+    "source_label": "delivery_period",
+    "label": "faq_policy",
+    "zh": "我打电话来查一下我的配送要多久才能到",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "查询配送时长，属delivery_period，标为faq_policy含糊"
+    ],
+    "group_id": "fc21e8ed702deca2",
+    "split": "test"
+  },
+  {
+    "id": "bitext-13251",
+    "en": "I do not know how I can see when will my purchase arrive",
+    "source_label": "delivery_period",
+    "label": "faq_policy",
+    "zh": "我不知道怎么查看我的购买什么时候会到",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "询问购买到达时间，属delivery_period，标为faq_policy含糊"
+    ],
+    "group_id": "9928f67725660da1",
+    "split": "test"
+  },
+  {
+    "id": "bitext-13120",
+    "en": "ned to see when will my package arrive",
+    "source_label": "delivery_period",
+    "label": "faq_policy",
+    "zh": "需要查看我的包裹什么时候会到",
+    "review_required": true,
+    "review_reasons": [
+      "原文\"ned\"为拼写错误，意为need",
+      "询问包裹到达时间，属delivery_period，标为faq_policy含糊"
+    ],
+    "group_id": "14b1b2117385c621",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-13898",
+    "en": "want assistance seeinhg how long the shipment takes",
+    "source_label": "delivery_period",
+    "label": "faq_policy",
+    "zh": "想要帮助查看这个货件要多久",
+    "review_required": true,
+    "review_reasons": [
+      "原文\"seeinhg\"为拼写错误，意为seeing",
+      "询问货件时长，属delivery_period，标为faq_policy含糊"
+    ],
+    "group_id": "ca7664ca51420258",
+    "split": "test"
+  },
+  {
+    "id": "bitext-12988",
+    "en": "I have got to see when will my parcel arrive, help me",
+    "source_label": "delivery_period",
+    "label": "faq_policy",
+    "zh": "我必须查看我的包裹什么时候会到，帮帮我",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "询问包裹到达时间，属delivery_period，标为faq_policy含糊"
+    ],
+    "group_id": "c8d09ce09ecb46a0",
+    "split": "test"
+  },
+  {
+    "id": "bitext-15553",
+    "en": "nede to download my bill #85632",
+    "source_label": "get_invoice",
+    "label": "faq_policy",
+    "zh": "需要下载我的账单#85632",
+    "review_required": true,
+    "review_reasons": [
+      "原文\"nede\"为拼写错误，意为need",
+      "具体下载账单#85632，属get_invoice，标为faq_policy含糊"
+    ],
+    "group_id": "db50f1942d92f779",
+    "split": "test"
+  },
+  {
+    "id": "bitext-15739",
+    "en": "help me to download my goddamn invoices from {{Person Name}}",
+    "source_label": "get_invoice",
+    "label": "faq_policy",
+    "zh": "帮我下载{{Person Name}}的那些该死的发票",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "具体下载发票，属get_invoice，标为faq_policy含糊"
+    ],
+    "group_id": "c2a22fb5c04b5bfa",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-15304",
+    "en": "I want to get invoice #00108",
+    "source_label": "get_invoice",
+    "label": "faq_policy",
+    "zh": "我想获取发票#00108",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "获取具体发票#00108，属get_invoice，标为faq_policy含糊"
+    ],
+    "group_id": "f2a68b55be9d71a0",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-15124",
+    "en": "I don't know how I can download my invoice from {{Person Name}}",
+    "source_label": "get_invoice",
+    "label": "faq_policy",
+    "zh": "我不知道怎么下载{{Person Name}}的发票",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "下载具体发票，属get_invoice，标为faq_policy含糊"
+    ],
+    "group_id": "0a2953a51ec2e00d",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-15201",
+    "en": "i need assistance to get the invoice from {{Person Name}}",
+    "source_label": "get_invoice",
+    "label": "faq_policy",
+    "zh": "我需要帮助获取{{Person Name}}的发票",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "获取具体发票，属get_invoice，标为faq_policy含糊"
+    ],
+    "group_id": "77f25ecfa88726c9",
+    "split": "test"
+  },
+  {
+    "id": "bitext-15894",
+    "en": "I want to download the invoice from {{Person Name}}, help me",
+    "source_label": "get_invoice",
+    "label": "faq_policy",
+    "zh": "我想下载{{Person Name}}的发票，帮帮我",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "下载具体发票，属get_invoice，标为faq_policy含糊"
+    ],
+    "group_id": "f66df61973a15dc8",
+    "split": "test"
+  },
+  {
+    "id": "bitext-15660",
+    "en": "could you mail me my goddamn invoices from {{Person Name}}?",
+    "source_label": "get_invoice",
+    "label": "faq_policy",
+    "zh": "你能把{{Person Name}}的那些该死的发票邮寄给我吗？",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "邮寄具体发票，属get_invoice，标为faq_policy含糊"
+    ],
+    "group_id": "534a9a49023b8d03",
+    "split": "test"
+  },
+  {
+    "id": "bitext-15107",
+    "en": "get invoices from December",
+    "source_label": "get_invoice",
+    "label": "faq_policy",
+    "zh": "获取十二月的发票",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "获取十二月发票，属get_invoice，标为faq_policy含糊"
+    ],
+    "group_id": "e6f05d29803ecf36",
+    "split": "test"
+  },
+  {
+    "id": "bitext-15313",
+    "en": "need assistance downloading my invoice{{Invoice Number}}",
+    "source_label": "get_invoice",
+    "label": "faq_policy",
+    "zh": "需要帮助下载我的发票{{Invoice Number}}",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "下载具体发票，属get_invoice，标为faq_policy含糊"
+    ],
+    "group_id": "c0c625081b04da7c",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-15019",
+    "en": "can you help me get the bills from {{Person Name}}?",
+    "source_label": "get_invoice",
+    "label": "faq_policy",
+    "zh": "你能帮我从{{Person Name}}那里拿到账单吗？",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "译文准确；但“拿到账单”是具体获取账单请求，应属 get_invoice，标为 faq_policy 含糊"
+    ],
+    "group_id": "7b1b62eaf5f554a6",
+    "split": "test"
+  },
+  {
+    "id": "bitext-15183",
+    "en": "I don't know how to download my bill #00108",
+    "source_label": "get_invoice",
+    "label": "faq_policy",
+    "zh": "我不知道怎么下载我的账单#00108",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "下载具体账单#00108，属get_invoice，标为faq_policy含糊"
+    ],
+    "group_id": "0a2953a51ec2e00d",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-15145",
+    "en": "getting invoice from {{Person Name}}",
+    "source_label": "get_invoice",
+    "label": "faq_policy",
+    "zh": "获取{{Person Name}}的发票",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "获取具体发票，属get_invoice，标为faq_policy含糊"
+    ],
+    "group_id": "03eb8c40bca6dd67",
+    "split": "test"
+  },
+  {
+    "id": "bitext-15505",
+    "en": "I'm trying to get th fucking invoices from {{Person Name}}",
+    "source_label": "get_invoice",
+    "label": "faq_policy",
+    "zh": "我正试着从{{Person Name}}那里拿到那些该死的发票",
+    "review_required": true,
+    "review_reasons": [
+      "原文含粗俗用语fucking，译文保留其语气",
+      ""
+    ],
+    "group_id": "36d6a35abcb9d6c6",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-15459",
+    "en": "will umail me the bills from {{Person Name}}",
+    "source_label": "get_invoice",
+    "label": "faq_policy",
+    "zh": "你会把{{Person Name}}的账单邮寄给我吗",
+    "review_required": true,
+    "review_reasons": [
+      "umail拼写含糊，按'邮寄/发邮件给我'理解",
+      ""
+    ],
+    "group_id": "8d85b44a6d107ea2",
+    "split": "test"
+  },
+  {
+    "id": "bitext-15850",
+    "en": "can uhelp me download the invoice from {{Person Name}}",
+    "source_label": "get_invoice",
+    "label": "faq_policy",
+    "zh": "你能帮我下载{{Person Name}}的发票吗",
+    "review_required": true,
+    "review_reasons": [
+      "uhelp为you help的口语缩写",
+      ""
+    ],
+    "group_id": "f66df61973a15dc8",
+    "split": "test"
+  },
+  {
+    "id": "bitext-15488",
+    "en": "will ya send me my invoices from {{Person Name}}",
+    "source_label": "get_invoice",
+    "label": "faq_policy",
+    "zh": "你能把我从{{Person Name}}那里的发票发给我吗",
+    "review_required": true,
+    "review_reasons": [
+      "ya为you的口语形式",
+      ""
+    ],
+    "group_id": "b05edba86cd28112",
+    "split": "test"
+  },
+  {
+    "id": "bitext-15268",
+    "en": "i need help to download my blls from {{Person Name}}",
+    "source_label": "get_invoice",
+    "label": "faq_policy",
+    "zh": "我需要帮助下载{{Person Name}}给我的账单",
+    "review_required": true,
+    "review_reasons": [
+      "blls为bills的拼写错误",
+      ""
+    ],
+    "group_id": "664d168852fc23e3",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-15855",
+    "en": "i do not know what i have to do to download my bill #37777",
+    "source_label": "get_invoice",
+    "label": "faq_policy",
+    "zh": "我不知道我必须做什么才能下载我的账单#37777",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "译文准确；但原文是具体账单下载求助，label 却为 faq_policy，与 get_invoice 的具体查询意图不符，存在含糊"
+    ],
+    "group_id": "015c9ea33653a4d3",
+    "split": "test"
+  },
+  {
+    "id": "bitext-15723",
+    "en": "can uhelp me to get the invoice #12588",
+    "source_label": "get_invoice",
+    "label": "faq_policy",
+    "zh": "你能帮我拿到12588号发票吗",
+    "review_required": true,
+    "review_reasons": [
+      "uhelp为you help的口语缩写",
+      ""
+    ],
+    "group_id": "ad92ffac15ce7047",
+    "split": "test"
+  },
+  {
+    "id": "bitext-15602",
+    "en": "can usend me the damn invoices from {{Person Name}}",
+    "source_label": "get_invoice",
+    "label": "faq_policy",
+    "zh": "能不能把{{Person Name}}的那些该死的发票发给我",
+    "review_required": true,
+    "review_reasons": [
+      "原文'usend'疑为'send'的拼写错误；'damn'含粗鲁语气，已保留",
+      "译文准确，get_invoice对应具体发票查询，label为faq_policy偏政策类，但源标签本身为get_invoice，此处label与源标签不一致需注意"
+    ],
+    "group_id": "e6d01ee42df0a269",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-16552",
+    "en": "I paid {{Currency Symbol}}{{Refund Amount}} for this item, want help to get a rebate",
+    "source_label": "get_refund",
+    "label": "refund",
+    "zh": "我为这件商品支付了{{Currency Symbol}}{{Refund Amount}}，想要帮助获得返款",
+    "review_required": true,
+    "review_reasons": [
+      "'rebate'译为返款，未明确为退款",
+      "rebate译为返款，属退款类具体申请，label为refund合理"
+    ],
+    "group_id": "8e1fdb6d0f9e03c7",
+    "split": "test"
+  },
+  {
+    "id": "bitext-16519",
+    "en": "would it be possible to obtain a reimbursement of my money",
+    "source_label": "get_refund",
+    "label": "refund",
+    "zh": "有可能获得我的钱款的报销吗",
+    "review_required": true,
+    "review_reasons": [
+      "'reimbursement of my money'语义含糊，直译保留",
+      "reimbursement译为报销略偏，但属退款申请语义，label合理"
+    ],
+    "group_id": "31ba96bdee789162",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-16236",
+    "en": "can ya help me to request a refund of my money",
+    "source_label": "get_refund",
+    "label": "refund",
+    "zh": "你能帮我申请退还我的钱款吗",
+    "review_required": true,
+    "review_reasons": [
+      "'ya'为'you'的口语形式",
+      "准确，label合理"
+    ],
+    "group_id": "1c1721f2064c1467",
+    "split": "test"
+  },
+  {
+    "id": "bitext-16675",
+    "en": "i have paid {{Currency Symbol}}{{Refund Amount}} for this item i wanna obtai a rebate",
+    "source_label": "get_refund",
+    "label": "refund",
+    "zh": "我为这件商品支付了{{Currency Symbol}}{{Refund Amount}}，我想要获得返款",
+    "review_required": true,
+    "review_reasons": [
+      "'obtai'疑为'obtain'的拼写错误",
+      "准确，label合理"
+    ],
+    "group_id": "8e1fdb6d0f9e03c7",
+    "split": "test"
+  },
+  {
+    "id": "bitext-16264",
+    "en": "I do not know how I could ask for goddamn refunds",
+    "source_label": "get_refund",
+    "label": "refund",
+    "zh": "我不知道我该怎么要求该死的退款",
+    "review_required": true,
+    "review_reasons": [
+      "原文含粗俗语气词goddamn，译文保留其语气",
+      ""
+    ],
+    "group_id": "f7c6947a3df98f23",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-16689",
+    "en": "I need help to demand a goddamn reimbursement",
+    "source_label": "get_refund",
+    "label": "refund",
+    "zh": "我需要帮助要求该死的报销",
+    "review_required": true,
+    "review_reasons": [
+      "原文含粗俗语气词goddamn，译文保留其语气",
+      "reimbursement译作报销，语义略偏"
+    ],
+    "group_id": "b74caf04c3674b8a",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-15950",
+    "en": "I don't know how I can request a rebate",
+    "source_label": "get_refund",
+    "label": "refund",
+    "zh": "我不知道我该怎么申请返利",
+    "review_required": true,
+    "review_reasons": [
+      "",
+      "rebate意为返利/折扣，译文正确；但source_label为get_refund，rebate与退款语义不同，译文未漏译，仅标签语义偏差"
+    ],
+    "group_id": "c85b63ff34188130",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-25660",
+    "en": "wqhere to see purchase {{Order Number}} current status",
+    "source_label": "track_order",
+    "label": "order_inquiry",
+    "zh": "在哪里查看购买{{Order Number}}的当前状态",
+    "review_required": true,
+    "review_reasons": [
+      "原文wqhere为拼写错误，按where理解",
+      ""
+    ],
+    "group_id": "b630fa444422cc5c",
+    "split": "test"
+  },
+  {
+    "id": "bitext-25440",
+    "en": "see order {{Order Number}} stats",
+    "source_label": "track_order",
+    "label": "order_inquiry",
+    "zh": "查看订单{{Order Number}}的状态",
+    "review_required": true,
+    "review_reasons": [
+      "原文stats可能为status的拼写错误，按状态理解",
+      ""
+    ],
+    "group_id": "900a3311b0071217",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-25518",
+    "en": "want help to see tthe damn ETA of order {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry",
+    "zh": "想要帮助查看订单{{Order Number}}那该死的预计到达时间",
+    "review_required": true,
+    "review_reasons": [
+      "原文tthe为拼写错误；damn保留原文语气",
+      "damn语气保留，语义完整"
+    ],
+    "group_id": "9ef0ee5b74470ce7",
+    "split": "test"
+  },
+  {
+    "id": "bitext-25848",
+    "en": "can ushow me the ETA of purchase {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry",
+    "zh": "你能给我显示购买{{Order Number}}的预计到达时间吗",
+    "review_required": true,
+    "review_reasons": [
+      "原文can ushow me为拼写/空格错误，按can you show me理解",
+      ""
+    ],
+    "group_id": "c1b585eeac12fd3c",
+    "split": "test"
+  },
+  {
+    "id": "bitext-25123",
+    "en": "need assistance to see the eta of purcase {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry",
+    "zh": "需要帮助查看购买{{Order Number}}的预计到达时间",
+    "review_required": true,
+    "review_reasons": [
+      "原文purcase为拼写错误，按purchase理解",
+      ""
+    ],
+    "group_id": "9ef0ee5b74470ce7",
+    "split": "test"
+  },
+  {
+    "id": "bitext-25442",
+    "en": "chcek order {{Order Number}} current status",
+    "source_label": "track_order",
+    "label": "order_inquiry",
+    "zh": "检查订单 {{Order Number}} 的当前状态",
+    "review_required": true,
+    "review_reasons": [
+      "原文“chcek”为拼写错误，已按“check”理解",
+      ""
+    ],
+    "group_id": "9a4200856333c203",
+    "split": "test"
+  },
+  {
+    "id": "bitext-25015",
+    "en": "checking order {{Order Number}} stagus",
+    "source_label": "track_order",
+    "label": "order_inquiry",
+    "zh": "正在检查订单 {{Order Number}} 的状态",
+    "review_required": true,
+    "review_reasons": [
+      "原文“stagus”为“status”的拼写错误",
+      ""
+    ],
+    "group_id": "3aeade5ed64ce6c7",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-25470",
+    "en": "can uhelp me checking the eta of order {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry",
+    "zh": "你能帮我查一下订单 {{Order Number}} 的预计送达时间吗",
+    "review_required": true,
+    "review_reasons": [
+      "原文“uhelp”为“you help”的连写",
+      ""
+    ],
+    "group_id": "4e03c1a861aa231d",
+    "split": "test"
+  },
+  {
+    "id": "bitext-25431",
+    "en": "I have to see the bloody ETA of order {{Order Number}}, I need help",
+    "source_label": "track_order",
+    "label": "order_inquiry",
+    "zh": "我非得看到订单 {{Order Number}} 的预计送达时间，我需要帮助",
+    "review_required": true,
+    "review_reasons": [
+      "原文含粗俗语气词“bloody”，译文以“非得”体现其强调/不满语气",
+      ""
+    ],
+    "group_id": "9ef0ee5b74470ce7",
+    "split": "test"
+  },
+  {
+    "id": "bitext-25492",
+    "en": "i need help seeing the goddamn eta of purchae {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry",
+    "zh": "我需要帮助查看购买 {{Order Number}} 的该死的预计送达时间",
+    "review_required": true,
+    "review_reasons": [
+      "原文含粗俗语气词“goddamn”，已保留其语气；“purchae”为“purchase”的拼写错误",
+      ""
+    ],
+    "group_id": "a54b8eba7ad01d98",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-24921",
+    "en": "I'm tying to see the ETA of purchase {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry",
+    "zh": "我正在尝试查看购买 {{Order Number}} 的预计送达时间",
+    "review_required": true,
+    "review_reasons": [
+      "原文“tying”应为“trying”的拼写错误",
+      ""
+    ],
+    "group_id": "8122e86ef6f4ea93",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-26194",
+    "en": "I don't know how to track my restitution",
+    "source_label": "track_refund",
+    "label": "refund",
+    "zh": "我不知道如何追踪我的退款",
+    "review_required": true,
+    "review_reasons": [
+      "restitution 译为退款，语义含糊，可能指补偿/返还",
+      "restitution译为退款，可能指补偿/返还，语义含糊"
+    ],
+    "group_id": "837d7edad4d64ce9",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-26140",
+    "en": "where can I see if there are any updates on the restitution?",
+    "source_label": "track_refund",
+    "label": "refund",
+    "zh": "我在哪里能看到退款是否有任何更新？",
+    "review_required": true,
+    "review_reasons": [
+      "restitution 译为退款，语义含糊",
+      "restitution译为退款，语义含糊"
+    ],
+    "group_id": "1d3d462623975492",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-26615",
+    "en": "could you help me to see the status of the reimbursement?",
+    "source_label": "track_refund",
+    "label": "refund",
+    "zh": "你能帮我查看报销的状态吗？",
+    "review_required": true,
+    "review_reasons": [
+      "reimbursement 译为报销，也可能指退款",
+      "reimbursement译为报销，也可能指退款"
+    ],
+    "group_id": "dcb87b6304a4178b",
+    "split": "test"
+  },
+  {
+    "id": "bitext-26793",
+    "en": "how to see the restitution current status?",
+    "source_label": "track_refund",
+    "label": "refund",
+    "zh": "如何查看退款的当前状态？",
+    "review_required": true,
+    "review_reasons": [
+      "restitution 译为退款，语义含糊",
+      "restitution译为退款，语义含糊"
+    ],
+    "group_id": "85fcb73a1e125db7",
+    "split": "test"
+  },
+  {
+    "id": "bitext-25891",
+    "en": "i expect a restitution of {{Currency Symbol}}{{Refund Amount}} was it processed already",
+    "source_label": "track_refund",
+    "label": "refund",
+    "zh": "我期待一笔 {{Currency Symbol}}{{Refund Amount}} 的退款，它已经处理了吗？",
+    "review_required": true,
+    "review_reasons": [
+      "restitution 译为退款，语义含糊",
+      "restitution译为退款，语义含糊"
+    ],
+    "group_id": "99afa2f360447d42",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-25912",
+    "en": "help knowing if there is anything new on the restitution",
+    "source_label": "track_refund",
+    "label": "refund",
+    "zh": "帮忙了解退款是否有任何新情况",
+    "review_required": true,
+    "review_reasons": [
+      "restitution 译为退款，语义含糊",
+      "restitution译为退款，语义含糊"
+    ],
+    "group_id": "9ebfea2f47b08c05",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-26100",
+    "en": "could you help me see my rebate status?",
+    "source_label": "track_refund",
+    "label": "refund",
+    "zh": "你能帮我查看我的返利状态吗？",
+    "review_required": true,
+    "review_reasons": [
+      "rebate 译为返利，也可能指退款",
+      "rebate译为返利，也可能指退款"
+    ],
+    "group_id": "759b71d3bbce2ed3",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-26549",
+    "en": "can you help me check the rebate current status?",
+    "source_label": "track_refund",
+    "label": "refund",
+    "zh": "你能帮我查看返利的当前状态吗？",
+    "review_required": true,
+    "review_reasons": [
+      "rebate 译为返利，也可能指退款",
+      "rebate译为返利，也可能指退款"
+    ],
+    "group_id": "bf4e5bea62c5589d",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-26408",
+    "en": "I want to track the reimbursement, can you help me?",
+    "source_label": "track_refund",
+    "label": "refund",
+    "zh": "我想追踪报销，你能帮我吗？",
+    "review_required": true,
+    "review_reasons": [
+      "reimbursement 译为报销，也可能指退款",
+      "reimbursement译为报销，也可能指退款"
+    ],
+    "group_id": "2da47fe7244dcd8c",
+    "split": "test"
+  },
+  {
+    "id": "bitext-26436",
+    "en": "where to see the bloody rebate current status?",
+    "source_label": "track_refund",
+    "label": "refund",
+    "zh": "在哪里查看这该死的返利当前状态？",
+    "review_required": true,
+    "review_reasons": [
+      "rebate 译为返利，也可能指退款",
+      "rebate译为返利，也可能指退款"
+    ],
+    "group_id": "3ac095e08595f01c",
+    "split": "test"
+  },
+  {
+    "id": "bitext-26473",
+    "en": "how to see the status of my restitution?",
+    "source_label": "track_refund",
+    "label": "refund",
+    "zh": "怎么查看我的退款状态？",
+    "review_required": true,
+    "review_reasons": [
+      "restitution 译为退款，与 refund 同义",
+      ""
+    ],
+    "group_id": "14ec4340aafa535f",
+    "split": "dev"
+  },
+  {
+    "id": "bitext-26674",
+    "en": "can you help me check the goddamn status of the rebate?",
+    "source_label": "track_refund",
+    "label": "refund",
+    "zh": "你能不能帮我查一下这该死的返款状态？",
+    "review_required": true,
+    "review_reasons": [
+      "含 goddamn 的粗鲁语气",
+      ""
+    ],
+    "group_id": "b6dc072123a45513",
+    "split": "test"
+  },
+  {
+    "id": "bitext-26765",
+    "en": "help me to check if there are nay news on the refund",
+    "source_label": "track_refund",
+    "label": "refund",
+    "zh": "帮我查一下退款有没有什么消息",
+    "review_required": true,
+    "review_reasons": [
+      "原文 nay 为 any 的拼写错误",
+      ""
+    ],
+    "group_id": "9479674e085254ef",
+    "split": "test"
+  }
+]

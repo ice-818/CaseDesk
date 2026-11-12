@@ -1,0 +1,3002 @@
+[
+  {
+    "id": "bitext-00339",
+    "en": "help me to cancel purchase {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00172",
+    "en": "I have a problem with canceling purchase {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00244",
+    "en": "assistance to cancel order {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00094",
+    "en": "I want help canceling order {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00358",
+    "en": "problem witth cancelling order {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00211",
+    "en": "ened help with cancelling purchase {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00989",
+    "en": "I no longer want purchase {{Order Number}}, can you cancel it?",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00678",
+    "en": "I do not want the item I purchased, can I cancel the order?",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00566",
+    "en": "I purchased some items, cancel order {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00064",
+    "en": "could you help me cancel purchase {{Order Number}}?",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00110",
+    "en": "need assistance canceling order {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00863",
+    "en": "need assistance to cancel purchase {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00039",
+    "en": "i do not want these article i try to cancel order {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00021",
+    "en": "i have problems with canceling order {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00382",
+    "en": "want assistance canceling purchase {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00385",
+    "en": "I cannot afford order {{Order Number}}, I need help canceling it",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00162",
+    "en": "i havegot to cancel purchase {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00083",
+    "en": "cancelling order",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00185",
+    "en": "what do I ned to do to cancel order {{Order Number}}?",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00262",
+    "en": "I don't know how I colud cancel order {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00242",
+    "en": "I have a problem with cancelling order {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00722",
+    "en": "I do not want this article, cancel order {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00614",
+    "en": "how do I cancel purchae {{Order Number}}?",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00175",
+    "en": "I can't afford order {{Order Number}}, could I cancel it?",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00504",
+    "en": "can uhelp me cancelliung order {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00122",
+    "en": "i do not knwo how to cancel order {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00040",
+    "en": "i need help to cancel purchase {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00647",
+    "en": "I can't pay  for order {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00123",
+    "en": "I have ordered some article, cancel purchase {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00805",
+    "en": "I want to cancel purchase {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00889",
+    "en": "I do not know what to do to cancel purchase {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00574",
+    "en": "I dp not know how to cancel order {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00381",
+    "en": "I can't pay for purchase {{Order Number}}, how can I cancel it?",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00721",
+    "en": "help canceling order {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00649",
+    "en": "I have a question about canceling order {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00212",
+    "en": "I need assistance cancelling order {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00048",
+    "en": "assistance cancelling purchase {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00318",
+    "en": "i do not know how to cancel purchasw {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-00239",
+    "en": "I want help cancellkng purchase {{Order Number}}",
+    "source_label": "cancel_order",
+    "label": "cancel_order"
+  },
+  {
+    "id": "bitext-03211",
+    "en": "where can i check the termination penalties",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03224",
+    "en": "wanna see the early exit penalty how can i do it",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03280",
+    "en": "can ya help me checking the cancellation charges",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03872",
+    "en": "help me to check the termination fees",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03754",
+    "en": "I can't find the early exit penalty, will you help me?",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03466",
+    "en": "I want to see the termination fees, can you help me?",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03449",
+    "en": "help checking the early exit charges",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03714",
+    "en": "I need to check the early terfmination fee",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03895",
+    "en": "i try to see the early temrination penalty",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03446",
+    "en": "I do not know what I need to do to check the withdrawal fees",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03680",
+    "en": "show me the early exit penalty",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03103",
+    "en": "I don't know how I can check the withdrawal penalties",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03723",
+    "en": "I do not know what I have to do to check te cancellation fee",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03713",
+    "en": "I have to check the withdrawal charge, how can I do it?",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03696",
+    "en": "is it possible to chcek the termination charges?",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03175",
+    "en": "is it possible to check the cancellation penalty?",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03138",
+    "en": "I want help to see the cancellation charges",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03394",
+    "en": "want help seeing the withdrawal charge",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03332",
+    "en": "help seeing the fucking cancellation charges",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03159",
+    "en": "i have to see the early termination penalties how to doo it",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03453",
+    "en": "i dont know what to do tyo see the withdrawal fees",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03472",
+    "en": "i do not know how i can checkj the termination penalties",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03794",
+    "en": "how much would ucharge me for breaking the contract",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03870",
+    "en": "can you help me seeing the early termination charges?",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03784",
+    "en": "show early termination charge",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03163",
+    "en": "I don't know how to check the early termination charge",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03691",
+    "en": "show cancellation penalty",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03390",
+    "en": "I have to see the withdrawal efe",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03663",
+    "en": "I want help to check the cancellation penalty",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03262",
+    "en": "I need help to check the early termination fee",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03833",
+    "en": "I want to check the early exit fee",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03003",
+    "en": "show me the cancellation penalty",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03109",
+    "en": "show withdrawal fees",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03593",
+    "en": "I need assistance seeing the early termination penalties",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03243",
+    "en": "what is the fee for breaking the contract",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03430",
+    "en": "I have got to check the withdrawal charges, help me",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03381",
+    "en": "I want to see the withdrawal charge, I need help",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03116",
+    "en": "I don't know what I have to do to see the early exit fees",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03094",
+    "en": "where can I check the damn withdrawal charges?",
+    "source_label": "check_cancellation_fee",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04203",
+    "en": "find bill #85632",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03949",
+    "en": "I need help to locate my bills from {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04356",
+    "en": "I want help taking a quick look at bill #85632",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04338",
+    "en": "help looking for the bill #00108",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04663",
+    "en": "I don't know what I need to do to look forthe invoice #12588",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04742",
+    "en": "checking invoices from August",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04753",
+    "en": "I need to give a quick look at bill #00108",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03985",
+    "en": "i do not know what to do to cdheck my bill #85632",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04280",
+    "en": "how can I look for my bill #37777?",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04784",
+    "en": "i want help to check my bill fom {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04545",
+    "en": "would it be possible to locate the invoice from {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04865",
+    "en": "find the bill #37777",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04682",
+    "en": "i need assistance to find my damn bills from {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04143",
+    "en": "assistance taking a quick look at the bill #00108",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04478",
+    "en": "I want assistance to find my bills from {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04122",
+    "en": "checking invoice from {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04328",
+    "en": "i do not know how i can take a quick look at the bill #37777",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04295",
+    "en": "how can i locate the bill ffom {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04487",
+    "en": "how do i locate my bills from {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04801",
+    "en": "find my bilps from {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04690",
+    "en": "I need to look for the bill from {{Person Name}}, how to do it?",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04223",
+    "en": "where can i locate my invoices from {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04710",
+    "en": "I want assistance checking my invoice #37777",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04153",
+    "en": "where do i locate my invoices from {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03934",
+    "en": "could you help me give a quick look at bill #12588?",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04883",
+    "en": "how do I give a quick look at the invoice from {{Person Name}}?",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04184",
+    "en": "I don't know what I need to do to check the invoice #37777",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04297",
+    "en": "how can I see my bill from {{Person Name}}?",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04457",
+    "en": "wanna see bill #37777",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04204",
+    "en": "i need assitance to find my bloody bill from {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-03925",
+    "en": "can you help me check bill #12588?",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04701",
+    "en": "i do not know how i can check my bill #37777",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04137",
+    "en": "I do not know how I could locate my bill from {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04592",
+    "en": "i do not know what i need to do to find the invoice #37777",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04081",
+    "en": "where do I look for the invoice #12588?",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04728",
+    "en": "need assistance to see my invoices from {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04893",
+    "en": "seemy bill from {{Person Name}}",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04367",
+    "en": "is it possible to locate the bill #37777?",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04103",
+    "en": "i want assistance taking a quick look at the invoice #00108",
+    "source_label": "check_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05706",
+    "en": "I need to check the payment methods, how can I do it?",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05564",
+    "en": "want help seeing the accepted payment methods",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05444",
+    "en": "can ya help me seieng ur allowed payment methods",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05528",
+    "en": "can you help me to see your allowed payment modalities?",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05751",
+    "en": "I want to see the allowed payment methods , how can I do it?",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05651",
+    "en": "where do i see ur accepted payment options",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05231",
+    "en": "where can I check your payment modalities?",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05037",
+    "en": "help checking what payment methods are accepted",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05307",
+    "en": "i do not know how i can see ur payhment options",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05481",
+    "en": "I have got to list the damn payment methods, how to do it?",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05182",
+    "en": "I want help checking your payment options",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05209",
+    "en": "where to check what payment options you accept?",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05426",
+    "en": "i want assistance to list the allowed payment methods",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05356",
+    "en": "what are the payment payment modalities allowed?",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04977",
+    "en": "I want help listing your allowed payment methods",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04995",
+    "en": "help me see ur allowed payment optyions",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05561",
+    "en": "I want assistance to check the available payment modalities",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05016",
+    "en": "where do i see the accepted payment options",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05277",
+    "en": "can I check your fucking accepted payment options?",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05752",
+    "en": "wanna check theavailable payment options",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05848",
+    "en": "I have to see your allowed payment options, how can I do it?",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05457",
+    "en": "can you help me seeing the accetped payment methods?",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05912",
+    "en": "i dont know how to check  ur allowed payment modalities",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-04940",
+    "en": "can I pay with PayPal?",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05040",
+    "en": "i have to check the accepted payment options",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05819",
+    "en": "can i check ur aailable payment methods",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05759",
+    "en": "need assistance listing your accepted payment modalities",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05583",
+    "en": "how do i see ur available payment modailties",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05656",
+    "en": "I need assistance to list the allowed payment options",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05784",
+    "en": "help me list your accepted payment methods",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05199",
+    "en": "want assistance to see your payment modalities",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05026",
+    "en": "list ur available payment methods",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05841",
+    "en": "I do not know how I can list the goddamn payment methods",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05795",
+    "en": "allowed payment options",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05108",
+    "en": "help to see your accepted payment options",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05393",
+    "en": "assistance to list your acepted payment modalities",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05093",
+    "en": "I need help checking the allowed payment modalities",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05456",
+    "en": "where can I list the payment options?",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05176",
+    "en": "assistanc to see what payment options are allowed",
+    "source_label": "check_payment_methods",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06906",
+    "en": "i need help seeing ur monbey back policy",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-05986",
+    "en": "I have got to see how long refunds take",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06850",
+    "en": "I want to check in what situations can I request a refund",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06578",
+    "en": "I need to check your reimbursement policy, hbow to do it?",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06381",
+    "en": "can ushow me in which cases can i ask for reimbursements",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06607",
+    "en": "I need to see in which cases can I ask for reimbursements",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06886",
+    "en": "could I check in what cases can I request reimbursements?",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06103",
+    "en": "I want assistance to see your money back policy",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06810",
+    "en": "help me seeing in which cases can I ask for my money back",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06311",
+    "en": "need help to see in which cases can I request my money bac",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06478",
+    "en": "show me under what circumstances can I ask for my money back",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06690",
+    "en": "could you help me to see how long reimbursements take?",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06203",
+    "en": "I would like to see in which cases can I ask to be refunded",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06206",
+    "en": "I have to check in what cases can I request a refund",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06191",
+    "en": "help me check in which cases can I ask to be reimbursed",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06026",
+    "en": "I need to see in which situations can I ask for a refund",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06360",
+    "en": "are charges for services reimbursable?",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06816",
+    "en": "need to see in what situations can i ask for a reimbursement",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06852",
+    "en": "I'm trying to see ur reimbursement policy",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06784",
+    "en": "i have got to see ur refund policy",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06432",
+    "en": "can i see under what circumstances can i ask for a refund",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06508",
+    "en": "help me to seed in what situations can I ask to be refunded",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06527",
+    "en": "want assistance to check in what casew can I request refunds",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06321",
+    "en": "help me seeing in what cases can I request a reimbursement",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06752",
+    "en": "I need to see how long reimbursements take, how to do it?",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06101",
+    "en": "I'm trying to see in what cases can i request refunds",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06196",
+    "en": "want help to see in which situations can I ask for refunds",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06256",
+    "en": "help checking in which cases can i request a reimbursement",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06193",
+    "en": "I need to see how long reimbursements take, how can I do it?",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06788",
+    "en": "help me to check how long reimbursements usuaoly take",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06787",
+    "en": "I want assistance checking your reimbursement policy",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06162",
+    "en": "help to see in which cases can I request ym money back",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06676",
+    "en": "help to see in which cases can I request a reimbursement",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06696",
+    "en": "help me check in which cases can I request a refund",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06525",
+    "en": "can ushow me in which situations can i ask to be refunded",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06166",
+    "en": "I need to see your refund policy",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06140",
+    "en": "i have to check ur refund policy can i get some help",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06862",
+    "en": "what do i need ti do to check ur refund policy",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-06895",
+    "en": "I want assistance to see in what cases can I ask for refunds",
+    "source_label": "check_refund_policy",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-07832",
+    "en": "file complaint",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-06951",
+    "en": "can you help me lodging a complaint against your company?",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07287",
+    "en": "I need assistance filing a reclamation",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07469",
+    "en": "the experience with you was awful, file a customer complaint",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-06958",
+    "en": "lodge reclamtaion against ur business",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07103",
+    "en": "I'm trying to file a consumer reclamation against ur company",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07703",
+    "en": "i want help making a claim against u company",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07144",
+    "en": "help me to lodge a complaint against your business",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07180",
+    "en": "assistance making a consumer reclamation against ur company",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07708",
+    "en": "I'm trying to make a  customer claim against ur company",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07331",
+    "en": "help to make a consumer claim against your company",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07448",
+    "en": "i need help to file a consumer complaint",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07544",
+    "en": "I need to lodge a goddamn conplaint against your business",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07881",
+    "en": "can you help me to lodge a consumer claim?",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07682",
+    "en": "I want help making a ucstomer claim against your company",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-06943",
+    "en": "I have to make a claim",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07633",
+    "en": "I'd like to make a customer reclamation against ur business",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07203",
+    "en": "how to make a damn customer claim against your business?",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07082",
+    "en": "ido not know how i could file a consumer claim",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07492",
+    "en": "I do not know how I can make a reclamation",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07572",
+    "en": "i have got to lodge a reclamaion i need help",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07698",
+    "en": "the experience with ur brand was bad file a claim",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07425",
+    "en": "I ain't happy with your work, I need to make a claim",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07822",
+    "en": "I need to file a reclamation against your organization",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07894",
+    "en": "I want help making a complaint against your company",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07451",
+    "en": "i call to lodge a customer reclamation",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-06984",
+    "en": "my experience with you was awful, file a reclamation",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07311",
+    "en": "need help to file a damn claim against your organization",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07776",
+    "en": "my experience with your brand was bad, lodge a reclamation",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07228",
+    "en": "I want to make a consumer claim against your organization",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07601",
+    "en": "make customer complaint against ur company",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07175",
+    "en": "help me lodge a consumer claim",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07169",
+    "en": "I am not happy with your work, help lodging a customer claim",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-06937",
+    "en": "my experience with uhas been bad i wanna make a bloody claim",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07524",
+    "en": "how could I file a complaont?",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07725",
+    "en": "want assistance to lodge a complaint against your business",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07438",
+    "en": "I'd like to lodge a damn consumer claim how could i do it",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-07907",
+    "en": "I don't know how to lodge a condumer reclamation",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-06942",
+    "en": "I call to lodge a consumer reclamation against your business",
+    "source_label": "complaint",
+    "label": "complaint"
+  },
+  {
+    "id": "bitext-09593",
+    "en": "help to talk with a person",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09736",
+    "en": "help me to talk to an operator",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09151",
+    "en": "talk to an operator",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09553",
+    "en": "i nded assistance to talk to a live agent",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09146",
+    "en": "I want to contact an agent",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-08999",
+    "en": "can you help me talking with an agent?",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09659",
+    "en": "help talking  with a live agent",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09582",
+    "en": "how to talk to an assistant?",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09265",
+    "en": "want assistance talking to an assistant",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09503",
+    "en": "I need assistance to chat with a fucking human agent",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09394",
+    "en": "can you help me to speak to someone?",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09142",
+    "en": "I do not know what to do to chat with a live agent",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09537",
+    "en": "how to speak to someone?",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09132",
+    "en": "what do  I need to do to chat with an assistant?",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09833",
+    "en": "need assistance to chat with a person",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09594",
+    "en": "i need assistance to speak with a human agent",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09502",
+    "en": "I need assistance speaking with an assistant",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09169",
+    "en": "transferring to agent",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09242",
+    "en": "I do not know how I can contact an operator",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09070",
+    "en": "i try to speak with an agent",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09425",
+    "en": "I want assistance to speak to a fucking live agent",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09296",
+    "en": "can I talk with an operator?",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09437",
+    "en": "I need to speak to a person",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09288",
+    "en": "you aren't helpful at all, will you direct to me an agent?",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09561",
+    "en": "uarent being helpful how to chat with a agent",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09465",
+    "en": "I wan help speaking with an assistant",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09289",
+    "en": "help me speaking with a person",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09081",
+    "en": "i need assistanceto chat with a live agent",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09871",
+    "en": "help speaking to an agent",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09449",
+    "en": "could you help me to speak with an operator?",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09696",
+    "en": "could ya help me to speak wqith somebody",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09085",
+    "en": "i have got to contact an agent",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09375",
+    "en": "I don't know what I have to do to contact a person",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09618",
+    "en": "uare not helpful help me talk wity a bloody assistant",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-08915",
+    "en": "can I talk to a person?",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09306",
+    "en": "I don't know how to speak with a fucking assistant",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09218",
+    "en": "can Icontact a person?",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-09573",
+    "en": "i dont know what i have to do to talk to an assistant",
+    "source_label": "contact_human_agent",
+    "label": "human_handoff"
+  },
+  {
+    "id": "bitext-12593",
+    "en": "i have to check the shipment methods i need assistance",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-11928",
+    "en": "can i order frrom {{Delivery Country}}",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12321",
+    "en": "I try to see what shipment options are available",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12273",
+    "en": "assistance to check what delivery options are there",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-11930",
+    "en": "help me to see what shipping options are available",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12257",
+    "en": "I call to check the shipment options",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12277",
+    "en": "I need to see what delivery methods you offer",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12314",
+    "en": "how can I see what options for delivery I can choose?",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12765",
+    "en": "i want assistance to see the options for shipment",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12359",
+    "en": "show me what fucking shipping options I can choose",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-11948",
+    "en": "i dont know how to see what methods for delivery i have",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12399",
+    "en": "help me check what delivery options I have",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12743",
+    "en": "can you help me to see the shipping options?",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-11931",
+    "en": "deliverids to {{Delivery Country}}",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12834",
+    "en": "i try to check what shipment methods are there",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12464",
+    "en": "check options for delivery",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12149",
+    "en": "how do I check what methods for delivery are there?",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12275",
+    "en": "need to see what shipment options are there how to do it",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12800",
+    "en": "can you show me what shipment options are available?",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12519",
+    "en": "I do not know what to do to check the options for shipment",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12120",
+    "en": "is it possible to place a damn order from {{Delivery Country}}?",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12163",
+    "en": "I want to see what shipment methods are available",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12068",
+    "en": "do ya ship toJapan",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12396",
+    "en": "i dont know how to check what methods for delivery are there",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12671",
+    "en": "is it possible to see what shipping options I have?",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12246",
+    "en": "want help seeing what delivery options are there",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12168",
+    "en": "can you help me to see what shipment methods I can choose?",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12197",
+    "en": "I have a problem with the shipment options",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12597",
+    "en": "I don't know what I need to do to see the shipment options",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12214",
+    "en": "can you help me see what methods for delivery I have?",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12304",
+    "en": "I want assistance to check what shipping options are there",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12018",
+    "en": "how to check the shipping options?",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12806",
+    "en": "assistance seeing what shipment methods you offer",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12312",
+    "en": "i need help seeing what shipping methods i can choose",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12151",
+    "en": "could you help me to check what delivery methods I have?",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12509",
+    "en": "I have got to check what delivery methods are there",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-11946",
+    "en": "I have got to check what methods for delivery you offer",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-11956",
+    "en": "I want to see what shipment options I have, how do I do it?",
+    "source_label": "delivery_options",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13625",
+    "en": "need assistance to see how soon can I expect my article",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13824",
+    "en": "could you show me how soon can I expect my delivery?",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13109",
+    "en": "is it possible to check when my shipment is going to arrive?",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13720",
+    "en": "where do I check when my package is going to arrive?",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13836",
+    "en": "help me see how soon can I expect the article",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13279",
+    "en": "I have to ese how soon can I expect the article",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13259",
+    "en": "assistance to check how soon can i exepct the purchase",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13100",
+    "en": "I want to see when will my product arrive, I need help",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13558",
+    "en": "how could I check how long it takes for the item to arrive?",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13477",
+    "en": "where can I see how long the shipment takes?",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13307",
+    "en": "where do I check how soon can I expect the item?",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13699",
+    "en": "i want help to check how soon can i expect my order",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13694",
+    "en": "I try to see how soon can I expect my parcel",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12946",
+    "en": "I have to check when will my item arrive, I need assistance",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13619",
+    "en": "can uhelp me check how soon can i epect the delivery",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13610",
+    "en": "I call to check how long it takes for the delivery to arrive",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13795",
+    "en": "I have to see when my item is going to arrive, help me",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13855",
+    "en": "i call to see when my product is gonna arrive",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13377",
+    "en": "where to see how long it takes for the item to arrive?",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13660",
+    "en": "want assistance to see how soon can I expect my product",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13839",
+    "en": "I want to know moreabout the delivery period",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13844",
+    "en": "where do i check how long it takes for my article to arrive",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13354",
+    "en": "where can I find information about the shipping period?",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13748",
+    "en": "where do I check how long it takes for my package to arrive?",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13187",
+    "en": "I want to see how long it tyakes for my package to arrive",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13804",
+    "en": "can I see how soon can I expect the shipment?",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13587",
+    "en": "hrlp me check when will my product arrive",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13244",
+    "en": "i have to see how long it takes for my delivery to arrive",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13595",
+    "en": "i call to check when my parcel is gonna arive",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13422",
+    "en": "how long does it usually take for a product to arrive?",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12956",
+    "en": "I want assistance seeing when my item is going to arrive",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12992",
+    "en": "can ya show me when my purchase is gonna arrive",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13496",
+    "en": "help seeing how soon can I expect the product",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13850",
+    "en": "i call to check how long it takes for my delivery to arrive",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13251",
+    "en": "I do not know how I can see when will my purchase arrive",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13120",
+    "en": "ned to see when will my package arrive",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-13898",
+    "en": "want assistance seeinhg how long the shipment takes",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-12988",
+    "en": "I have got to see when will my parcel arrive, help me",
+    "source_label": "delivery_period",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15553",
+    "en": "nede to download my bill #85632",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15739",
+    "en": "help me to download my goddamn invoices from {{Person Name}}",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15304",
+    "en": "I want to get invoice #00108",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15124",
+    "en": "I don't know how I can download my invoice from {{Person Name}}",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15201",
+    "en": "i need assistance to get the invoice from {{Person Name}}",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15894",
+    "en": "I want to download the invoice from {{Person Name}}, help me",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15660",
+    "en": "could you mail me my goddamn invoices from {{Person Name}}?",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15107",
+    "en": "get invoices from December",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15313",
+    "en": "need assistance downloading my invoice{{Invoice Number}}",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15019",
+    "en": "can you help me get the bills from {{Person Name}}?",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15183",
+    "en": "I don't know how to download my bill #00108",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15145",
+    "en": "getting invoice from {{Person Name}}",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15115",
+    "en": "I have lost bill #37777, could you send it to me?",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15505",
+    "en": "I'm trying to get th fucking invoices from {{Person Name}}",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15459",
+    "en": "will umail me the bills from {{Person Name}}",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15241",
+    "en": "i dont know what i need to do to download the invoice #00108",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15850",
+    "en": "can uhelp me download the invoice from {{Person Name}}",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15488",
+    "en": "will ya send me my invoices from {{Person Name}}",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15196",
+    "en": "i dont know how i can get the invoice #37777",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15695",
+    "en": "I need help getting the bills from {{Person Name}}",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15156",
+    "en": "I do not know what to do to download my invoice #12588",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15621",
+    "en": "where to download the bill #12588?",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15589",
+    "en": "I do not know how I can download the bill #12588",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15626",
+    "en": "is it possible to get my bill #00108?",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15886",
+    "en": "i dont know how i can download the invoice from {{Person Name}}",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15854",
+    "en": "I want to get my invoice from {{Person Name}}, I need help",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15178",
+    "en": "i haveto get the invoice from {{Person Name}} how can i do it",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15268",
+    "en": "i need help to download my blls from {{Person Name}}",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15855",
+    "en": "i do not know what i have to do to download my bill #37777",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15723",
+    "en": "can uhelp me to get the invoice #12588",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15786",
+    "en": "can I download bill #37777?",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15004",
+    "en": "I need help to get my bill from {{Person Name}}",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15602",
+    "en": "can usend me the damn invoices from {{Person Name}}",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15724",
+    "en": "I don't know how I can get the bills from {{Person Name}}",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-14979",
+    "en": "getting invoice #00108",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15127",
+    "en": "i do not know what i have to do to  get invoice #85632",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15058",
+    "en": "i dont know what i need to do to get the invoice #85632",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-15529",
+    "en": "I want assistance to download the invoice #00108",
+    "source_label": "get_invoice",
+    "label": "faq_policy"
+  },
+  {
+    "id": "bitext-16552",
+    "en": "I paid {{Currency Symbol}}{{Refund Amount}} for this item, want help to get a rebate",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16409",
+    "en": "help me request compensations",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16519",
+    "en": "would it be possible to obtain a reimbursement of my money",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16289",
+    "en": "i dont know what i have to do to obtain a compensation",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16359",
+    "en": "assistance obtaining a refund of money",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16648",
+    "en": "could you help me receiving compensations of my money?",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16570",
+    "en": "what do I have to do to receive a rebate of money?",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16691",
+    "en": "can you help me requesting compensations?",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-15993",
+    "en": "I paid {{Currency Symbol}}{{Refund Amount}} for a purchase, I try to get a reimbursement",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16098",
+    "en": "how do i obtain a reimbursement of money",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16194",
+    "en": "i have to receive rebates of money",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16236",
+    "en": "can ya help me to request a refund of my money",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16571",
+    "en": "I'm trying to obtain compensations",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16675",
+    "en": "i have paid {{Currency Symbol}}{{Refund Amount}} for this item i wanna obtai a rebate",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16292",
+    "en": "help me to request a restitution of money",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16335",
+    "en": "I need assistance obtaining compensations of my money",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16741",
+    "en": "where can I receive a rebate of my money?",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16264",
+    "en": "I do not know how I could ask for goddamn refunds",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16872",
+    "en": "help to demand a rebate of my money",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16644",
+    "en": "can you help me to obtain a refund of money?",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16363",
+    "en": "how to receive a reimbursement of my money?",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16565",
+    "en": "is it possible to get a refund of money",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16032",
+    "en": "where to ask for reimbursements of money ?",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16538",
+    "en": "where do I get rebates of my money?",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16453",
+    "en": "how to ask for a rebate of my money",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16689",
+    "en": "I need help to demand a goddamn reimbursement",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-15952",
+    "en": "help me request a compensation of money",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16388",
+    "en": "I need help demanding a rebate of money",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16283",
+    "en": "I need to get a compensation",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16228",
+    "en": "how long till I obtain a refund of money?",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16604",
+    "en": "want assistance to obtain a restitution of money",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16541",
+    "en": "when am I obtaining a refund?",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16478",
+    "en": "need to get a rebate of my money",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16853",
+    "en": "need assistance demanding my money back",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-15950",
+    "en": "I don't know how I can request a rebate",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16101",
+    "en": "I don't know how I can get a refund of money",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16180",
+    "en": "i want assistance to ask for a reimbursement of money",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-16597",
+    "en": "I don't know how I can obtain a refund",
+    "source_label": "get_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-25315",
+    "en": "need help to see the ETA of the order {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25660",
+    "en": "wqhere to see purchase {{Order Number}} current status",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25528",
+    "en": "check purchase {{Order Number}} status",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25696",
+    "en": "what is order {{Order Number}} current status",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-24971",
+    "en": "I'd like to track purchase {{Order Number}} i need assistance",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-24957",
+    "en": "how can I see purchase {{Order Number}} current status?",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25440",
+    "en": "see order {{Order Number}} stats",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25449",
+    "en": "I am trying to see the status of purchase {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25037",
+    "en": "showing me estimated time of arrival of order {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25510",
+    "en": "where do i check the current status of purchase {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25224",
+    "en": "i need assistance to locate purchase {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25138",
+    "en": "help to see the ETA of the order {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25518",
+    "en": "want help to see tthe damn ETA of order {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25848",
+    "en": "can ushow me the ETA of purchase {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25123",
+    "en": "need assistance to see the eta of purcase {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25624",
+    "en": "i have to see the eta of order {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25442",
+    "en": "chcek order {{Order Number}} current status",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25015",
+    "en": "checking order {{Order Number}} stagus",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25685",
+    "en": "i cannot see the eta of order {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25546",
+    "en": "I want assistance checking the ETA of purchase {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25231",
+    "en": "how to see purchase {{Order Number}} current status?",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25712",
+    "en": "assistance to see the ETA of order {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25524",
+    "en": "where do I check the ETA of purchase {{Order Number}}?",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25470",
+    "en": "can uhelp me checking the eta of order {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25665",
+    "en": "can ya help me to see the ETA of the purchase {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25431",
+    "en": "I have to see the bloody ETA of order {{Order Number}}, I need help",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-24926",
+    "en": "assistance checking the ETA of the purchase {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25788",
+    "en": "assistance to check the current status of order {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25633",
+    "en": "wanna check the eta of order {{Order Number}} how to do it",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25492",
+    "en": "i need help seeing the goddamn eta of purchae {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25346",
+    "en": "I need help to check the current status of order {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25418",
+    "en": "i want help seeing the current status of purchase {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-24921",
+    "en": "I'm tying to see the ETA of purchase {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25283",
+    "en": "where do I check my last purchase estimated time of arrival?",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25043",
+    "en": "I have to check purchase {{Order Number}} current status",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25485",
+    "en": "I want to see the ETA of order {{Order Number}}, how do I do it?",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-24939",
+    "en": "what do i have to do to see the status of purchase {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-25508",
+    "en": "I need help to track purchase {{Order Number}}",
+    "source_label": "track_order",
+    "label": "order_inquiry"
+  },
+  {
+    "id": "bitext-26194",
+    "en": "I don't know how to track my restitution",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26014",
+    "en": "where do I know if there is anything wrong with the refund?",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26140",
+    "en": "where can I see if there are any updates on the restitution?",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26615",
+    "en": "could you help me to see the status of the reimbursement?",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-25955",
+    "en": "can you help me see my compensation status?",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26793",
+    "en": "how to see the restitution current status?",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-25891",
+    "en": "i expect a restitution of {{Currency Symbol}}{{Refund Amount}} was it processed already",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-25912",
+    "en": "help knowing if there is anything new on the restitution",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26100",
+    "en": "could you help me see my rebate status?",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26822",
+    "en": "I have got to see my refund status, can you help me?",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26038",
+    "en": "where to know if there are any news on my compensation?",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26334",
+    "en": "I have to see the damn compensation status, can you help me?",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26549",
+    "en": "can you help me check the rebate current status?",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26408",
+    "en": "I want to track the reimbursement, can you help me?",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-25898",
+    "en": "i cannot see if there is anything new on the compensation",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26436",
+    "en": "where to see the bloody rebate current status?",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26013",
+    "en": "I'm waiting for an refund of {{Currency Symbol}}{{Refund Amount}}",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-25946",
+    "en": "I have got to track the compensation",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26853",
+    "en": "assistance to see if there are any news on the reimbursement",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26743",
+    "en": "help me to see if there is anything new on the reimbursement",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26473",
+    "en": "how to see the status of my restitution?",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26489",
+    "en": "I need to check if there are any news on my restitution",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-25884",
+    "en": "i expect an rebate of {{Refund Amount}} dollars",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26707",
+    "en": "can I check the current status of my reimbursement?",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26435",
+    "en": "can I see the status of my restitution?",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-25877",
+    "en": "i expect a reimbursement of {{Refund Amount}} dollars",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26674",
+    "en": "can you help me check the goddamn status of the rebate?",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26828",
+    "en": "i expect a compensation of {{Currency Symbol}}{{Refund Amount}} was it processed",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26227",
+    "en": "how could i see the status of my refund",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-25961",
+    "en": "I want to see my compensation current status",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26581",
+    "en": "I want to check my restitution status, I need help",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26390",
+    "en": "I have to see my refund current status, will you help me?",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26049",
+    "en": "where can I see my refund current status?",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26162",
+    "en": "I do not know how I can see the current status of my refund",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26765",
+    "en": "help me to check if there are nay news on the refund",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26457",
+    "en": "I need assistance seeing my reimbursement current status",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-26040",
+    "en": "I need to know if there are any news on my rebate, help me",
+    "source_label": "track_refund",
+    "label": "refund"
+  },
+  {
+    "id": "bitext-25936",
+    "en": "I want to see my rebate status",
+    "source_label": "track_refund",
+    "label": "refund"
+  }
+]
