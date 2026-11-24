@@ -1,0 +1,3733 @@
+{
+  "schema_version": 1,
+  "catalog": [
+    {
+      "sku": "TRAJ-1",
+      "merchant_id": "m_demo",
+      "name": "黑色通勤鞋",
+      "category": "服饰",
+      "price_cents": 22500,
+      "inventory": 10,
+      "tags": "color:黑色,size:42"
+    },
+    {
+      "sku": "TRAJ-2",
+      "merchant_id": "m_demo",
+      "name": "黑色通勤鞋",
+      "category": "服饰",
+      "price_cents": 22500,
+      "inventory": 10,
+      "tags": "color:黑色,size:42"
+    },
+    {
+      "sku": "TRAJ-3",
+      "merchant_id": "m_demo",
+      "name": "黑色通勤鞋",
+      "category": "服饰",
+      "price_cents": 22500,
+      "inventory": 10,
+      "tags": "color:黑色,size:42"
+    },
+    {
+      "sku": "TRAJ-ZERO",
+      "merchant_id": "m_demo",
+      "name": "零库存鞋",
+      "category": "服饰",
+      "price_cents": 10000,
+      "inventory": 0,
+      "tags": "color:黑色,size:42"
+    }
+  ],
+  "trajectories": [
+    {
+      "trajectory_id": "SHOP-01",
+      "kind": "shopping",
+      "turns": [
+        {
+          "message": "你好",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "greeting",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "simple",
+              "strategy": "direct",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": false
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "SHOP-02",
+      "kind": "shopping",
+      "turns": [
+        {
+          "message": "谢谢你",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "chitchat",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "simple",
+              "strategy": "direct",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": false
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "SHOP-03",
+      "kind": "shopping",
+      "turns": [
+        {
+          "message": "普通商品的退货时效",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "faq_policy",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "single_hop",
+              "strategy": "single",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "citations": true
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "SHOP-04",
+      "kind": "shopping",
+      "turns": [
+        {
+          "message": "推荐300元以内黑色42码鞋",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "recommendation",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "min_count": 3,
+            "hard": true,
+            "pending": false,
+            "constraints": {
+              "max_price_cents": 30000,
+              "color": "黑色",
+              "size": "42"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "SHOP-05",
+      "kind": "shopping",
+      "turns": [
+        {
+          "message": "推荐紫色44码鞋",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "recommendation",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "count": 0,
+            "contains": "未找到"
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "SHOP-06",
+      "kind": "shopping",
+      "turns": [
+        {
+          "message": "查询库存",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "faq_policy",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "check_inventory",
+                  "arguments": {
+                    "sku": "TRAJ-ZERO"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "answer_tool": {
+              "inventory": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "SHOP-07",
+      "kind": "shopping",
+      "turns": [
+        {
+          "message": "推荐300元以内黑色42码鞋",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "recommendation",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "min_count": 1,
+            "hard": true,
+            "constraints": {
+              "max_price_cents": 30000,
+              "color": "黑色",
+              "size": "42"
+            }
+          }
+        },
+        {
+          "message": "选第2个",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "recommendation",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "selected": "TRAJ-2"
+          }
+        },
+        {
+          "message": "上一个",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "recommendation",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "index": 0
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "SHOP-08",
+      "kind": "shopping",
+      "turns": [
+        {
+          "message": "查看优惠券",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "faq_policy",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "get_coupon",
+                  "arguments": {},
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "answer_tool": {
+              "coupons": [
+                {
+                  "code": "NEW10",
+                  "desc": "新客满 99 减 10，不与品类券叠用"
+                },
+                {
+                  "code": "SHIP0",
+                  "desc": "满 59 包邮，偏远地区除外"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "SHOP-09",
+      "kind": "shopping",
+      "turns": [
+        {
+          "message": "七天无理由退货政策",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "faq_policy",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "single_hop",
+              "strategy": "single",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "citations": true
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "SHOP-10",
+      "kind": "shopping",
+      "turns": [
+        {
+          "message": "查看保修信息",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "faq_policy",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "get_warranty",
+                  "arguments": {
+                    "sku": "SKU-HEADSET"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "answer_tool": {
+              "warranty_months": 12
+            }
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "SHOP-11",
+      "kind": "shopping",
+      "turns": [
+        {
+          "message": "ORD10001 物流到哪了",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "logistics",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "track_shipment",
+                  "arguments": {
+                    "order_id": "ORD10001"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": false,
+            "answer_tool": {
+              "order_id": "ORD10001"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "SHOP-12",
+      "kind": "shopping",
+      "turns": [
+        {
+          "message": "请转人工投诉",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "human_handoff",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "escalate_to_human",
+                  "arguments": {
+                    "reason": "用户投诉"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "answer_tool": {
+              "queue": "human"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "SHOP-13",
+      "kind": "shopping",
+      "turns": [
+        {
+          "message": "越界请求",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "out_of_scope",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "out_of_scope",
+              "strategy": "refuse",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "refused": true
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "SHOP-14",
+      "kind": "shopping",
+      "turns": [
+        {
+          "message": "推荐300元以内黑色42码鞋",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "recommendation",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "min_count": 1,
+            "hard": true,
+            "constraints": {
+              "max_price_cents": 30000,
+              "color": "黑色",
+              "size": "42"
+            }
+          }
+        },
+        {
+          "message": "对比第1和第2",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "recommendation",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "compare": [
+              "TRAJ-1",
+              "TRAJ-2"
+            ],
+            "hard": true,
+            "constraints": {
+              "max_price_cents": 30000,
+              "color": "黑色",
+              "size": "42"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "SHOP-15",
+      "kind": "shopping",
+      "turns": [
+        {
+          "message": "核对保修资料",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "faq_policy",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "get_warranty",
+                  "arguments": {
+                    "sku": "SKU-HEADSET"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "calls": [
+              "faithfulness"
+            ],
+            "answer_tool": {
+              "warranty_months": 12
+            }
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "SHOP-16",
+      "kind": "shopping",
+      "turns": [
+        {
+          "message": "推荐300元以内黑色42码鞋",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "recommendation",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "min_count": 1,
+            "hard": true,
+            "constraints": {
+              "max_price_cents": 30000,
+              "color": "黑色",
+              "size": "42"
+            }
+          }
+        },
+        {
+          "message": "推荐300元以内黑色42码鞋",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "recommendation",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "same_previous": true,
+            "hard": true,
+            "constraints": {
+              "max_price_cents": 30000,
+              "color": "黑色",
+              "size": "42"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "AFTER-01",
+      "kind": "aftersale",
+      "turns": [
+        {
+          "message": "申请退款 ORD10003",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "refund",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "create_refund_request",
+                  "arguments": {
+                    "order_id": "ORD10003",
+                    "reason": "不想要了"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "u_demo",
+          "expect": {
+            "refund_count": 1,
+            "refund_status": "requested",
+            "order_status": "refunding"
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "AFTER-02",
+      "kind": "aftersale",
+      "turns": [
+        {
+          "message": "申请退货 ORD10003",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "return_exchange",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "create_return_request",
+                  "arguments": {
+                    "order_id": "ORD10003",
+                    "reason": "不想要了"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "u_demo",
+          "expect": {
+            "return_count": 1,
+            "return_status": "requested",
+            "order_status": "paid"
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "AFTER-03",
+      "kind": "aftersale",
+      "turns": [
+        {
+          "message": "申请退款 ORD10003",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "refund",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "create_refund_request",
+                  "arguments": {
+                    "order_id": "ORD10003",
+                    "reason": "不想要了"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "u_demo",
+          "expect": {
+            "refund_count": 1,
+            "refund_status": "requested",
+            "order_status": "refunding"
+          }
+        },
+        {
+          "message": "审批处理售后 $refund_id",
+          "user": "op",
+          "nodes": {
+            "intent": {
+              "label": "faq_policy",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "process_refund",
+                  "arguments": {
+                    "refund_id": "$refund_id",
+                    "action": "approve"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "op",
+          "expect": {
+            "refund_status": "approved"
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "AFTER-04",
+      "kind": "aftersale",
+      "turns": [
+        {
+          "message": "申请退款 ORD10003",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "refund",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "create_refund_request",
+                  "arguments": {
+                    "order_id": "ORD10003",
+                    "reason": "不想要了"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "u_demo",
+          "expect": {
+            "refund_count": 1,
+            "refund_status": "requested",
+            "order_status": "refunding"
+          }
+        },
+        {
+          "message": "审批处理售后 $refund_id",
+          "user": "agent",
+          "nodes": {
+            "intent": {
+              "label": "faq_policy",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "process_refund",
+                  "arguments": {
+                    "refund_id": "$refund_id",
+                    "action": "approve"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "agent",
+          "expect": {
+            "refund_status": "approved"
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "AFTER-05",
+      "kind": "aftersale",
+      "turns": [
+        {
+          "message": "申请退款 ORD10003",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "refund",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "create_refund_request",
+                  "arguments": {
+                    "order_id": "ORD10003",
+                    "reason": "不想要了"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "u_demo",
+          "expect": {
+            "refund_count": 1,
+            "refund_status": "requested",
+            "order_status": "refunding"
+          }
+        },
+        {
+          "message": "审批处理售后 $refund_id",
+          "user": "op",
+          "nodes": {
+            "intent": {
+              "label": "faq_policy",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "process_refund",
+                  "arguments": {
+                    "refund_id": "$refund_id",
+                    "action": "reject"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "op",
+          "expect": {
+            "refund_status": "rejected",
+            "order_status": "paid"
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "AFTER-06",
+      "kind": "aftersale",
+      "turns": [
+        {
+          "message": "申请退款 ORD10003",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "refund",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "create_refund_request",
+                  "arguments": {
+                    "order_id": "ORD10003",
+                    "reason": "不想要了"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "u_demo",
+          "expect": {
+            "refund_count": 1,
+            "refund_status": "requested",
+            "order_status": "refunding"
+          }
+        },
+        {
+          "message": "审批处理售后 $refund_id",
+          "user": "op",
+          "nodes": {
+            "intent": {
+              "label": "faq_policy",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "process_refund",
+                  "arguments": {
+                    "refund_id": "$refund_id",
+                    "action": "approve"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "op",
+          "expect": {
+            "refund_status": "approved"
+          }
+        },
+        {
+          "message": "审批处理售后 $refund_id",
+          "user": "op",
+          "nodes": {
+            "intent": {
+              "label": "faq_policy",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "process_refund",
+                  "arguments": {
+                    "refund_id": "$refund_id",
+                    "action": "complete"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "op",
+          "expect": {
+            "refund_status": "completed",
+            "order_status": "refunded",
+            "total": 7900,
+            "refund_count": 1
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "AFTER-07",
+      "kind": "aftersale",
+      "turns": [
+        {
+          "message": "申请退款 ORD10003",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "refund",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "create_refund_request",
+                  "arguments": {
+                    "order_id": "ORD10003",
+                    "reason": "不想要了"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "u_demo",
+          "expect": {
+            "refund_count": 1,
+            "refund_status": "requested",
+            "order_status": "refunding"
+          }
+        },
+        {
+          "message": "审批处理售后 $refund_id",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "faq_policy",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "process_refund",
+                  "arguments": {
+                    "refund_id": "$refund_id",
+                    "action": "approve"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": false,
+            "refund_status": "requested",
+            "no_business_change": true,
+            "direct_denied": true
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "AFTER-08",
+      "kind": "aftersale",
+      "turns": [
+        {
+          "message": "申请退货 ORD10003",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "return_exchange",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "create_return_request",
+                  "arguments": {
+                    "order_id": "ORD10003",
+                    "reason": "不想要了"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "u_demo",
+          "expect": {
+            "return_count": 1,
+            "return_status": "requested",
+            "order_status": "paid"
+          }
+        },
+        {
+          "message": "审批处理售后 $return_id",
+          "user": "op",
+          "nodes": {
+            "intent": {
+              "label": "faq_policy",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "process_return",
+                  "arguments": {
+                    "return_id": "$return_id",
+                    "action": "approve"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "op",
+          "expect": {
+            "return_status": "approved"
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "AFTER-09",
+      "kind": "aftersale",
+      "turns": [
+        {
+          "message": "申请退货 ORD10003",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "return_exchange",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "create_return_request",
+                  "arguments": {
+                    "order_id": "ORD10003",
+                    "reason": "不想要了"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "u_demo",
+          "expect": {
+            "return_count": 1,
+            "return_status": "requested",
+            "order_status": "paid"
+          }
+        },
+        {
+          "message": "审批处理售后 $return_id",
+          "user": "op",
+          "nodes": {
+            "intent": {
+              "label": "faq_policy",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "process_return",
+                  "arguments": {
+                    "return_id": "$return_id",
+                    "action": "approve"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "op",
+          "expect": {
+            "return_status": "approved"
+          }
+        },
+        {
+          "message": "审批处理售后 $return_id",
+          "user": "op",
+          "nodes": {
+            "intent": {
+              "label": "faq_policy",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "process_return",
+                  "arguments": {
+                    "return_id": "$return_id",
+                    "action": "complete"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "op",
+          "expect": {
+            "return_status": "completed",
+            "refund_count": 1,
+            "total": 7900,
+            "order_status": "refunded"
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "AFTER-10",
+      "kind": "aftersale",
+      "turns": [
+        {
+          "message": "申请退货 ORD10003",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "return_exchange",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "create_return_request",
+                  "arguments": {
+                    "order_id": "ORD10003",
+                    "reason": "不想要了"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "u_demo",
+          "expect": {
+            "return_count": 1,
+            "return_status": "requested",
+            "order_status": "paid"
+          }
+        },
+        {
+          "message": "审批处理售后 $return_id",
+          "user": "agent",
+          "nodes": {
+            "intent": {
+              "label": "faq_policy",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "process_return",
+                  "arguments": {
+                    "return_id": "$return_id",
+                    "action": "reject"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "agent",
+          "expect": {
+            "return_status": "rejected",
+            "order_status": "paid"
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "AFTER-11",
+      "kind": "aftersale",
+      "turns": [
+        {
+          "message": "申请退款 ORD10003",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "refund",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "create_refund_request",
+                  "arguments": {
+                    "order_id": "ORD10003",
+                    "reason": "不想要了"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "u_demo",
+          "expect": {
+            "refund_count": 1,
+            "refund_status": "requested",
+            "order_status": "refunding"
+          }
+        },
+        {
+          "message": "审批处理售后 $refund_id",
+          "user": "op",
+          "nodes": {
+            "intent": {
+              "label": "faq_policy",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "process_refund",
+                  "arguments": {
+                    "refund_id": "$refund_id",
+                    "action": "complete"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "op",
+          "expect": {
+            "refund_status": "requested",
+            "refund_count": 1,
+            "total": 0
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "AFTER-12",
+      "kind": "aftersale",
+      "turns": [
+        {
+          "message": "申请退款 ORD10003",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "refund",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "create_refund_request",
+                  "arguments": {
+                    "order_id": "ORD10003",
+                    "reason": "不想要了"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "u_demo",
+          "expect": {
+            "refund_count": 1,
+            "refund_status": "requested",
+            "order_status": "refunding"
+          }
+        },
+        {
+          "message": "审批处理售后 $refund_id",
+          "user": "op",
+          "nodes": {
+            "intent": {
+              "label": "faq_policy",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "process_refund",
+                  "arguments": {
+                    "refund_id": "$refund_id",
+                    "action": "approve"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "op",
+          "expect": {
+            "refund_status": "approved"
+          }
+        },
+        {
+          "message": "审批处理售后 $refund_id",
+          "user": "op",
+          "nodes": {
+            "intent": {
+              "label": "faq_policy",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "process_refund",
+                  "arguments": {
+                    "refund_id": "$refund_id",
+                    "action": "complete"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "op",
+          "expect": {
+            "refund_status": "completed"
+          }
+        },
+        {
+          "message": "审批处理售后 $refund_id",
+          "user": "op",
+          "nodes": {
+            "intent": {
+              "label": "faq_policy",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "process_refund",
+                  "arguments": {
+                    "refund_id": "$refund_id",
+                    "action": "approve"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "op",
+          "expect": {
+            "refund_status": "completed",
+            "refund_count": 1,
+            "total": 7900
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "AFTER-13",
+      "kind": "aftersale",
+      "turns": [
+        {
+          "message": "申请退款 ORD10003",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "refund",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "create_refund_request",
+                  "arguments": {
+                    "order_id": "ORD10003",
+                    "reason": "不想要了"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "u_demo",
+          "expect": {
+            "refund_count": 1,
+            "refund_status": "requested",
+            "order_status": "refunding"
+          }
+        },
+        {
+          "message": "申请退款 ORD10003",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "refund",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "create_refund_request",
+                  "arguments": {
+                    "order_id": "ORD10003",
+                    "reason": "不想要了"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "u_demo",
+          "expect": {
+            "refund_count": 1,
+            "active_count": 1,
+            "total": 0
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "AFTER-14",
+      "kind": "aftersale",
+      "turns": [
+        {
+          "message": "申请退款 ORD99999",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "faq_policy",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "create_refund_request",
+                  "arguments": {
+                    "order_id": "ORD99999",
+                    "reason": "退货"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true,
+            "refund_count": 0,
+            "return_count": 0,
+            "no_business_change": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "u_demo",
+          "expect_status": 403,
+          "expect": {
+            "refund_count": 0,
+            "return_count": 0,
+            "no_business_change": true
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "AFTER-15",
+      "kind": "aftersale",
+      "turns": [
+        {
+          "message": "申请退款 ORD10003",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "refund",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "create_refund_request",
+                  "arguments": {
+                    "order_id": "ORD10003",
+                    "reason": "不想要了"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "u_demo",
+          "expect": {
+            "refund_count": 1,
+            "refund_status": "requested",
+            "order_status": "refunding"
+          }
+        },
+        {
+          "message": "查询 ORD10003 退款进度",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "faq_policy",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "get_refund_status",
+                  "arguments": {
+                    "order_id": "ORD10003"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "refund_count": 1,
+            "refund_status": "requested",
+            "answer_tool": {
+              "order_id": "ORD10003"
+            }
+          }
+        },
+        {
+          "message": "审批处理售后 $refund_id",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "faq_policy",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "process_refund",
+                  "arguments": {
+                    "refund_id": "$refund_id",
+                    "action": "complete"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": false,
+            "no_business_change": true,
+            "direct_denied": true
+          }
+        }
+      ]
+    },
+    {
+      "trajectory_id": "AFTER-16",
+      "kind": "aftersale",
+      "turns": [
+        {
+          "message": "申请退款 ORD10003",
+          "user": "u_demo",
+          "nodes": {
+            "intent": {
+              "label": "refund",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "create_refund_request",
+                  "arguments": {
+                    "order_id": "ORD10003",
+                    "reason": "不想要了"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "u_demo",
+          "expect": {
+            "refund_count": 1,
+            "refund_status": "requested",
+            "order_status": "refunding"
+          }
+        },
+        {
+          "message": "审批处理售后 $refund_id",
+          "user": "op",
+          "nodes": {
+            "intent": {
+              "label": "faq_policy",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "process_refund",
+                  "arguments": {
+                    "refund_id": "$refund_id",
+                    "action": "approve"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "op",
+          "expect": {
+            "refund_status": "approved"
+          }
+        },
+        {
+          "message": "审批处理售后 $refund_id",
+          "user": "op",
+          "nodes": {
+            "intent": {
+              "label": "faq_policy",
+              "confidence": 0.9,
+              "rationale": "scripted",
+              "prompt_version": "intent_v3"
+            },
+            "complexity": {
+              "complexity": "tool_required",
+              "strategy": "agent",
+              "confidence": 1,
+              "rationale": "scripted"
+            },
+            "planner": {
+              "steps": [
+                {
+                  "step_id": 1,
+                  "goal": "fixed trajectory",
+                  "tool_name": "process_refund",
+                  "arguments": {
+                    "refund_id": "$refund_id",
+                    "action": "complete"
+                  },
+                  "needs_retrieval": false
+                }
+              ],
+              "rationale": "scripted"
+            },
+            "answer": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            },
+            "faithfulness": {
+              "supported": true,
+              "hallucinated_spans": [],
+              "rationale": "scripted"
+            },
+            "rewrite": {
+              "queries": [
+                "七天无理由退货"
+              ]
+            },
+            "grade": {
+              "score": "yes",
+              "rationale": "scripted"
+            },
+            "self_correct": {
+              "answer": "已核对本次查询。",
+              "citation_chunk_ids": [],
+              "refused": false
+            }
+          },
+          "expect": {
+            "pending": true
+          }
+        },
+        {
+          "confirm_pending": true,
+          "user": "op",
+          "expect": {
+            "refund_count": 1,
+            "total": 7900,
+            "order_status": "refunded"
+          }
+        },
+        {
+          "repeat_confirmation": true,
+          "user": "op",
+          "expect": {
+            "pending": false,
+            "refund_count": 1,
+            "total": 7900,
+            "no_business_change": true
+          }
+        }
+      ]
+    }
+  ]
+}

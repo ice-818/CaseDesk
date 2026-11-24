@@ -1,0 +1,30 @@
+{
+  "baseline_passed": 225,
+  "baseline_warnings": 1,
+  "final": {
+    "tests": 259,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "coverage_scope": [
+    "app",
+    "eval"
+  ],
+  "coverage_percent": 74.58,
+  "coverage_threshold": 70,
+  "ruff": "passed",
+  "mypy": "passed (136 source files)",
+  "uv_lock_check": "passed",
+  "postgresql_tested": false,
+  "postgresql_reason": "Docker Desktop manually paused; original state preserved",
+  "paid_model_calls": 0,
+  "frontend_changed_files": 0,
+  "frontend_original_files_checked": 26,
+  "business_database_unchanged": true,
+  "new_dependency": {
+    "bcrypt": "5.0.0"
+  },
+  "existing_dependency_version_changes": {},
+  "git_commit_created": false
+}

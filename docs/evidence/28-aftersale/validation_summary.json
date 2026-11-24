@@ -1,0 +1,62 @@
+{
+  "batch": "aftersale idempotency and status machine",
+  "validated_at": "2026-11-23T19:12:48+08:00",
+  "baseline": {
+    "tests": 405,
+    "coverage_percent": 77.92
+  },
+  "final": {
+    "tests": 421,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "tests_added": 16,
+  "coverage_scope": [
+    "app",
+    "eval"
+  ],
+  "coverage_percent": 78.08,
+  "coverage_threshold": 70,
+  "statements": 7204,
+  "missing_statements": 1579,
+  "frontend": {
+    "vitest_passed": 46,
+    "vitest_files": 10,
+    "production_build": "passed",
+    "modules": 2177,
+    "gzip_bundle_kb": 131.08
+  },
+  "ruff": "passed",
+  "mypy": "passed (145 source files)",
+  "migration": "0010",
+  "new_tools": [
+    "process_refund",
+    "process_return"
+  ],
+  "database_guards": [
+    "ck_refunds_status",
+    "ck_returns_status",
+    "uq_refunds_active_order",
+    "uq_returns_active_order"
+  ],
+  "business_rules": [
+    "one active document per order per table",
+    "cross-table refund/return conflict",
+    "illegal order status rejected",
+    "cumulative refund amount cannot exceed order total",
+    "illegal status transition rejected",
+    "return completion auto-creates completed refund"
+  ],
+  "postgresql_tested": false,
+  "postgresql_reason": "Docker Desktop manually paused; partial indexes use sqlite_where and postgresql_where",
+  "new_dependency": {},
+  "schema_or_table_change": "migration 0010 only; no new tables",
+  "paid_model_calls": 0,
+  "git_commit_created": false,
+  "verification_scripts": [
+    "verify_0010.py",
+    "tests/integration/test_aftersale_guard.py",
+    "tests/integration/test_aftersale_transition.py"
+  ]
+}

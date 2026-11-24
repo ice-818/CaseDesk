@@ -1,0 +1,356 @@
+{
+  "backup": "C:\\Users\\7000\\AppData\\Local\\Temp\\CaseDesk-auth-before-20261119-162647",
+  "changes": [
+    {
+      "path": ".env.example",
+      "absolute_path": "D:/code/CaseDesk/.env.example",
+      "status": "modified",
+      "sha256": "8d58c851c565adfe5d90aad4911cb8229171d61d35fd64064293a39b63d6fb36"
+    },
+    {
+      "path": "README.md",
+      "absolute_path": "D:/code/CaseDesk/README.md",
+      "status": "modified",
+      "sha256": "a057f36afbb0d26a27ef7a677463b629ba0accc114c6501107584e6273c4ad83"
+    },
+    {
+      "path": "alembic/env.py",
+      "absolute_path": "D:/code/CaseDesk/alembic/env.py",
+      "status": "modified",
+      "sha256": "5b1b24adfb9c1c3434fc5a8cd084f8352f7cb8cf25a9630c95c1e6a943de2aff"
+    },
+    {
+      "path": "alembic/versions/0008_trusted_auth.py",
+      "absolute_path": "D:/code/CaseDesk/alembic/versions/0008_trusted_auth.py",
+      "status": "new",
+      "sha256": "1ddb2ff9493e8de0c7f46d0cf9ba0851fc934c7ffa8989aca24734e3f8fd38e1"
+    },
+    {
+      "path": "app/agents/nodes/executor.py",
+      "absolute_path": "D:/code/CaseDesk/app/agents/nodes/executor.py",
+      "status": "modified",
+      "sha256": "adafec12249e640bf79a8677698b3db3fac83562850e638f0b6aee6a9fa4dce4"
+    },
+    {
+      "path": "app/api/auth_route.py",
+      "absolute_path": "D:/code/CaseDesk/app/api/auth_route.py",
+      "status": "new",
+      "sha256": "fde392b310f6b84deb92565090d155fc03af3588de4e341f41fed5e2303f1241"
+    },
+    {
+      "path": "app/api/dependencies.py",
+      "absolute_path": "D:/code/CaseDesk/app/api/dependencies.py",
+      "status": "modified",
+      "sha256": "b7011e7933a54ce12f2bb6a6764d9f02468761a8a53c013216b8ed640c41beaa"
+    },
+    {
+      "path": "app/api/routes/admin.py",
+      "absolute_path": "D:/code/CaseDesk/app/api/routes/admin.py",
+      "status": "modified",
+      "sha256": "3ba925aedd4594febe7d74aef710d5b780c8e87dff6c8b3344cc9727127ac130"
+    },
+    {
+      "path": "app/api/routes/auth.py",
+      "absolute_path": "D:/code/CaseDesk/app/api/routes/auth.py",
+      "status": "new",
+      "sha256": "3731ed4d95841953873f15a6dfa7b664a1709fa7dfd60afc8fd6d13c43474dda"
+    },
+    {
+      "path": "app/api/routes/chat.py",
+      "absolute_path": "D:/code/CaseDesk/app/api/routes/chat.py",
+      "status": "modified",
+      "sha256": "19f8875604668c98c7692cadc3274bc3cab17b6a03d9575bd0ae90bafb233362"
+    },
+    {
+      "path": "app/api/routes/platform.py",
+      "absolute_path": "D:/code/CaseDesk/app/api/routes/platform.py",
+      "status": "modified",
+      "sha256": "d8fb115c23107fc1028db1bd149d3444815a3dfecf9b1e2141c5dab0e1f05418"
+    },
+    {
+      "path": "app/cli/client.py",
+      "absolute_path": "D:/code/CaseDesk/app/cli/client.py",
+      "status": "modified",
+      "sha256": "5d8b4e4f5133074d1acc8214a3f003d34f6553aa87d8efaf5f9f357b97bb3214"
+    },
+    {
+      "path": "app/cli/commands.py",
+      "absolute_path": "D:/code/CaseDesk/app/cli/commands.py",
+      "status": "modified",
+      "sha256": "e03bb5f990943e53598a7c849e3beed87c2a923d698030405ce56143f0f0b005"
+    },
+    {
+      "path": "app/cli/render.py",
+      "absolute_path": "D:/code/CaseDesk/app/cli/render.py",
+      "status": "modified",
+      "sha256": "846a386932d09c5bcf5819c28f42b2aa5ebc806b2f410699510e36bee6a31821"
+    },
+    {
+      "path": "app/config/settings.py",
+      "absolute_path": "D:/code/CaseDesk/app/config/settings.py",
+      "status": "modified",
+      "sha256": "07a6fdbd8e07d4cadede2067176aace9f021f2a58e13f6bfe89ac0422ad62d67"
+    },
+    {
+      "path": "app/core/auth_context.py",
+      "absolute_path": "D:/code/CaseDesk/app/core/auth_context.py",
+      "status": "new",
+      "sha256": "f2bbdfd8db1c51dc57c38d521b6be7c6e52fb997180e00dbac5390e5f6fc28fa"
+    },
+    {
+      "path": "app/core/error_codes.py",
+      "absolute_path": "D:/code/CaseDesk/app/core/error_codes.py",
+      "status": "modified",
+      "sha256": "61d2b19bcef58a723d19400cf1947eeb4a47218f93f7b1e770a85193278b3cf9"
+    },
+    {
+      "path": "app/core/exceptions.py",
+      "absolute_path": "D:/code/CaseDesk/app/core/exceptions.py",
+      "status": "modified",
+      "sha256": "216ffa86a32f31ae74764036a2dcc935507734141ca16d48f830f00049ffd622"
+    },
+    {
+      "path": "app/core/security.py",
+      "absolute_path": "D:/code/CaseDesk/app/core/security.py",
+      "status": "modified",
+      "sha256": "18d681b21f713fdc50f13d66dd70ac94b8f7f83e9314ecd0bfea81cad6b061f4"
+    },
+    {
+      "path": "app/main.py",
+      "absolute_path": "D:/code/CaseDesk/app/main.py",
+      "status": "modified",
+      "sha256": "6265eb71519e4fcb459e0858e7726d1e5b32290098d98f1387bd1140b900bee7"
+    },
+    {
+      "path": "app/observability/logging.py",
+      "absolute_path": "D:/code/CaseDesk/app/observability/logging.py",
+      "status": "modified",
+      "sha256": "3a6ac0799a86f4330b0eaf9a32629262bbd6e4a1e3a488dba85533e4c423c86b"
+    },
+    {
+      "path": "app/repositories/auth_repository.py",
+      "absolute_path": "D:/code/CaseDesk/app/repositories/auth_repository.py",
+      "status": "new",
+      "sha256": "f2dbebc801d127a5cc0e330c3b37a7754181811a8f31a0b9f3504cfda31fabde"
+    },
+    {
+      "path": "app/repositories/db.py",
+      "absolute_path": "D:/code/CaseDesk/app/repositories/db.py",
+      "status": "modified",
+      "sha256": "6520ee72f311f08f3db07ea3903bdc4c5a20dc5f082c0af8734d15823bf00273"
+    },
+    {
+      "path": "app/repositories/models.py",
+      "absolute_path": "D:/code/CaseDesk/app/repositories/models.py",
+      "status": "modified",
+      "sha256": "88600ae3358b8201a5e7cc7325541b236a643317b7c22d391c2c5e5028dae573"
+    },
+    {
+      "path": "app/repositories/session_repository.py",
+      "absolute_path": "D:/code/CaseDesk/app/repositories/session_repository.py",
+      "status": "modified",
+      "sha256": "a4251da9936312488c5e75294050ab5a41f2bfcb707b72b240e93b1316bb8cb0"
+    },
+    {
+      "path": "app/schemas/auth.py",
+      "absolute_path": "D:/code/CaseDesk/app/schemas/auth.py",
+      "status": "new",
+      "sha256": "bb80772259daa594abf590931a7479802984ebf9de8290a963dacddbb7d15e03"
+    },
+    {
+      "path": "app/schemas/chat.py",
+      "absolute_path": "D:/code/CaseDesk/app/schemas/chat.py",
+      "status": "modified",
+      "sha256": "dc8a715afda76acffc1a49a141c5e3e0ffeff72cc478e1552aa1d3fd2f0ab2a8"
+    },
+    {
+      "path": "app/schemas/platform.py",
+      "absolute_path": "D:/code/CaseDesk/app/schemas/platform.py",
+      "status": "modified",
+      "sha256": "884b920f8295bfd2abe4ba6c1b2bab053a24ec5118ddbd86167e75cd3e8718d2"
+    },
+    {
+      "path": "app/schemas/reception.py",
+      "absolute_path": "D:/code/CaseDesk/app/schemas/reception.py",
+      "status": "modified",
+      "sha256": "d89a9f6cd54d30b16d2fc5f01963254ab151f6f3bbc1432895d85c1b14dcfceb"
+    },
+    {
+      "path": "app/services/auth_service.py",
+      "absolute_path": "D:/code/CaseDesk/app/services/auth_service.py",
+      "status": "new",
+      "sha256": "f90ce4e954bb35f8e90efdc9586856e7b068e280306135f08123600502f19d29"
+    },
+    {
+      "path": "app/services/chat_service.py",
+      "absolute_path": "D:/code/CaseDesk/app/services/chat_service.py",
+      "status": "modified",
+      "sha256": "6da71680a7770a9957da82d21fc23d262cbb273ce23be71e53176f6c82b9c867"
+    },
+    {
+      "path": "app/services/container.py",
+      "absolute_path": "D:/code/CaseDesk/app/services/container.py",
+      "status": "modified",
+      "sha256": "f1f91c2e064dacde5f9b20d54401f3af4fd39f22b4c7bdc212588230f78ca692"
+    },
+    {
+      "path": "docs/25-trusted-auth.md",
+      "absolute_path": "D:/code/CaseDesk/docs/25-trusted-auth.md",
+      "status": "new",
+      "sha256": "3d4a2ee7f6389b06f63e919ffadc80f5b9a6f3f989824baeb26101ff5db25d87"
+    },
+    {
+      "path": "eval/runner.py",
+      "absolute_path": "D:/code/CaseDesk/eval/runner.py",
+      "status": "modified",
+      "sha256": "07da4bb3d156dfb4bf9388a7958cb8e8fbdbe6ffba3f6e8380312644d5b8154b"
+    },
+    {
+      "path": "pyproject.toml",
+      "absolute_path": "D:/code/CaseDesk/pyproject.toml",
+      "status": "modified",
+      "sha256": "e6768b8487554b5df1c5d24d45644ea1b81af1fc21ceee6cd50c184ef0ece1b1"
+    },
+    {
+      "path": "scripts/seed_users.py",
+      "absolute_path": "D:/code/CaseDesk/scripts/seed_users.py",
+      "status": "new",
+      "sha256": "ae13f63970fe4c7d7d48021b64b5c59d32ae8443d39946d2113f472d3df766f0"
+    },
+    {
+      "path": "tests/__init__.py",
+      "absolute_path": "D:/code/CaseDesk/tests/__init__.py",
+      "status": "new",
+      "sha256": "e2eb5a4990157fe443cbc3cbbb54f3e6964ce51e2597b80bd25f96cdb717b31a"
+    },
+    {
+      "path": "tests/auth_support.py",
+      "absolute_path": "D:/code/CaseDesk/tests/auth_support.py",
+      "status": "new",
+      "sha256": "b718bc9a5e2f51ad9e588b75011e1734e9aa33befea868d1ef1db68ec7f05697"
+    },
+    {
+      "path": "tests/conftest.py",
+      "absolute_path": "D:/code/CaseDesk/tests/conftest.py",
+      "status": "modified",
+      "sha256": "42c775ff99cb6129a0b038a69388de52b99be7236b186be441569d254fa06ebc"
+    },
+    {
+      "path": "tests/e2e/test_auth_api.py",
+      "absolute_path": "D:/code/CaseDesk/tests/e2e/test_auth_api.py",
+      "status": "new",
+      "sha256": "e45e0afe643f01246962e60162412e433472c184bcf74e9965fd26b17795dc12"
+    },
+    {
+      "path": "tests/e2e/test_auth_cli.py",
+      "absolute_path": "D:/code/CaseDesk/tests/e2e/test_auth_cli.py",
+      "status": "new",
+      "sha256": "63ac44d1edf6ba8f227a172136299ccddb3f1095851d183c8b0cabf65315fce0"
+    },
+    {
+      "path": "tests/e2e/test_auth_stream.py",
+      "absolute_path": "D:/code/CaseDesk/tests/e2e/test_auth_stream.py",
+      "status": "new",
+      "sha256": "82522ee158ea84ee188c623a482a81341590ada80e940326939f7ebab10ebe43"
+    },
+    {
+      "path": "tests/e2e/test_auth_user_binding.py",
+      "absolute_path": "D:/code/CaseDesk/tests/e2e/test_auth_user_binding.py",
+      "status": "new",
+      "sha256": "924efa5f0ce6bdef4bf9bcfd1c24b308be46748a679fa1ffffcb79a83a13cf58"
+    },
+    {
+      "path": "tests/e2e/test_chat_api.py",
+      "absolute_path": "D:/code/CaseDesk/tests/e2e/test_chat_api.py",
+      "status": "modified",
+      "sha256": "d74ed3c3e709ffa8f2678fe6445e520d21c184bd9ccd45a0c20f3209f2b3ba27"
+    },
+    {
+      "path": "tests/e2e/test_data_evaluation_platform.py",
+      "absolute_path": "D:/code/CaseDesk/tests/e2e/test_data_evaluation_platform.py",
+      "status": "modified",
+      "sha256": "36842eb605b10a3fdc0228608c563270ce6f1c94af0f14f61b8450de67253ed9"
+    },
+    {
+      "path": "tests/e2e/test_reception_api.py",
+      "absolute_path": "D:/code/CaseDesk/tests/e2e/test_reception_api.py",
+      "status": "modified",
+      "sha256": "a5eb7d12330d89bc53103e96335e55995bacb4391972d8af7c071ea53884ea79"
+    },
+    {
+      "path": "tests/e2e/test_shopping_multiturn.py",
+      "absolute_path": "D:/code/CaseDesk/tests/e2e/test_shopping_multiturn.py",
+      "status": "modified",
+      "sha256": "c1b6a42cd76243601b46e57d82710bf629be3753d9ea3254b48292ca4cbb2ba5"
+    },
+    {
+      "path": "tests/e2e/test_shopping_recovery.py",
+      "absolute_path": "D:/code/CaseDesk/tests/e2e/test_shopping_recovery.py",
+      "status": "modified",
+      "sha256": "673beea0506bfaa36ae72a059fa8e1a6a9a39902e91b4d097363560c47065bf0"
+    },
+    {
+      "path": "tests/integration/test_auth_migration.py",
+      "absolute_path": "D:/code/CaseDesk/tests/integration/test_auth_migration.py",
+      "status": "new",
+      "sha256": "424fadcdfb1290230e04b88a4c496cfe5e676de8f98f8cd91d71a371465a98f4"
+    },
+    {
+      "path": "tests/integration/test_auth_repository.py",
+      "absolute_path": "D:/code/CaseDesk/tests/integration/test_auth_repository.py",
+      "status": "new",
+      "sha256": "7a0d6c389fdfff8bc83b9904c75f329ba631789052106c2736914b454cb4098d"
+    },
+    {
+      "path": "tests/integration/test_auth_seed.py",
+      "absolute_path": "D:/code/CaseDesk/tests/integration/test_auth_seed.py",
+      "status": "new",
+      "sha256": "b1ec942b72c2169d9ab13b623c7856f31efe59930871da68ebdaa64037b3f147"
+    },
+    {
+      "path": "tests/integration/test_reception.py",
+      "absolute_path": "D:/code/CaseDesk/tests/integration/test_reception.py",
+      "status": "modified",
+      "sha256": "f568e8c31011fd98798ddcf3b28ddba5fefff85e77c2e85de522b0a6dc743a9f"
+    },
+    {
+      "path": "tests/unit/test_action_confirmation.py",
+      "absolute_path": "D:/code/CaseDesk/tests/unit/test_action_confirmation.py",
+      "status": "modified",
+      "sha256": "12def0676378dd6a949b8320805513231f86ceac7d97e932c6656bbad9774e2e"
+    },
+    {
+      "path": "tests/unit/test_auth_redaction.py",
+      "absolute_path": "D:/code/CaseDesk/tests/unit/test_auth_redaction.py",
+      "status": "new",
+      "sha256": "c297a58aa8c1c55c95990d43ee9f1cc9f6f47717a5c459d2a561bc181edc8a2b"
+    },
+    {
+      "path": "tests/unit/test_auth_service.py",
+      "absolute_path": "D:/code/CaseDesk/tests/unit/test_auth_service.py",
+      "status": "new",
+      "sha256": "af75db7df16925d78fd25072ac9c0e2c6e67e902b8ea4b2181843615a2904cd9"
+    },
+    {
+      "path": "tests/unit/test_executor_fallback.py",
+      "absolute_path": "D:/code/CaseDesk/tests/unit/test_executor_fallback.py",
+      "status": "modified",
+      "sha256": "a86b6d9e94dc369a5a073f1c27c8729f0493d97aae6353fcc9bd49af3850a61d"
+    },
+    {
+      "path": "tests/unit/test_product_execution_guard.py",
+      "absolute_path": "D:/code/CaseDesk/tests/unit/test_product_execution_guard.py",
+      "status": "modified",
+      "sha256": "584f4189bf607435d26a4e6aec52cd3338683084afc7e9402212d72508998a75"
+    },
+    {
+      "path": "uv.lock",
+      "absolute_path": "D:/code/CaseDesk/uv.lock",
+      "status": "modified",
+      "sha256": "6275f269daa3c701abda27826015f1a8fab780749301fc4360d6299da68f1389"
+    }
+  ],
+  "frontend_changes": [],
+  "frontend_original_files_checked": 26,
+  "business_database_unchanged": true
+}

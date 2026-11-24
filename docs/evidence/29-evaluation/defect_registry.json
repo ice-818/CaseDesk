@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "defects": [
+    {
+      "bug_id": "BUG-001",
+      "severity": "P0",
+      "status": "fixed",
+      "title": "跨表售后并发可在同一订单同时活跃，跨表互斥失效",
+      "regression_test": "tests/integration/test_aftersale_faults.py::test_concurrent_refund_and_return_cannot_both_be_active",
+      "evidence_doc": "docs/evidence/29-evaluation/BUG-001-cross-table-aftersale-race.md"
+    },
+    {
+      "bug_id": "BUG-002",
+      "severity": "P1",
+      "status": "fixed",
+      "title": "售后审批工具缺角色守卫且审批计划被多层过滤，买家可越权处理/审批链路不可达",
+      "regression_test": "tests/integration/test_aftersale_transition.py::test_buyer_cannot_process_aftersale",
+      "evidence_doc": "docs/evidence/29-evaluation/BUG-002-aftersale-approval-guard.md"
+    },
+    {
+      "bug_id": "BUG-003",
+      "severity": "P1",
+      "status": "fixed",
+      "title": "refund 意图退款申请计划被 Skill 白名单过滤，买家只退款链路不可达",
+      "regression_test": "tests/e2e/test_synthetic_trajectories.py::test_fixed_trajectory[AFTER-01]",
+      "evidence_doc": "docs/evidence/29-evaluation/BUG-003-refund-request-skill-whitelist.md"
+    }
+  ]
+}
