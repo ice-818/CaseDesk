@@ -3,6 +3,7 @@
 from pydantic import BaseModel, Field
 
 from app.core.enums import ToolRisk
+from app.retrieval.policy_scope import authorize_policy_target
 from app.schemas.agent import ToolResult
 from app.tools.base import Tool, ToolContext
 from app.tools.deps import RepositoryBackedTool
@@ -31,7 +32,8 @@ class GetOrderTool(RepositoryBackedTool, Tool):
     input_model = OrderIdInput
 
     async def execute(self, parsed: OrderIdInput, context: ToolContext) -> ToolResult:
-        order = await self.repository.get_visible_order(parsed.order_id, context.user_id)
+        order = await self.repository.get_visible_order(parsed.order_id)
+        await authorize_policy_target(self.repository._session, order_id=parsed.order_id)
         return ToolResult(name=self.name, success=True, output=order.model_dump(mode="json"))
 
 
@@ -49,7 +51,8 @@ class GetOrderItemsTool(RepositoryBackedTool, Tool):
     input_model = OrderIdInput
 
     async def execute(self, parsed: OrderIdInput, context: ToolContext) -> ToolResult:
-        order = await self.repository.get_visible_order(parsed.order_id, context.user_id)
+        order = await self.repository.get_visible_order(parsed.order_id)
+        await authorize_policy_target(self.repository._session, order_id=parsed.order_id)
         return ToolResult(
             name=self.name,
             success=True,

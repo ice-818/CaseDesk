@@ -1,6 +1,10 @@
+
+import pytest
+
 from app.core.enums import DocumentCategory
 from app.retrieval.bm25 import BM25Retriever
 from app.retrieval.chunking import chunk_markdown, stable_chunk_id
+from tests.policy_support import policy_case, public_fixture_chunks
 
 
 def test_chunk_ids_are_stable() -> None:
@@ -31,7 +35,13 @@ def test_bm25_ranks_lexical_match() -> None:
         category=DocumentCategory.RETURN_POLICY,
         source="x",
     )
-    retriever = BM25Retriever(chunks)
+    retriever = BM25Retriever(public_fixture_chunks(chunks))
     hits = retriever.search("定制商品 7天无理由", top_k=2)
     assert hits
     assert "定制" in hits[0].content or "无理由" in hits[0].content
+
+
+@pytest.fixture(autouse=True)
+def explicit_public_policy_scope():
+    with policy_case("operator", None):
+        yield

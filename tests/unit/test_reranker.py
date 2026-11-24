@@ -1,3 +1,4 @@
+
 import pytest
 
 from app.config.settings import Settings
@@ -5,6 +6,7 @@ from app.core.enums import DocumentCategory
 from app.providers.reranker import CrossEncoderRerankProvider, LexicalRerankProvider
 from app.retrieval.reranker import DocumentReranker
 from app.schemas.retrieval import RetrievedChunk
+from tests.policy_support import policy_case
 
 
 class _FakeCrossEncoder:
@@ -29,6 +31,7 @@ def _settings(**overrides) -> Settings:
 
 def _chunk(chunk_id: str, content: str) -> RetrievedChunk:
     return RetrievedChunk(
+        policy_layer="platform", policy_scope_version=1, corpus_fingerprint="test-corpus",
         chunk_id=chunk_id,
         document_id="doc",
         title="t",
@@ -96,3 +99,9 @@ async def test_disabled_cross_encoder_falls_back() -> None:
     assert provider.available is False
     ranked = await provider.rerank("a", ["a", "b"], top_n=1)
     assert ranked[0][0] == 0
+
+
+@pytest.fixture(autouse=True)
+def explicit_public_policy_scope():
+    with policy_case("operator", None):
+        yield

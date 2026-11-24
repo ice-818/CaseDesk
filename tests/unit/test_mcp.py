@@ -1,7 +1,9 @@
 import pytest
 
+from app.core.data_scope import bind_data_scope, scope_from_identity
 from app.mcp.adapter import merge_mcp_tools
 from app.mcp.runtime import LOCAL_CATALOG, call_mcp_tool
+from app.schemas.auth import AuthIdentity
 from app.tools.base import ToolContext
 from app.tools.registry import ToolRegistry
 
@@ -28,3 +30,9 @@ async def test_mcp_proxy_is_function_calling_tool() -> None:
     result = await tool.run({}, ToolContext(user_id="u", session_id="s", trace_id="t"))
     assert result.success is True
     assert result.output["cutoff"] == "16:00"
+
+
+@pytest.fixture(autouse=True)
+def trusted_buyer_scope():
+    with bind_data_scope(scope_from_identity(AuthIdentity("u", "buyer"))):
+        yield

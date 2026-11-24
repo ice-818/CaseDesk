@@ -2,6 +2,8 @@
 
 from typing import Any, TypedDict
 
+from app.agents.navigation import NavigationCommand
+from app.agents.product_requirements import ProductRequirements
 from app.core.enums import QueryComplexity, RetrievalStrategy
 from app.schemas.agent import AgentPlan, ComplexityResult, IntentResult, ToolResult
 from app.schemas.chat import ActionProposal, ChatMessage
@@ -17,9 +19,15 @@ class AgentState(TypedDict, total=False):
     """
 
     trace_id: str
+    shopping_checkpoint_id: str | None
+    resume_checkpoint_id: str | None
     session_id: str
     user_id: str
     user_query: str
+    product_requirements: ProductRequirements
+    shopping_loop: dict[str, Any]
+    navigation: NavigationCommand
+    navigation_applied: bool
     messages: list[ChatMessage]
     summary: str
     intent: IntentResult | None

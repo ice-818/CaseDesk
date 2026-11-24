@@ -2,10 +2,13 @@
 
 from pydantic import BaseModel, Field
 
+from app.core.data_scope import require_data_scope
 from app.core.enums import ToolRisk
+from app.core.exceptions import ResourceNotFoundError
 from app.retrieval.hybrid import HybridRetriever
 from app.schemas.agent import ToolResult
 from app.tools.base import Tool, ToolContext
+from app.tools.deps import RepositoryBackedTool
 
 
 class KnowledgeSearchInput(BaseModel):
@@ -49,6 +52,7 @@ class SearchKnowledgeTool(Tool):
         self._retriever = retriever
 
     async def execute(self, parsed: KnowledgeSearchInput, context: ToolContext) -> ToolResult:
+        require_data_scope()  # Per-document filtering is implemented in stage C.
         chunks = await self._retriever.retrieve(parsed.query, top_k=4)
         return ToolResult(
             name=self.name,
@@ -88,7 +92,7 @@ class GetCouponTool(Tool):
         )
 
 
-class GetWarrantyTool(Tool):
+class GetWarrantyTool(RepositoryBackedTool, Tool):
     name = "get_warranty"
     description = (
         "按 SKU 返回保修月数与免责摘要（结构化，非全文政策）。"
@@ -102,6 +106,9 @@ class GetWarrantyTool(Tool):
     input_model = WarrantyInput
 
     async def execute(self, parsed: WarrantyInput, context: ToolContext) -> ToolResult:
+        product = await self.repository.get_product(parsed.sku)
+        if product is None:
+            raise ResourceNotFoundError()
         return ToolResult(
             name=self.name,
             success=True,

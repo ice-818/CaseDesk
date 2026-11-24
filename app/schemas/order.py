@@ -17,6 +17,7 @@ class OrderItem(BaseModel):
 
 class Order(BaseModel):
     order_id: str
+    merchant_id: str
     user_id: str
     status: OrderStatus
     items: list[OrderItem]
@@ -31,6 +32,7 @@ class Order(BaseModel):
 
 class Product(BaseModel):
     sku: str
+    merchant_id: str | None = None
     name: str
     category: str
     price_cents: int

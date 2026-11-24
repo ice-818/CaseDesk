@@ -163,12 +163,56 @@ def eval_intent_overlay() -> dict:
     }
 
 
+def _policy_component(function):
+    from functools import wraps
+
+    @wraps(function)
+    async def wrapped(*args, **kwargs):
+        from app.core.data_scope import bind_data_scope, scope_from_identity
+        from app.retrieval.policy_scope import policy_request
+        from app.schemas.auth import AuthIdentity
+
+        with (
+            bind_data_scope(scope_from_identity(AuthIdentity("component-evaluation", "operator"))),
+            policy_request(),
+        ):
+            return await function(*args, **kwargs)
+
+    return wrapped
+
+
+async def _evaluation_corpus(embedder):
+    from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine
+
+    from alembic import command
+    from alembic.config import Config
+    from app.retrieval.ingest import ingest_to_memory
+    from app.retrieval.policy_manifest import known_merchants
+
+    engine = create_async_engine("sqlite+aiosqlite:///:memory:")
+    try:
+
+        def upgrade(connection):
+            root = Path(__file__).resolve().parents[1]
+            config = Config(str(root / "alembic.ini"))
+            config.set_main_option("script_location", str(root / "alembic"))
+            config.attributes.update(connection=connection, configure_logger=False)
+            command.upgrade(config, "0009")
+
+        async with engine.connect() as connection:
+            await connection.run_sync(upgrade)
+        merchants = await known_merchants(async_sessionmaker(engine))
+        return await ingest_to_memory("knowledge", embedder, merchants=merchants)
+    finally:
+        await engine.dispose()
+
+
+@_policy_component
 async def eval_retrieval() -> dict:
     from app.config.settings import get_settings
     from app.providers.embeddings import build_embedding_provider
     from app.providers.reranker import CrossEncoderRerankProvider, LexicalRerankProvider
     from app.retrieval.hybrid import HybridRetriever
-    from app.retrieval.ingest import ingest_to_memory
     from app.retrieval.reranker import DocumentReranker
     from app.retrieval.vector import VectorRetriever
 
@@ -177,7 +221,7 @@ async def eval_retrieval() -> dict:
     dense_backend = getattr(embedder, "backend", "vector")
     vector_label = "hash-vector" if dense_backend == "hash" else dense_backend
     hybrid_label = f"bm25+{vector_label}+rrf"
-    bm25, store, _ = await ingest_to_memory("knowledge", embedder)
+    bm25, store, _ = await _evaluation_corpus(embedder)
     vector = VectorRetriever(store, embedder)
     hybrid = HybridRetriever(bm25, vector, rrf_k=60)
     rows = load_jsonl(RAG_PATH)
@@ -284,13 +328,13 @@ async def _generate_answer(llm, query: str, evidence: str) -> str:
     return parse_model(response.content, AnswerPayload).answer
 
 
+@_policy_component
 async def eval_generation() -> dict:
     from app.config.settings import get_settings
     from app.guardrails.hallucination import FaithfulnessChecker
     from app.providers.deepseek import DeepSeekProvider
     from app.providers.embeddings import build_embedding_provider
     from app.retrieval.hybrid import HybridRetriever
-    from app.retrieval.ingest import ingest_to_memory
     from app.retrieval.vector import VectorRetriever
 
     settings = get_settings()
@@ -299,7 +343,7 @@ async def eval_generation() -> dict:
     llm = DeepSeekProvider(settings)
     checker = FaithfulnessChecker(llm)
     embedder = build_embedding_provider(settings)
-    bm25, store, _ = await ingest_to_memory("knowledge", embedder)
+    bm25, store, _ = await _evaluation_corpus(embedder)
     retriever = HybridRetriever(bm25, VectorRetriever(store, embedder), rrf_k=60)
     rows = load_jsonl(RAG_PATH)
     semaphore = asyncio.Semaphore(3)
@@ -405,6 +449,9 @@ async def eval_e2e() -> dict:
     settings = get_settings()
     if not settings.llm_configured:
         raise SystemExit("DEEPSEEK_API_KEY missing")
+    auth_token = os.environ.get("CASEDESK_EVAL_TOKEN", "")
+    if not auth_token:
+        raise SystemExit("CASEDESK_EVAL_TOKEN required for authenticated E2E evaluation")
     container = await build_container(settings, seed=True)
     rows = load_jsonl(E2E_PATH)
     latencies: list[float] = []
@@ -420,10 +467,13 @@ async def eval_e2e() -> dict:
     toolish_n = 0
     details = []
     try:
+        identity = await container.auth_service.authenticate(auth_token)
         for row in rows:
-            request = ChatRequest(message=row["query"], user_id=row.get("user_id") or "u_demo")
+            request = ChatRequest(message=row["query"])
             started = time.perf_counter()
-            response = await container.chat_service.chat(request, trace_id=f"eval_{row['id']}")
+            response = await container.chat_service.chat(
+                request, trace_id=f"eval_{row['id']}", auth=identity
+            )
             total_ms = (time.perf_counter() - started) * 1000
             latencies.append(response.latency.total_ms or total_ms)
             intent_ms.append(response.latency.intent_ms)

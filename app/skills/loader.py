@@ -9,7 +9,7 @@ SKILLS_DIR = Path(__file__).parent / "definitions"
 
 INTENT_TO_SKILL = {
     "return_exchange": "return_handling",
-    "refund": "return_handling",
+    "refund": "refund_request",
     "logistics": "order_tracking",
     "order_inquiry": "order_tracking",
     "cancel_order": "order_cancellation",

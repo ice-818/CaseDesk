@@ -5,6 +5,7 @@ from __future__ import annotations
 import re
 
 from app.agents.state import AgentState
+from app.core.data_scope import require_data_scope
 from app.core.exceptions import LLMOutputError, LLMProviderError
 from app.core.ids import new_id
 from app.prompts.planner import PLANNER_SYSTEM, PLANNER_USER
@@ -36,6 +37,13 @@ class Planner:
 
     async def create_plan(self, query: str, intent_label: str, summary: str) -> AgentPlan:
         skill = match_skill(query, intent_label)
+        # The approval workflow is restricted to operators and service agents.
+        if (
+            skill is not None
+            and skill["name"] == "aftersale_approval"
+            and require_data_scope().role not in _APPROVER_ROLES
+        ):
+            skill = None
         allowed = _allowed_tools(skill, self._registry)
         if isinstance(self._llm, OfflineLLMProvider):
             return (
@@ -184,20 +192,45 @@ async def planner_node(state: AgentState, planner: Planner) -> dict:
             "pending_action": None,
         }
     intent = state.get("intent")
+    requirements = state.get("product_requirements")
+    if confirmed is None and requirements and requirements.active:
+        return {
+            "plan": AgentPlan(
+                steps=[
+                    PlanStep(
+                        step_id=1,
+                        goal="constraint-checked product search",
+                        tool_name="recommend_products",
+                        arguments={"query": requirements.task_query or ""},
+                    )
+                ]
+            ),
+            "pending_action": None,
+        }
     plan = await planner.create_plan(
         state["user_query"],
         intent.label.value if intent else "faq_policy",
         state.get("summary") or "",
     )
+    role = require_data_scope().role
     write_steps = [
         step
         for step in plan.steps
         if step.tool_name and planner._registry.get(step.tool_name).risk in WRITE_RISKS
     ]
-    if any(
-        _explicit_write_request(state["user_query"], step.tool_name or "") for step in write_steps
-    ):
-        if any(not step.arguments.get("order_id") for step in write_steps):
+    requested = {
+        step.tool_name: _write_step_is_requested(
+            state["user_query"], step.tool_name or "", role
+        )
+        for step in write_steps
+    }
+    if any(requested.values()):
+        missing = [
+            step
+            for step in write_steps
+            if requested.get(step.tool_name) and not _has_required_handle(step)
+        ]
+        if missing:
             return {
                 "plan": plan.model_copy(update={"steps": []}),
                 "extra": {"missing_order_id": True},
@@ -207,8 +240,7 @@ async def planner_node(state: AgentState, planner: Planner) -> dict:
             "steps": [
                 step
                 for step in plan.steps
-                if step not in write_steps
-                or _explicit_write_request(state["user_query"], step.tool_name or "")
+                if step not in write_steps or requested.get(step.tool_name)
             ]
         }
     )
@@ -252,6 +284,36 @@ def _explicit_write_request(query: str, tool_name: str) -> bool:
     if tool_name == "create_return_request":
         return any(cue in query for cue in ("申请退货", "帮我退货", "我要退货", "提交退货"))
     return False
+
+
+_PROCESS_TOOLS = {"process_refund", "process_return"}
+_APPROVER_ROLES = {"operator", "service_agent"}
+_PROCESS_CUES = (
+    "审批", "通过", "批准", "同意", "拒绝", "驳回", "完成", "打款", "签收", "处理",
+)
+
+
+def _explicit_process_request(query: str, tool_name: str) -> bool:
+    if tool_name not in _PROCESS_TOOLS:
+        return False
+    # 咨询性措辞不算处理指令。
+    if any(cue in query for cue in ("规则", "政策", "怎么", "能不能", "是否", "可以吗", "能退吗")):
+        return False
+    return any(cue in query for cue in _PROCESS_CUES)
+
+
+def _has_required_handle(step: PlanStep) -> bool:
+    if step.tool_name == "process_refund":
+        return bool(step.arguments.get("refund_id"))
+    if step.tool_name == "process_return":
+        return bool(step.arguments.get("return_id"))
+    return bool(step.arguments.get("order_id"))
+
+
+def _write_step_is_requested(query: str, tool_name: str, role: str) -> bool:
+    if tool_name in _PROCESS_TOOLS:
+        return role in _APPROVER_ROLES and _explicit_process_request(query, tool_name)
+    return _explicit_write_request(query, tool_name)
 
 
 def _action_summary(tool_name: str, arguments: dict) -> str:

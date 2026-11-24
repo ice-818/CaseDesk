@@ -61,6 +61,15 @@ class OrderStatus(str, Enum):
     REFUNDED = "refunded"
 
 
+class AftersaleStatus(str, Enum):
+    """Lifecycle of a refund or return request."""
+
+    REQUESTED = "requested"
+    APPROVED = "approved"
+    REJECTED = "rejected"
+    COMPLETED = "completed"
+
+
 class ToolRisk(str, Enum):
     READ = "read"
     WRITE = "write"

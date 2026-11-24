@@ -17,10 +17,12 @@ from app.retrieval.cache import (
     cache_key,
 )
 from app.schemas.retrieval import RetrievedChunk
+from tests.policy_support import policy_case
 
 
 def _chunk(chunk_id: str = "c1", content: str = "七天无理由。") -> RetrievedChunk:
     return RetrievedChunk(
+        policy_layer="platform", policy_scope_version=1, corpus_fingerprint="test-corpus",
         chunk_id=chunk_id,
         document_id="return_policy_0",
         title="退货政策",
@@ -51,7 +53,7 @@ def test_order_query_is_false_for_policy_question() -> None:
 
 def test_cache_key_is_stable_and_prefixed() -> None:
     assert cache_key("退货", 3) == cache_key("退货", 3)
-    assert cache_key("退货", 3).startswith("ret:")
+    assert cache_key("退货", 3).startswith("ret:scope:v1:")
 
 
 def test_cache_key_varies_with_top_k() -> None:
@@ -159,3 +161,9 @@ async def test_redis_cache_get_degrades_on_error() -> None:
 async def test_redis_cache_set_swallows_error() -> None:
     cache = RedisRetrievalCache(_BrokenRedis(), ttl_seconds=60)
     await cache.set("退货", 3, [_chunk()])  # must not raise
+
+
+@pytest.fixture(autouse=True)
+def explicit_public_policy_scope():
+    with policy_case("operator", None):
+        yield

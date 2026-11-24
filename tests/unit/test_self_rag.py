@@ -12,6 +12,7 @@ from app.core.exceptions import LLMProviderError
 from app.providers.fake import FakeLLMProvider
 from app.retrieval.self_rag import SelfRAGLoop
 from app.schemas.retrieval import RetrievedChunk
+from tests.policy_support import policy_case
 
 _SUFFICIENT = '{"relevant": true, "sufficient": true, "missing_aspect": "", "rationale": "ok"}'
 _NOT_SUFFICIENT = (
@@ -21,6 +22,7 @@ _NOT_SUFFICIENT = (
 
 def _chunk(chunk_id: str, content: str = "政策正文") -> RetrievedChunk:
     return RetrievedChunk(
+        policy_layer="platform", policy_scope_version=1, corpus_fingerprint="test-corpus",
         chunk_id=chunk_id,
         document_id=f"policy_{chunk_id}",
         title="政策",
@@ -150,3 +152,9 @@ async def test_loop_returns_empty_when_nothing_retrieved_and_grading_fails() -> 
     loop = _loop(llm=_RaisingLLM(), retriever=retriever, hops=1)
 
     assert await loop.retrieve("退货", top_k=3) == []
+
+
+@pytest.fixture(autouse=True)
+def explicit_public_policy_scope():
+    with policy_case("operator", None):
+        yield

@@ -1,5 +1,6 @@
 """Repository-backed tool base."""
 
+from app.core.data_scope import require_data_scope
 from app.core.request_scope import get_db_session
 from app.repositories.order_repository import OrderRepository
 
@@ -12,6 +13,8 @@ class RepositoryBackedTool:
 
     @property
     def repository(self) -> OrderRepository:
+        require_data_scope()
         if self._repository is not None:
+            self._repository.scope.assert_current()
             return self._repository
         return OrderRepository(get_db_session())

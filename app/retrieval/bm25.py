@@ -6,6 +6,7 @@ from collections import defaultdict
 
 from rank_bm25 import BM25Okapi
 
+from app.retrieval.policy_scope import EMPTY_CORPUS, corpus_of, current_policy
 from app.retrieval.tokenizer import tokenize
 from app.schemas.retrieval import RetrievedChunk
 
@@ -14,26 +15,31 @@ class BM25Retriever:
     """Lexical retriever. Complements dense search on exact policy numbers / SKUs."""
 
     def __init__(self, corpus: list[RetrievedChunk] | None = None) -> None:
+        self.corpus_fingerprint = EMPTY_CORPUS
         self._chunks: list[RetrievedChunk] = []
         self._bm25: BM25Okapi | None = None
         if corpus:
             self.build(corpus)
 
     def build(self, corpus: list[RetrievedChunk]) -> None:
+        self.corpus_fingerprint = corpus_of(corpus)
         self._chunks = list(corpus)
         tokenized = [tokenize(chunk.content) for chunk in self._chunks]
         # BM25Okapi requires a non-empty corpus; keep None if ingest has not run.
         self._bm25 = BM25Okapi(tokenized) if tokenized else None
 
     def search(self, query: str, *, top_k: int) -> list[RetrievedChunk]:
-        if self._bm25 is None or not self._chunks:
+        context = current_policy(self.corpus_fingerprint)
+        visible = [chunk for chunk in self._chunks if context.allows(chunk)]
+        if not visible:
             return []
-        scores = self._bm25.get_scores(tokenize(query))
+        local_bm25 = BM25Okapi([tokenize(chunk.content) for chunk in visible])
+        scores = local_bm25.get_scores(tokenize(query))
         ranked = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)[:top_k]
         results: list[RetrievedChunk] = []
         for rank, index in enumerate(ranked, start=1):
             # BM25 IDF can be negative on tiny corpora; still return the ranked docs.
-            chunk = self._chunks[index].model_copy(deep=True)
+            chunk = visible[index].model_copy(deep=True)
             chunk.score = float(scores[index])
             chunk.rank = rank
             chunk.source = "bm25"

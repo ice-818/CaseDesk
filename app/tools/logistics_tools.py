@@ -5,6 +5,7 @@ from typing import Any
 from pydantic import BaseModel, Field
 
 from app.core.enums import ToolRisk
+from app.retrieval.policy_scope import authorize_policy_target
 from app.schemas.agent import ToolResult
 from app.tools.base import Tool, ToolContext
 from app.tools.deps import RepositoryBackedTool
@@ -33,7 +34,8 @@ class TrackShipmentTool(RepositoryBackedTool, Tool):
     input_model = TrackInput
 
     async def execute(self, parsed: TrackInput, context: ToolContext) -> ToolResult:
-        order = await self.repository.get_visible_order(parsed.order_id, context.user_id)
+        order = await self.repository.get_visible_order(parsed.order_id)
+        await authorize_policy_target(self.repository._session, order_id=parsed.order_id)
         events: list[dict[str, Any]] = []
         if order.paid_at:
             events.append({"status": "warehouse", "at": order.paid_at.isoformat()})

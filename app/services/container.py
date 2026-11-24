@@ -21,6 +21,7 @@ from app.retrieval.hybrid import HybridRetriever
 from app.retrieval.ingest import ingest_knowledge
 from app.retrieval.reranker import DocumentReranker
 from app.retrieval.vector import VectorRetriever
+from app.services.auth_service import AuthService
 from app.services.chat_service import ChatService
 from app.services.seed import seed_demo_data
 from app.tools.factory import build_tool_registry
@@ -37,6 +38,7 @@ class AppContainer:
         engine,
         session_factory,
         retriever: HybridRetriever,
+        auth_service: AuthService,
         redis=None,
         vector_store=None,
     ) -> None:
@@ -48,6 +50,7 @@ class AppContainer:
         self.retriever = retriever
         self.redis = redis
         self.vector_store = vector_store
+        self.auth_service = auth_service
 
     async def aclose(self) -> None:
         closer = getattr(self.llm, "aclose", None)
@@ -69,8 +72,10 @@ async def build_infrastructure(settings: Settings):
     return engine, session_factory, redis
 
 
-async def build_retrieval(settings: Settings, redis):
+async def build_retrieval(settings: Settings, redis, session_factory):
     """Build the knowledge ingestion and hybrid retrieval components."""
+    from app.retrieval.policy_manifest import known_merchants
+    merchants = await known_merchants(session_factory)
     embedder = build_embedding_provider(settings)
     cache = (
         RedisRetrievalCache(redis, ttl_seconds=settings.retrieval_cache_ttl_seconds)
@@ -80,6 +85,7 @@ async def build_retrieval(settings: Settings, redis):
     bm25, store, _ = await ingest_knowledge(
         settings.knowledge_dir,
         embedder,
+        merchants=merchants,
         settings=settings,
         qdrant_url=settings.qdrant_url,
         qdrant_collection=settings.qdrant_collection,
@@ -98,12 +104,20 @@ async def build_container(settings: Settings, seed: bool = False) -> AppContaine
         DeepSeekProvider(settings) if settings.llm_configured else OfflineLLMProvider()
     )
     engine, session_factory, redis = await build_infrastructure(settings)
+    auth_service = AuthService(session_factory, settings)
+    try:
+        await auth_service.check_schema(engine)
+    except Exception:
+        await engine.dispose()
+        if redis is not None:
+            await redis.aclose()
+        raise
     rate_limiter = (
         RedisRateLimiter(redis, limit=settings.rate_limit_per_minute)
         if redis is not None
         else InMemoryRateLimiter(limit=settings.rate_limit_per_minute)
     )
-    retriever, reranker, store = await build_retrieval(settings, redis)
+    retriever, reranker, store = await build_retrieval(settings, redis, session_factory)
     registry = build_tool_registry(retriever)
     if settings.mcp_enabled:
         await register_stdio_tools(registry)
@@ -126,6 +140,7 @@ async def build_container(settings: Settings, seed: bool = False) -> AppContaine
         session_factory=session_factory,
         rate_limiter=rate_limiter,
         registry=registry,
+        auth_service=auth_service,
     )
     if seed:
         async with session_factory() as session:
@@ -149,4 +164,5 @@ async def build_container(settings: Settings, seed: bool = False) -> AppContaine
         retriever=retriever,
         redis=redis,
         vector_store=store,
+        auth_service=auth_service,
     )

@@ -36,6 +36,7 @@ async def router_node(state: AgentState, router: AdaptiveRouter) -> dict:
             rationale="confirmed_action",
         )
         if state.get("confirmed_action")
+        or (state.get("product_requirements") and state["product_requirements"].active)
         else await router.route(state["user_query"], intent)
     )
     latency = _latency(state)

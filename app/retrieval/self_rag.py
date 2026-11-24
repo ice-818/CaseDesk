@@ -14,6 +14,12 @@ from app.prompts.self_rag import GRADE_SYSTEM, GRADE_USER
 from app.providers.base import LLMProvider
 from app.providers.json_parser import parse_model
 from app.retrieval.hybrid import HybridRetriever
+from app.retrieval.policy_scope import (
+    chunk_identity,
+    current_policy,
+    policy_operation,
+    verify_results,
+)
 from app.retrieval.query_rewrite import QueryRewriter
 from app.retrieval.reranker import DocumentReranker
 from app.schemas.retrieval import RetrievedChunk
@@ -35,12 +41,14 @@ class SelfRAGLoop:
         llm: LLMProvider,
         settings: Settings,
     ) -> None:
+        self.corpus_fingerprint = getattr(retriever, "corpus_fingerprint", None)
         self._retriever = retriever
         self._reranker = reranker
         self._rewriter = rewriter
         self._llm = llm
         self._settings = settings
 
+    @policy_operation
     async def retrieve(
         self,
         query: str,
@@ -56,12 +64,14 @@ class SelfRAGLoop:
             candidates_by_id: dict[str, RetrievedChunk] = {}
             for search_query in queries:
                 for candidate in await self._retriever.retrieve(search_query, top_k=top_k):
-                    candidates_by_id.setdefault(candidate.chunk_id, candidate)
+                    verify_results(current_policy(), [candidate])
+                    candidates_by_id.setdefault(chunk_identity(candidate), candidate)
             reranked = await self._reranker.rerank(
                 query, list(candidates_by_id.values()), top_n=self._settings.rerank_top_n
             )
             for chunk in reranked:
-                accumulated[chunk.chunk_id] = chunk
+                verify_results(current_policy(), [chunk])
+                accumulated[chunk_identity(chunk)] = chunk
             grade = await self._grade(query, list(accumulated.values()))
             if grade.sufficient:
                 break

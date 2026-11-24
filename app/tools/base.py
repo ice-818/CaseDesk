@@ -6,8 +6,9 @@ from typing import Any, Protocol
 
 from pydantic import BaseModel, ValidationError
 
+from app.core.data_scope import assert_tool_actor
 from app.core.enums import ToolRisk
-from app.core.exceptions import InvalidRequestError, ToolExecutionError
+from app.core.exceptions import AppError, InvalidRequestError, ToolExecutionError
 from app.schemas.agent import ToolResult
 
 
@@ -63,7 +64,8 @@ class Tool:
             InvalidRequestError: If the arguments do not match the schema.
         """
         try:
-            return self.input_model.model_validate(arguments)
+            clean = {key: value for key, value in arguments.items() if key not in {"merchant_id", "shop_id", "scope", "data_scope"}}
+            return self.input_model.model_validate(clean)
         except ValidationError as exc:
             raise InvalidRequestError(f"invalid arguments for {self.name}: {exc}") from exc
 
@@ -71,11 +73,17 @@ class Tool:
         """Validate, then execute, mapping unexpected errors to a tool failure."""
         parsed = self.parse(arguments)
         try:
+            assert_tool_actor(context.user_id)
+            await self.authorize(parsed, context)
             return await self.execute(parsed, context)
-        except InvalidRequestError:
+        except AppError:
             raise
         except Exception as exc:
             raise ToolExecutionError(f"{self.name} failed") from exc
+
+    async def authorize(self, parsed: BaseModel, context: ToolContext) -> None:
+        """Write tools override this; invoked before idempotency cache lookup too."""
+        assert_tool_actor(context.user_id)
 
     async def execute(self, parsed: BaseModel, context: ToolContext) -> ToolResult:
         """Perform the tool's work. Subclasses must override this."""

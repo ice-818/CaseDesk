@@ -5,6 +5,7 @@ description = "CaseDesk multi-agent customer support workspace"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "bcrypt>=5,<6",
     "fastapi>=0.115.0,<0.116",
     "uvicorn[standard]>=0.32.0,<0.33",
     "pydantic>=2.9.0,<3",
@@ -63,6 +64,14 @@ testpaths = ["tests"]
 pythonpath = ["."]
 filterwarnings = [
     "ignore::DeprecationWarning",
+]
+markers = [
+    "redteam: 越权与提示注入等红队攻击矩阵",
+    "trajectory: 合成用户固定剧本端到端轨迹",
+    "property: 基于固定种子的属性/不变性测试",
+    "fault: 故障注入与并发竞态测试",
+    "regression: 已修复缺陷的回归用例",
+    "determinism: 确定性冒烟，重复运行结果一致",
 ]
 
 [tool.ruff]

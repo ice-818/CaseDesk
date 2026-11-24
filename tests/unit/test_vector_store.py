@@ -13,10 +13,14 @@ from app.retrieval.vector import (
     stable_point_id,
 )
 from app.schemas.retrieval import RetrievedChunk
+from tests.policy_support import policy_case
 
 
 def _chunk(chunk_id: str, content: str = "正文") -> RetrievedChunk:
     return RetrievedChunk(
+        policy_layer="platform",
+        policy_scope_version=1,
+        corpus_fingerprint="test-corpus",
         chunk_id=chunk_id,
         document_id="policy_0",
         title="政策",
@@ -147,10 +151,17 @@ async def test_vector_retriever_searches_with_embedded_query() -> None:
 @pytest.mark.asyncio
 async def test_vector_retriever_returns_empty_without_embedding() -> None:
     retriever = VectorRetriever(InMemoryVectorStore(), _EmptyEmbedder())
-    assert await retriever.search("退货", top_k=1) == []
+    with policy_case("operator", None, fingerprint=retriever.store.corpus_fingerprint):
+        assert await retriever.search("退货", top_k=1) == []
 
 
 @pytest.mark.asyncio
 async def test_vector_retriever_ping_delegates_to_store() -> None:
     retriever = VectorRetriever(InMemoryVectorStore(), _FixedEmbedder([1.0]))
     assert await retriever.ping() is True
+
+
+@pytest.fixture(autouse=True)
+def explicit_public_policy_scope():
+    with policy_case("operator", None):
+        yield

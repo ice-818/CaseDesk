@@ -1,15 +1,65 @@
 """Product tools: search, detail, recommendation and inventory."""
 
-from pydantic import BaseModel, Field
+import re
 
+from pydantic import BaseModel, ConfigDict, Field, model_validator
+
+from app.core.constants import SHOPPING_RECALL_PAGE_SIZES
 from app.core.enums import ToolRisk
-from app.core.exceptions import InvalidRequestError
+from app.core.exceptions import ResourceNotFoundError
+from app.retrieval.policy_scope import authorize_policy_target
 from app.schemas.agent import ToolResult
 from app.tools.base import Tool, ToolContext
 from app.tools.deps import RepositoryBackedTool
 
 
-class SearchInput(BaseModel):
+class ProductConstraints(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    min_price_cents: int | None = Field(
+        default=None, ge=0, strict=True, description="最低价格，单位分，含边界"
+    )
+    max_price_cents: int | None = Field(
+        default=None, ge=0, strict=True, description="最高价格，单位分，含边界；300元填30000"
+    )
+    color: str | None = Field(
+        default=None,
+        min_length=1,
+        max_length=32,
+        pattern=r"^[^,\s]+$",
+        description="明确颜色，如黑色；缺少该规格的商品不得匹配",
+    )
+    size: str | None = Field(
+        default=None,
+        min_length=1,
+        max_length=32,
+        pattern=r"^[^,\s]+$",
+        description="明确尺码，如42；不得更换尺码",
+    )
+    colors: list[str] | None = Field(
+        default=None,
+        min_length=1,
+        max_length=12,
+        description="可接受颜色的列表，任一匹配；不能与color同时传入",
+    )
+
+    @model_validator(mode="after")
+    def validate_price_range(self):
+        if self.color is not None and self.colors is not None:
+            raise ValueError("use either color or colors")
+        if self.colors and any(not value or re.search(r"[,\s]", value) for value in self.colors):
+            raise ValueError("invalid color")
+        if (
+            self.min_price_cents is not None
+            and self.max_price_cents is not None
+            and self.min_price_cents > self.max_price_cents
+        ):
+            raise ValueError("minimum price exceeds maximum price")
+        return self
+
+
+class SearchInput(ProductConstraints):
+    offset: int = Field(default=0, ge=0)
     query: str = Field(
         min_length=1,
         max_length=80,
@@ -26,7 +76,8 @@ class SkuInput(BaseModel):
     )
 
 
-class RecommendInput(BaseModel):
+class RecommendInput(ProductConstraints):
+    offset: int = Field(default=0, ge=0)
     category: str | None = Field(
         default=None,
         max_length=32,
@@ -47,13 +98,17 @@ class SearchProductsTool(RepositoryBackedTool, Tool):
         "何时不用：已知 sku 用 get_product_detail；「推荐/不知道买什么」用 recommend_products；政策问题用 search_knowledge。"
         "优先使用 search_products 当有明确关键词；模糊需求或推荐语气则用 recommend_products。"
         "参数 query：1–80 字搜索词，不是 sku。例 query=「降噪耳机」，不要填 SKU-A1 或 ORD1001。"
+        "硬条件参数 min_price_cents/max_price_cents（整数分，含边界）、color（如黑色）、size（如42），必须完整传递用户明确条件，禁止放宽。"
+        "query只填商品关键词，不要把预算和尺码混进搜索词。无匹配时products为空，不得推荐其他规格。"
         "返回 products[]：sku、name、category、price_cents（分）、inventory；后续详情用返回的 sku 调 get_product_detail。"
     )
     risk = ToolRisk.READ
     input_model = SearchInput
 
     async def execute(self, parsed: SearchInput, context: ToolContext) -> ToolResult:
-        products = await self.repository.search_products(parsed.query)
+        products = await self.repository.find_matching_products(
+            **parsed.model_dump(), limit=SHOPPING_RECALL_PAGE_SIZES[self.name]
+        )
         return ToolResult(
             name=self.name,
             success=True,
@@ -77,7 +132,8 @@ class GetProductDetailTool(RepositoryBackedTool, Tool):
     async def execute(self, parsed: SkuInput, context: ToolContext) -> ToolResult:
         product = await self.repository.get_product(parsed.sku)
         if product is None:
-            raise InvalidRequestError(f"product not found: {parsed.sku}")
+            raise ResourceNotFoundError()
+        await authorize_policy_target(self.repository._session, sku=parsed.sku)
         return ToolResult(name=self.name, success=True, output=product.model_dump())
 
 
@@ -88,19 +144,29 @@ class RecommendProductsTool(RepositoryBackedTool, Tool):
         "何时用：用户说推荐、随便看看、按场景/预算选、不知道买哪款。"
         "何时不用：已有明确搜索词用 search_products；已知 sku 用 get_product_detail。"
         "优先使用 search_products 当用户给出具体商品关键词；否则用本工具。"
-        "参数 category 可选品类如「数码」；query 可选需求如「送女朋友的礼物」。至少填一个，都空则按「热销」召回。不要填 sku。"
+        "硬条件参数 min_price_cents/max_price_cents（整数分，含边界）、color（如黑色）、size（如42），必须完整传递用户明确条件，禁止放宽。"
+        "query只填商品关键词；category与query同时提供时都必须匹配。无匹配时不得改预算或换尺码。"
+        "参数 category 可选品类如「数码」；query 可选商品关键词。都空则在授权目录内按硬条件召回，不附加关键词。不要填 sku。"
         "返回 products 最多 3 条，字段同 search_products；不是个性化实时推荐。"
     )
     risk = ToolRisk.READ
     input_model = RecommendInput
 
     async def execute(self, parsed: RecommendInput, context: ToolContext) -> ToolResult:
-        query = parsed.category or parsed.query or "热销"
-        products = await self.repository.search_products(query)
+        products = await self.repository.find_matching_products(
+            **parsed.model_dump(), limit=SHOPPING_RECALL_PAGE_SIZES[self.name]
+        )
         return ToolResult(
             name=self.name,
             success=True,
-            output={"products": [p.model_dump() for p in products[:3]]},
+            output={
+                "products": [p.model_dump() for p in products],
+                "status": "matched" if products else "no_match",
+                "applied_constraints": parsed.model_dump(exclude_none=True, exclude={"offset"}),
+                "message": "仅返回符合已传入硬条件且有库存的商品。"
+                if products
+                else "当前商品目录未找到符合全部已传入条件且有库存的商品；不得擅自放宽条件。",
+            },
         )
 
 
@@ -120,7 +186,7 @@ class CheckInventoryTool(RepositoryBackedTool, Tool):
     async def execute(self, parsed: SkuInput, context: ToolContext) -> ToolResult:
         product = await self.repository.get_product(parsed.sku)
         if product is None:
-            raise InvalidRequestError(f"product not found: {parsed.sku}")
+            raise ResourceNotFoundError()
         return ToolResult(
             name=self.name,
             success=True,

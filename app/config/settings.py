@@ -3,7 +3,7 @@
 from functools import lru_cache
 from typing import Literal
 
-from pydantic import SecretStr
+from pydantic import Field, SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -23,6 +23,7 @@ class Settings(BaseSettings):
     app_name: str = "CaseDesk"
     log_level: str = "INFO"
     api_v1_prefix: str = "/api/v1"
+    reception_idle_seconds: int = Field(default=1800, ge=60)
 
     deepseek_api_key: SecretStr = SecretStr("")
     deepseek_base_url: str = "https://api.deepseek.com"
@@ -70,6 +71,10 @@ class Settings(BaseSettings):
     db_max_overflow: int = 10
     db_pool_timeout: int = 30
     admin_api_token: SecretStr = SecretStr("")
+    auth_session_ttl_seconds: int = Field(default=28800, ge=1, le=604800)
+    auth_login_limit_per_minute: int = Field(default=10, ge=1)
+    auth_stream_check_interval_seconds: float = Field(default=1.0, gt=0, le=1.0)
+    cors_allowed_origins: list[str] = ["http://127.0.0.1:5173", "http://localhost:5173"]
     knowledge_dir: str = "knowledge"
     unstructured_enabled: bool = True
     unstructured_strategy: str = "auto"

@@ -74,6 +74,8 @@ async def faithfulness_node(
     state: AgentState, checker: FaithfulnessChecker, llm: LLMProvider
 ) -> dict:
     answer = state.get("final_answer") or ""
+    if (state.get("extra") or {}).get("product_answer_checked"):
+        return {}
     if (
         state.get("refused")
         or state.get("pending_action")
@@ -109,6 +111,10 @@ async def faithfulness_node(
                 title=chunk.title,
                 chunk_id=chunk.chunk_id,
                 section=chunk.section,
+                policy_layer=chunk.policy_layer,
+                merchant_id=chunk.merchant_id,
+                applicable_category=chunk.applicable_category,
+                policy_version=chunk.policy_version,
             )
             for chunk in chunks
             if chunk.chunk_id in citation_ids

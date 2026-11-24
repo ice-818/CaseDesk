@@ -10,6 +10,7 @@ Duplicate chunk_ids are merged; first-seen metadata wins, scores are fused.
 from __future__ import annotations
 
 from app.core.constants import DEFAULT_RRF_K
+from app.retrieval.policy_scope import chunk_identity, context_for_chunks, verify_results
 from app.schemas.retrieval import RetrievedChunk
 
 
@@ -20,13 +21,16 @@ def reciprocal_rank_fusion(
 ) -> list[RetrievedChunk]:
     if k <= 0:
         raise ValueError("RRF k must be positive")
+    chunks = [chunk for ranked in ranked_lists for chunk in ranked]
+    verify_results(context_for_chunks(chunks), chunks)
     scores: dict[str, float] = {}
     canonical: dict[str, RetrievedChunk] = {}
     for ranked in ranked_lists:
         for rank_position, chunk in enumerate(ranked, start=1):
-            scores[chunk.chunk_id] = scores.get(chunk.chunk_id, 0.0) + 1.0 / (k + rank_position)
-            if chunk.chunk_id not in canonical:
-                canonical[chunk.chunk_id] = chunk.model_copy(deep=True)
+            identity = chunk_identity(chunk)
+            scores[identity] = scores.get(identity, 0.0) + 1.0 / (k + rank_position)
+            if identity not in canonical:
+                canonical[identity] = chunk.model_copy(deep=True)
     fused = []
     for chunk_id, score in sorted(scores.items(), key=lambda item: item[1], reverse=True):
         chunk = canonical[chunk_id]

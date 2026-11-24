@@ -79,7 +79,9 @@ def dedupe_chunks(
     kept: list[RetrievedChunk] = []
     seen: dict[str, str] = {}
     for chunk in chunks:
-        digest = content_sha1(chunk.content)
+        from app.retrieval.policy_scope import policy_identity
+
+        digest = str(policy_identity(chunk)) + content_sha1(chunk.content)
         prior = seen.get(digest)
         if prior is not None:
             logger.info(

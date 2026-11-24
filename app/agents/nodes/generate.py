@@ -7,6 +7,7 @@ import time
 
 from pydantic import BaseModel, Field
 
+from app.agents.product_requirements import matches_requirements
 from app.agents.state import AgentState
 from app.core.enums import RetrievalStrategy
 from app.core.exceptions import LLMOutputError, LLMProviderError
@@ -24,10 +25,134 @@ class AnswerPayload(BaseModel):
     refused: bool = False
 
 
+def _navigation_answer(loop: dict, *, continued: bool) -> str:
+    if notice := loop.get("navigation_notice"):
+        return notice
+    verified = loop["verified"]
+    if continued and not loop.get("navigation_found"):
+        return {
+            "budget_exhausted": "已达到本轮查询上限，暂时无法确认更多符合条件的商品。",
+            "tool_failure": "商品工具暂时不可用，无法核实更多商品。",
+            "needs_clarification": "请先确认本轮选购条件。",
+        }.get(loop.get("stop_reason", ""), "当前范围内没有更多符合条件的商品。")
+    if not verified:
+        return "目前没有已核验商品。"
+    if loop["view"] == "select":
+        return f"已记录你选中的商品（SKU：{loop['selected_sku']}）。"
+    by_sku = {p["sku"]: p for p in verified}
+    ranking = {item["sku"]: item for item in loop.get("verified_ranking", [])}
+    shown = loop["display_skus"]
+
+    def describe(sku: str) -> str:
+        product = by_sku[sku]
+        tags = "、".join(product.get("tags") or []) or "无规格标签"
+        item = ranking.get(sku)
+        scores = "暂无评分"
+        if item:
+            scores = "、".join(f"{key} {value:.3f}" for key, value in item["feature_scores"].items())
+            scores += f"、total_score {item['total_score']:.3f}"
+        return (
+            f"第{shown.index(sku) + 1}个 {product['name']}（{sku}）｜"
+            f"价格 {product['price_cents'] / 100:.2f} 元｜库存 {product['inventory']}｜标签 {tags}｜{scores}"
+        )
+
+    if loop["view"] == "compare":
+        rows = [describe(sku) for sku in loop["compare_skus"]]
+        return "\n".join(["商品对比", *rows, "数据来自已核验详情，不代表独立检测。"])
+    return describe(verified[loop["display_index"]]["sku"])
+
+
 async def generate_node(state: AgentState, llm: LLMProvider) -> dict:
     started = time.perf_counter()
     chunks = state.get("retrieved_chunks") or []
     tools = state.get("tool_results") or []
+    clarification = (state.get("extra") or {}).get("product_clarification")
+    if clarification:
+        return {
+            "final_answer": f"推荐前需要确认：{clarification}。",
+            "citations": [],
+            "extra": {**(state.get("extra") or {}), "product_answer_checked": True},
+        }
+    requirements = state.get("product_requirements")
+    shopping_loop = state.get("shopping_loop")
+    if state.get("navigation"):
+        answer = (
+            _navigation_answer(shopping_loop, continued=bool(state.get("navigation_applied")))
+            if shopping_loop else "当前没有可继续浏览的选购结果，请先说明想找什么商品。"
+        )
+        return {
+            "final_answer": answer,
+            "citations": [],
+            "extra": {
+                **(state.get("extra") or {}),
+                "product_answer_checked": True,
+                "shopping_stop_reason": (shopping_loop or {}).get("stop_reason"),
+            },
+        }
+    if requirements and requirements.active and shopping_loop:
+        products = shopping_loop.get("verified") or []
+        reason = str(shopping_loop.get("stop_reason") or "insufficient_evidence")
+        if products:
+            lines = ["以下候选已核对本次硬条件及库存："]
+            for index, p in enumerate(products, start=1):
+                lines.append(
+                    f"第{index}个 {p['name']}（{p['sku']}），{p['price_cents'] / 100:.2f}元；目录依据：{'、'.join(p.get('tags') or [])}。"
+                )
+            if requirements.evidence_tags:
+                lines.append("属性依据来自商品目录标注，不代表独立检测或性能保证。")
+            if reason in {"budget_exhausted", "tool_failure"}:
+                lines.append("其余候选尚未核实：已达到本轮查询上限或工具暂时不可用。")
+            answer = "\n".join(lines)
+        else:
+            explanations = {
+                "no_match": "当前未找到符合全部条件的商品。",
+                "tool_failure": "商品工具暂时不可用，无法完成本次核实。",
+                "budget_exhausted": "已达到本轮查询上限，暂时无法确认有符合条件的商品。",
+            }
+            answer = explanations.get(reason, "候选商品的资料不足，无法确认满足全部要求。")
+            answer += "没有擅自放宽条件；请补充信息或明确告知是否调整要求。"
+        return {
+            "final_answer": answer,
+            "shopping_loop": {**shopping_loop, "display_skus": [p["sku"] for p in products]},
+            "citations": [],
+            "extra": {
+                **(state.get("extra") or {}),
+                "product_answer_checked": True,
+                "shopping_stop_reason": reason,
+            },
+        }
+    product_calls = [
+        tool for tool in tools if tool.name in {"search_products", "recommend_products"}
+    ]
+    plan = state.get("plan")
+    planned_product = plan and any(
+        step.tool_name in {"search_products", "recommend_products"} for step in plan.steps
+    )
+    if requirements and requirements.constraints and (product_calls or planned_product):
+        products = {
+            p["sku"]: p
+            for tool in product_calls
+            if tool.success
+            for p in tool.output.get("products", [])
+            if isinstance(p, dict)
+            and "sku" in p
+            and matches_requirements(p, requirements.constraints)
+        }
+        if not products:
+            answer = "当前未查到可核实符合全部条件的商品；我没有放宽预算、颜色或尺码。请补充信息或明确告知是否调整条件。"
+        else:
+            lines = ["以下商品通过了本次明确预算、颜色和尺码条件的核对："]
+            for p in list(products.values())[:3]:
+                lines.append(
+                    f"{p['name']}（{p['sku']}），价格{p['price_cents'] / 100:.2f}元；规格标签：{'、'.join(p.get('tags') or [])}。"
+                )
+            lines.append("其他用途和偏好尚需核实，以上不代表已满足未结构化的要求。")
+            answer = "\n".join(lines)
+        return {
+            "final_answer": answer,
+            "citations": [],
+            "extra": {**(state.get("extra") or {}), "product_answer_checked": True},
+        }
     if tools and all(not tool.success for tool in tools):
         return {
             "final_answer": "暂时无法查到相关业务数据，请核对订单号或稍后重试。",
@@ -60,6 +185,10 @@ async def generate_node(state: AgentState, llm: LLMProvider) -> dict:
                 title=chunk.title,
                 chunk_id=chunk.chunk_id,
                 section=chunk.section,
+                policy_layer=chunk.policy_layer,
+                merchant_id=chunk.merchant_id,
+                applicable_category=chunk.applicable_category,
+                policy_version=chunk.policy_version,
             )
             for chunk in chunks
             if chunk.chunk_id in citation_ids
@@ -99,6 +228,10 @@ async def generate_node(state: AgentState, llm: LLMProvider) -> dict:
             title=chunk.title,
             chunk_id=chunk.chunk_id,
             section=chunk.section,
+            policy_layer=chunk.policy_layer,
+            merchant_id=chunk.merchant_id,
+            applicable_category=chunk.applicable_category,
+            policy_version=chunk.policy_version,
         )
         for chunk in chunks
         if chunk.chunk_id in set(payload.citation_chunk_ids)

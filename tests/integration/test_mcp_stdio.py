@@ -7,9 +7,11 @@ import pytest
 from mcp import StdioServerParameters
 from mcp.types import CallToolResult, TextContent
 
+from app.core.data_scope import bind_data_scope, scope_from_identity
 from app.core.exceptions import InvalidRequestError, ToolExecutionError
 from app.mcp.client import StdioMCPClient, decode_result
 from app.mcp.stdio_adapter import register_stdio_tools
+from app.schemas.auth import AuthIdentity
 from app.tools.base import ToolContext
 from app.tools.registry import ToolRegistry
 
@@ -73,3 +75,9 @@ def test_error_and_text_result_conversion() -> None:
     ) == {"hours": "10:00-18:00"}
     converted = decode_result(CallToolResult(content=[TextContent(type="text", text="hello")]))
     assert converted["content"][0]["text"] == "hello"
+
+
+@pytest.fixture(autouse=True)
+def trusted_buyer_scope():
+    with bind_data_scope(scope_from_identity(AuthIdentity("u", "buyer"))):
+        yield

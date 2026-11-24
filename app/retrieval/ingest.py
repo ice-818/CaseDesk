@@ -10,8 +10,9 @@ from app.config.settings import Settings, get_settings
 from app.core.enums import DocumentCategory
 from app.providers.base import EmbeddingProvider
 from app.retrieval.bm25 import BM25Retriever
-from app.retrieval.chunking import document_id_from_path
+from app.retrieval.chunking import document_id_from_path, scoped_chunk_id
 from app.retrieval.cleaning import dedupe_chunks
+from app.retrieval.policy_manifest import corpus_fingerprint, document_scope
 from app.retrieval.unstructured_parser import list_knowledge_files, parse_path
 from app.retrieval.vector import (
     InMemoryVectorStore,
@@ -71,15 +72,26 @@ class KnowledgeIngestor:
         knowledge_dir: str,
         embedder: EmbeddingProvider,
         settings: Settings | None = None,
+        merchants: frozenset[str] = frozenset(),
     ) -> None:
+        self._merchants = merchants
         self._knowledge_dir = Path(knowledge_dir)
         self._embedder = embedder
         self._settings = settings or get_settings()
 
     async def load(self) -> tuple[list[RetrievedChunk], list[VectorRecord]]:
         files = list_knowledge_files(self._knowledge_dir)
+        entries = [
+            (path, document_scope(path, self._knowledge_dir, self._merchants)) for path in files
+        ]
+        fingerprint = corpus_fingerprint(
+            [
+                (path.relative_to(self._knowledge_dir).as_posix(), path.read_bytes(), metadata)
+                for path, metadata in entries
+            ]
+        )
         chunks: list[RetrievedChunk] = []
-        for path in files:
+        for path, metadata in entries:
             category = category_for_stem(path.stem)
             document_id = document_id_from_path(path, root=self._knowledge_dir)
             title = path.stem
@@ -91,7 +103,10 @@ class KnowledgeIngestor:
                 category=category,
                 settings=self._settings,
             )
-            chunks.extend(file_chunks)
+            for chunk in file_chunks:
+                chunk = chunk.model_copy(update={**metadata, "corpus_fingerprint": fingerprint})
+                chunk.chunk_id = scoped_chunk_id(chunk)
+                chunks.append(chunk)
         chunks = dedupe_chunks(chunks)
         if not chunks:
             return [], []
@@ -104,8 +119,10 @@ async def ingest_to_memory(
     knowledge_dir: str,
     embedder: EmbeddingProvider,
     settings: Settings | None = None,
+    *,
+    merchants: frozenset[str] = frozenset(),
 ) -> tuple[BM25Retriever, InMemoryVectorStore, list[RetrievedChunk]]:
-    ingestor = KnowledgeIngestor(knowledge_dir, embedder, settings=settings)
+    ingestor = KnowledgeIngestor(knowledge_dir, embedder, settings=settings, merchants=merchants)
     chunks, records = await ingestor.load()
     bm25 = BM25Retriever(chunks)
     store = InMemoryVectorStore()
@@ -121,11 +138,12 @@ async def ingest_knowledge(
     qdrant_url: str = "",
     qdrant_collection: str = "cs_knowledge",
     embedding_dim: int = 512,
+    merchants: frozenset[str] = frozenset(),
 ) -> tuple[BM25Retriever, InMemoryVectorStore | QdrantVectorStore, list[RetrievedChunk]]:
     """Prefer Qdrant when configured; fall back to memory if Qdrant is down."""
     logger = logging.getLogger(__name__)
     resolved = settings or get_settings()
-    ingestor = KnowledgeIngestor(knowledge_dir, embedder, settings=resolved)
+    ingestor = KnowledgeIngestor(knowledge_dir, embedder, settings=resolved, merchants=merchants)
     chunks, records = await ingestor.load()
     bm25 = BM25Retriever(chunks)
     if qdrant_url:

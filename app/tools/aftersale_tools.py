@@ -1,11 +1,23 @@
 """After-sale tools: refund, return and order cancellation."""
 
+from typing import Literal
+
 from pydantic import BaseModel, Field
 
-from app.core.enums import ToolRisk
+from app.core.data_scope import require_data_scope
+from app.core.enums import AftersaleStatus, ToolRisk
+from app.core.exceptions import ForbiddenError
 from app.schemas.agent import ToolResult
 from app.tools.base import Tool, ToolContext
 from app.tools.deps import RepositoryBackedTool
+
+_APPROVER_ROLES = {"operator", "service_agent"}
+
+_ACTION_TARGET = {
+    "approve": AftersaleStatus.APPROVED,
+    "reject": AftersaleStatus.REJECTED,
+    "complete": AftersaleStatus.COMPLETED,
+}
 
 
 class OrderIdInput(BaseModel):
@@ -45,7 +57,7 @@ class GetRefundStatusTool(RepositoryBackedTool, Tool):
     input_model = OrderIdInput
 
     async def execute(self, parsed: OrderIdInput, context: ToolContext) -> ToolResult:
-        await self.repository.get_visible_order(parsed.order_id, context.user_id)
+        await self.repository.get_visible_order(parsed.order_id)
         refunds = await self.repository.get_refunds(parsed.order_id)
         return ToolResult(
             name=self.name,
@@ -76,8 +88,11 @@ class CreateRefundRequestTool(RepositoryBackedTool, Tool):
     risk = ToolRisk.DESTRUCTIVE
     input_model = RefundCreateInput
 
+    async def authorize(self, parsed: RefundCreateInput, context: ToolContext) -> None:
+        await super().authorize(parsed, context)
+        await self.repository.get_visible_order(parsed.order_id, write=True)
+
     async def execute(self, parsed: RefundCreateInput, context: ToolContext) -> ToolResult:
-        await self.repository.get_visible_order(parsed.order_id, context.user_id)
         output = await self.repository.create_refund(
             order_id=parsed.order_id,
             reason=parsed.reason,
@@ -99,8 +114,11 @@ class CreateReturnRequestTool(RepositoryBackedTool, Tool):
     risk = ToolRisk.WRITE
     input_model = RefundCreateInput
 
+    async def authorize(self, parsed: RefundCreateInput, context: ToolContext) -> None:
+        await super().authorize(parsed, context)
+        await self.repository.get_visible_order(parsed.order_id, write=True)
+
     async def execute(self, parsed: RefundCreateInput, context: ToolContext) -> ToolResult:
-        await self.repository.get_visible_order(parsed.order_id, context.user_id)
         output = await self.repository.create_return(
             order_id=parsed.order_id,
             reason=parsed.reason,
@@ -122,7 +140,88 @@ class CancelOrderTool(RepositoryBackedTool, Tool):
     risk = ToolRisk.DESTRUCTIVE
     input_model = OrderIdInput
 
+    async def authorize(self, parsed: OrderIdInput, context: ToolContext) -> None:
+        await super().authorize(parsed, context)
+        await self.repository.get_visible_order(parsed.order_id, write=True)
+
     async def execute(self, parsed: OrderIdInput, context: ToolContext) -> ToolResult:
-        await self.repository.get_visible_order(parsed.order_id, context.user_id)
         output = await self.repository.cancel_order(parsed.order_id, trace_id=context.trace_id)
+        return ToolResult(name=self.name, success=True, output=output)
+
+
+class RefundProcessInput(BaseModel):
+    refund_id: str = Field(
+        min_length=3,
+        max_length=32,
+        pattern=r"^[A-Za-z0-9_-]+$",
+        description="退款单号，如 rf_1234abcd；不要填订单号 ORD…",
+    )
+    action: Literal["approve", "reject", "complete"] = Field(
+        description="approve 审批通过；reject 拒绝申请；complete 确认打款完成（仅 approved 可 complete）"
+    )
+
+
+class ProcessRefundTool(RepositoryBackedTool, Tool):
+    name = "process_refund"
+    description = (
+        "处理一笔退款单的状态流转（write，须确认）。"
+        "何时用：客服或运营审批用户的退款申请。"
+        "何时不用：用户新提交退款用 create_refund_request；查进度用 get_refund_status。"
+        "参数 refund_id 是 rf_ 开头的退款单号；action 取 approve/reject/complete。"
+        "非法流转（如未 approve 直接 complete）会被拒绝；complete 后订单变为 refunded。"
+    )
+    risk = ToolRisk.WRITE
+    input_model = RefundProcessInput
+
+    async def authorize(self, parsed: RefundProcessInput, context: ToolContext) -> None:
+        await super().authorize(parsed, context)
+        if require_data_scope().role not in _APPROVER_ROLES:
+            raise ForbiddenError("只有运营或客服可以处理售后单")
+        await self.repository._get_scoped_refund(parsed.refund_id)
+
+    async def execute(self, parsed: RefundProcessInput, context: ToolContext) -> ToolResult:
+        output = await self.repository.transition_refund(
+            refund_id=parsed.refund_id,
+            target=_ACTION_TARGET[parsed.action],
+            trace_id=context.trace_id,
+        )
+        return ToolResult(name=self.name, success=True, output=output)
+
+
+class ReturnProcessInput(BaseModel):
+    return_id: str = Field(
+        min_length=3,
+        max_length=32,
+        pattern=r"^[A-Za-z0-9_-]+$",
+        description="退货单号，如 rt_1234abcd；不要填订单号 ORD…",
+    )
+    action: Literal["approve", "reject", "complete"] = Field(
+        description="approve 同意退货；reject 拒绝；complete 确认已收到退货并自动全额退款"
+    )
+
+
+class ProcessReturnTool(RepositoryBackedTool, Tool):
+    name = "process_return"
+    description = (
+        "处理一笔退货单的状态流转（write，须确认）。"
+        "何时用：客服或运营审批退货、确认收到退货。"
+        "何时不用：用户新提交退货用 create_return_request。"
+        "参数 return_id 是 rt_ 开头的退货单号；action 取 approve/reject/complete。"
+        "complete 表示退货已签收，系统自动生成一笔全额退款，订单变为 refunded。"
+    )
+    risk = ToolRisk.WRITE
+    input_model = ReturnProcessInput
+
+    async def authorize(self, parsed: ReturnProcessInput, context: ToolContext) -> None:
+        await super().authorize(parsed, context)
+        if require_data_scope().role not in _APPROVER_ROLES:
+            raise ForbiddenError("只有运营或客服可以处理售后单")
+        await self.repository._get_scoped_return(parsed.return_id)
+
+    async def execute(self, parsed: ReturnProcessInput, context: ToolContext) -> ToolResult:
+        output = await self.repository.transition_return(
+            return_id=parsed.return_id,
+            target=_ACTION_TARGET[parsed.action],
+            trace_id=context.trace_id,
+        )
         return ToolResult(name=self.name, success=True, output=output)

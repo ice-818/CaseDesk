@@ -1,0 +1,12 @@
+{
+  "name": "refund_request",
+  "description": "买家只退款（不退货）申请标准流程",
+  "triggers": ["申请退款", "我要退款", "退钱"],
+  "steps": [
+    "确认订单号与订单当前状态",
+    "检索退款政策",
+    "判断订单是否可发起售后",
+    "创建待确认的退款申请写操作"
+  ],
+  "tools": ["get_order", "get_order_items", "search_knowledge", "create_refund_request"]
+}

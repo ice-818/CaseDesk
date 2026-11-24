@@ -22,3 +22,8 @@ UNTRUSTED_CONTEXT_BANNER = (
 )
 
 PII_MASK = "***"
+
+# Shopping recall keeps the existing per-tool page sizes and recommendation goal.
+SHOPPING_RECALL_PAGE_SIZES = {"search_products": 5, "recommend_products": 3}
+SHOPPING_VERIFIED_TARGET = 3
+SHOPPING_TIME_BUDGET_SECONDS = 30

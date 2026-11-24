@@ -16,12 +16,14 @@ from app.agents.nodes.memory import memory_node
 from app.agents.nodes.planner import Planner, planner_node
 from app.agents.nodes.retrieval import retrieval_node
 from app.agents.nodes.router import intent_node, router_node
+from app.agents.nodes.shopping import after_shopping_check, checkpointed_shopping_check
 from app.agents.state import AgentState
 from app.config.settings import Settings
 from app.core.enums import RetrievalStrategy
 from app.guardrails.hallucination import FaithfulnessChecker
 from app.memory.summarizer import ConversationSummarizer
 from app.providers.base import LLMProvider
+from app.ranking.product import RuleBasedProductRanker
 from app.retrieval.adaptive import AdaptiveRouter
 from app.retrieval.hybrid import HybridRetriever
 from app.retrieval.query_rewrite import QueryRewriter
@@ -75,19 +77,25 @@ def build_graph(
     )
     graph.add_node("plan_tasks", partial(planner_node, planner=planner))
     graph.add_node("execute_tools", partial(executor_node, registry=registry, settings=settings))
+    graph.add_node(
+        "check_shopping",
+        partial(checkpointed_shopping_check, settings=settings, ranker=RuleBasedProductRanker()),
+    )
     graph.add_node("generate_answer", partial(generate_node, llm=llm))
     graph.add_node("refuse_answer", refuse_node)
     graph.add_node("check_faithfulness", partial(faithfulness_node, checker=checker, llm=llm))
     graph.add_node("compact_memory", partial(memory_node, settings=settings, summarizer=summarizer))
 
     def _after_guardrail(state: AgentState) -> str:
-        return "refuse_answer" if state.get("refused") else "classify_intent"
+        if state.get("refused"):
+            return "refuse_answer"
+        return "check_shopping" if state.get("navigation") else "classify_intent"
 
     graph.add_edge(START, "apply_guardrail")
     graph.add_conditional_edges(
         "apply_guardrail",
         _after_guardrail,
-        {"refuse_answer": "refuse_answer", "classify_intent": "classify_intent"},
+        {"refuse_answer": "refuse_answer", "classify_intent": "classify_intent", "check_shopping": "check_shopping"},
     )
     graph.add_edge("classify_intent", "route_complexity")
     graph.add_conditional_edges(
@@ -102,7 +110,12 @@ def build_graph(
     )
     graph.add_edge("retrieve_docs", "generate_answer")
     graph.add_edge("plan_tasks", "execute_tools")
-    graph.add_edge("execute_tools", "generate_answer")
+    graph.add_edge("execute_tools", "check_shopping")
+    graph.add_conditional_edges(
+        "check_shopping",
+        after_shopping_check,
+        {"execute_tools": "execute_tools", "generate_answer": "generate_answer"},
+    )
     graph.add_edge("generate_answer", "check_faithfulness")
     graph.add_edge("refuse_answer", "compact_memory")
     graph.add_edge("check_faithfulness", "compact_memory")

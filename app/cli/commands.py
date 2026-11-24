@@ -13,6 +13,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="casedesk-cli", description="CaseDesk 终端客服工作台"
     )
+    parser.add_argument("command", nargs="?", choices=["login"], help="登录后进入交互工作台")
     parser.add_argument("--base-url", default=DEFAULT_BASE, help="已有 API 地址")
     parser.add_argument("--user-id", default=DEFAULT_USER)
     parser.add_argument("--local", action="store_true", help="强制本进程启动引擎，不连已有 API")

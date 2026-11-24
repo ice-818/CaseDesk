@@ -1,0 +1,11 @@
+{
+  "name": "aftersale_approval",
+  "description": "售后审批与处理流程，仅运营或客服使用",
+  "triggers": ["审批", "批准", "驳回", "拒绝", "签收", "打款", "完成处理"],
+  "steps": [
+    "确认售后单归属与当前状态",
+    "校验状态流转是否合法",
+    "执行审批、驳回或完成（退货完成自动全额退款）"
+  ],
+  "tools": ["process_refund", "process_return", "get_refund_status"]
+}

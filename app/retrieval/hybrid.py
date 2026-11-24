@@ -5,10 +5,11 @@ from __future__ import annotations
 import logging
 import time
 
-from app.core.exceptions import RetrievalError
+from app.core.exceptions import ForbiddenError, RetrievalError, UnauthorizedError
 from app.retrieval.bm25 import BM25Retriever
 from app.retrieval.cache import RetrievalCache
 from app.retrieval.fusion import reciprocal_rank_fusion
+from app.retrieval.policy_scope import current_policy, policy_operation, verify_results
 from app.retrieval.vector import VectorRetriever
 from app.schemas.retrieval import RetrievedChunk
 
@@ -29,11 +30,13 @@ class HybridRetriever:
         rrf_k: int,
         cache: RetrievalCache | None = None,
     ) -> None:
+        self.corpus_fingerprint = bm25.corpus_fingerprint
         self._bm25 = bm25
         self._vector = vector
         self._rrf_k = rrf_k
         self._cache = cache
 
+    @policy_operation
     async def retrieve(self, query: str, *, top_k: int) -> list[RetrievedChunk]:
         if self._cache is not None:
             cached = await self._cache.get(query, top_k)
@@ -46,18 +49,25 @@ class HybridRetriever:
         dense_error: Exception | None = None
         try:
             lexical = self._bm25.search(query, top_k=top_k)
+        except (ForbiddenError, UnauthorizedError):
+            raise
         except Exception as exc:  # BM25 is in-process; unexpected errors still isolated
             lexical_error = exc
             logger.exception("bm25_failed")
         try:
             dense = await self._vector.search(query, top_k=top_k)
+        except (ForbiddenError, UnauthorizedError):
+            raise
         except Exception as exc:
             dense_error = exc
             logger.exception("vector_search_failed")
+        if not lexical and not dense and lexical_error is None and dense_error is None:
+            return []
         if not lexical and not dense:
             raise RetrievalError("both lexical and dense retrievers failed") from (
                 dense_error or lexical_error
             )
+        verify_results(current_policy(), lexical + dense)
         fused = reciprocal_rank_fusion([lexical, dense], k=self._rrf_k)
         elapsed_ms = (time.perf_counter() - started) * 1000
         logger.info(

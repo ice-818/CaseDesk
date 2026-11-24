@@ -8,13 +8,22 @@ from app.retrieval.vector import VectorRetriever
 
 
 @pytest.mark.asyncio
-async def test_hybrid_retrieves_return_policy() -> None:
+async def test_hybrid_retrieves_return_policy(tmp_path) -> None:
     clear_settings_cache()
     embedder = HashEmbeddingProvider(dim=get_settings().embedding_dim)
-    bm25, store, chunks = await ingest_to_memory("knowledge", embedder)
+    from app.retrieval.policy_manifest import known_merchants
+    from tests.merchant_support import database
+    engine, factory = await database(tmp_path / "retrieval.db")
+    try:
+        merchants = await known_merchants(factory)
+    finally:
+        await engine.dispose()
+    bm25, store, chunks = await ingest_to_memory("knowledge", embedder, merchants=merchants)
     assert chunks
     retriever = HybridRetriever(bm25, VectorRetriever(store, embedder), rrf_k=60)
-    hits = await retriever.retrieve("定制商品能不能七天无理由退货", top_k=5)
+    from tests.merchant_support import actor
+    with actor("u_demo", "buyer", None):
+        hits = await retriever.retrieve("定制商品能不能七天无理由退货", top_k=5)
     assert hits
     blob = " ".join(hit.content for hit in hits)
     assert "定制" in blob or "无理由" in blob

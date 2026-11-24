@@ -1,10 +1,15 @@
+
+import pytest
+
 from app.core.enums import DocumentCategory
 from app.retrieval.fusion import reciprocal_rank_fusion
 from app.schemas.retrieval import RetrievedChunk
+from tests.policy_support import policy_case
 
 
 def _chunk(chunk_id: str, rank: int) -> RetrievedChunk:
     return RetrievedChunk(
+        policy_layer="platform", policy_scope_version=1, corpus_fingerprint="test-corpus",
         chunk_id=chunk_id,
         document_id="doc",
         title="t",
@@ -33,3 +38,9 @@ def test_rrf_uses_rank_not_raw_score() -> None:
     fused = reciprocal_rank_fusion([[high_score_low_rank], [low_score_high_rank]], k=60)
     # two lists of size 1 → both rank 1, equal RRF; stable by sort of dict
     assert {item.chunk_id for item in fused} == {"x", "y"}
+
+
+@pytest.fixture(autouse=True)
+def explicit_public_policy_scope():
+    with policy_case("operator", None):
+        yield

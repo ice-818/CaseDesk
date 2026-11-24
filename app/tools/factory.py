@@ -6,6 +6,8 @@ from app.tools.aftersale_tools import (
     CreateRefundRequestTool,
     CreateReturnRequestTool,
     GetRefundStatusTool,
+    ProcessRefundTool,
+    ProcessReturnTool,
 )
 from app.tools.base import Tool
 from app.tools.knowledge_tools import (
@@ -38,6 +40,8 @@ def build_tool_registry(retriever: HybridRetriever) -> ToolRegistry:
         CreateRefundRequestTool(),
         CreateReturnRequestTool(),
         CancelOrderTool(),
+        ProcessRefundTool(),
+        ProcessReturnTool(),
         SearchProductsTool(),
         GetProductDetailTool(),
         RecommendProductsTool(),

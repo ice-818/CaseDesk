@@ -98,3 +98,14 @@ def _window(text: str, size: int, overlap: int) -> list[str]:
             break
         start = max(end - overlap, start + 1)
     return pieces
+
+
+def scoped_chunk_id(chunk: RetrievedChunk) -> str:
+    import json
+
+    from app.retrieval.policy_scope import policy_identity
+
+    digest = hashlib.sha256(
+        json.dumps(policy_identity(chunk), ensure_ascii=False).encode()
+    ).hexdigest()[:16]
+    return f"{chunk.document_id}_{digest}_{chunk.chunk_index:02d}"

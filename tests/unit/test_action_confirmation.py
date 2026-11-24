@@ -1,10 +1,12 @@
 import pytest
 
 from app.agents.nodes.planner import Planner, planner_node
+from app.core.data_scope import bind_data_scope, scope_from_identity
 from app.core.enums import ToolRisk
 from app.core.exceptions import InvalidRequestError
 from app.providers.fake import OfflineLLMProvider
-from app.schemas.chat import ActionProposal, ChatRequest, ChatResponse
+from app.schemas.auth import AuthIdentity
+from app.schemas.chat import ActionProposal, ChatCommand, ChatResponse
 from app.services.chat_service import ChatService
 from app.tools.aftersale_tools import CancelOrderTool
 from app.tools.order_tools import GetOrderTool
@@ -45,7 +47,7 @@ async def test_cancellation_needs_explicit_request_and_confirmation() -> None:
 def test_confirmation_is_bound_to_session_and_user() -> None:
     service = ChatService.__new__(ChatService)
     service._pending_actions = {}
-    request = ChatRequest(message="取消订单 ORD10003", user_id="u_demo")
+    request = ChatCommand(message="取消订单 ORD10003", user_id="u_demo")
     response = ChatResponse(
         answer="请确认",
         session_id="sess_demo",
@@ -54,7 +56,7 @@ def test_confirmation_is_bound_to_session_and_user() -> None:
     )
     service._remember_pending(request, response)
 
-    confirmed = ChatRequest(
+    confirmed = ChatCommand(
         message="确认执行",
         user_id="u_demo",
         session_id="sess_demo",
@@ -67,3 +69,9 @@ def test_confirmation_is_bound_to_session_and_user() -> None:
         service._resolve_confirmation(forged, "sess_demo")
     with pytest.raises(InvalidRequestError):
         service._resolve_confirmation(confirmed, "another_session")
+
+
+@pytest.fixture(autouse=True)
+def trusted_buyer_scope():
+    with bind_data_scope(scope_from_identity(AuthIdentity("u_demo", "buyer"))):
+        yield

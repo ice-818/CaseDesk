@@ -7,6 +7,7 @@ otherwise the engine is loaded in this process, which is slow on first start.
 from __future__ import annotations
 
 import asyncio
+import getpass
 import json
 from collections.abc import AsyncIterator
 from typing import TYPE_CHECKING, Any
@@ -14,6 +15,7 @@ from typing import TYPE_CHECKING, Any
 import httpx
 
 from app.cli.render import HELP, apply_event, emit, format_meta, parse_sse_data_line
+from app.core.exceptions import AppError
 from app.core.ids import new_trace_id
 from app.schemas.chat import ChatRequest
 
@@ -52,12 +54,15 @@ class ChatCli:
         self._pending_summary: str | None = None
         self._http: httpx.AsyncClient | None = None
         self._container: AppContainer | None = None
+        self._token: str | None = None
 
     async def setup(self) -> str:
         """Connect to a running API, or start the engine in-process, and return a banner."""
-        if not self._force_local and await self._api_up():
+        if not self._force_local:
+            if not await self._api_up():
+                raise ChatFailed("API 不可达；如需本地模式，请显式使用 --local 并登录。")
             self._http = httpx.AsyncClient(timeout=self._timeout)
-            return f"已连接 {self._base}。在这个终端里连续提问即可，/quit 退出。"
+            return f"已连接 {self._base}。请先登录，/quit 退出。"
         print("正在本进程启动引擎（首次加载模型较慢）...")
         from app.config.settings import get_settings
         from app.services.container import build_container
@@ -75,6 +80,11 @@ class ChatCli:
 
     async def aclose(self) -> None:
         """Release the HTTP client or the in-process container."""
+        if self._token:
+            try:
+                await self.logout()
+            except (ChatFailed, httpx.HTTPError):
+                print("本地已退出，服务端撤销未确认。")
         if self._http is not None:
             await self._http.aclose()
         if self._container is not None:
@@ -82,35 +92,90 @@ class ChatCli:
 
     async def chat(self, message: str, *, confirm: str | None = None) -> dict[str, Any]:
         """Send one turn and return the answer body."""
-        if self._container is not None:
-            return await self._chat_local(message, confirm=confirm)
-        return await self._chat_http(message, confirm=confirm)
+        self._require_token()
+        try:
+            if self._container is not None:
+                return await self._chat_local(message, confirm=confirm)
+            return await self._chat_http(message, confirm=confirm)
+        except AppError as exc:
+            if exc.http_status == 401:
+                self._clear_login()
+            raise ChatFailed(f"请求失败 [{exc.http_status}]: {exc.message}") from None
+
+    def _require_token(self) -> str:
+        if not self._token:
+            raise ChatFailed("请先登录。")
+        return self._token
+
+    def _clear_login(self) -> None:
+        self._token = None
+        self._session_id = self._pending_id = self._pending_summary = None
+
+    async def login(self, user_id: str, password: str) -> None:
+        self._clear_login()
+        try:
+            if self._container is not None:
+                login_result = await self._container.auth_service.login(user_id, password, via="cli-local")
+                self._token = login_result.access_token
+                self._user_id = login_result.user.user_id
+            elif self._http is not None:
+                response = await self._http.post(f"{self._base}/api/v1/auth/login",
+                    json={"user_id": user_id, "password": password})
+                data = self._decode_http(response)
+                self._token = data["access_token"]
+                self._user_id = data["user"]["user_id"]
+            else:
+                raise ChatFailed("客户端尚未连接。")
+        except AppError as exc:
+            raise ChatFailed(f"登录失败 [{exc.http_status}]: {exc.message}") from None
+
+    async def logout(self) -> None:
+        token = self._token
+        try:
+            if token and self._container is not None:
+                identity = await self._container.auth_service.authenticate(token)
+                await self._container.auth_service.logout(identity)
+            elif token and self._http is not None:
+                response = await self._http.post(f"{self._base}/api/v1/auth/logout",
+                    headers={"Authorization": "Bearer " + token})
+                if response.status_code not in {204, 401}:
+                    raise ChatFailed("本地已退出，服务端撤销未确认。")
+        except AppError as exc:
+            if exc.http_status != 401:
+                raise ChatFailed("本地已退出，服务端撤销未确认。") from None
+        finally:
+            self._clear_login()
+
+    async def _interactive_login(self, user_id: str | None = None) -> None:
+        password = await asyncio.to_thread(getpass.getpass, "密码（隐藏输入）: ")
+        await self.login(user_id or self._user_id, password)
+        print(f"已登录：{self._user_id}")
 
     async def _chat_local(self, message: str, *, confirm: str | None) -> dict[str, Any]:
         assert self._container is not None  # chat() only routes here when set
         request = ChatRequest(
             message=message,
-            user_id=self._user_id,
             session_id=self._session_id,
             confirm_action_id=confirm,
         )
+        identity = await self._container.auth_service.authenticate(self._require_token())
         if self._stream:
-            stream = self._container.chat_service.stream(request, trace_id=new_trace_id())
+            stream = self._container.chat_service.stream(request, trace_id=new_trace_id(), auth=identity)
             return await self._consume_events(stream)
-        response = await self._container.chat_service.chat(request, trace_id=new_trace_id())
+        response = await self._container.chat_service.chat(request, trace_id=new_trace_id(), auth=identity)
         return response.model_dump(mode="json")
 
     async def _chat_http(self, message: str, *, confirm: str | None) -> dict[str, Any]:
         assert self._http is not None
         payload = {
             "message": message,
-            "user_id": self._user_id,
             "session_id": self._session_id,
             "confirm_action_id": confirm,
         }
         if self._stream:
             return await self._chat_http_stream(payload)
-        response = await self._http.post(f"{self._base}/api/v1/chat", json=payload)
+        response = await self._http.post(f"{self._base}/api/v1/chat", json=payload,
+            headers={"Authorization": "Bearer " + self._require_token()})
         return self._decode_http(response)
 
     async def _chat_http_stream(self, payload: dict[str, Any]) -> dict[str, Any]:
@@ -119,11 +184,13 @@ class ChatCli:
 
         async def events() -> AsyncIterator[dict[str, Any]]:
             async with http.stream(
-                "POST", f"{self._base}/api/v1/chat/stream", json=payload
+                "POST", f"{self._base}/api/v1/chat/stream", json=payload,
+                headers={"Authorization": "Bearer " + self._require_token()}
             ) as response:
                 if response.status_code >= 400:
-                    raw = (await response.aread()).decode("utf-8", errors="replace")
-                    raise ChatFailed(f"请求失败 [{response.status_code}]: {raw[:300]}")
+                    if response.status_code == 401:
+                        self._clear_login()
+                    raise ChatFailed(f"请求失败 [{response.status_code}]")
                 async for line in response.aiter_lines():
                     event = parse_sse_data_line(line)
                     if event:
@@ -135,6 +202,11 @@ class ChatCli:
         answer: dict[str, Any] | None = None
         printed = False
         async for event in events:
+            if event.get("event") == "error":
+                status = event.get("status_code")
+                if status == 401:
+                    self._clear_login()
+                raise ChatFailed(f"请求失败 [{status}]")
             maybe, printed = apply_event(
                 event, show_tokens=self._show_tokens, printed_nodes=printed
             )
@@ -152,6 +224,8 @@ class ChatCli:
         except json.JSONDecodeError:
             body = {"answer": response.text, "error_code": "BAD_RESPONSE"}
         if response.status_code >= 400:
+            if response.status_code == 401:
+                self._clear_login()
             message = body.get("message") or body.get("answer") or response.text
             raise ChatFailed(
                 f"请求失败 [{body.get('error_code') or response.status_code}]: {message}"
@@ -191,6 +265,12 @@ class ChatCli:
         print(banner)
         print("输入问题后回车即可继续问。/help 看命令。\n")
         while True:
+            if not self._token:
+                try:
+                    await self._interactive_login()
+                except (ChatFailed, EOFError, KeyboardInterrupt) as exc:
+                    print(str(exc))
+                    return
             try:
                 raw = (await asyncio.to_thread(input, "你> ")).strip()
             except (EOFError, KeyboardInterrupt):
@@ -199,10 +279,20 @@ class ChatCli:
             if not raw:
                 continue
             if raw in {"/quit", "/exit", "/q"}:
+                await self.logout()
                 print("再见。")
                 return
             if raw == "/help":
                 print(HELP)
+                continue
+            if raw == "/logout":
+                await self.logout()
+                print("已退出登录。")
+                continue
+            if raw.startswith("/login"):
+                parts = raw.split(maxsplit=1)
+                await self.logout()
+                await self._interactive_login(parts[1] if len(parts) == 2 else None)
                 continue
             if raw == "/new":
                 self._session_id = None

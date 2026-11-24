@@ -6,13 +6,19 @@ import hashlib
 import json
 import time
 
+from app.agents.product_requirements import extract_requirements, protect_arguments
 from app.agents.state import AgentState
 from app.config.settings import Settings
+from app.core.auth_context import check_execution_identity
 from app.core.exceptions import (
     AppError,
+    AuthenticationUnavailableError,
+    ForbiddenError,
     InvalidRequestError,
+    ResourceNotFoundError,
     ToolExecutionError,
     ToolPermissionError,
+    UnauthorizedError,
 )
 from app.core.request_scope import get_db_session
 from app.observability.metrics import TOOL_CALLS
@@ -50,7 +56,10 @@ def fallback_arguments(tool_name: str, step: PlanStep, query: str) -> dict:
     if tool_name == "search_knowledge":
         return {"query": query[:200]}
     if tool_name in {"search_products", "recommend_products"}:
-        return {"query": (step.arguments.get("query") or query)[:80]}
+        arguments = dict(step.arguments)
+        arguments.pop("category", None)
+        arguments["query"] = (arguments.get("query") or query)[:80]
+        return arguments
     return dict(step.arguments)
 
 
@@ -62,12 +71,13 @@ async def execute_with_fallback(
     query: str,
 ) -> ToolResult:
     """Execution-layer fallback: a failed read tool tries the next mapped tool."""
+    await check_execution_identity()
     try:
         result = await tool.run(step.arguments, context)
         if result.success:
             return result
         raise ToolExecutionError(result.error or f"{tool.name} returned success=false")
-    except ToolPermissionError:
+    except (ToolPermissionError, UnauthorizedError, ForbiddenError, AuthenticationUnavailableError, ResourceNotFoundError):
         raise
     except (AppError, InvalidRequestError) as exc:
         last_error = str(exc)
@@ -75,6 +85,7 @@ async def execute_with_fallback(
             if fallback_name not in registry.names():
                 continue
             fallback = registry.get(fallback_name)
+            await check_execution_identity()
             try:
                 fb_result = await fallback.run(
                     fallback_arguments(fallback_name, step, query), context
@@ -87,6 +98,8 @@ async def execute_with_fallback(
                     }
                     TOOL_CALLS.labels(tool=fallback_name, status="fallback").inc()
                     return fb_result.model_copy(update={"output": merged})
+            except (UnauthorizedError, ForbiddenError, AuthenticationUnavailableError, ResourceNotFoundError):
+                raise
             except (AppError, InvalidRequestError):
                 continue
         raise
@@ -116,6 +129,9 @@ async def executor_node(
     idempotency = IdempotencyRepository(get_db_session())
     calls = 0
     query = state["user_query"]
+    requirements = state.get("product_requirements") or extract_requirements(query)
+    if requirements.source_query != query:
+        requirements = extract_requirements(query)
     for step in plan.steps:
         if (
             calls >= settings.max_tool_calls
@@ -124,11 +140,39 @@ async def executor_node(
             break
         if not step.tool_name:
             continue
-        tool = registry.get(step.tool_name)
+        tool_name = step.tool_name
+        if step.tool_name in {
+            "search_products",
+            "recommend_products",
+            "get_product_detail",
+            "check_inventory",
+        }:
+            if requirements.clarification:
+                return {
+                    "tool_results": [],
+                    "product_requirements": requirements,
+                    "extra": {
+                        **(state.get("extra") or {}),
+                        "product_clarification": requirements.clarification,
+                    },
+                }
+            if step.tool_name in {"search_products", "recommend_products"}:
+                arguments = protect_arguments(step.arguments, requirements)
+                if requirements.active:
+                    # Pagination is owned by the controller, never the model.
+                    arguments["offset"] = (state.get("shopping_loop") or {}).get("recall_offset", 0)
+                step = step.model_copy(
+                    update={"arguments": arguments}
+                )
+        tool = registry.get(tool_name)
+        await check_execution_identity()
         confirmed = bool(state.get("confirm_action_id"))
         try:
             if tool.risk in WRITE_RISKS:
                 assert_permitted(tool, confirmed=confirmed)
+                parsed = tool.parse(step.arguments)
+                await tool.authorize(parsed, context)
+                step = step.model_copy(update={"arguments": parsed.model_dump()})
                 idem_key = context.confirmed_action_id or context.idempotency_key
                 if idem_key:
                     fp = _fingerprint(tool.name, step.arguments)
@@ -148,9 +192,21 @@ async def executor_node(
                     results.append(result)
                     calls += 1
                     continue
-            result = await execute_with_fallback(tool, step, context, registry, query)
+            if requirements.active and tool.name in {
+                "recommend_products",
+                "search_products",
+                "get_product_detail",
+                "check_inventory",
+            }:
+                # The shopping controller owns continuation. Do not silently
+                # fall back to unrelated knowledge or exceed its call budget.
+                result = await tool.run(step.arguments, context)
+            else:
+                result = await execute_with_fallback(tool, step, context, registry, query)
             TOOL_CALLS.labels(tool=tool.name, status="ok").inc()
             results.append(result)
+        except (UnauthorizedError, ForbiddenError, AuthenticationUnavailableError, ResourceNotFoundError):
+            raise
         except ToolPermissionError as exc:
             TOOL_CALLS.labels(tool=tool.name, status="denied").inc()
             results.append(
@@ -166,9 +222,10 @@ async def executor_node(
             )
         calls += 1
     latency = state.get("latency") or LatencyBreakdown()
-    latency.tool_ms = (time.perf_counter() - started) * 1000
+    latency.tool_ms += (time.perf_counter() - started) * 1000
     return {
         "tool_results": results,
+        "product_requirements": requirements,
         "step_count": (state.get("step_count") or 0) + calls,
         "latency": latency,
     }

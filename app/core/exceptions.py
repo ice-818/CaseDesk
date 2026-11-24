@@ -36,6 +36,13 @@ class RateLimitError(AppError):
         )
 
 
+class ResourceNotFoundError(AppError):
+    """Opaque read denial: do not disclose another owner/merchant's resource."""
+
+    def __init__(self) -> None:
+        super().__init__("resource not found", error_code=ErrorCode.RESOURCE_NOT_FOUND, http_status=404)
+
+
 class RetrievalError(AppError):
     def __init__(self, message: str, *, timeout: bool = False) -> None:
         super().__init__(
@@ -49,6 +56,16 @@ class RetrievalError(AppError):
 class UnauthorizedError(AppError):
     def __init__(self, message: str = "unauthorized") -> None:
         super().__init__(message, error_code=ErrorCode.UNAUTHORIZED, http_status=401)
+
+
+class ForbiddenError(AppError):
+    def __init__(self, message: str = "permission denied") -> None:
+        super().__init__(message, error_code=ErrorCode.FORBIDDEN, http_status=403)
+
+
+class AuthenticationUnavailableError(AppError):
+    def __init__(self) -> None:
+        super().__init__("authentication storage unavailable", error_code=ErrorCode.DATABASE_UNAVAILABLE, http_status=503)
 
 
 class LLMProviderError(AppError):

@@ -1,19 +1,21 @@
 """Application factory: lifespan wiring and FastAPI app creation."""
 
 import logging
+import re
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 from pathlib import Path
 
 from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from prometheus_client import CONTENT_TYPE_LATEST, generate_latest
 from starlette.exceptions import HTTPException as StarletteHTTPException
 from starlette.responses import Response
 from starlette.staticfiles import StaticFiles
 
-from app.api.routes import admin, chat, health
+from app.api.routes import admin, auth, chat, health, platform
 from app.config.settings import Settings, get_settings
 from app.core.error_codes import ErrorCode
 from app.core.exceptions import AppError
@@ -59,23 +61,34 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         clear_settings_cache()
     resolved = settings or get_settings()
     app = FastAPI(
-        title="CaseDesk Customer Support",
+        title="CaseDesk｜企业级智能客服和导购平台",
         version="0.1.0",
         lifespan=lifespan,
     )
     prefix = resolved.api_v1_prefix
+    app.add_middleware(CORSMiddleware, allow_origins=resolved.cors_allowed_origins,
+        allow_methods=["GET", "POST"], allow_headers=["Authorization", "Content-Type", "x-admin-token"],
+        allow_credentials=False)
     app.include_router(health.router, prefix=prefix)
+    app.include_router(auth.router, prefix=prefix)
     app.include_router(chat.router, prefix=prefix)
     app.include_router(admin.router, prefix=prefix)
+    app.include_router(platform.router, prefix=prefix)
 
     @app.middleware("http")
     async def request_context(request: Request, call_next):
-        trace_id = request.headers.get("x-trace-id") or new_trace_id()
-        request_id = request.headers.get("x-request-id") or new_request_id()
+        def safe_id(value, fallback):
+            return value if value and re.fullmatch(r"[A-Za-z0-9_-]{1,64}", value) and not value.startswith("cds_") else fallback()
+        trace_id = safe_id(request.headers.get("x-trace-id"), new_trace_id)
+        request_id = safe_id(request.headers.get("x-request-id"), new_request_id)
         tokens = bind_request_context(trace_id=trace_id, request_id=request_id)
         request.state.trace_id = trace_id
         request.state.request_id = request_id
         try:
+            if any(key.lower() in {"token", "access_token", "authorization", "refresh_token"}
+                   for key in request.query_params):
+                return JSONResponse(status_code=400, content={"error_code": "INVALID_REQUEST",
+                    "message": "credentials must be sent in Authorization header", "trace_id": trace_id})
             response = await call_next(request)
             response.headers["x-trace-id"] = trace_id
             response.headers["x-request-id"] = request_id
@@ -90,11 +103,16 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             message=exc.message,
             trace_id=getattr(request.state, "trace_id", "-"),
         )
-        return JSONResponse(status_code=exc.http_status, content=body.model_dump(mode="json"))
+        return JSONResponse(status_code=exc.http_status, content=body.model_dump(mode="json"),
+            headers={"Cache-Control": "no-store", **({"WWW-Authenticate": "Bearer"} if exc.http_status == 401 else {})})
 
     @app.exception_handler(RequestValidationError)
     async def validation_handler(request: Request, exc: RequestValidationError) -> JSONResponse:
-        details = exc.errors() if resolved.app_env != "production" else None
+        details = (
+            [{key: value for key, value in error.items() if key not in {"ctx", "input"}} for error in exc.errors()]
+            if resolved.app_env != "production"
+            else None
+        )
         body = APIErrorBody(
             error_code=ErrorCode.INVALID_REQUEST,
             message="invalid request",

@@ -18,10 +18,16 @@ class ChatMessage(BaseModel):
 class ChatRequest(BaseModel):
     message: str = Field(min_length=1, max_length=4000)
     session_id: str | None = Field(default=None, max_length=64)
-    user_id: str = Field(default="anonymous", min_length=1, max_length=64)
+    user_id: Any = Field(default=None, json_schema_extra={"deprecated": True})
     stream: bool = False
+    resume_checkpoint_id: str | None = Field(default=None, max_length=64)
     confirm_action_id: str | None = None
     idempotency_key: str | None = Field(default=None, max_length=128)
+
+
+class ChatCommand(ChatRequest):
+    """Internal request: its identity is supplied by authentication only."""
+    user_id: str = Field(min_length=1, max_length=64)
 
 
 class ActionProposal(BaseModel):
@@ -33,6 +39,8 @@ class ActionProposal(BaseModel):
 
 
 class ChatResponse(BaseModel):
+    checkpoint_id: str | None = None
+    shopping_view: dict[str, Any] | None = None
     answer: str
     session_id: str
     trace_id: str

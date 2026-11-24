@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from app.providers.base import RerankProvider
+from app.retrieval.policy_scope import context_for_chunks
 from app.schemas.retrieval import RetrievedChunk
 
 
@@ -17,6 +18,8 @@ class DocumentReranker:
         *,
         top_n: int,
     ) -> list[RetrievedChunk]:
+        context = context_for_chunks(chunks)
+        chunks = [chunk for chunk in chunks if context.allows(chunk)]
         if not chunks:
             return []
         documents = [chunk.content for chunk in chunks]
