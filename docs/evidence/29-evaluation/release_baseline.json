@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "expected_total_tests": 548,
+  "expected_total_tests": 549,
   "release_markers": ["redteam", "property", "fault", "determinism", "regression"],
   "notes": "expected_total_tests 为发布门禁基线；实际收集数低于该值且无注册表说明时，判定为未解释的通过率下降。"
 }

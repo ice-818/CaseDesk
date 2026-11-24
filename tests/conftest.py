@@ -26,12 +26,7 @@ def _auth_database(request, tmp_path, monkeypatch):
     if "e2e" not in request.node.path.parts:
         yield None
         return
-    from sse_starlette.sse import AppStatus
-
     from tests.auth_support import prepare_auth_database, test_headers
-    # Each TestClient owns a fresh event loop. The dependency's process-wide
-    # exit event must not leak from a previous client's closed loop.
-    monkeypatch.setattr(AppStatus, "should_exit_event", None)
     path = tmp_path / "authenticated.db"
     prepare_auth_database(path)
     tokens = test_headers(path)
@@ -40,6 +35,21 @@ def _auth_database(request, tmp_path, monkeypatch):
     clear_settings_cache()
     yield tokens
     clear_settings_cache()
+
+
+@pytest.fixture(autouse=True)
+def _reset_sse_appstatus():
+    # sse_starlette stores a process-wide exit event on AppStatus. It binds to
+    # the event loop of the first SSE response, while every TestClient owns a
+    # fresh loop. Reusing the stale event therefore raises
+    # "bound to a different event loop" (sse-starlette issue #59). Reset it on
+    # both sides of every test, including non-e2e, so a loop-bound event can
+    # never leak across app instances or test boundaries.
+    from sse_starlette.sse import AppStatus
+
+    AppStatus.should_exit_event = None
+    yield
+    AppStatus.should_exit_event = None
 
 
 @pytest.fixture

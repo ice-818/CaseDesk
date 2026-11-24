@@ -24,6 +24,14 @@
       "title": "refund 意图退款申请计划被 Skill 白名单过滤，买家只退款链路不可达",
       "regression_test": "tests/e2e/test_synthetic_trajectories.py::test_fixed_trajectory[AFTER-01]",
       "evidence_doc": "docs/evidence/29-evaluation/BUG-003-refund-request-skill-whitelist.md"
+    },
+    {
+      "bug_id": "BUG-004",
+      "severity": "P2",
+      "status": "fixed",
+      "title": "sse_starlette 进程级退出事件跨 TestClient 事件循环泄漏，跨循环复用触发 RuntimeError 造成偶发 flaky",
+      "regression_test": "tests/e2e/test_sse_event_loop_isolation.py::test_sse_appstatus_event_does_not_leak_across_event_loops",
+      "evidence_doc": "docs/evidence/29-evaluation/BUG-004-sse-appstatus-event-loop-leak.md"
     }
   ]
 }
