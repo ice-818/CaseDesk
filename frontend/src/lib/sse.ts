@@ -38,6 +38,7 @@ export class SseDecoder {
 }
 
 function parseFrame(frame: string): StreamEvent | null {
+  const eventName = frame.split(/\r?\n/).find(line => line.startsWith("event:"))?.slice(6).trim();
   const data = frame
     .split(/\r?\n/)
     .filter((line) => line.startsWith("data:"))
@@ -46,9 +47,10 @@ function parseFrame(frame: string): StreamEvent | null {
   if (!data || data === "[DONE]") return null;
   try {
     const value: unknown = JSON.parse(data);
-    if (typeof value !== "object" || value === null || !("event" in value)) return null;
-    if (typeof value.event !== "string") return null;
-    return value as StreamEvent;
+    if (typeof value !== "object" || value === null) return null;
+    const event = "event" in value ? value.event : eventName;
+    if (typeof event !== "string") return null;
+    return { ...value, event } as StreamEvent;
   } catch {
     return null;
   }

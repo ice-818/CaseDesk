@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import type { ActionProposal, Citation, Conversation, Message } from "../types";
 import { Logo } from "./Logo";
+import { ShoppingPanel } from "./ShoppingPanel";
 
 function CitationList({ citations }: { citations: Citation[] }) {
   const unique = citations.filter((item, index, all) => all.findIndex((other) => other.chunk_id === item.chunk_id) === index);
@@ -30,11 +31,13 @@ interface MessageViewProps {
   busy: boolean;
   onConfirm: (action: ActionProposal, messageId: string) => void;
   onCancel: (messageId: string) => void;
+  onNavigate: (text: string) => void;
 }
 
-export function MessageView({ conversation, busy, onConfirm, onCancel }: MessageViewProps) {
+export function MessageView({ conversation, busy, onConfirm, onCancel, onNavigate }: MessageViewProps) {
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const endRef = useRef<HTMLDivElement>(null);
+  const latestMessage = conversation.messages[conversation.messages.length - 1];
   useEffect(() => { endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" }); }, [conversation.messages]);
 
   async function copy(message: Message) {
@@ -53,6 +56,8 @@ export function MessageView({ conversation, busy, onConfirm, onCancel }: Message
           <div className="assistant-body">
             {message.content ? <div className={`markdown ${message.state === "error" ? "message-error" : ""}`}><ReactMarkdown remarkPlugins={[remarkGfm]}>{message.content}</ReactMarkdown></div> : <div className="thinking"><span /><span /><span /></div>}
             {message.state === "complete" && <>
+              {message.shoppingView && <ShoppingPanel view={message.shoppingView}
+                busy={busy || message !== latestMessage} onNavigate={onNavigate} />}
               <CitationList citations={message.citations ?? []} />
               {message.pendingAction && <ActionCard action={message.pendingAction} disabled={busy} onConfirm={() => onConfirm(message.pendingAction!, message.id)} onCancel={() => onCancel(message.id)} />}
               <div className="message-tools"><button aria-label="复制回答" title="复制回答" onClick={() => void copy(message)}>{copiedId === message.id ? <Check size={16} /> : <Copy size={16} />}</button></div>

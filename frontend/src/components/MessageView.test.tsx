@@ -20,11 +20,12 @@ describe("answer presentation", () => {
       }],
     };
     const html = renderToStaticMarkup(
-      <MessageView conversation={conversation} busy={false} onConfirm={() => {}} onCancel={() => {}} />,
+      <MessageView conversation={conversation} busy={false} onConfirm={() => {}} onCancel={() => {}} onNavigate={() => {}} />,
     );
     expect(html).toContain("质量问题可以申请售后");
     expect(html).toContain("退货规则");
     expect(html).not.toContain("多跳检索");
     expect(html).not.toContain("4.2 秒");
+    expect(html).not.toContain("product-card");
   });
 });

@@ -136,6 +136,36 @@ button:focus-visible, textarea:focus-visible, input:focus-visible { outline: 3px
 .assistant-avatar .brand-mark { width: 30px; height: 30px; border-radius: 10px; box-shadow: none; }
 .assistant-avatar .brand-mark svg { width: 17px; height: 17px; }
 .assistant-body { min-width: 0; flex: 1; padding-top: 3px; }
+
+.shopping-panel { display: grid; gap: 12px; max-width: 680px; margin: 14px 0; }
+.shopping-conditions { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 16px; padding: 10px 12px; border-radius: 10px; background: var(--surface-hover); }
+.shopping-conditions h3 { margin: 0; font-size: 13px; }
+.shopping-conditions dl, .product-scores { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 0; }
+.shopping-conditions dl > div, .product-scores > div { display: flex; gap: 5px; font-size: 12px; }
+.shopping-conditions dt, .product-scores dt { color: var(--muted); }
+.shopping-conditions dd, .product-scores dd { margin: 0; }
+.shopping-cards { display: grid; gap: 10px; }
+.shopping-compare { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.product-card { display: grid; align-content: start; gap: 9px; min-width: 0; padding: 13px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); overflow-wrap: anywhere; }
+.product-card-selected { border-color: var(--primary); background: var(--surface-active); }
+.product-card-heading, .product-card-facts { display: flex; align-items: baseline; flex-wrap: wrap; gap: 5px 12px; }
+.product-card-heading h3 { margin: 0; font-size: 15px; }
+.product-card-selected-label { color: var(--primary-strong); font-size: 12px; font-weight: 600; }
+.product-card-sku, .product-card-facts span, .shopping-note { color: var(--muted); font-size: 12px; }
+.product-card-facts strong { color: var(--primary-strong); }
+.product-card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0; padding: 0; list-style: none; }
+.product-card-tags li { padding: 3px 6px; border-radius: 6px; background: var(--surface-hover); font-size: 12px; }
+.product-scores { padding-top: 8px; border-top: 1px solid var(--soft-border); }
+.product-scores dd, .product-card-facts strong { font-variant-numeric: tabular-nums; }
+.shopping-notice, .shopping-note { margin: 0; }
+.shopping-notice { padding: 8px 12px; border-left: 3px solid var(--primary); border-radius: 5px; background: var(--surface-hover); font-size: 13px; }
+.shopping-actions { display: flex; flex-wrap: wrap; gap: 7px; }
+.shopping-button { padding: 5px 10px; min-height: 34px; border: 1px solid var(--border); border-radius: 8px; color: var(--text); background: var(--surface); font-size: 13px; }
+.shopping-button:enabled:hover { border-color: var(--primary); background: var(--surface-hover); }
+.shopping-button:disabled { opacity: .55; }
+.product-card-action { justify-self: start; border-color: var(--primary); color: var(--primary-text); background: var(--primary); }
+.product-card-action:enabled:hover { color: var(--primary-text); background: var(--primary-strong); }
+@media (max-width: 540px) { .shopping-compare { grid-template-columns: minmax(0, 1fr); } }
 .markdown { font-size: 14px; line-height: 1.85; overflow-wrap: anywhere; }
 .markdown > :first-child { margin-top: 0; }
 .markdown > :last-child { margin-bottom: 0; }
@@ -207,3 +237,35 @@ button:focus-visible, textarea:focus-visible, input:focus-visible { outline: 3px
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }
 
 .fatal-error { min-height: 100dvh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 24px; text-align: center; background: var(--canvas); color: var(--text); }.fatal-error h1 { margin: 0; font-size: 22px; }.fatal-error p { margin: 0; color: var(--muted); font-size: 14px; }.fatal-error button { margin-top: 12px; padding: 9px 16px; border: 0; border-radius: 8px; background: var(--primary); color: var(--primary-text); }
+.reception-panel { width: min(100% - 32px, 800px); margin: 8px auto; padding: 12px; border: 1px solid #8885; border-radius: 12px; max-height: 40vh; overflow-y: auto; font-size: 14px; }
+.reception-panel:empty { display: none; }
+.reception-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+.reception-panel button, .reception-panel select { padding: 6px 12px; border-radius: 6px; border: 1px solid #8887; color: inherit; background: transparent; }
+.reception-panel button:disabled { opacity: .5; cursor: not-allowed; }
+.reception-panel label { display: block; margin: 8px 0; }
+.reception-panel textarea { display: block; width: 100%; min-height: 50px; margin-top: 6px; color: inherit; background: transparent; border: 1px solid #8887; border-radius: 6px; }
+.platform-page { padding: 24px; max-width: 1300px; margin: auto; height: 100dvh; overflow-y: auto; }
+.platform-page header { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.platform-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 20px; }
+.platform-page section { padding: 16px; border: 1px solid #8886; border-radius: 12px; min-width: 0; margin-bottom: 18px; }
+.platform-page label { display: block; margin: 12px 0; }
+.platform-page input, .platform-page select, .platform-page textarea { display: block; width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #8888; color: inherit; background: var(--canvas, white); }
+.platform-page textarea, .platform-page pre { font: 12px/1.6 monospace; }
+.platform-page pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+.platform-page button { padding: 8px 12px; margin: 4px; border-radius: 6px; border: 1px solid #8888; background: transparent; color: inherit; }
+.platform-page button:disabled { opacity: .5; cursor: not-allowed; }
+.platform-page code { overflow-wrap: anywhere; }
+.platform-run-list { max-height: 360px; overflow-y: auto; }
+.platform-run-list article { padding: 12px 0; border-bottom: 1px solid #8885; }
+@media (max-width: 800px) { .platform-columns { grid-template-columns: 1fr; } .platform-page { padding: 12px; } }
+/* Login and account controls share the existing workspace palette. */
+.login-page { min-height: 100dvh; display: grid; place-items: center; padding: 24px; background: var(--bg, #f7f7f5); }
+.login-panel { width: min(100%, 380px); padding: 32px; border: 1px solid var(--border, #dededb); border-radius: 16px; background: var(--surface, #fff); }
+.login-panel h1 { font-size: 24px; margin: 20px 0 8px; }
+.login-panel p, .login-panel small { color: var(--muted, #666); }
+.login-panel form { display: grid; gap: 12px; margin: 24px 0 16px; }
+.login-panel input { min-width: 0; padding: 11px 12px; border: 1px solid var(--border, #ccc); border-radius: 8px; font: inherit; }
+.login-panel button { padding: 12px; border: 0; border-radius: 8px; background: #23594c; color: #fff; font: inherit; cursor: pointer; }
+.login-panel button:disabled { opacity: .55; cursor: default; }
+.login-panel .auth-notice { color: #a13232; line-height: 1.6; }
+.account-name { max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; }

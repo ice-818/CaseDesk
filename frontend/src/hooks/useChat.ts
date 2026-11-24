@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useReducer, useRef, useState } from "react";
 import type { ChatResponse, Conversation, Message } from "../types";
 import { streamChat } from "../lib/api";
-import { loadConversations, saveConversations } from "../lib/storage";
+import { captureStorageScope, loadConversations, saveConversations } from "../lib/storage";
+import { isCurrentAuth } from "../lib/auth";
 
 interface State {
   conversations: Conversation[];
@@ -66,6 +67,7 @@ function reducer(state: State, action: Action): State {
               state: "complete",
               citations: action.response.citations,
               pendingAction: action.response.pending_action,
+              shoppingView: action.response.shopping_view,
               strategy: action.response.strategy,
               traceId: action.response.trace_id,
               latencyMs: action.response.latency.total_ms,
@@ -93,11 +95,10 @@ function reducer(state: State, action: Action): State {
   }
 }
 
-const DEMO_USER_ID = import.meta.env.VITE_DEMO_USER_ID || "u_demo";
-
 export function useChat() {
+  const [storageScope] = useState(captureStorageScope);
   const [state, dispatch] = useReducer(reducer, undefined, () => ({
-    conversations: loadConversations(),
+    conversations: loadConversations(storageScope),
     activeId: null,
   }));
   const stateRef = useRef(state);
@@ -107,12 +108,12 @@ export function useChat() {
   const [busy, setBusy] = useState(false);
 
   useEffect(() => {
-    const timer = window.setTimeout(() => saveConversations(state.conversations), 300);
+    const timer = window.setTimeout(() => saveConversations(state.conversations, storageScope), 300);
     return () => window.clearTimeout(timer);
   }, [state.conversations]);
 
   useEffect(() => {
-    const flush = () => saveConversations(stateRef.current.conversations);
+    const flush = () => saveConversations(stateRef.current.conversations, storageScope);
     window.addEventListener("pagehide", flush);
     return () => window.removeEventListener("pagehide", flush);
   }, []);
@@ -123,7 +124,7 @@ export function useChat() {
 
   const send = useCallback(async (raw: string, confirmActionId?: string) => {
     const text = raw.trim();
-    if (!text || text.length > 4000 || busyRef.current) return false;
+    if (!isCurrentAuth(storageScope.version) || !text || text.length > 4000 || busyRef.current) return false;
     const current = stateRef.current;
     const existing = current.conversations.find((item) => item.id === current.activeId);
     const conversation: Conversation = existing ?? {
@@ -145,11 +146,11 @@ export function useChat() {
       await streamChat(
         {
           message: text,
-          user_id: DEMO_USER_ID,
           ...(conversation.sessionId ? { session_id: conversation.sessionId } : {}),
           ...(confirmActionId ? { confirm_action_id: confirmActionId } : {}),
         },
         (event) => {
+          if (controller.signal.aborted || !isCurrentAuth(storageScope.version)) return;
           if (event.event === "token") {
             dispatch({ type: "token", conversationId: conversation.id, messageId: assistant.id, text: event.text });
           }
@@ -164,7 +165,7 @@ export function useChat() {
       return true;
     } catch (error) {
       const stopped = controller.signal.aborted;
-      if (!answered) {
+      if (!answered && isCurrentAuth(storageScope.version)) {
         dispatch({
           type: "fail",
           conversationId: conversation.id,
@@ -177,7 +178,7 @@ export function useChat() {
     } finally {
       requestRef.current = null;
       busyRef.current = false;
-      setBusy(false);
+      if (isCurrentAuth(storageScope.version)) setBusy(false);
     }
   }, []);
 
