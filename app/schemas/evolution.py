@@ -109,3 +109,9 @@ class ProposalReviewRequest(StrictModel):
 class DatasetReviewRequest(StrictModel):
     decision: Literal["approved", "rejected"]
     note: str = Field(min_length=1, max_length=2000)
+
+
+class ConsolidateRequest(StrictModel):
+    new_version: str = Field(
+        min_length=1, max_length=32, pattern=r"^[A-Za-z0-9_.-]+$"
+    )

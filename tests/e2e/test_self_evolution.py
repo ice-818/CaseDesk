@@ -7,10 +7,12 @@ EVO = "/api/v1/admin/evolution"
 ADMIN_HEADERS = {"x-admin-token": "test-evolution-token"}
 
 
-def _seed_low_score_feedback(client, reason: str, buyer_headers: dict) -> None:
+def _seed_low_score_feedback(
+    client, reason: str, buyer_headers: dict, message: str = "你好"
+) -> None:
     chat = client.post(
         "/api/v1/chat",
-        json={"message": "你好", "user_id": "owner"},
+        json={"message": message, "user_id": "owner"},
         headers=buyer_headers,
     )
     assert chat.status_code == 200
@@ -373,6 +375,159 @@ def test_human_rejection_terminates_proposal(tmp_path, monkeypatch, auth_headers
             assert (
                 client.post(
                     f"{EVO}/proposals/{prop_id}/promote", headers=ADMIN_HEADERS
+                ).status_code
+                == 409
+            )
+    finally:
+        clear_settings_cache()
+
+
+def test_consolidate_feedback_into_new_regression_version(
+    tmp_path, monkeypatch, auth_headers
+):
+    monkeypatch.setenv("ADMIN_API_TOKEN", "test-evolution-token")
+    clear_settings_cache()
+    buyer_headers = auth_headers("owner")
+    try:
+        with TestClient(create_app()) as client:
+            # The user message contains the proposed keyword.
+            _seed_low_score_feedback(
+                client, "答非所问", buyer_headers, message="催发货"
+            )
+            regression_bundle = {
+                "name": "intent_reg",
+                "version": "v1",
+                "cases": [
+                    {"case_id": "c1", "query": "我的快递到哪了", "expected_intent": "logistics"},
+                ],
+            }
+            reg_id = client.post(
+                f"{EVO}/regression-datasets", json=regression_bundle, headers=ADMIN_HEADERS
+            ).json()["dataset_id"]
+            client.post(
+                f"{EVO}/regression-datasets/{reg_id}/review",
+                json={"decision": "approved", "note": "freeze"},
+                headers=ADMIN_HEADERS,
+            )
+            prop_id = client.post(
+                f"{EVO}/proposals",
+                json={"name": "fb_prop", "version": "v1"},
+                headers=ADMIN_HEADERS,
+            ).json()["proposal_id"]
+            client.post(f"{EVO}/proposals/{prop_id}/attribute", headers=ADMIN_HEADERS)
+            client.post(
+                f"{EVO}/proposals/{prop_id}/regress",
+                json={
+                    "regression_dataset_id": reg_id,
+                    "candidate": {
+                        "type": "intent_keyword",
+                        "intent": "logistics",
+                        "keyword": "催发货",
+                    },
+                },
+                headers=ADMIN_HEADERS,
+            )
+            client.post(f"{EVO}/proposals/{prop_id}/gate", headers=ADMIN_HEADERS)
+            client.post(
+                f"{EVO}/proposals/{prop_id}/review",
+                json={"decision": "approved", "note": "ok"},
+                headers=ADMIN_HEADERS,
+            )
+            client.post(f"{EVO}/proposals/{prop_id}/promote", headers=ADMIN_HEADERS)
+
+            consolidated = client.post(
+                f"{EVO}/proposals/{prop_id}/consolidate",
+                json={"new_version": "v2"},
+                headers=ADMIN_HEADERS,
+            )
+            assert consolidated.status_code == 200
+            data = consolidated.json()
+            assert data["status"] == "draft"
+            assert data["version"] == "v2"
+            cases = data["payload"]["cases"]
+            assert len(cases) == 2
+            assert cases[0]["case_id"] == "c1"  # Original case retained.
+            new_case = cases[1]
+            assert new_case["query"] == "催发货"
+            assert new_case["expected_intent"] == "logistics"
+            # The sediment version still needs human approval to become frozen.
+            approved = client.post(
+                f"{EVO}/regression-datasets/{data['dataset_id']}/review",
+                json={"decision": "approved", "note": "confirmed sediment"},
+                headers=ADMIN_HEADERS,
+            )
+            assert approved.status_code == 200
+    finally:
+        clear_settings_cache()
+
+
+def test_consolidate_requires_promoted_and_dedupes_query(
+    tmp_path, monkeypatch, auth_headers
+):
+    monkeypatch.setenv("ADMIN_API_TOKEN", "test-evolution-token")
+    clear_settings_cache()
+    buyer_headers = auth_headers("owner")
+    try:
+        with TestClient(create_app()) as client:
+            _seed_low_score_feedback(
+                client, "答非所问", buyer_headers, message="催发货"
+            )
+            reg_id = client.post(
+                f"{EVO}/regression-datasets",
+                json={
+                    "name": "g",
+                    "version": "v1",
+                    "cases": [
+                        {"case_id": "c1", "query": "催发货", "expected_intent": "logistics"},
+                    ],
+                },
+                headers=ADMIN_HEADERS,
+            ).json()["dataset_id"]
+            client.post(
+                f"{EVO}/regression-datasets/{reg_id}/review",
+                json={"decision": "approved", "note": "freeze"},
+                headers=ADMIN_HEADERS,
+            )
+            prop_id = client.post(
+                f"{EVO}/proposals",
+                json={"name": "p", "version": "v1"},
+                headers=ADMIN_HEADERS,
+            ).json()["proposal_id"]
+            client.post(f"{EVO}/proposals/{prop_id}/attribute", headers=ADMIN_HEADERS)
+            # A non-promoted proposal cannot be consolidated.
+            assert (
+                client.post(
+                    f"{EVO}/proposals/{prop_id}/consolidate",
+                    json={"new_version": "v2"},
+                    headers=ADMIN_HEADERS,
+                ).status_code
+                == 409
+            )
+            client.post(
+                f"{EVO}/proposals/{prop_id}/regress",
+                json={
+                    "regression_dataset_id": reg_id,
+                    "candidate": {
+                        "type": "intent_keyword",
+                        "intent": "logistics",
+                        "keyword": "催发货",
+                    },
+                },
+                headers=ADMIN_HEADERS,
+            )
+            client.post(f"{EVO}/proposals/{prop_id}/gate", headers=ADMIN_HEADERS)
+            client.post(
+                f"{EVO}/proposals/{prop_id}/review",
+                json={"decision": "approved", "note": "ok"},
+                headers=ADMIN_HEADERS,
+            )
+            client.post(f"{EVO}/proposals/{prop_id}/promote", headers=ADMIN_HEADERS)
+            # The regression set already contains the same query: nothing new.
+            assert (
+                client.post(
+                    f"{EVO}/proposals/{prop_id}/consolidate",
+                    json={"new_version": "v2"},
+                    headers=ADMIN_HEADERS,
                 ).status_code
                 == 409
             )

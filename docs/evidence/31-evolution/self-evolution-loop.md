@@ -76,8 +76,8 @@ collect -> attribute -> regress -> gate -> review -> promoted
 
 ## 6. 测试与覆盖率
 
-- 新增 `tests/e2e/test_self_evolution.py`，共 6 个用例：完整成功闭环、门禁阻断、非法转换与角色守卫、回归集审查守卫、回归前置校验、人审驳回终态。
-- 全量后端测试 **555 passed**（含新增 6 个），无失败。
+- `tests/e2e/test_self_evolution.py` 共 8 个用例：完整成功闭环、门禁阻断、非法转换与角色守卫、回归集审查守卫、回归前置校验、人审驳回终态，以及错例沉淀成功路径与沉淀守卫（去重/非 promoted 拒绝）。
+- 全量后端测试 **557 passed**，无失败。
 - 全量行覆盖率 **TOTAL 85%**，高于 CI 门槛 70%，也高于上一基线 78.08%。
 
 ### 关于 coverage 数字的诚实说明
@@ -94,10 +94,37 @@ collect -> attribute -> regress -> gate -> review -> promoted
 - 一条 6 阶段、2 个失败终态的可审计自进化状态机，人审为强制节点、不可绕过。
 - 确定性词法归因覆盖 5 类失败，外部 API 调用 0、零付费、全程离线可复现。
 - 门禁实测可拦截"过宽关键词"导致的回归（regressed 用例），fail-closed 成立。
-- 全量 555 测试通过、整体覆盖率 85%，并能解释 coverage 在异步线程下的测量局限。
+- 晋升错例可确定性沉淀为回归集新版本（draft→人审冻结），按 query 去重、无新增则 409，让回归库随真实反馈持续增厚，且不新增表字段、不绕过 HITL。
+- 全量 557 测试通过、整体覆盖率 85%、release gate 4/4，并能解释 coverage 在异步线程下的测量局限。
 
 ## 8. 边界与后续
 
 - 当前候选变更仅支持意图关键词；知识条目、检索参数等其他确定性变更类型可按同一状态机扩展。
 - 不做真实支付/资金移动、不做 LTR/协同过滤（数据稀疏，不伪造）。
 - 候选变更的真实"代码落地"仍由开发者在评审通过后执行，系统负责验证与门禁，不自动写生产配置。
+
+## 9. 错例沉淀：让回归库随真实反馈持续增厚
+
+仅有"提案晋升"还不算完整闭环——已确认修复的错例若不进入冻结集，下次变更可能再次踩坑。因此新增沉淀环节，把晋升提案对应的错例确定性地转为回归用例。
+
+### 9.1 设计取舍
+
+1. **不新增表字段**：候选意图（`CandidateChange.intent`）原本只在请求中传递、未持久化。改为在候选评测 run 的 `manifest` 中新增 `candidate_intent` 字段（关键词已在 `candidate_label`）。manifest 本就是描述"该 run 在测什么"的元数据，加字段语义合理，且对表结构零改动、无需新迁移。
+2. **不直接改已批准集**：平台规则是"已审不可改、只能发新版本"。沉淀产出的是回归集的一条新 `DatasetVersionRow`（`status="draft"`），沿用原集全部用例并追加沉淀用例，operator 人审 `approved` 后才成为新冻结集——既自动又不绕过 HITL。
+3. **确定性提取**：代表性 query 取错例对话中"包含候选关键词"的那条 user 消息；找不到则回退到第一条 user 消息。gold intent 取候选变更的 intent。全程无 LLM、无外部调用。
+4. **按 query 去重**：回归集已存在相同 query 的用例则跳过；若没有任何新增，返回 `409`，不产生空版本。
+
+### 9.2 执行流程（`consolidate_to_regression`）
+
+1. 校验提案状态为 `promoted`，否则 `409`；
+2. 读取错例集（`FeedbackCaseBundle`）与候选 run，从其 manifest 重建 `CandidateChange`（`candidate_intent` + `candidate_label`）；
+3. 从 manifest 的 `dataset_id` 找到原回归集（`IntentRegressionBundle`）；
+4. 对每个错例调用 `build_regression_case_from_feedback` 生成回归用例（新 case_id 以 `sed_` 前缀 + 唯一片段），按 query 去重后追加；
+5. 以新版本号构建新 bundle，计算 canonical content_hash，插入一条 `intent_classification`/`regression` 的 `draft` 版本并提交。
+
+### 9.3 测试实测
+
+- 成功路径：用户消息含候选关键词 `催发货`，晋升后沉淀出 `v2` 草稿，原用例保留、新增用例 `query="催发货"`、`expected_intent="logistics"`，再经人审批准成为新冻结集。
+- 守卫：非 `promoted` 状态沉淀返回 `409`；回归集已含相同 query、无新增时返回 `409`，不产生冗余版本。
+
+至此闭环为：真实反馈 → 错例收集 → 归因 → 回归 → 门禁 → 人审 → 晋升 → **沉淀为新回归版本 → 人审冻结**，回归库随真实反馈持续增厚，且每一步都可审计、人审不可绕过。

@@ -23,6 +23,7 @@ from app.schemas.evolution import (
     ConversationTurn,
     FeedbackCase,
     FeedbackCaseBundle,
+    IntentRegressionCase,
     IntentRegressionBundle,
 )
 
@@ -178,3 +179,28 @@ def evaluate_intent_regression(
         },
         "cases": rows,
     }
+
+
+def build_regression_case_from_feedback(
+    case: FeedbackCase, *, candidate: CandidateChange, case_id: str
+) -> IntentRegressionCase:
+    """Turn a confirmed feedback case into a frozen regression case.
+
+    The representative query is the user message containing the proposed
+    keyword (falling back to the first user message); the gold intent is the
+    intent of the approved candidate change. This is fully deterministic.
+    """
+    user_messages = [turn.content for turn in case.turns if turn.role == "user"]
+    query = next(
+        (
+            content
+            for content in user_messages
+            if candidate.keyword.lower() in content.lower()
+        ),
+        user_messages[0] if user_messages else "",
+    )
+    return IntentRegressionCase(
+        case_id=case_id,
+        query=query,
+        expected_intent=candidate.intent,
+    )

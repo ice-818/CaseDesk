@@ -7,6 +7,7 @@ from app.api.dependencies import get_container
 from app.api.routes.admin import require_admin
 from app.repositories.evolution_repository import EvolutionRepository
 from app.schemas.evolution import (
+    ConsolidateRequest,
     CreateProposalRequest,
     DatasetReviewRequest,
     IntentRegressionBundle,
@@ -115,4 +116,17 @@ async def promote_proposal(
 ):
     return await EvolutionRepository(container.session_factory).promote_proposal(
         proposal_id
+    )
+
+
+@router.post("/proposals/{proposal_id}/consolidate")
+async def consolidate_to_regression(
+    proposal_id: str,
+    payload: ConsolidateRequest,
+    container: AppContainer = Depends(get_container),
+):
+    return await EvolutionRepository(
+        container.session_factory
+    ).consolidate_to_regression(
+        proposal_id, new_version=payload.new_version
     )

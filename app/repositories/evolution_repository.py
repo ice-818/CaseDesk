@@ -30,6 +30,7 @@ from app.schemas.evolution import (
 from app.services.evolution import (
     AttributionEngine,
     FeedbackCollector,
+    build_regression_case_from_feedback,
     evaluate_intent_regression,
 )
 
@@ -215,7 +216,13 @@ class EvolutionRepository:
                 dataset_id=reg_dataset.dataset_id,
                 candidate_label=candidate.keyword,
                 status="completed",
-                manifest_json=json.dumps(self._manifest(reg_dataset, candidate.keyword)),
+                manifest_json=json.dumps(
+                    self._manifest(
+                        reg_dataset,
+                        candidate.keyword,
+                        candidate_intent=candidate.intent.value,
+                    )
+                ),
                 report_json=json.dumps(candidate_report, ensure_ascii=False),
             )
             db.add_all([baseline_run, candidate_run])
@@ -302,6 +309,82 @@ class EvolutionRepository:
             await db.commit()
             return proposal_view(proposal)
 
+    async def consolidate_to_regression(
+        self, proposal_id: str, *, new_version: str
+    ) -> dict:
+        """Build a new regression version that absorbs confirmed feedback.
+
+        The machine deterministically extracts one regression case per
+        feedback case and emits a *draft* dataset version; a human must
+        approve that version before it becomes the new frozen set.
+        """
+        require_operator(self.scope)
+        async with self.factory() as db:
+            proposal = await self._get(db, proposal_id)
+            if proposal.status != "promoted":
+                raise AppError(
+                    "only a promoted proposal can be consolidated", http_status=409
+                )
+            source = await db.get(DatasetVersionRow, proposal.source_dataset_id)
+            feedback_bundle = FeedbackCaseBundle.model_validate_json(source.payload_json)
+            candidate_run = await db.get(EvaluationRunRow, proposal.candidate_run_id)
+            manifest = json.loads(candidate_run.manifest_json)
+            if not manifest.get("candidate_intent"):
+                raise AppError(
+                    "candidate run is missing candidate intent metadata",
+                    http_status=409,
+                )
+            candidate = CandidateChange(
+                type="intent_keyword",
+                intent=manifest["candidate_intent"],
+                keyword=manifest["candidate_label"],
+            )
+            reg_dataset = await db.get(DatasetVersionRow, manifest["dataset_id"])
+            regression_bundle = IntentRegressionBundle.model_validate_json(
+                reg_dataset.payload_json
+            )
+            new_cases = list(regression_bundle.cases)
+            existing_queries = {case.query for case in new_cases}
+            added_case_ids: list[str] = []
+            for feedback_case in feedback_bundle.cases:
+                case_id = "sed_" + new_id()[:12]
+                regression_case = build_regression_case_from_feedback(
+                    feedback_case, candidate=candidate, case_id=case_id
+                )
+                if regression_case.query in existing_queries:
+                    continue
+                new_cases.append(regression_case)
+                existing_queries.add(regression_case.query)
+                added_case_ids.append(case_id)
+            if not added_case_ids:
+                raise AppError(
+                    "no new regression case to consolidate", http_status=409
+                )
+            new_bundle = IntentRegressionBundle(
+                name=regression_bundle.name,
+                version=new_version,
+                cases=new_cases,
+            )
+            canonical = json.dumps(
+                new_bundle.model_dump(mode="json"),
+                ensure_ascii=False,
+                sort_keys=True,
+                separators=(",", ":"),
+            )
+            new_row = DatasetVersionRow(
+                dataset_id=new_id("ds_"),
+                name=new_bundle.name,
+                version=new_bundle.version,
+                task="intent_classification",
+                split="regression",
+                status="draft",
+                content_hash=hashlib.sha256(canonical.encode()).hexdigest(),
+                payload_json=new_bundle.model_dump_json(),
+            )
+            db.add(new_row)
+            await db.commit()
+            return regression_dataset_view(new_row)
+
     # ---- helpers ---------------------------------------------------------
 
     async def _get(self, db, proposal_id: str) -> ImprovementProposalRow:
@@ -319,12 +402,18 @@ class EvolutionRepository:
             )
 
     @staticmethod
-    def _manifest(dataset: DatasetVersionRow, label: str) -> dict:
+    def _manifest(
+        dataset: DatasetVersionRow,
+        label: str,
+        *,
+        candidate_intent: str | None = None,
+    ) -> dict:
         return {
             "adapter": "intent_classification",
             "adapter_version": "intent-rules-v1",
             "dataset_id": dataset.dataset_id,
             "candidate_label": label,
+            "candidate_intent": candidate_intent,
             "external_api_calls": 0,
             "mode": "deterministic-rules",
         }
