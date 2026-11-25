@@ -1,51 +1,45 @@
-<h1 align="center">CaseDesk｜企业级智能客服和导购平台</h1>
+# CaseDesk
 
-<p align="center"><strong>面向电商平台多商家服务场景，围绕政策咨询、商品导购、订单物流与售后申请，逐步建设可评测、可追踪的智能服务平台。</strong></p>
+一个企业级智能客服和导购平台的原型，后端 FastAPI + LangGraph，前端 React。覆盖政策咨询、商品导购、订单物流和售后申请这几块。
 
-<p align="center">FastAPI × LangGraph × React · 自适应路由 · 可溯源检索 · 人工确认写操作</p>
+技术栈：FastAPI · LangGraph · React · BM25 + 向量混合检索 · 写操作人工确认
 
-> [!IMPORTANT]
-> CaseDesk 是基于本地样例知识库与订单数据运行的个人项目/演示环境，不是已接入真实交易、承运商或身份系统的生产客服。本文把已实现、已测量和待建设分开说明；不要把演示数据、离线评测或代码配置表述为线上业务指标。
->
-> 多商家是当前确定的建设方向；现有原型尚未完成生产级多租户认证、全链路数据隔离和企业容量验证。
+先说清楚，这是我自己做的项目，跑在本地：知识库是几份样例文档，订单是脚本生成的，没接真实的支付、物流和企业账号。所以里面的订单、物流状态都是演示数据，评测数字也是离线跑出来的，不是线上指标。多租户和数据隔离在后面的计划里，这个版本还没做。
 
 ---
 
-## 项目快照
+## 长什么样
 
 ![CaseDesk 前端工作台快照](docs/assets/frontend-snapshot.webp)
 
-<p align="center"><sub>现有 Web 工作台：流式对话、来源引用、会话搜索、主题切换与高风险操作确认卡片。</sub></p>
+工作台支持流式对话、来源引用、会话搜索、深色模式，高风险操作会弹确认卡片。
 
-## 解决什么问题
+## 为什么做这个
 
-电商客服的输入并不都是“查一个 FAQ”：问候无需检索；退换货规则需要引用依据；多个限制条件可能需要多次检索；订单、物流和售后申请又涉及用户数据与写操作。CaseDesk 将这些请求放进同一个工作流：
+电商客服收到的输入不都是"查一个 FAQ"。问候不用检索，退换货规则得引用依据，多个限制条件可能要查好几次，订单物流和售后又涉及用户数据和写操作。用一条固定的 RAG 链路处理所有请求，会有几个问题：
 
-- 政策与商品问题走知识检索，回答可带 `citations`；
-- 订单、物流、商品、优惠与售后请求由规划器选择受限工具；
-- 退款、退货和取消订单先生成待确认操作，确认后才执行；
-- 每个请求生成 `trace_id`，并在响应中返回策略、耗时和 token 统计字段；
-- 模型、缓存、向量库或精排不可用时会选择本地/离线降级路径，可由 `/api/v1/capabilities` 查询实际后端。
+- 简单问题也走完整检索和精排，白白拖慢；
+- 只靠向量，订单号这种精确词召回变差；只靠关键词，口语化的问题又命中不了；
+- 让模型直接执行退款、取消这类操作，一旦被提示注入或者理解错，没人把关就改了业务数据。
 
-当前仓库没有真实人工接管率、GMV、成本节省或生产 SLA 的证据，因此不宣称这类结果。
+所以我的思路是**先判断、再分流**，让不同代价的请求走不同的路径。
 
-## 与单一 RAG Demo 的差别
+## 和普通 RAG 有什么不一样
 
-| 维度 | 已在仓库中实现的做法 | 对应位置 |
+| 方面 | 怎么做 | 代码 |
 | --- | --- | --- |
-| 路由 | `DIRECT`、`SINGLE`、`MULTI`、`AGENT`、`REFUSE` 五类策略 | `app/retrieval/adaptive.py`、`app/agents/graph.py` |
-| 知识检索 | BM25 与可选稠密向量检索经 RRF 融合；可选 Cross-Encoder 精排；内存/Redis 缓存 | `app/retrieval/` |
-| 多条件问题 | 查询改写与 Self-RAG 检索循环；默认最多 3 跳 | `app/retrieval/self_rag.py`、`app/config/settings.py` |
-| 业务工具 | 15 个注册工具覆盖订单、物流、商品、优惠、库存、售后、知识检索与转人工 | `app/tools/factory.py` |
-| 写操作安全 | 参数校验、订单可见性检查、风险分级、显式确认、幂等记录 | `app/tools/`、`app/repositories/idempotency.py` |
-| 回答可靠性 | 输入注入拦截；在线模型路径做忠实度检查、一次自纠错，证据不足时拒答/转人工 | `app/guardrails/`、`app/agents/nodes/faithfulness.py` |
-| 工程接口 | JSON 与 SSE、健康/就绪/能力探针、结构化日志、Prometheus 指标 | `app/api/`、`app/observability/`、`app/main.py` |
-| 可验证性 | Python 测试目录、前端 Vitest 用例、离线数据集与评测运行器 | `tests/`、`frontend/src/**/*.test.*`、`eval/` |
-| 自进化闭环 | 低分错例经确定性归因、回归、fail-closed 门禁与强制人审后晋升，再沉淀为新回归集版本；前端提供 operator 人审工作台 | `app/services/evolution.py`、`app/api/routes/evolution.py`、`frontend/src/components/EvolutionPanel.tsx` |
+| 路由 | Direct / Single / Multi / Agent / Refuse 五条路径 | `app/retrieval/adaptive.py`、`app/agents/graph.py` |
+| 检索 | BM25 和向量两路，RRF 融合，可选 Cross-Encoder 精排，带缓存 | `app/retrieval/` |
+| 多条件问题 | 查询改写 + Self-RAG 检索循环，默认最多 3 跳 | `app/retrieval/self_rag.py` |
+| 业务工具 | 15 个工具，覆盖订单、物流、商品、优惠、库存、售后、检索和转人工 | `app/tools/factory.py` |
+| 写操作安全 | 参数校验、订单可见性、风险分级、显式确认、幂等 | `app/tools/`、`app/repositories/idempotency.py` |
+| 回答可靠性 | 注入拦截，在线路径做忠实度检查和一次自纠错，证据不足就拒答或转人工 | `app/guardrails/`、`app/agents/nodes/faithfulness.py` |
+| 工程接口 | JSON 和 SSE、健康/就绪/能力探针、结构化日志、Prometheus 指标 | `app/api/`、`app/observability/` |
+| 自进化闭环 | 错例经归因、回归、门禁、人审后晋升，再沉淀成新回归集，前端有人审工作台 | `app/services/evolution.py`、`frontend/src/components/EvolutionPanel.tsx` |
 
-“可选”表示组件是否启用取决于环境和配置；不能把代码中的可选组件写成当前环境已加载的服务。
+检索里有些组件是可选的，启不启用取决于配置，别把可选的当成当前环境一定加载了。
 
-## 一眼看懂架构
+## 整体架构
 
 ```mermaid
 flowchart LR
@@ -74,69 +68,59 @@ flowchart LR
     EV -. 沉淀新回归集 .-> E
 ```
 
-### 数据与质量闭环：已实现的最小形态
+## 几条核心路径
 
-| 环节 | 当前实现 | 尚未实现，不能夸大 |
-| --- | --- | --- |
-| 数据供给 | `knowledge/` 文档在启动时解析、清洗、切块、精确去重并构建 BM25/向量索引；非 Markdown 输入有 PII 掩码逻辑 | 客服全量会话、商品图/直播视频统一采集，标注平台、特征库、自动微调数据生产 |
-| 业务执行 | LangGraph 连接检索、规划、工具、回答、忠实度与会话压缩节点；SQLite 可显式灌入演示订单 | 真实 OMS/CRM/物流/支付系统、可靠多租户与线上人工工单闭环 |
-| 质量控制 | `eval/` 含意图、检索、E2E 样本及运行器；测试目录覆盖关键组件；`/metrics` 暴露运行时指标；自进化人审闭环把错例确定性沉淀为回归集新版本 | 7 维自动评测中台、线上 A/B、告警闭环、自动再训练 |
-
-这是一条“知识资料 → 检索/Agent → 离线评测与代码回归”的最小闭环，不是已经建成的数据中台和评测中台；后者见[路线图](#路线图明确是规划)。
-
-## 已实现功能与使用边界
-
-### 五条处理路径
-
-| 策略 | 适合的输入 | 系统处理 |
+| 策略 | 适合什么输入 | 怎么处理 |
 | :---: | --- | --- |
-| `DIRECT` | 问候、闲聊 | 直接生成，不检索知识库 |
-| `SINGLE` | 单一政策或 FAQ | 一轮检索与可选精排 |
-| `MULTI` | 多条件、跨条款问题 | 改写、补检与自纠错 |
-| `AGENT` | 查订单、物流、商品或发起售后 | 规划后调用受限制的业务工具 |
-| `REFUSE` | 越权、明显提示注入或证据不足 | 拒答，或提示补充信息/转人工 |
+| `DIRECT` | 问候、闲聊 | 直接生成，不检索 |
+| `SINGLE` | 单个政策或 FAQ | 一轮检索加可选精排 |
+| `MULTI` | 多条件、跨条款 | 改写、补检加自纠错 |
+| `AGENT` | 查订单、物流、商品或售后 | 规划后调用受限工具 |
+| `REFUSE` | 越权、明显注入或证据不足 | 拒答，或提示补充信息、转人工 |
 
-### 订单与售后安全
+这里把策略做成枚举而不是一堆 `if query:`，是因为枚举能单独单测，SSE 里能告诉外面走了哪条策略，Prometheus 也能按策略打点。
 
-`create_refund_request`、`create_return_request`、`cancel_order` 都是写操作。首次请求只会返回 `pending_action`；客户端需要在同一 `session_id`、同一 `user_id` 下带回 `confirm_action_id` 才能继续执行。待确认操作仅保存在服务进程内 15 分钟，服务重启或多实例切换后需要重新发起。
+## 写操作怎么保证安全
 
-订单可见性会按请求中的 `user_id` 过滤，但当前 API **不认证**这个字段。前端默认的 `u_demo` 仅为本地演示；面对不可信用户部署前，必须由服务端可信认证层绑定用户和会话，不能直接相信请求体。
+`create_refund_request`、`create_return_request`、`cancel_order` 都是写操作。第一次请求只会返回一个待确认动作，客户端得在同一个 `session_id`、同一个 `user_id` 下把 `confirm_action_id` 带回来才会真正执行。待确认动作只存在服务进程里，15 分钟过期，服务重启或者多实例切换后得重新发起。
 
-### 自进化人审闭环（HITL）
+订单可见性会按请求里的 `user_id` 过滤，但要注意这个字段当前 API 不做认证，默认的 `u_demo` 只是本地演示。真要对不可信用户部署，得先有服务端认证把用户和会话绑定，不能直接信请求体。
 
-CaseDesk 把“系统如何从错误中改进”做成一条不可由机器绕过的人工闭环，全程离线、外部 API 调用为 0。一条改进提案按线性状态推进，界面在每个阶段只暴露该阶段的下一步操作：
+## 自进化人审闭环
+
+这是我比较花心思的一块：让系统从错误里改进，但每一步都不能让机器自己说了算。整条链路离线跑，外部 API 调用为 0。一个提案按状态线性推进，界面上每个阶段只显示当前这一步的操作：
 
 | 阶段 | 谁来做 | 关键约束 |
 | --- | --- | --- |
-| 收集错例 | 机器 | 从低分反馈确定性收集并生成提案 |
-| 词法归因 | 机器 | 按规则区分 intent_error、answer_quality 等类别 |
-| 回归对比 | 机器 | 在冻结回归集上分别跑基线与候选，给出逐用例结果 |
-| fail-closed 门禁 | 机器 | 仅当候选无退化且有改善才放行；任何不确定都阻断 |
-| 人工审核 | operator（强制） | 批准或驳回，未填说明时按钮禁用，人审不可绕过 |
-| 确认晋升 | operator | 人审通过后才把候选变更晋升到运行配置 |
-| 错例沉淀 | 机器 + operator | 确定性提取回归用例，产生新草稿版本，人审冻结后才成为新基线 |
+| 收集错例 | 机器 | 从低分反馈确定性收集，生成提案 |
+| 词法归因 | 机器 | 按规则区分 intent_error、answer_quality 这些类别 |
+| 回归对比 | 机器 | 在冻结回归集上分别跑基线和候选，给出逐用例结果 |
+| fail-closed 门禁 | 机器 | 候选没有退化且确实有改善才放行，拿不准就拦下来 |
+| 人工审核 | operator，强制 | 批准或驳回，没填说明时按钮点不了，人审绕不过去 |
+| 确认晋升 | operator | 人审通过才把候选变更晋升到运行配置 |
+| 错例沉淀 | 机器加 operator | 提取回归用例，生成新草稿，人审冻结后才成为新基线 |
 
-关键设计取舍：
+几个关键取舍：
 
-- **已审不可改，只能发新版本**：沉淀不修改已批准回归集，而是新增一条 `draft` 状态的 DatasetVersion，人审通过后才冻结，避免污染历史基线。
-- **写路径全部在服务端校验**：前端工作台只做线性引导与只读展示，状态机、权限与必填校验仍由服务端强制执行。
-- **确定性提取与去重**：沉淀优先取含候选关键词的用户消息，找不到回退该错例第一条用户消息，并按 query 去重；没有可新增用例时返回冲突错误而非静默成功。
+- **已审的不能改，只能发新版本**。沉淀不去动已批准的回归集，而是新建一条 draft 版本，人审通过再冻结，这样不会污染历史基线。
+- **写路径全在服务端校验**。前端只做引导和只读展示，状态机、权限、必填校验都在服务端强制执行。
+- **确定性提取加去重**。优先取含候选关键词的用户消息，找不到就退回这条错例的第一条用户消息，再按 query 去重。没有可新增的用例时直接返回冲突，而不是假装成功。
 
-operator 登录后可在顶栏“自进化人审”进入工作台，查看错例完整对话、归因与门禁结果，并完成回归集版本的冻结或驳回。该闭环已在真实浏览器中完成端到端点击验证，详见 [`docs/evidence/31-evolution/self-evolution-loop.md`](docs/evidence/31-evolution/self-evolution-loop.md)。
+operator 登录后从顶栏"自进化人审"进去，能看错例的完整对话、归因和门禁结果，再决定冻结还是驳回。这条链路我已经在真实浏览器里完整点了一遍，细节见 [`docs/evidence/31-evolution/self-evolution-loop.md`](docs/evidence/31-evolution/self-evolution-loop.md)。
 
-### 还没有的能力
+## 还没做的
 
-- 订单、物流、退款与退货均使用本地种子/仓储数据，未连接真实交易、承运商、支付或 CRM；
-- 没有媒体运营、直播切片、素材管理、销售培训等独立业务 Agent；商品推荐是工具能力，并非已验证的个性化推荐系统；
-- 没有聊天/商品/视频统一数据平台、标注平台、模型微调流水线或线上自动回流；
-- 没有服务端用户认证、多租户隔离、增量知识库删除 API 或默认 Alembic 迁移流程；
-- PII 掩码、提示注入检测与忠实度判定都是现有防线，不等于完整的生产级安全合规保证。
+- 订单、物流、退款退货都用本地种子数据，没接真实交易、承运商、支付或 CRM；
+- 没有直播切片、素材管理、销售培训这类独立业务 Agent；商品推荐是工具能力，不是验证过的个性化推荐系统；
+- 没有统一数据平台、标注平台、模型微调流水线或线上自动回流；
+- 多租户隔离和知识库增量删除 API 还没做；启动不会自动迁移，需要显式跑 alembic 升级；
+- PII 掩码、注入检测、忠实度判定是现有的防线，但不等于完整的生产级安全合规。
 
-更完整的限制说明见 [`docs/12-limitations.md`](docs/12-limitations.md)。
+更完整的限制说明看 [`docs/12-limitations.md`](docs/12-limitations.md)。
 
-## 快速开始（Windows PowerShell）
+## 怎么跑起来（Windows PowerShell）
 
-需要 Python 3.11+；Web 开发还需要 Node.js `^20.19.0` 或 `>=22.12.0` 与 npm。命令均在项目根目录执行。
+需要 Python 3.11+，做前端还要 Node.js `^20.19.0` 或 `>=22.12.0` 和 npm。命令都在项目根目录执行。
 
 ```powershell
 py -3.11 -m venv .venv
@@ -144,7 +128,7 @@ py -3.11 -m venv .venv
 python -m pip install --upgrade pip
 python -m pip install -e ".[dev]"
 
-# 仅在不存在时创建本地配置；不要提交 .env 或任何密钥。
+# .env 不存在时再创建，不要提交 .env 或任何密钥
 if (-not (Test-Path .env)) { Copy-Item .env.example .env }
 
 Push-Location frontend
@@ -152,29 +136,29 @@ npm ci
 Pop-Location
 ```
 
-未配置 `DEEPSEEK_API_KEY` 时，系统使用离线实现来演示可核验的检索/订单结果；要使用生成式模型，需要由你在本地 `.env` 配置自己的密钥。README 不读取、不输出也不保存该文件中的值。
+没配 `DEEPSEEK_API_KEY` 时，系统用离线实现演示可核验的检索和订单结果；想用生成式模型，自己在 `.env` 里配密钥就行。
 
 ### 启动 API 和工作台
 
-后端可信登录改造后，启动前需要完成 `0008` 认证迁移及预置账号初始化；已有库没有迁移版本时，必须先核对结构，不能直接登记版本或覆盖旧数据。详细步骤与兼容边界见 [`docs/25-trusted-auth.md`](docs/25-trusted-auth.md)。本批仅完成后端，现有前端登录接入另行验收后实施。
+启动前要先完成认证迁移和预置账号初始化。已经有数据的库如果没有迁移版本，先核对结构，别直接登记版本或者覆盖旧数据。具体步骤看 [`docs/25-trusted-auth.md`](docs/25-trusted-auth.md)。
 
 ```powershell
 .\scripts\dev-start.ps1
 ```
 
-该脚本以轻量本地配置在后台启动 FastAPI 和 Vite；默认地址为：
+默认地址：
 
 - 工作台：<http://127.0.0.1:5173>
 - 健康检查：<http://127.0.0.1:8002/api/v1/health>
-- OpenAPI 文档：<http://127.0.0.1:8002/docs>
+- 接口文档：<http://127.0.0.1:8002/docs>
 
-端口冲突时可显式指定：
+端口被占了可以显式指定：
 
 ```powershell
 .\scripts\dev-start.ps1 -ApiPort 8010 -FrontendPort 5174
 ```
 
-### 发送第一条政策问题
+### 发第一条问题
 
 ```powershell
 $body = @{ message = '定制商品超过七天但有质量问题还能退吗？'; user_id = 'u_demo' } |
@@ -187,54 +171,52 @@ Invoke-RestMethod `
   -Body $body
 ```
 
-响应包含 `answer`、`session_id`、`trace_id`、`intent`、`strategy`、`citations`、`pending_action`、`token_usage` 与 `latency`。流式接口为 `POST /api/v1/chat/stream`；健康、就绪与实际后端能力分别见 `GET /api/v1/health`、`/api/v1/ready`、`/api/v1/capabilities`。
+响应里有 `answer`、`session_id`、`trace_id`、`intent`、`strategy`、`citations`、`pending_action`、`token_usage` 和 `latency`。流式接口是 `POST /api/v1/chat/stream`。
 
-### 演示订单与人工确认
+### 演示订单和人工确认
 
-默认启动不会自动写入订单。先停止 API，再执行：
+默认启动不会自动写订单。先停掉 API，再执行：
 
 ```powershell
 .\.venv\Scripts\python.exe .\scripts\seed_demo.py
 ```
 
-这会为本地演示用户 `u_demo` 创建 `ORD10001` 到 `ORD10003`。重启 API 后可先问“帮我查 ORD10001 的物流”；对“取消 ORD10003”会先得到确认卡片。该操作只影响本地演示数据库。
+这会给本地演示用户 `u_demo` 建 `ORD10001` 到 `ORD10003`。重启 API 后可以问"帮我查 ORD10001 的物流"，对"取消 ORD10003"会先收到确认卡片。整个操作只影响本地演示库。
 
-## API、运行与部署
+## 部署
 
 | 接口 | 用途 |
 | --- | --- |
-| `POST /api/v1/chat` | 返回单次完整 JSON 响应 |
-| `POST /api/v1/chat/stream` | 返回 SSE 的节点、token、answer 与 done 事件 |
-| `GET /api/v1/health` / `ready` | 存活与数据库/可选依赖状态 |
-| `GET /api/v1/capabilities` | 显示实际使用的数据库、缓存、检索、精排与 LLM 后端及降级状态 |
-| `GET /metrics` | Prometheus 格式指标 |
+| `POST /api/v1/chat` | 单次完整 JSON 响应 |
+| `POST /api/v1/chat/stream` | SSE 的节点、token、answer 和 done 事件 |
+| `GET /api/v1/health` / `ready` | 存活和数据库/可选依赖状态 |
+| `GET /api/v1/capabilities` | 实际用的数据库、缓存、检索、精排、LLM 后端和降级状态 |
+| `GET /metrics` | Prometheus 指标 |
 | `GET /docs` | FastAPI 自动生成的接口文档 |
 
-Docker 编排分为三种配置；默认演示模式不要求外部模型密钥、PostgreSQL、Redis 或 Qdrant：
+Docker 有三种配置，默认演示模式不需要外部模型密钥、PostgreSQL、Redis 或 Qdrant：
 
 ```powershell
-# SQLite + 内存/离线降级的默认演示
+# SQLite + 离线降级，默认演示
 docker compose up --build -d
 
 # 单 API + PostgreSQL + Redis
 $env:POSTGRES_PASSWORD = 'choose-a-local-password'
 docker compose -f docker-compose.single.yml up --build -d
 
-# 两个 API 实例 + PostgreSQL + Redis + Qdrant + Nginx
+# 两个 API + PostgreSQL + Redis + Qdrant + Nginx
 docker compose -f docker-compose.multi.yml up --build -d
 ```
 
-Docker 默认暴露 <http://127.0.0.1:8000>。单机与多实例模式会尝试加载本地 embedding/精排模型；首次拉取模型的网络、磁盘与内存开销需自行评估。部署说明见 [`docs/11-deployment.md`](docs/11-deployment.md)。
+Docker 默认暴露 <http://127.0.0.1:8000>。单机和多实例模式会尝试加载本地 embedding/精排模型，第一次拉模型的网络、磁盘和内存开销自己评估。部署细节看 [`docs/11-deployment.md`](docs/11-deployment.md)。
 
-## 测试、构建与评测
-
-### 可复现命令
+## 测试和评测
 
 ```powershell
-# Python：单元、集成与 API 端到端测试
+# Python 单元、集成和 API 端到端测试
 .\.venv\Scripts\python.exe -m pytest -q
 
-# 前端：Vitest 与 TypeScript/Vite 构建
+# 前端 Vitest 和 TypeScript/Vite 构建
 Push-Location frontend
 npm test
 npm run build
@@ -244,64 +226,51 @@ Pop-Location
 .\.venv\Scripts\python.exe -m eval.runner --task intent --llm
 ```
 
-`.github/workflows/ci.yml` 定义了 Python 3.11/3.12 的锁文件检查、Ruff、mypy、pytest 与 70% 覆盖率门槛。该目录当前没有 `.git`，因此无法从本地确定 CI 是否实际运行过、提交版本或改动归属。
+CI（`.github/workflows/ci.yml`）在 Python 3.11/3.12 上跑锁文件检查、Ruff、mypy、pytest，覆盖率门槛 70%。
 
-### 当前可核验的评测口径
+### 意图评测口径
 
-仓库内 [`eval/reports/latest.json`](eval/reports/latest.json) 是 2026-11-10 的 100 条中文意图样本报告：
+[`eval/reports/latest.json`](eval/reports/latest.json) 是 100 条中文意图样本的报告：
 
-| 口径 | 准确率 | 应如何表述 |
+| 口径 | 准确率 | 怎么说比较准确 |
 | --- | ---: | --- |
 | `intent_rules` | 50.0% (50/100) | 关键词规则基线 |
-| `intent_v1`，无覆盖层 | 88.0% (88/100) | 一次模型版本 |
-| `intent_v2`，无覆盖层 | **91.0% (91/100)** | 当前报告中的纯模型分类结果 |
-| `intent_v3` + `intent_overlay` | 100.0% (100/100) | 含为该样本集编写的覆盖层，不能表述为纯模型准确率或泛化能力 |
+| `intent_v1`，无覆盖层 | 88.0% (88/100) | 一个模型版本 |
+| `intent_v2`，无覆盖层 | **91.0% (91/100)** | 当前报告里的纯模型结果 |
+| `intent_v3` + `intent_overlay` | 100.0% (100/100) | 加了覆盖层，不能说成纯模型准确率或泛化能力 |
 
-`eval/MEASURED.md` 还记录过一轮更早的检索/生成/E2E 测量，但对应的完整原始报告不在当前目录，且与 `latest.json` 的日期、数据集和口径不同。因此本 README 不把其中的检索、幻觉率、延迟或“154 passed”写成当前可复现结论。请在固定代码、模型版本、数据集和随机性设置后重新运行并归档报告。
+`eval/MEASURED.md` 里还有更早一轮检索、生成、E2E 的测量，但完整原始报告不在当前目录，日期和数据集也对不上，所以这里不把那些数字当成当前可复现的结论，需要固定代码、模型、数据集后重新跑再归档。
 
-### 本次工作区验证状态（2026-11-25）
+### 最近一次验证（2026-11-25）
 
-- 后端：使用项目虚拟环境运行 `python -m pytest -q`，结果为 **558 passed**，整体行覆盖率 **85%**，发布门禁 release gate **4/4** 通过；
-- 前端：Vitest **49 passed**（11 个测试文件），`tsc` 与 `vite build` 零报错；CI 设定覆盖率门槛为 70%；
-- 真实浏览器联调：以 operator 账号在浏览器中实际点击，完整走通“收集错例→归因→回归→门禁→人审→晋升→沉淀→冻结新回归集”全链路，写操作结果均经数据库核验；
-- 未读取 `.env` 内容、未使用任何付费密钥；本地数据库经 Alembic 显式升级到当前修订版本，升级前已备份。
+- 后端：虚拟环境跑 pytest，**558 passed**，行覆盖率 **85%**，发布门禁 **4/4** 通过；
+- 前端：Vitest **49 passed**（11 个测试文件），`tsc` 和 `vite build` 零报错；
+- 真实浏览器：用 operator 账号实际点击，完整走通"收集错例→归因→回归→门禁→人审→晋升→沉淀→冻结新回归集"，写操作都查库核验过；
+- 没读 `.env`、没用付费密钥；本地库用 Alembic 显式升级到当前版本，升级前做了备份。
 
-## 项目结构
+## 目录结构
 
 ```text
-app/          FastAPI、LangGraph、检索、工具、存储与可观测性
-frontend/     React + TypeScript 客服协作台
-knowledge/    本地政策/商品知识资料
-data/         本地 SQLite 运行数据（不应提交敏感数据）
-eval/         离线数据集、指标、运行器和本地报告
-tests/        单元、集成与 API E2E 测试
+app/          FastAPI、LangGraph、检索、工具、存储和可观测性
+frontend/     React + TypeScript 工作台
+knowledge/    本地政策和商品知识资料
+data/         本地 SQLite 运行数据（不提交敏感数据）
+eval/         离线数据集、指标、运行器和报告
+tests/        单元、集成和 API E2E 测试
 scripts/      开发启动和演示数据脚本
-docs/         架构、API、评测、部署与限制说明
+docs/         架构、API、评测、部署和限制说明
 ```
 
-## 路线图（明确是规划）
+## 后面想做什么
 
-以“有业务、有体系、可落地、有闭环”为目标，下一阶段应优先补足能被实际验证的链路，而不是堆叠名词：
+1. 接上可信身份认证、服务端会话绑定、真实 OMS/物流/售后接口和审计；
+2. 给知识库补版本、增量删除、数据质量检查和人工标注流程；
+3. 把评测扩到答案正确性、工具调用、召回、权限安全、时延成本、异常处理和业务合规这几个维度，每轮保存原始报告；
+4. 用脱敏的真实业务样本，验证人工接管率、首响、解决时长、工具成功率和单位成本；
+5. 这些都能复现之后，再看要不要加素材、直播、培训这类新的业务 Agent。
 
-1. 接入可信身份认证、服务端会话绑定、真实 OMS/物流/售后接口与审计；
-2. 为知识库补充版本、增量删除、数据质量检查和人工标注流程；
-3. 把评测扩展为答案正确性、工具调用、召回、权限/安全、时延/成本、异常处理和业务合规七个维度，并保存每轮原始报告；
-4. 用真实而脱敏的业务样本，验证人工接管率、首响、解决时长、工具成功率和单位请求成本；
-5. 在上述基础可复现后，再评估素材、直播、培训等新的业务 Agent 是否值得接入共享的数据与评测能力。
+## 关于来源和协议
 
-## 贡献与证据边界
+这个项目从 [JEen-wang/Adaptive-rag](https://github.com/JEen-wang/Adaptive-rag) 起步，在它的骨架上我做了大量改造，包括工具权限、安全护栏、评测体系、自进化闭环和人审工作台。写简历或面试时，我只讲能拿提交记录、演示和评测报告证明的部分，不会把原型说成独立搭建的完整中台或上线系统。
 
-当前目录没有 Git 元数据，无法依据本地历史确认作者、提交范围或“从零开发”的个人贡献；也不能由文件名推断具体实习职责。仓库中仍可见 `adaptive_rag_cs` 包/容器命名等上游痕迹，而 `pyproject.toml` 与应用标题使用 `casedesk`。
-
-用于简历或面试时，请只陈述自己能用提交记录、PR、演示录屏、接口响应、评测原始报告或设计文档证明的改动。例如，可如实说“基于开源项目完成/改造了某个明确模块，并能演示其代码路径与验证结果”；不要声称独立搭建完整中台、生产上线或取得线上业务指标。建议补充以下证据后再压缩为简历项目：
-
-- 可追溯的 Git 仓库、分支/提交、上游 fork 或变更清单；
-- 可重复的启动录屏，以及政策问答、订单查询和确认写操作的 API/页面演示；
-- 固定版本的评测输入、命令、原始输出、失败样本和复测日期；
-- 你负责的设计决策、故障排查、测试修复与代码审查记录。
-
-## 上游与许可证
-
-CaseDesk 的目录结构与能力基础参考 [JEen-wang/Adaptive-rag](https://github.com/JEen-wang/Adaptive-rag)。上游 README 的信息组织方式（问题、架构、快速开始、评测、限制与溯源）被沿用；本 README 的功能陈述以当前本地文件为准，不把上游的简历文字或指标自动迁移为 CaseDesk 事实。
-
-项目保留 [MIT License](LICENSE) 及相应版权/授权声明。使用、修改或分发时，请同时保留上游许可与出处。
+项目用 [MIT License](LICENSE)，使用、修改或分发时保留上游许可和出处。
