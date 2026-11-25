@@ -269,3 +269,31 @@ button:focus-visible, textarea:focus-visible, input:focus-visible { outline: 3px
 .login-panel button:disabled { opacity: .55; cursor: default; }
 .login-panel .auth-notice { color: #a13232; line-height: 1.6; }
 .account-name { max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; }
+
+/* Self-evolution human review workbench. */
+.evolution-badge { display: inline-flex; align-items: center; padding: 2px 9px; border-radius: 999px; font-size: 12px; border: 1px solid #8886; white-space: nowrap; }
+.evolution-badge-collect, .evolution-badge-attribute, .evolution-badge-regress, .evolution-badge-gate, .evolution-badge-review { color: #2b5cab; border-color: #2b5cab55; background: #2b5cab14; }
+.evolution-badge-promoted, .evolution-dataset-approved { color: #1f7a4d; border-color: #1f7a4d55; background: #1f7a4d14; }
+.evolution-badge-blocked, .evolution-badge-rejected, .evolution-dataset-rejected { color: #a13232; border-color: #a1323255; background: #a1323214; }
+.evolution-dataset-draft { color: #9a6a1c; border-color: #9a6a1c55; background: #9a6a1c14; }
+.evolution-proposal-list { margin-top: 14px; display: flex; flex-direction: column; gap: 8px; max-height: 420px; overflow-y: auto; }
+.evolution-proposal-item { display: flex; align-items: center; justify-content: space-between; gap: 10px; width: 100%; text-align: left; padding: 10px 12px; border-radius: 9px; border: 1px solid #8886; background: transparent; color: inherit; }
+.evolution-proposal-item:hover { background: var(--surface-hover, #8881); }
+.evolution-proposal-selected { border-color: var(--primary, #23594c); box-shadow: inset 0 0 0 1px var(--primary, #23594c); }
+.evolution-proposal-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; }
+.evolution-detail-head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.evolution-meta { color: var(--muted, #666); font-size: 13px; line-height: 1.7; }
+.evolution-block { margin-top: 14px; padding-top: 12px; border-top: 1px solid #8885; }
+.evolution-block h3 { margin: 0 0 8px; font-size: 15px; }
+.evolution-terminal { color: #a13232; font-weight: 600; }
+.feedback-case { padding: 12px; margin: 10px 0; border: 1px solid #8885; border-radius: 10px; min-width: 0; }
+.feedback-case-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 13px; color: var(--muted, #666); }
+.feedback-reason { font-size: 13px; color: #9a6a1c; margin: 8px 0; }
+.feedback-turns { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+.feedback-turn { display: flex; gap: 8px; margin: 0; font-size: 13px; line-height: 1.6; }
+.feedback-role { flex: 0 0 34px; color: var(--muted, #777); font-size: 12px; }
+.feedback-turn-user .feedback-role { color: #2b5cab; }
+.feedback-turn-assistant .feedback-role { color: #1f7a4d; }
+.evolution-dataset-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; margin-top: 12px; }
+.evolution-dataset { padding: 14px; border: 1px solid #8886; border-radius: 12px; min-width: 0; }
+.evolution-dataset small { display: block; margin-top: 8px; color: var(--muted, #777); line-height: 1.5; }

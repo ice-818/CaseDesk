@@ -171,3 +171,97 @@ export interface Conversation {
   sessionId?: string;
   messages: Message[];
 }
+
+// ---- Self-evolution human review workbench ----
+
+export type EvolutionStatus =
+  | "collect"
+  | "attribute"
+  | "regress"
+  | "gate"
+  | "review"
+  | "promoted"
+  | "blocked"
+  | "rejected";
+
+export interface EvolutionTurn {
+  role: "user" | "assistant" | "system";
+  content: string;
+}
+
+export interface FeedbackCase {
+  case_id: string;
+  session_id: string;
+  user_id: string;
+  merchant_id: string | null;
+  channel: "platform" | "shop";
+  score: number;
+  feedback_reason: string;
+  turns: EvolutionTurn[];
+}
+
+export interface FeedbackCasesResponse {
+  dataset_id: string;
+  name: string;
+  version: string;
+  cases: FeedbackCase[];
+}
+
+export interface AttributedCase {
+  case_id: string;
+  attribution: string;
+  matched_signal: string;
+}
+
+export interface AttributionReport {
+  items: AttributedCase[];
+  counts: Record<string, number>;
+}
+
+export interface IntentRegressionCase {
+  case_id: string;
+  query: string;
+  expected_intent: string;
+}
+
+export interface GateResult {
+  passed: boolean;
+  baseline_pass_rate: number;
+  candidate_pass_rate: number;
+  pass_rate_delta: number;
+  improved: string[];
+  regressed: string[];
+  reasons: string[];
+}
+
+export interface EvolutionProposal {
+  proposal_id: string;
+  title: string;
+  status: EvolutionStatus;
+  candidate_label: string;
+  source_dataset_id: string;
+  baseline_run_id: string | null;
+  candidate_run_id: string | null;
+  attribution: AttributionReport | null;
+  gate: GateResult | null;
+  review_decision: "approved" | "rejected" | null;
+  reviewer: string | null;
+  review_note: string | null;
+  created_at: string | null;
+  updated_at: string | null;
+}
+
+export interface RegressionDataset {
+  dataset_id: string;
+  name: string;
+  version: string;
+  task: string;
+  status: string;
+  reviewer: string | null;
+  review_note: string | null;
+  payload: {
+    name: string;
+    version: string;
+    cases: IntentRegressionCase[];
+  };
+}

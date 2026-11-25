@@ -99,6 +99,17 @@ class EvolutionRepository:
             await db.commit()
             return regression_dataset_view(row)
 
+    async def list_intent_regression_datasets(self, limit: int = 50) -> dict:
+        require_operator(self.scope)
+        async with self.factory() as db:
+            rows = await db.scalars(
+                select(DatasetVersionRow)
+                .where(DatasetVersionRow.task == "intent_classification")
+                .order_by(DatasetVersionRow.created_at.desc())
+                .limit(limit)
+            )
+            return {"datasets": [regression_dataset_view(row) for row in rows]}
+
     async def review_intent_regression_dataset(
         self, dataset_id: str, *, decision: str, note: str
     ) -> dict:
@@ -131,6 +142,22 @@ class EvolutionRepository:
         require_operator(self.scope)
         async with self.factory() as db:
             return proposal_view(await self._get(db, proposal_id))
+
+    async def get_proposal_feedback_cases(self, proposal_id: str) -> dict:
+        """Return the reconstructed feedback cases backing a proposal."""
+        require_operator(self.scope)
+        async with self.factory() as db:
+            proposal = await self._get(db, proposal_id)
+            source = await db.get(DatasetVersionRow, proposal.source_dataset_id)
+            if source is None:
+                raise AppError("feedback source dataset not found", http_status=404)
+            bundle = FeedbackCaseBundle.model_validate_json(source.payload_json)
+            return {
+                "dataset_id": source.dataset_id,
+                "name": bundle.name,
+                "version": bundle.version,
+                "cases": bundle.model_dump(mode="json")["cases"],
+            }
 
     async def create_proposal(self, *, name: str, version: str) -> dict:
         """collect: gather low-score feedback and persist the case bundle."""

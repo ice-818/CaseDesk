@@ -533,3 +533,49 @@ def test_consolidate_requires_promoted_and_dedupes_query(
             )
     finally:
         clear_settings_cache()
+
+
+def test_evolution_list_endpoints_expose_datasets_and_feedback_cases(
+    tmp_path, monkeypatch, auth_headers
+):
+    monkeypatch.setenv("ADMIN_API_TOKEN", "test-evolution-token")
+    clear_settings_cache()
+    buyer_headers = auth_headers("owner")
+    try:
+        with TestClient(create_app()) as client:
+            _seed_low_score_feedback(
+                client, "答非所问", buyer_headers, message="催发货"
+            )
+            reg_id = client.post(
+                f"{EVO}/regression-datasets",
+                json={
+                    "name": "g",
+                    "version": "v1",
+                    "cases": [
+                        {"case_id": "a", "query": "催发货", "expected_intent": "logistics"}
+                    ],
+                },
+                headers=ADMIN_HEADERS,
+            ).json()["dataset_id"]
+            prop_id = client.post(
+                f"{EVO}/proposals",
+                json={"name": "p", "version": "v1"},
+                headers=ADMIN_HEADERS,
+            ).json()["proposal_id"]
+
+            datasets = client.get(
+                f"{EVO}/regression-datasets", headers=ADMIN_HEADERS
+            )
+            assert datasets.status_code == 200
+            assert reg_id in [d["dataset_id"] for d in datasets.json()["datasets"]]
+
+            feedback = client.get(
+                f"{EVO}/proposals/{prop_id}/feedback-cases", headers=ADMIN_HEADERS
+            )
+            assert feedback.status_code == 200
+            body = feedback.json()
+            assert body["dataset_id"]
+            assert len(body["cases"]) == 1
+            assert body["cases"][0]["turns"][0]["content"] == "催发货"
+    finally:
+        clear_settings_cache()

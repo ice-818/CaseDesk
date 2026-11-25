@@ -24,6 +24,16 @@ router = APIRouter(
 )
 
 
+@router.get("/regression-datasets")
+async def list_regression_datasets(
+    limit: int = Query(default=50, ge=1, le=100),
+    container: AppContainer = Depends(get_container),
+):
+    return await EvolutionRepository(
+        container.session_factory
+    ).list_intent_regression_datasets(limit=limit)
+
+
 @router.post("/regression-datasets", status_code=201)
 async def create_regression_dataset(
     payload: IntentRegressionBundle, container: AppContainer = Depends(get_container)
@@ -68,6 +78,15 @@ async def get_proposal(
     proposal_id: str, container: AppContainer = Depends(get_container)
 ):
     return await EvolutionRepository(container.session_factory).get_proposal(proposal_id)
+
+
+@router.get("/proposals/{proposal_id}/feedback-cases")
+async def get_proposal_feedback_cases(
+    proposal_id: str, container: AppContainer = Depends(get_container)
+):
+    return await EvolutionRepository(
+        container.session_factory
+    ).get_proposal_feedback_cases(proposal_id)
 
 
 @router.post("/proposals/{proposal_id}/attribute")

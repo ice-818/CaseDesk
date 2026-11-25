@@ -9,6 +9,7 @@ import { SearchDialog } from "./components/SearchDialog";
 import { Sidebar } from "./components/Sidebar";
 import { ReceptionPanel } from "./components/ReceptionPanel";
 import { PlatformPanel } from "./components/PlatformPanel";
+import { EvolutionPanel } from "./components/EvolutionPanel";
 import type { ActionProposal } from "./types";
 import { useAuth } from "./auth/AuthProvider";
 import { LoginPanel } from "./components/LoginPanel";
@@ -35,6 +36,7 @@ function Workspace() {
   const [storageScope] = useState(captureStorageScope);
   const chat = useChat();
   const [platformOpen, setPlatformOpen] = useState(false);
+  const [evolutionOpen, setEvolutionOpen] = useState(false);
   const [receptionState, setReceptionState] = useState<{ sessionId: string; closed: boolean } | null>(null);
   const receptionClosed = Boolean(chat.active?.sessionId && receptionState?.sessionId === chat.active.sessionId && receptionState.closed);
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -81,6 +83,7 @@ function Workspace() {
   }
 
   if (platformOpen && auth.user?.role === "operator") return <PlatformPanel onBack={() => setPlatformOpen(false)} />;
+  if (evolutionOpen && auth.user?.role === "operator") return <EvolutionPanel onBack={() => setEvolutionOpen(false)} />;
   return <div className={`app-shell ${sidebarCollapsed ? "sidebar-collapsed" : ""}`}>
     <Sidebar conversations={chat.conversations} activeId={chat.active?.id ?? null} open={sidebarOpen} onClose={() => { setSidebarOpen(false); setSidebarCollapsed(true); }} onNew={newChat} onSelect={selectChat} onRemove={chat.remove} onSearch={() => setSearchOpen(true)} onTheme={() => setTheme(theme === "light" ? "dark" : "light")} theme={theme} />
     <main className="main-panel">
@@ -88,6 +91,7 @@ function Workspace() {
         <button className="icon-button open-sidebar" aria-label="打开侧栏" title="打开侧栏" onClick={() => { setSidebarCollapsed(false); setSidebarOpen(true); }}>{sidebarCollapsed ? <PanelLeftOpen size={20} /> : <Menu size={20} />}</button>
         <span className="model-title">CaseDesk <small>智能客服和导购平台</small></span>
         {auth.user?.role === "operator" && <button onClick={() => setPlatformOpen(true)} disabled={chat.busy}>数据与评测</button>}
+        {auth.user?.role === "operator" && <button onClick={() => setEvolutionOpen(true)} disabled={chat.busy}>自进化人审</button>}
         <span className="account-name">{auth.user?.user_id}</span><button onClick={() => void auth.logout()}>退出登录</button>
         <div className="topbar-right"><span className={`connection-pill ${healthy === false ? "offline" : ""}`}><span />{healthy === null ? "正在检查服务" : healthy ? "服务已连接" : "服务未连接"}</span><button className="icon-button help-button" title="项目说明" aria-label="项目说明" onClick={() => window.open("https://github.com/ice-818/CaseDesk", "_blank", "noopener,noreferrer")}><CircleHelp size={19} /></button></div>
       </header>
