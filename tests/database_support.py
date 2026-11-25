@@ -19,6 +19,6 @@ async def migrate_test_database(engine):
         config=Config(str(root/"alembic.ini"))
         config.set_main_option("script_location",str(root/"alembic"))
         config.attributes.update(connection=connection,configure_logger=False)
-        command.upgrade(config, "0010")
+        command.upgrade(config, "0011")
     async with engine.connect() as connection:
         await connection.run_sync(upgrade)

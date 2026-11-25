@@ -29,9 +29,11 @@ _KEYWORD_RULES: list[tuple[tuple[str, ...], IntentLabel]] = [
 ]
 
 
-def rule_based_intent(query: str) -> IntentResult:
+def rule_based_intent(query: str, *, extra_rules: list[tuple[tuple[str, ...], IntentLabel]] | None = None) -> IntentResult:
     lowered = query.lower()
-    for keywords, label in _KEYWORD_RULES:
+    # Candidate rules take precedence so a proposed keyword can be tested offline.
+    rules = list(extra_rules) + _KEYWORD_RULES if extra_rules else _KEYWORD_RULES
+    for keywords, label in rules:
         if label == IntentLabel.GREETING:
             matched = bool(
                 re.fullmatch(r"(?:你好|您好|hi|hello)[!！。．.\s]*", query.strip(), re.I)

@@ -263,7 +263,7 @@ def test_fresh_upgrade_uses_async_migration_connection(tmp_path):
     engine = create_engine(f"sqlite:///{path}")
     try:
         with engine.connect() as connection:
-            assert connection.execute(text("SELECT version_num FROM alembic_version")).scalar_one() == "0010"
+            assert connection.execute(text("SELECT version_num FROM alembic_version")).scalar_one() == "0011"
             assert connection.exec_driver_sql("PRAGMA foreign_key_check").all() == []
             assert {"merchants", "products", "orders", "users"}.issubset(inspect(connection).get_table_names())
     finally:
@@ -319,7 +319,7 @@ async def test_init_schema_requires_current_revision_and_does_not_upgrade_0008(d
             await init_schema(async_engine)
         assert snapshot(engine) == before
         assert_revision(engine, "0008")
-        migrate(engine, "0010")
+        migrate(engine, "0011")
         before = snapshot(engine)
         await init_schema(async_engine)
         assert snapshot(engine) == before

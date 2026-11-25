@@ -24,6 +24,7 @@ class Settings(BaseSettings):
     log_level: str = "INFO"
     api_v1_prefix: str = "/api/v1"
     reception_idle_seconds: int = Field(default=1800, ge=60)
+    feedback_collect_max_score: int = Field(default=3, ge=1, le=5)
 
     deepseek_api_key: SecretStr = SecretStr("")
     deepseek_base_url: str = "https://api.deepseek.com"

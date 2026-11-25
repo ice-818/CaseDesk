@@ -312,3 +312,58 @@ class IdempotencyRow(Base):
     fingerprint: Mapped[str] = mapped_column(String(64))
     response_json: Mapped[str] = mapped_column(Text)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+
+
+class ImprovementProposalRow(Base):
+    """Human-in-the-loop self-evolution proposal lifecycle."""
+
+    __tablename__ = "improvement_proposals"
+    __table_args__ = (
+        CheckConstraint(
+            "status IN ('collect','attribute','regress','gate','review',"
+            "'promoted','rejected','blocked')",
+            name="ck_improvement_status",
+        ),
+        CheckConstraint(
+            "review_decision IS NULL OR review_decision IN ('approved','rejected')",
+            name="ck_improvement_review_decision",
+        ),
+    )
+
+    proposal_id: Mapped[str] = mapped_column(String(64), primary_key=True)
+    title: Mapped[str] = mapped_column(String(128))
+    status: Mapped[str] = mapped_column(
+        String(16), default="collect", server_default="collect"
+    )
+    candidate_label: Mapped[str] = mapped_column(String(80))
+    source_dataset_id: Mapped[str | None] = mapped_column(
+        String(64),
+        ForeignKey(
+            "dataset_versions.dataset_id", name="fk_improvement_source_dataset"
+        ),
+        nullable=True,
+        index=True,
+    )
+    baseline_run_id: Mapped[str | None] = mapped_column(
+        String(64),
+        ForeignKey("evaluation_runs.run_id", name="fk_improvement_baseline_run"),
+        nullable=True,
+    )
+    candidate_run_id: Mapped[str | None] = mapped_column(
+        String(64),
+        ForeignKey("evaluation_runs.run_id", name="fk_improvement_candidate_run"),
+        nullable=True,
+    )
+    attribution_json: Mapped[str] = mapped_column(
+        Text, default="", server_default=""
+    )
+    gate_json: Mapped[str] = mapped_column(Text, default="", server_default="")
+    review_decision: Mapped[str | None] = mapped_column(String(16), nullable=True)
+    reviewer: Mapped[str | None] = mapped_column(String(80), nullable=True)
+    review_note: Mapped[str | None] = mapped_column(Text, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), default=utcnow
+    )
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), default=utcnow
+    )

@@ -16,7 +16,7 @@ from app.config.settings import Settings
 from app.repositories.models import Base
 
 # The single schema revision this build is allowed to run against.
-EXPECTED_REVISION = "0010"
+EXPECTED_REVISION = "0011"
 
 
 def create_engine(settings: Settings) -> AsyncEngine:
